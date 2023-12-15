@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Google Font (Noto Sans TC - Black) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;900&display=swap');
+
 /* Base Element Setting */
 * {
   box-sizing: border-box;
   transition: all 0.2s;
   /* outline: 1px solid #000; */
+}
+body {
+  font-family: 'Noto Sans TC', sans-serif;
 }
 img {
   max-width: 100%;
