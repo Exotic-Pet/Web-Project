@@ -21,7 +21,7 @@ img {
 
 /* CSS Animation */
 .scroll {
-  height: 12px;
+  min-height: 2px;
   overflow: hidden;
   position: relative;
 }
@@ -30,11 +30,11 @@ img {
   top: 0;
   right: 50%;
   z-index: 10;
-  width: 20px;
+  width: 30px;
   min-height: 2px;
-  animation: fade-in 2.5s ease-in-out infinite;
+  animation: scroll-line 3s ease-in-out infinite;
 }
-@keyframes fade-in {
+@keyframes scroll-line {
   0% {
     right: -40px;
   }
