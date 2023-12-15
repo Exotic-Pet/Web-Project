@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base Element Setting */
+* {
+  box-sizing: border-box;
+  transition: all 0.2s;
+  /* outline: 1px solid #000; */
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* CSS Animation */
+.scroll {
+  height: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.scroll__line {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  z-index: 10;
+  width: 20px;
+  min-height: 2px;
+  animation: fade-in 2.5s ease-in-out infinite;
+}
+@keyframes fade-in {
+  0% {
+    right: -40px;
+  }
+  100% {
+    right: 80px;
+  }
+}
