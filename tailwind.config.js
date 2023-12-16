@@ -26,6 +26,11 @@ export default {
           normal: "#F9F5F2",
         },
       },
+      letterSpacing: {
+        wide: '0.1rem',
+        wider: '0.2rem',
+        widest: '0.3rem',
+      },
     },
   },
   plugins: [],

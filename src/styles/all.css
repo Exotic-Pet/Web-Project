@@ -9,6 +9,7 @@
 * {
   box-sizing: border-box;
   transition: all 0.2s;
+  scroll-behavior: smooth;
   /* outline: 1px solid #000; */
 }
 body {
@@ -42,23 +43,24 @@ img {
     right: 80px;
   }
 }
-
+/* Move Ball */
 .move {
   position: relative;
 }
 .move__ball {
   position: absolute;
-  top: -5px;
-  right: 130px;
+  top: 15px;
+  right: 135px;
   z-index: -1;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 80px;
+  min-height: 80px;
   border-radius: 50%;
   transition: all 0.5s ease-out;
 }
 .move:hover .move__ball {
-  right: -22px;
+  right: -12px;
   background-color: #91AF74;
+  transform: scale(1.5);
 }
 .move__text {
   transition: all 0.5s ease-out;
