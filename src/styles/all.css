@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Google Font (Noto Sans TC - Black) */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;900&display=swap');
+/* Google Font (Noto Sans TC) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* Base Element Setting */
 * {
@@ -41,4 +41,28 @@ img {
   100% {
     right: 80px;
   }
+}
+
+.move {
+  position: relative;
+}
+.move__ball {
+  position: absolute;
+  top: -5px;
+  right: 130px;
+  z-index: -1;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  transition: all 0.5s ease-out;
+}
+.move:hover .move__ball {
+  right: -22px;
+  background-color: #91AF74;
+}
+.move__text {
+  transition: all 0.5s ease-out;
+}
+.move:hover .move__text {
+  color: white;
 }

@@ -11,9 +11,9 @@
 
 <body>
   <header class="mt-[40px]">
-    <div class="container mx-auto flex justify-around">
+    <div class="container mx-auto flex justify-evenly">
       <!-- Navbar -->
-      <nav class="">
+      <nav class="max-w-[170px]">
         <h1>
           <a href="#" class="hover:opacity-70">
             <img class="mx-auto" src="../assets/index/LOGO.svg" alt="logo">
@@ -21,7 +21,7 @@
         </h1>
         <ul class="mt-[32px]">
           <li class="mt-[16px]">
-            <a href="#" class="px-[36px] flex items-center hover:opacity-70">
+            <a href="#" class="flex items-center hover:opacity-70">
               <img src="../assets/index/home-green.svg" alt="home">
               <h2 class="ml-[12px] text-[20px] text-brown-dark font-black">
                 特寵探店
@@ -30,7 +30,7 @@
             </a>
           </li>
           <li class="mt-[16px]">
-            <a href="#" class="px-[36px] flex items-center hover:opacity-70">
+            <a href="#" class="flex items-center hover:opacity-70">
               <img src="../assets/index/calendar-green.svg" alt="calendar">
               <h2 class="ml-[12px] text-[20px] text-brown-dark font-black">
                 特寵活動
@@ -39,7 +39,7 @@
             </a>
           </li>
           <li class="mt-[16px]">
-            <a href="#" class="px-[36px] flex items-center hover:opacity-70">
+            <a href="#" class="flex items-center hover:opacity-70">
               <img src="../assets/index/intro-green.svg" alt="intro">
               <h2 class="ml-[12px] text-[20px] text-brown-dark font-black">
                 特寵介紹
@@ -48,7 +48,7 @@
             </a>
           </li>
           <li class="mt-[16px]">
-            <a href="#" class="px-[36px] flex items-center hover:opacity-70">
+            <a href="#" class="flex items-center hover:opacity-70">
               <img src="../assets/index/people-green.svg" alt="people">
               <h2 class="ml-[12px] text-[20px] text-brown-dark font-black">
                 聚會揪團
@@ -57,7 +57,7 @@
             </a>
           </li>
           <li class="mt-[16px]">
-            <a href="#" class="px-[36px] flex items-center hover:opacity-70">
+            <a href="#" class="flex items-center hover:opacity-70">
               <img src="../assets/index/msg-green.svg" alt="msg">
               <h2 class="ml-[12px] text-[20px] text-brown-dark font-black">
                 心得交流
@@ -68,29 +68,63 @@
         </ul>
         <!-- Download Link -->
         <div class="mt-[48px]">
-          <a href="#" class="block hover:opacity-70">
+          <a href="#" class="max-w-[200px] mx-auto block hover:opacity-70">
             <img src="../assets/index/google-play.png" alt="google-play">
           </a>
-          <a href="#" class="mt-[12px] block hover:opacity-70">
+          <a href="#" class="max-w-[200px] mx-auto mt-[12px] block hover:opacity-70">
             <img src="../assets/index/app-store.png" alt="app-store">
           </a>
         </div>
         <!-- Scroll Animation -->
         <div class="mt-[56px] -rotate-90 mx-auto max-w-[80px]">
-          <h4 class="text-[12px] font-black text-center">Scroll</h4>
+          <h4 class="text-[12px] font-black text-center text-brown-dark">Scroll</h4>
           <div class="scroll mt-[4px]">
             <div class="scroll__line bg-green-dark"></div>
           </div>
         </div>
       </nav>
       <!-- Banner -->
-      <figure>
+      <figure class="ml-[24px]">
         <img src="../assets/index/banner.png" alt="banner">
       </figure>
     </div>
   </header>
-  <main>
-
+  <!-- Main -->
+  <main class="mt-[80px]">
+    <!-- News -->
+    <div class="container mx-auto">
+      <article class="mx-auto px-[32px]">
+        <div class="flex justify-between items-center">
+          <!-- News Title -->
+          <div>
+            <h2 class="text-brown-dark font-black text-[50px]">
+              News
+              <span class="text-green-normal text-[40px] font-black">最新消息</span>
+            </h2>
+            <div class="mt-[16px] text-[20px] font-semibold">
+              <a class="px-[22px] py-[4px] rounded-full bg-brown-light" href="#">活動</a>
+              <a class="ml-[22px] px-[22px] py-[4px] rounded-full bg-green-normal text-white" href="#">店家</a>
+            </div>
+          </div>
+          <!-- See More -->
+          <div class="move py-[8px]">
+            <a class="flex items-center" href="#">
+              <figure>
+                <img src="../assets/index/arrow-right.svg" alt="arrow">
+              </figure>
+              <p class="move__text max-w-[50px] ml-[20px] text-[24px] text-brown-dark font-bold">
+                查看更多
+              </p>
+              <div class="move__ball bg-yellow-dark"></div>
+            </a>
+          </div>
+        </div>
+        <!-- News List -->
+        <ul class="mt-[48px] py-[48px] border-t-2 border-brown-normal">
+          <li class=""></li>
+        </ul>
+      </article>
+    </div>
   </main>
 
   <!-- Tailwind CSS -->
