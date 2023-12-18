@@ -5,14 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layout</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- all.css -->
   <link rel="stylesheet" href="../styles/all.css">
 </head>
 
 <body>
   <!-- Header -->
-  <header>
-
+  <header class="py-[16px]">
+    <!-- Navbar -->
+    <nav class="container mx-auto flex justify-between items-center leading-none">
+      <h1>
+        <a href="#" class="hover:opacity-70">
+          <img class="max-w-[48px]" src="../assets/index/LOGO.svg" alt="logo">
+        </a>
+      </h1>
+      <!-- Mobile Menu -->
+      <a class="text-4xl text-brown-dark lg:hidden" href="#">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <!-- PC Menu -->
+      <ul class="hidden lg:flex items-center font-black text-center tracking-wide">
+        <li class="nav__list min-w-[104px] border-r border-brown-light">
+          <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵探店</a>
+        </li>
+        <li class="nav__list min-w-[104px] border-r border-brown-light">
+          <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵活動</a>
+        </li>
+        <li class="nav__list min-w-[104px] border-r border-brown-light">
+          <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵介紹</a>
+        </li>
+        <li class="nav__list min-w-[104px] border-r border-brown-light">
+          <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">聚會揪團</a>
+        </li>
+        <li class="nav__list min-w-[104px]">
+          <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">心得交流</a>
+        </li>
+        <!-- Account Info -->
+        <li class="ml-[16px]">
+          <a class="text-white flex items-center p-2 bg-brown-dark rounded-full" href="#">
+            <img class="max-w-[40px]" src="../assets/layout/account-green.svg" alt="account">
+            <h2 class="ml-2 mr-1 text-[18px] hover:text-green-light">我的帳號</h2>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Footer -->
