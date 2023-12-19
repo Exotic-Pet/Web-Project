@@ -21,27 +21,31 @@ img {
   display: block;
 }
 
-/* CSS Animation */
+/* Scroll Ball Animation */
 .scroll {
-  min-height: 2px;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
-.scroll__line {
+.scroll__ball {
   position: absolute;
   top: 0;
-  right: 50%;
-  z-index: 10;
-  width: 30px;
-  min-height: 2px;
-  animation: scroll-line 3s ease-in-out infinite;
+  right: 0;
+  padding: 5px;
+  border-radius: 50%;
+  animation: scroll-ball 4s ease-in-out infinite;
 }
-@keyframes scroll-line {
+@keyframes scroll-ball {
   0% {
-    right: -40px;
+    right: -10px;
+  }
+  45% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
   }
   100% {
-    right: 80px;
+    right: 90px;
   }
 }
 
@@ -51,18 +55,17 @@ img {
 }
 .move__ball {
   position: absolute;
-  top: 15px;
+  top: 8px;
   right: 135px;
   z-index: -1;
-  min-width: 80px;
-  min-height: 80px;
+  padding: 40px;
   border-radius: 50%;
   transition: all 0.5s ease-out;
 }
 .move:hover .move__ball {
-  right: -12px;
+  right: -13px;
   background-color: #91AF74;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .move__text {
   transition: all 0.5s ease-out;
@@ -89,4 +92,17 @@ img {
 .nav__list__link:hover::after {
   width: 101%;
   left: -2px;
+}
+
+/* Deco Zoom */
+.deco__zoom {
+  animation: zoom 1.5s ease-in-out infinite alternate;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
