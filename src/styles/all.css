@@ -19,6 +19,16 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  vertical-align: middle;
+}
+
+/* Utilities Class */
+.ellipsis-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 /* Scroll Ball Animation */
