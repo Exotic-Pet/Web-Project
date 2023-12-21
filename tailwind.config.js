@@ -15,7 +15,9 @@ export default {
           light: "#D0CCC6",
         },
         yellow: {
-          dark: "#EFC141",
+          dark: "#D7A10A",
+          normal: "#EFC141",
+          light: "#F7D575",
         },
         cyan: {
           dark: "#4D9895",
@@ -27,9 +29,9 @@ export default {
         },
       },
       letterSpacing: {
-        wide: '0.1rem',
-        wider: '0.2rem',
-        widest: '0.3rem',
+        wide: "0.1rem",
+        wider: "0.2rem",
+        widest: "0.3rem",
       },
     },
   },
