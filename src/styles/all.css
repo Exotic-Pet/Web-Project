@@ -42,16 +42,23 @@ img {
   right: 0;
   padding: 5px;
   border-radius: 50%;
-  animation: scroll-ball 4s ease-in-out infinite;
+  opacity: 0;
+  animation: scroll-ball 4s ease-out infinite;
 }
 @keyframes scroll-ball {
   0% {
     right: -10px;
   }
-  45% {
+  5% {
+    opacity: 0;
+  }
+  15% {
     opacity: 1;
   }
-  80% {
+  55% {
+    opacity: 1;
+  }
+  70% {
     opacity: 0;
   }
   100% {
