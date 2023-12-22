@@ -54,119 +54,182 @@
     </header>
 
     <!-- banner -->
-    <div class="relative"><img src="../assets/store/cafe-banner.png" alt="store_banner"></div>
+    <div class="bg-yellow-normal">
+        <div class="bg-center bg-[url('../assets/store/cafe-banner.png')] min-h-[133px] bg-no-repeat">
+            <!-- <img src="../assets/store/cafe-banner.png" alt="store_banner"> -->
+        </div>
+    </div>
+    
 
     <!-- Cafe Page -->
     <main class="flex">
-        <aside class="ml-20 basis-1/3 mt-20">
+        <aside class="mt-20 ml-20 basis-1/4">
             <div>
                 <!-- Search Bar -->
                 <form action="" class="flex justify-around">
                     <div class="relative">
                         <input type="text" placeholder="搜尋"
-                            class="text-brown-normal text-[26.54px] w-[388px] h-[53px] rounded-[38px] border-2 border-solid border-brown-normal pl-4">
-                        <img src="../assets/store/search.svg" alt="search" class="absolute right-5 top-3">
+                            class="text-brown-normal text-[26.54px] w-[388px] h-[53px] rounded-[38px] border-2 border-solid border-brown-normal pl-4 focus:outline-yellow-normal">
+                        <img src="../assets/store/search.svg" alt="search" class="absolute transition ease-in-out right-5 top-3 hover:scale-110">
                     </div>
                 </form>
                 <!-- Search Place -->
-                <h2 class="font-black text-3xl text-brown-dark text-center m-7">進階搜尋</h2>
+                <h2 class="text-3xl font-black text-center text-brown-dark m-7">進階搜尋</h2>
                 <form action="">
                     <ul>
                         <li>
                             <a href="#" class="flex justify-between">
-                                <h3 class="text-2xl font-black text-yellow-dark">你想去哪?</h3>
-                                <img src="../assets/store/arrow-top.svg" alt="arrow-top">
+                                <h3 class="text-2xl font-black text-yellow-dark hover:text-yellow-normal">你想去哪?</h3>
+                                <img src="../assets/store/arrow-top.svg" alt="arrow-top" class="hover:-rotate-180">
                             </a>
                         </li>
-                        <li class="border-y-2 my-6">
+                        <li class="my-6 border-y-2">
                             <a href="#" class="flex justify-between my-5">
-                                <h3 class="text-2xl font-black text-yellow-dark">想找什麼?</h3>
-                                <img src="../assets/store/arrow-top.svg" alt="arrow-top">
+                                <h3 class="text-2xl font-black text-yellow-dark hover:text-yellow-normal">想找什麼?</h3>
+                                <img src="../assets/store/arrow-top.svg" alt="arrow-top" class="hover:-rotate-180">
                             </a>
                         </li>
                         <li>
                             <a href="#" class="flex justify-between">
-                                <h3 class="text-2xl font-black text-yellow-dark">想花什麼?</h3>
-                                <img src="../assets/store/arrow-top.svg" alt="arrow-top">
+                                <h3 class="text-2xl font-black text-yellow-dark hover:text-yellow-normal">想花什麼?</h3>
+                                <img src="../assets/store/arrow-top.svg" alt="arrow-top" class="hover:-rotate-180">
                             </a>
                         </li>
                     </ul>
                     <div class="mt-14">
                         <button
-                            class="mx-auto block text-2xl font-black bg-yellow-light rounded-[43.39px] w-[213px] h-[49px] mb-4">開始搜尋</button>
+                            class="transition ease-in-out hover:scale-110  mx-auto block text-2xl font-black bg-yellow-light rounded-[43.39px] w-[213px] h-[49px] mb-4">開始搜尋</button>
                         <button
-                            class="mx-auto block text-2xl font-black bg-brown-light rounded-[43.39px] w-[213px] h-[49px]">清除條件</button>
+                            class="transition ease-in-out hover:scale-110 mx-auto block text-2xl font-black bg-brown-light rounded-[43.39px] w-[213px] h-[49px]">清除條件</button>
                     </div>
                 </form>
             </div>
         </aside>
         <!-- Store List -->
-        <section class="basis-2/3 mt-10">
+        <section class="mt-10 basis-3/4">
             <ul class="flex justify-center">
-                <li class="border-solid border-2 border-brown-light rounded-full">
-                    <a href="" class="flex p-5">
+                <li class="border-2 border-solid rounded-full text-brown-normal border-brown-light hover:border-brown-dark">
+                    <a href="#" class="flex p-5">
                         <img src="../assets/store/coffee.svg" alt="cafe">
-                        <h4 class="text-brown-normal text-xl font-black">特寵<br>咖啡廳</h4>
+                        <h4 class="ml-3 text-xl font-black ">特寵<br>咖啡廳</h4>
                     </a>
                 </li>
-                <li class="mx-8 border-solid border-2 border-brown-light rounded-full">
+                <li class="mx-8 border-2 border-solid rounded-full border-brown-light hover:border-brown-dark">
                     <a href="" class="flex p-5">
                         <img src="../assets/store/shop.svg" alt="store">
-                        <h4 class="text-brown-normal text-xl font-black">特寵<br>專賣店</h4>
+                        <h4 class="ml-3 text-xl font-black text-brown-normal">特寵<br>專賣店</h4>
                     </a>
                 </li>
-                <li class="border-solid border-2 border-brown-light rounded-full ">
+                <li class="border-2 border-solid rounded-full border-brown-light hover:border-brown-dark">
                     <a href="" class="flex p-5 w-[153px]">
                         <img src="../assets/store/hospital.svg" alt="hospital">
-                        <h4 class="text-brown-normal text-xl font-black">特寵<br>醫院</h4>
+                        <h4 class="ml-3 text-xl font-black text-brown-normal">特寵<br>醫院</h4>
                     </a>
                 </li>
             </ul>
-            <div class="bg-gray-300 rounded-tl-[75px] ml-5 pb-2">
-                <ul class="mt-[66px] ml-[70px] flex  flex-wrap ">
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative">
-                        <h3 class="font-black text-3xl text-yellow-dark">玩蟒人生<span class=" ml-2 font-black text-lg text-brown-normal">Pythonism</span></h3>
-                        <figure>
-                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
-                        </figure>
+            <div class="bg-gray-200 rounded-tl-[75px] ml-11 pb-2 w-full pt-[66px] mt-10">
+                <ul class=" ml-[70px] flex flex-wrap gap-7">
+                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] ">
+                        <h3 class="text-3xl font-black text-yellow-dark">玩蟒人生<span class="ml-2 text-lg font-black text-brown-normal">Pythonism</span></h3>
+                        <figure class="relative">
+                            <img src="../assets/store/store-img.png" alt="store" class="mt-[17px]">
+                            <img src="../assets/store/like.svg" alt="like" class="absolute -bottom-2 -right-1">
+                        </figure> 
+                        <ul class="flex my-2">
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇</li>
+                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#龜</li>
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮</li>
+                        </ul>
                         <h4 class="text-xl font-black text-brown-dark">以球蟒為主的咖啡廳！</h4>
                         <p class="text-base text-brown-dark w-[300px] h-[70px]">只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！</p>
-                        <a href="" class="border-b-2 border-cyan-dark pb-1 text-lg text-brown-dark font-black absolute right-9">查看更多</a>
+                        <a href="" class="absolute pb-1 text-lg font-black transition ease-in-out border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative ml-7">
-                        <h3 class="font-black text-3xl text-yellow-dark">肉球森林<span class=" ml-2 font-black text-lg text-brown-normal">Pythonism</span></h3>
+                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative">
+                        <h3 class="text-3xl font-black text-yellow-dark">肉球森林<span class="ml-2 text-lg font-black text-brown-normal">Pythonism</span></h3>
                         <figure>
                             <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
                         </figure>
+                        <ul class="flex my-2">
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇</li>
+                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#龜</li>
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮</li>
+                        </ul>
                         <h4 class="text-xl font-black text-brown-dark">以球蟒為主的咖啡廳！</h4>
                         <p class="text-base text-brown-dark w-[300px] h-[70px]">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
-                        <a href="" class="border-b-2 border-cyan-dark pb-1 text-lg text-brown-dark font-black absolute right-9">查看更多</a>
+                        <a href="" class="absolute pb-1 text-lg font-black transition ease-in-out border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative ml-7">
-                        <h3 class="font-black text-3xl text-yellow-dark">肉球森林<span class=" ml-2 font-black text-lg text-brown-normal">Pythonism</span></h3>
+                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative">
+                        <h3 class="text-3xl font-black text-yellow-dark">肉球森林<span class="ml-2 text-lg font-black text-brown-normal">Pythonism</span></h3>
                         <figure>
                             <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
                         </figure>
+                        <ul class="flex my-2">
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇</li>
+                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#龜</li>
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮</li>
+                        </ul>
                         <h4 class="text-xl font-black text-brown-dark">以球蟒為主的咖啡廳！</h4>
                         <p class="text-base text-brown-dark w-[300px] h-[70px]">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
-                        <a href="" class="border-b-2 border-cyan-dark pb-1 text-lg text-brown-dark font-black absolute right-9">查看更多</a>
+                        <a href="" class="absolute pb-1 text-lg font-black transition ease-in-out border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                    </li>
+                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative">
+                        <h3 class="text-3xl font-black text-yellow-dark">肉球森林<span class="ml-2 text-lg font-black text-brown-normal">Pythonism</span></h3>
+                        <figure>
+                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
+                        </figure>
+                        <ul class="flex my-2">
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇</li>
+                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#龜</li>
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮</li>
+                        </ul>
+                        <h4 class="text-xl font-black text-brown-dark">以球蟒為主的咖啡廳！</h4>
+                        <p class="text-base text-brown-dark w-[300px] h-[70px]">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
+                        <a href="" class="absolute pb-1 text-lg font-black transition ease-in-out border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                    </li>
+                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative">
+                        <h3 class="text-3xl font-black text-yellow-dark">肉球森林<span class="ml-2 text-lg font-black text-brown-normal">Pythonism</span></h3>
+                        <figure>
+                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
+                        </figure>
+                        <ul class="flex my-2">
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇</li>
+                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#龜</li>
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮</li>
+                        </ul>
+                        <h4 class="text-xl font-black text-brown-dark">以球蟒為主的咖啡廳！</h4>
+                        <p class="text-base text-brown-dark w-[300px] h-[70px]">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
+                        <a href="" class="absolute pb-1 text-lg font-black transition ease-in-out border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                    </li>
+                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] h-[515px] relative">
+                        <h3 class="text-3xl font-black text-yellow-dark">肉球森林<span class="ml-2 text-lg font-black text-brown-normal">Pythonism</span></h3>
+                        <figure>
+                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
+                        </figure>
+                        <ul class="flex my-2">
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇</li>
+                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#龜</li>
+                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮</li>
+                        </ul>
+                        <h4 class="text-xl font-black text-brown-dark">以球蟒為主的咖啡廳！</h4>
+                        <p class="text-base text-brown-dark w-[300px] h-[70px]">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
+                        <a href="" class="absolute pb-1 text-lg font-black transition ease-in-out border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
                 </ul>
-                <ul class="flex justify-center">
+                <ul class="flex justify-center my-24">
                     <li>
-                        <a href="#" class="text-brown-dark font-black text-xl px-2">1</a>
+                        <a href="#" class="px-2 text-xl font-black border-b-2 text-brown-dark border-cyan-dark">1</a>
                     </li>
                     <li>
-                        <a href="#" class="text-brown-dark font-black text-xl px-2">2</a>
+                        <a href="#" class="px-2 text-xl font-black text-brown-dark">2</a>
                     </li>
                     <li>
-                        <a href="#" class="text-brown-dark font-black text-xl px-2">3</a>
+                        <a href="#" class="px-2 text-xl font-black text-brown-dark">3</a>
                     </li>
                     <li>
-                        <a href="#" class="text-brown-dark font-black text-xl px-2">...</a>
+                        <a href="#" class="px-2 text-xl font-black text-brown-dark">...</a>
                     </li>
                     <li>
-                        <a href="#" class="text-brown-dark font-black text-xl px-2">尾數頁</a>
+                        <a href="#" class="px-2 text-xl font-black text-brown-dark">尾數頁</a>
                     </li>
                 </ul>
             </div>
