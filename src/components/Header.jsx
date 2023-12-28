@@ -1,3 +1,4 @@
+import "../styles/all.css";
 import logo from '../assets/layout/LOGO.svg';
 import accountGreen from '../assets/layout/account-green.svg';
 
