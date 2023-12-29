@@ -1,19 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@charset "UTF-8";
 
 /* Google Font (Noto Sans TC) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Base Element Setting */
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base HTML Setting */
 *, *::after, *::before {
   box-sizing: border-box;
   transition: all 0.25s;
-  scroll-behavior: smooth;
   /* outline: 1px solid #000; */
 }
-body {
+html, body {
   font-family: 'Noto Sans TC', sans-serif;
+  scroll-behavior: smooth;
 }
 img {
   max-width: 100%;

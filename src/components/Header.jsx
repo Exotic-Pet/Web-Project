@@ -2,7 +2,7 @@ import "../styles/all.css";
 import logo from '../assets/layout/LOGO.svg';
 import accountGreen from '../assets/layout/account-green.svg';
 
-export default function Header () {
+export default function Header() {
   return (
     <header className="py-[16px]">
     {/* Navbar */}

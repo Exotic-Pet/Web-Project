@@ -33,6 +33,9 @@ export default {
         wider: "0.2rem",
         widest: "0.3rem",
       },
+      backgroundImage: {
+        'label': "url('./src/assets/store/label.svg')",
+      }
     },
   },
   plugins: [],
