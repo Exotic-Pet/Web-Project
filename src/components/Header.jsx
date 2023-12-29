@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/all.css";
 import logo from '../assets/layout/LOGO.svg';
 import accountGreen from '../assets/layout/account-green.svg';
@@ -9,9 +10,9 @@ export default function Header() {
     <nav className="container flex items-center justify-between px-2 mx-auto leading-none lg:px-0">
       <h1>
         <strong className="hidden">特寵生活</strong>
-        <a href="./home.html" className="hover:opacity-70">
+        <Link to="/" className="hover:opacity-70">
           <img className="max-w-[48px]" src={logo} alt="logo" />
-        </a>
+        </Link>
       </h1>
       {/* Mobile Menu */}
       <a className="text-4xl text-brown-dark lg:hidden" href="#">
@@ -20,7 +21,9 @@ export default function Header() {
       {/* PC Menu */}
       <ul className="items-center hidden font-black tracking-wide text-center lg:flex">
         <li className="nav__list min-w-[104px] border-r border-brown-light">
-          <a className="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵探店</a>
+          <Link to="/store-article" className="nav__list__link py-2 text-brown-dark text-[20px]">
+            特寵探店
+          </Link>
         </li>
         <li className="nav__list min-w-[104px] border-r border-brown-light">
           <a className="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵活動</a>

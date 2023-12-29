@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/all.css";
 import logo from "../assets/layout/LOGO.svg";
 import homeWhite from "../assets/layout/home-white.svg";
@@ -14,13 +15,13 @@ export default function Footer() {
         <nav className="flex flex-col justify-center md:flex-row">
           <h2 className="md:mr-[44px]">
             <strong className="hidden">特寵生活</strong>
-            <a href="#" className="hover:opacity-80">
+            <Link to="/" className="hover:opacity-80">
               <img className="mx-auto" src={logo} alt="logo" />
-            </a>
+            </Link>
           </h2>
           <ul className="max-w-[450px] mx-auto flex justify-center flex-wrap mt-8 sm:justify-start sm:mt-0 md:justify-start sm:max-w-[600px]">
             <li className="w-full sm:max-w-[200px]">
-              <a href="./cafe.html" className="block hover:opacity-80">
+              <Link to="/store-article" className="block hover:opacity-80">
                 <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
                   <img src={homeWhite} alt="home" />
                   <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-black">
@@ -30,7 +31,7 @@ export default function Footer() {
                     </small>
                   </h2>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className="w-full sm:max-w-[200px]">
               <a href="#" className="block hover:opacity-80">

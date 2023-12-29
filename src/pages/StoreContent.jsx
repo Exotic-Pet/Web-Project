@@ -186,10 +186,6 @@ export default function StoreContent() {
             <div className="mx-auto mt-[75px] mb-[39px] w-[300px] h-[200px] leading-[200px] font-black text-xl bg-gray-300 text-center">GDN</div>
             <div className="mx-auto text-center w-[300px] h-[200px] leading-[200px] justify-center font-black text-xl bg-gray-300">GDN</div>
         </aside>
-        
     </main>
-
-  )
+    )
 }
-
-   
