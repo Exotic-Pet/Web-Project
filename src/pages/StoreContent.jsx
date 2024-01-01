@@ -1,3 +1,4 @@
+import "../styles/all.css";
 import shareFacebook from '../assets/store/share-facebook.svg';
 import shareLine from '../assets/store/share-line.svg';
 import contentImg_1 from '../assets/store/content-img1.png';

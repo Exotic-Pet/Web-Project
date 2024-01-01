@@ -21,7 +21,7 @@ export default function Header() {
       {/* PC Menu */}
       <ul className="items-center hidden font-black tracking-wide text-center lg:flex">
         <li className="nav__list min-w-[104px] border-r border-brown-light">
-          <Link to="/store-article" className="nav__list__link py-2 text-brown-dark text-[20px]">
+          <Link to="/store" className="nav__list__link py-2 text-brown-dark text-[20px]">
             特寵探店
           </Link>
         </li>

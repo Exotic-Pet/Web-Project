@@ -31,10 +31,13 @@ export default {
       letterSpacing: {
         wide: "0.1rem",
         wider: "0.2rem",
-        widest: "0.3rem",
+        widest: "0.35rem",
       },
       backgroundImage: {
         'label': "url('./src/assets/store/label.svg')",
+        'overview-cafe': "url('./src/assets/store/overview-cafe.svg')",
+        'overview-store': "url('./src/assets/store/overview-store.svg')",
+        'overview-hospital': "url('./src/assets/store/overview-hospital.svg')",
       }
     },
   },
