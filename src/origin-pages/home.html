@@ -5,16 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- all.css -->
   <link rel="stylesheet" href="../styles/all.css">
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="mt-[40px]">
+  <!-- Mobile Menu -->
+  <header class="py-[16px] xl:hidden">
+    <!-- Navbar -->
+    <nav class="container flex items-center justify-between px-2 mx-auto leading-none lg:px-0">
+      <h1>
+        <strong class="hidden">特寵生活</strong>
+        <a href="./home.html" class="hover:opacity-70">
+          <img class="max-w-[48px]" src="../assets/layout/LOGO.svg" alt="logo">
+        </a>
+      </h1>
+      <a class="text-4xl text-brown-dark" href="#">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+  <!-- PC Navbar -->
+  <div class="mt-[40px]">
     <div class="container flex mx-auto justify-evenly">
       <!-- Navbar -->
-      <nav class="max-w-[180px]">
+      <nav class="max-w-[180px] hidden xl:block">
         <h1>
           <strong class="hidden">特寵生活</strong>
           <a href="#" class="hover:opacity-70">
@@ -87,11 +104,19 @@
         </div>
       </nav>
       <!-- Banner -->
-      <figure class="ml-[24px]">
-        <img src="../assets/index/banner.svg" alt="banner">
+      <figure class="relative xl:ml-[24px]">
+        <img class="xl:hidden" src="../assets/index/banner.svg" alt="banner">
+        <img class="hidden xl:block" src="../assets/index/banner-bg.svg" alt="banner-bg">
+        <!-- Animal -->
+        <img class="hidden xl:block absolute top-40 left-16 hover:-translate-y-3" src="../assets/index/snake.svg" alt="snake">
+        <img class="hidden xl:block absolute bottom-16 left-24 hover:-translate-y-3" src="../assets/index/hamster.svg" alt="hamster">
+        <img class="hidden xl:block absolute top-60 left-80 hover:-translate-y-3" src="../assets/index/gecko.svg" alt="gecko">
+        <img class="hidden xl:block absolute top-32 right-[24%] hover:-translate-y-3" src="../assets/index/parrot.svg" alt="parrot">
+        <img class="hidden xl:block absolute bottom-12 right-72 hover:-translate-y-3" src="../assets/index/turtle.svg" alt="turtle">
+        <img class="hidden xl:block absolute bottom-40 right-16 hover:-translate-y-3" src="../assets/index/duck.svg" alt="duck">
       </figure>
     </div>
-  </header>
+  </div>
   <!-- Main -->
   <main class="mt-[80px]">
     <!-- News -->
@@ -202,7 +227,7 @@
               </figure>
             </article>
           </li>
-        
+
         </ul>
       </article>
     </div>
@@ -210,7 +235,8 @@
     <div class="mt-56 py-32 bg-cover bg-no-repeat bg-center bg-[url('../assets/index/hot-bg.svg')]">
       <article class="relative">
         <!-- Chameleon -->
-        <img class="absolute w-60 -top-[280px] left-20 hover:scale-110" src="../assets/index/chameleon.svg" alt="chameleon"></img>
+        <img class="absolute w-60 -top-[280px] left-20 hover:scale-110" src="../assets/index/chameleon.svg"
+          alt="chameleon"></img>
         <!-- Hot Info Title -->
         <div class="container mx-auto relative text-center font-black tracking-wide">
           <h2 class="text-brown-dark text-[48px]">
@@ -233,7 +259,7 @@
           <!-- Card Info -->
           <li class="max-w-sm px-8 py-7 border-2 rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
             <h4 class="text-sm text-cyan-normal font-medium">
-              烏龜 
+              烏龜
               <span class="text-brown-normal font-normal">
                 <img class="inline-block ml-1 mb-[2px]" src="../assets/index/time.svg" alt="time">
                 23小時前
@@ -250,7 +276,7 @@
           <!-- Card Info -->
           <li class="max-w-sm px-8 py-7 border-2 rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
             <h4 class="text-sm text-cyan-normal font-medium">
-              守宮 
+              守宮
               <span class="text-brown-normal font-normal">
                 <img class="inline-block ml-1 mb-[2px]" src="../assets/index/time.svg" alt="time">
                 5小時前
@@ -267,7 +293,7 @@
           <!-- Card Info -->
           <li class="max-w-sm px-8 py-7 border-2 rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
             <h4 class="text-sm text-cyan-normal font-medium">
-              兔子 
+              兔子
               <span class="text-brown-normal font-normal">
                 <img class="inline-block ml-1 mb-[2px]" src="../assets/index/time.svg" alt="time">
                 1小時前
@@ -278,13 +304,15 @@
               <img class="w-full" src="../assets/index/hot-3.png" alt="hot">
             </figure>
             <p class="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
-              自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅） 不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
+              自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
+              不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
             </p>
           </li>
         </ul>
         <!-- See More Button -->
         <div class="mt-20 flex justify-center text-xl text-center tracking-wide font-black">
-          <a href="#" class="py-2 w-[288px] bg-white border-2 rounded-full border-cyan-normal text-brown-dark hover:text-white hover:bg-cyan-normal">
+          <a href="#"
+            class="py-2 w-[288px] bg-white border-2 rounded-full border-cyan-normal text-brown-dark hover:text-white hover:bg-cyan-normal">
             查看更多文章
           </a>
         </div>
@@ -319,7 +347,8 @@
             <img class="mx-auto" src="../assets/layout/LOGO.svg" alt="logo">
           </a>
         </h2>
-        <ul class="max-w-[450px] mx-auto flex justify-center flex-wrap mt-8 sm:justify-start sm:mt-0 md:justify-start sm:max-w-[600px]">
+        <ul
+          class="max-w-[450px] mx-auto flex justify-center flex-wrap mt-8 sm:justify-start sm:mt-0 md:justify-start sm:max-w-[600px]">
           <li class="w-full sm:max-w-[200px]">
             <a href="./cafe.html" class="block hover:opacity-80">
               <div class="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
@@ -378,7 +407,8 @@
         </ul>
       </nav>
       <!-- Footer Contact -->
-      <section class="mt-6 pt-6 border-t border-white text-white sm:py-4 sm:ml-[48px] md:mt-0 md:pl-[64px] md:border-t-0 md:border-l">
+      <section
+        class="mt-6 pt-6 border-t border-white text-white sm:py-4 sm:ml-[48px] md:mt-0 md:pl-[64px] md:border-t-0 md:border-l">
         <div class="mx-auto max-w-[320px] pl-8 sm:pl-0">
           <h3 class="text-xl font-black tracking-wider">
             聯繫我們 Contact us

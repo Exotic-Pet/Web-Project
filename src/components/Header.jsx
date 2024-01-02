@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import "../styles/all.css";
 import logo from '../assets/layout/LOGO.svg';
-import accountGreen from '../assets/layout/account-green.svg';
+import accountBrown from '../assets/layout/account-brown.svg';
 
 export default function Header() {
   return (
@@ -42,7 +42,7 @@ export default function Header() {
         {/* Account Info */}
         <li className="ml-[16px]">
           <a className="flex items-center p-2 text-white rounded-full bg-brown-dark" href="#">
-            <img className="max-w-[40px]" src={accountGreen} alt="account" />
+            <img className="max-w-[40px]" src={accountBrown} alt="account" />
             <h2 className="ml-2 mr-1 text-[18px] hover:text-green-light">我的帳號</h2>
           </a>
         </li>
