@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import "../styles/all.css";
 import logo from '../assets/layout/LOGO.svg';
 import accountGreen from '../assets/layout/account-green.svg';
@@ -16,7 +18,7 @@ export default function Header() {
       </h1>
       {/* Mobile Menu */}
       <a className="text-4xl text-brown-dark lg:hidden" href="#">
-        <i className="fa-solid fa-bars"></i>
+        <FontAwesomeIcon icon={faBars} />
       </a>
       {/* PC Menu */}
       <ul className="items-center hidden font-black tracking-wide text-center lg:flex">

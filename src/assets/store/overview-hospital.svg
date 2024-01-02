@@ -1,9 +1,8 @@
 <svg width="620" height="327" viewBox="0 0 620 327" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_800_6360)">
-<mask id="mask0_800_6360" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="620" height="327">
+<mask id="mask0_1105_2457" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="620" height="327">
 <path d="M599.19 0H20.76C9.29457 0 0 9.29457 0 20.76V305.53C0 316.995 9.29457 326.29 20.76 326.29H599.19C610.655 326.29 619.95 316.995 619.95 305.53V20.76C619.95 9.29457 610.655 0 599.19 0Z" fill="white"/>
 </mask>
-<g mask="url(#mask0_800_6360)">
+<g mask="url(#mask0_1105_2457)">
 <path d="M634 -15.7109H-14.5098V336.289H634V-15.7109Z" fill="#F7F3F2"/>
 <path d="M209.16 -2.93094C209.16 -2.93094 166 188.289 -18 211.289V-9.71094L209.16 -2.93094Z" fill="#EBE7E4"/>
 <path d="M-7 327.289L629 327.289V272.289L-7 272.289V327.289Z" fill="#BAA493"/>
@@ -70,16 +69,4 @@
 <path d="M388.96 148.947H354.56C352.58 148.947 350.98 147.438 350.98 145.568C350.98 143.698 352.58 142.188 354.56 142.188H388.96C390.94 142.188 392.54 143.698 392.54 145.568C392.54 147.438 390.94 148.947 388.96 148.947Z" fill="#93C8C8"/>
 <path d="M388.36 141.762H355.15C353.73 141.762 352.58 140.672 352.58 139.342C352.58 138.002 353.73 136.922 355.15 136.922H388.36C389.78 136.922 390.93 138.012 390.93 139.342C390.93 140.682 389.78 141.762 388.36 141.762Z" fill="#B8E0DF"/>
 <path d="M388.36 136.481H355.15C353.73 136.481 352.58 135.401 352.58 134.061C352.58 132.721 353.73 131.641 355.15 131.641H388.36C389.78 131.641 390.93 132.731 390.93 134.061C390.93 135.401 389.78 136.481 388.36 136.481Z" fill="#B8E0DF"/>
-<path d="M517.2 193.922H199.37V200.412H517.2V193.922Z" fill="#AD9C8E" stroke="#84705A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M503.94 200.406H212.63V298.286H503.94V200.406Z" fill="#D3C7BC" stroke="#84705A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M363.57 234.289H352.99V273.249H363.57V234.289Z" fill="white"/>
-<path d="M377.76 259.049V248.469H338.8V259.049H377.76Z" fill="white"/>
-<path d="M258 215.289H227V253.289H258V215.289Z" fill="#93C8C8" stroke="#84705A" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M282 239.289H251V277.289H282V239.289Z" fill="#B8E0DF" stroke="#84705A" stroke-width="2" stroke-miterlimit="10"/>
-</g>
-<defs>
-<clipPath id="clip0_800_6360">
-<rect width="619.95" height="326.29" rx="35" fill="white"/>
-</clipPath>
-</defs>
 </svg>
