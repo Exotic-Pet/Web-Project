@@ -33,6 +33,20 @@ img {
   -webkit-box-orient: vertical;
   white-space: normal;
 }
+.ellipsis-3{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.ellipsis-4{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
 
 /* Scroll Ball Animation */
 .scroll {
@@ -127,5 +141,22 @@ img {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Auto Scroll Card */
+.auto__scroll {
+  animation: auto-scroll 30s linear infinite;
+  /* animation-direction: alternate; */
+}
+.auto__scroll:hover {
+  animation-play-state: paused;
+}
+@keyframes auto-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
