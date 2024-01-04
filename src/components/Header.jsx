@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="py-[16px]">
     {/* Navbar */}
-    <nav className="container flex items-center justify-between px-2 mx-auto leading-none lg:px-0">
+    <nav className="flex items-center justify-between mx-auto leading-none px-4 lg:px-8 2xl:px-0 2xl:container">
       <h1>
         <strong className="hidden">特寵生活</strong>
         <Link to="/" className="hover:opacity-70">
