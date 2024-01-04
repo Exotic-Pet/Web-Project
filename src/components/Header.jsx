@@ -21,7 +21,7 @@ export default function Header() {
         <FontAwesomeIcon icon={faBars} />
       </a>
       {/* PC Menu */}
-      <ul className="items-center hidden font-black tracking-wide text-center lg:flex">
+      <ul className="items-center hidden font-bold tracking-wide text-center lg:flex">
         <li className="nav__list min-w-[104px] border-r border-brown-light">
           <Link to="/store" className="nav__list__link py-2 text-brown-dark text-[20px]">
             特寵探店

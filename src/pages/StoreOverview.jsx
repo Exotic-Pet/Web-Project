@@ -18,7 +18,7 @@ export default function StoreOverview() {
                   <div className="mb-4 tracking-widest text-[100px] font-light">
                     Cafe
                   </div>
-                  <strong className="inline-block tracking-wide py-[10px] px-4 rounded-full bg-yellow-normal text-[30px] font-black">
+                  <strong className="inline-block tracking-wide py-[10px] px-4 rounded-full bg-yellow-normal text-[30px] font-bold">
                     特寵咖啡廳
                   </strong>
                 </h3>
@@ -33,7 +33,7 @@ export default function StoreOverview() {
                   <div className="mb-3 tracking-widest text-[50px] font-light">
                     Store
                   </div>
-                  <strong className="inline-block tracking-wide p-[10px] rounded-full bg-green-light text-[20px] font-black">
+                  <strong className="inline-block tracking-wide p-[10px] rounded-full bg-green-light text-[20px] font-bold">
                     特寵專賣店
                   </strong>
                 </h3>
@@ -46,7 +46,7 @@ export default function StoreOverview() {
                   <div className="mb-3 tracking-widest text-[50px] font-light">
                     Hospital
                   </div>
-                  <strong className="inline-block tracking-wide p-[10px] rounded-full bg-cyan-normal text-[20px] font-black">
+                  <strong className="inline-block tracking-wide p-[10px] rounded-full bg-cyan-normal text-[20px] font-bold">
                     特寵醫院
                   </strong>
                 </h3>

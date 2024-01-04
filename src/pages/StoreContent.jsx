@@ -25,7 +25,7 @@ export default function StoreContent() {
                 </div>
                 <span className="ml-4 font-bold text-brown-normal">2023.12.08</span>
             </h4>
-            <h2 className="text-3xl font-black text-cyan-dark mb-[18px] tracking-wider">玩蟒人生Pythonimd｜球蟒咖啡廳～各種球蟒、玉米蛇、爬蟲類零距離接觸，台北大橋頭捷運站另類咖啡館</h2>
+            <h2 className="text-3xl font-bold text-cyan-dark mb-[18px] tracking-wider">玩蟒人生Pythonimd｜球蟒咖啡廳～各種球蟒、玉米蛇、爬蟲類零距離接觸，台北大橋頭捷運站另類咖啡館</h2>
             <div className="flex justify-end border-b-2 mb-9 pb-[18px] border-brown-normal items-center">
                 <p className="text-base font-bold text-brown-normal">分享文章</p>
                 <a href="#"><img src={shareFacebook} alt="facebook分享" className="mx-[11px]" /></a>
@@ -46,7 +46,7 @@ export default function StoreContent() {
                 </div>
                 <div className="mt-12 xl:mt-0">
                     <a href="#"><img src={facebook} alt="facebook" className="mb-[26px]" /></a>
-                    <h3 className="pb-3 mb-2 text-2xl font-black border-b-2 border-solid text-cyan-dark border-brown-dark">玩蟒人生<span>Pythonism</span></h3>
+                    <h3 className="pb-3 mb-2 text-2xl font-bold border-b-2 border-solid text-cyan-dark border-brown-dark">玩蟒人生<span>Pythonism</span></h3>
                     <ul>
                         <li className="flex items-center">
                             <img src={telephone} alt="telephone" className="mr-1" />
@@ -68,12 +68,12 @@ export default function StoreContent() {
             </div>
         </article>
         <aside className="mt-10 pb-24 px-2 md:w-[300px] lg:px-0 lg:ml-6 xl:ml-[113px]">
-            <h3 className="tracking-wide pb-5 mb-5 text-xl font-black border-b-2 border-solid text-cyan-dark border-cyan-dark">相關文章</h3>
+            <h3 className="tracking-wide pb-5 mb-5 text-xl font-bold border-b-2 border-solid text-cyan-dark border-cyan-dark">相關文章</h3>
             <ul>
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -84,7 +84,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -95,7 +95,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -106,7 +106,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -117,7 +117,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -126,12 +126,12 @@ export default function StoreContent() {
                     </div>
                 </li>
             </ul>
-            <h3 className="tracking-wide pb-5 mb-5 text-xl font-black border-b-2 border-solid text-cyan-dark border-cyan-dark">熱門文章</h3>
+            <h3 className="tracking-wide pb-5 mb-5 text-xl font-bold border-b-2 border-solid text-cyan-dark border-cyan-dark">熱門文章</h3>
             <ul>
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -142,7 +142,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -153,7 +153,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -164,7 +164,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -175,7 +175,7 @@ export default function StoreContent() {
                 <li className="flex items-center mb-6">
                     <img src={contentImg_5} alt="content" className="mr-3" />
                     <div>
-                        <h4 className="text-[15px] font-black text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
+                        <h4 className="text-[15px] font-bold text-brown-dark">台北肉球森林和可愛的貓咪、大嘴鳥、狐獴互動</h4>
                         <div className="flex">
                             <p className="text-cyan-dark font-medium text-[13px]">特寵咖啡廳</p>
                             <img src={time} alt="time" className="ml-2 mr-1" />
@@ -184,8 +184,8 @@ export default function StoreContent() {
                     </div>
                 </li>
             </ul>
-            <div className="mx-auto mt-[75px] mb-[39px] w-[300px] h-[200px] leading-[200px] font-black text-xl bg-gray-300 text-center">GDN</div>
-            <div className="mx-auto text-center w-[300px] h-[200px] leading-[200px] justify-center font-black text-xl bg-gray-300">GDN</div>
+            <div className="mx-auto mt-[75px] mb-[39px] w-[300px] h-[200px] leading-[200px] font-bold text-xl bg-gray-300 text-center">GDN</div>
+            <div className="mx-auto text-center w-[300px] h-[200px] leading-[200px] justify-center font-bold text-xl bg-gray-300">GDN</div>
         </aside>
     </main>
     )
