@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reptile</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- all.css -->
+    <link rel="stylesheet" href="../styles/all.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-[16px]">
+        <!-- Navbar -->
+        <nav class="flex items-center justify-between px-4 mx-auto leading-none lg:px-8 2xl:px-0 2xl:container">
+            <h1>
+                <strong class="hidden">特寵生活</strong>
+                <a href="./home.html" class="hover:opacity-70">
+                    <img class="max-w-[48px]" src="../assets/layout/LOGO.svg" alt="logo">
+                </a>
+            </h1>
+            <!-- Mobile Menu -->
+            <a class="text-4xl text-brown-dark lg:hidden" href="#">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+            <!-- PC Menu -->
+            <ul class="items-center hidden font-black tracking-wide text-center lg:flex">
+                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                    <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵探店</a>
+                </li>
+                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                    <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵活動</a>
+                </li>
+                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                    <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵介紹</a>
+                </li>
+                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                    <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">聚會揪團</a>
+                </li>
+                <li class="nav__list min-w-[104px]">
+                    <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">心得交流</a>
+                </li>
+                <!-- Account Info -->
+                <li class="ml-[16px]">
+                    <a class="flex items-center p-2 text-white rounded-full bg-brown-dark" href="#">
+                        <img class="max-w-[40px]" src="../assets/layout/account-brown.svg" alt="account">
+                        <h2 class="ml-2 mr-1 text-[18px] hover:text-green-light">我的帳號</h2>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content Info -->
+    <main class="container grid justify-center grid-cols-12 mx-auto mt-11 mb-32 gap-x-[50px]">
+        <aside class="col-span-3 mt-9">
+            <!-- Search Bar -->
+            <form action="" class="flex justify-around">
+                <div class="relative">
+                    <input type="text" placeholder="搜尋"
+                        class="text-brown-normal text-xl w-[258px] rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-green-normal">
+                    <img class="absolute w-5 cursor-pointer right-4 top-[11px] hover:scale-125"
+                        src="../assets/store/search.svg" alt="search">
+                </div>
+            </form>
+            <!-- Search Place -->
+            <h2 class="text-3xl font-black tracking-wider text-center text-brown-normal m-7">索引目錄</h2>
+            <form action="">
+                <h2 class="mb-6 text-2xl font-bold text-green-dark">兩棲爬蟲類</h2>
+                <ul>
+                    <li>
+                        <a href="#" class="flex justify-between">
+                            <h3 class="text-xl font-bold tracking-wider text-brown-dark">守宮</h3>
+                            <img src="../assets/reptile/arrow-top.svg" alt="arrow-top" class="rotate-180">
+                        </a>
+                        <h3 class="mt-2 text-xl text-brown-dark"><a href="#">地棲守宮</a></h3>
+                        <h3 class="mt-1 mb-[10px] text-xl text-brown-dark"><a href="#">樹棲守宮</a></h3>
+                    </li>
+                    <li class="pt-4 border-t border-solid border-brown-normal">
+                        <a href="#" class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold tracking-wider text-brown-dark">蜥蜴(變色龍)</h3>
+                            <img src="../assets/reptile/arrow-top.svg" alt="arrow-top" class="rotate-180">
+                        </a>
+                        <h3 class="mt-2 text-xl text-brown-dark"><a href="#">地棲蜥蜴</a></h3>
+                        <h3 class="mt-1 text-xl text-brown-dark mb-[10px]"><a href="#">樹棲蜥蜴</a></h3>
+                    </li>
+                    <li class="pt-4 border-t border-solid border-brown-normal">
+                        <a href="#" class="flex justify-between">
+                            <h3 class="text-xl font-bold tracking-wider text-brown-dark">烏龜</h3>
+                            <img src="../assets/reptile/arrow-top.svg" alt="arrow-top" class="rotate-180">
+                        </a>
+                        <h3 class="mt-2 text-xl text-brown-dark"><a href="#">陸龜</a></h3>
+                        <h3 class="mt-1 text-xl text-brown-dark mb-[10px]"><a href="#">水龜</a></h3>
+                    </li>
+                    <li class="pt-4 border-t border-solid border-brown-normal">
+                        <a href="#" class="flex justify-between">
+                            <h3 class="text-xl font-bold tracking-wider text-brown-dark">蛇</h3>
+                            <img src="../assets/reptile/arrow-top.svg" alt="arrow-top" class="rotate-180">
+                        </a>
+                        <h3 class="mt-2 text-xl text-brown-dark"><a href="#">地棲蛇</a></h3>
+                        <h3 class="mt-1 text-xl text-brown-dark mb-[10px]"><a href="#">樹棲蛇</a></h3>
+                    </li>
+                </ul>
+            </form>
+        </aside>
+        <section class="col-span-9 tracking-wide">
+            <!-- gecko -->
+            <div class="flex justify-between">
+                <div class="w-[281px] h-[58px] bg-brown-light flex justify-around items-center rounded-t-[20px]">
+                    <div class="flex">
+                        <div class="w-3 h-3 rounded-full bg-traffic-red"></div>
+                        <div class="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
+                        <div class="w-3 h-3 rounded-full bg-traffic-green"></div>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brown-dark">兩棲爬蟲類</h2>
+                </div>
+                <div class="w-[121px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                    <h2 class="text-2xl font-bold text-center text-white">守宮</h2>
+                </div>
+            </div>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none">
+                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">地棲守宮</h3>
+                <div class="flex justify-center mx-8 px-14">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+                <h3 class="mt-6 mb-6 text-3xl font-bold text-center text-white">樹棲守宮</h3>
+                <div class="flex justify-center mx-8 px-14 pb-[54px]">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+            </div>
+            <!-- lizard -->
+            <div class="flex justify-between mt-6">
+                <div class="w-[281px] h-[58px] bg-brown-light flex justify-around items-center rounded-t-[20px]">
+                    <div class="flex">
+                        <div class="w-3 h-3 rounded-full bg-traffic-red"></div>
+                        <div class="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
+                        <div class="w-3 h-3 rounded-full bg-traffic-green"></div>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brown-dark">兩棲爬蟲類</h2>
+                </div>
+                <div class="w-[220px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                    <h2 class="text-2xl font-bold text-center text-white">蜥蜴(變色龍)</h2>
+                </div>
+            </div>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none">
+                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">地棲蜥蜴</h3>
+                <div class="flex justify-center mx-8 px-14">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+                <h3 class="mt-6 mb-6 text-3xl font-bold text-center text-white">樹棲蜥蜴</h3>
+                <div class="flex justify-center mx-8 px-14 pb-[54px]">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+            </div>
+            <!-- turtle -->
+            <div class="flex justify-between mt-6">
+                <div class="w-[281px] h-[58px] bg-brown-light flex justify-around items-center rounded-t-[20px]">
+                    <div class="flex">
+                        <div class="w-3 h-3 rounded-full bg-traffic-red"></div>
+                        <div class="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
+                        <div class="w-3 h-3 rounded-full bg-traffic-green"></div>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brown-dark">兩棲爬蟲類</h2>
+                </div>
+                <div class="w-[121px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                    <h2 class="text-2xl font-bold text-center text-white">烏龜</h2>
+                </div>
+            </div>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none">
+                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">陸龜</h3>
+                <div class="flex justify-center mx-8 px-14">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+                <h3 class="mt-6 mb-6 text-3xl font-bold text-center text-white">水龜</h3>
+                <div class="flex justify-center mx-8 px-14 pb-[54px]">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+            </div>
+            <!-- snake -->
+            <div class="flex justify-between mt-6">
+                <div class="w-[281px] h-[58px] bg-brown-light flex justify-around items-center rounded-t-[20px]">
+                    <div class="flex">
+                        <div class="w-3 h-3 rounded-full bg-traffic-red"></div>
+                        <div class="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
+                        <div class="w-3 h-3 rounded-full bg-traffic-green"></div>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brown-dark">兩棲爬蟲類</h2>
+                </div>
+                <div class="w-[121px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                    <h2 class="text-2xl font-bold text-center text-white">蛇</h2>
+                </div>
+            </div>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none">
+                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">地棲蛇</h3>
+                <div class="flex justify-center mx-8 px-14">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+                <h3 class="mt-6 mb-6 text-3xl font-bold text-center text-white">樹棲蛇</h3>
+                <div class="flex justify-center mx-8 px-14 pb-[54px]">
+                    <img src="../assets/reptile/sample1.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample2.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample3.png" alt="gecko" class="rounded-xl mr-[22px]">
+                    <img src="../assets/reptile/sample4.png" alt="gecko" class="rounded-xl">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-[64px] relative bg-yellow-normal">
+        <div class="container flex flex-col justify-center mx-auto md:flex-row">
+            <nav class="flex flex-col justify-center md:flex-row">
+                <h2 class="md:mr-[44px]">
+                    <strong class="hidden">特寵生活</strong>
+                    <a href="#" class="hover:opacity-80">
+                        <img class="mx-auto" src="../assets/layout/LOGO.svg" alt="logo">
+                    </a>
+                </h2>
+                <ul
+                    class="max-w-[450px] mx-auto flex justify-center flex-wrap mt-8 sm:justify-start sm:mt-0 md:justify-start sm:max-w-[600px]">
+                    <li class="w-full sm:max-w-[200px]">
+                        <a href="./cafe.html" class="block hover:opacity-80">
+                            <div class="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                                <img src="../assets/layout/home-white.svg" alt="home">
+                                <h2 class="ml-[12px] text-[22px] tracking-wide text-brown-dark font-black">
+                                    特寵探店
+                                    <small class="block text-[10px] text-white">Exotic pet stores</small>
+                                </h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="w-full sm:max-w-[200px]">
+                        <a href="#" class="block hover:opacity-80">
+                            <div class="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                                <img src="../assets/layout/calendar-white.svg" alt="calendar">
+                                <h2 class="ml-[12px] text-[22px] tracking-wide text-brown-dark font-black">
+                                    特寵活動
+                                    <small class="block text-[10px] text-white">Exotic pet event</small>
+                                </h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="w-full sm:max-w-[200px]">
+                        <a href="#" class="block hover:opacity-80">
+                            <div class="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                                <img src="../assets/layout/intro-white.svg" alt="intro">
+                                <h2 class="ml-[12px] text-[22px] tracking-wide text-brown-dark font-black">
+                                    特寵介紹
+                                    <small class="block text-[10px] text-white">Introduction</small>
+                                </h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="w-full sm:max-w-[200px]">
+                        <a href="#" class="block hover:opacity-80">
+                            <div class="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                                <img src="../assets/layout/people-white.svg" alt="people">
+                                <h2 class="ml-[12px] text-[22px] tracking-wide text-brown-dark font-black">
+                                    聚會揪團
+                                    <small class="block text-[10px] text-white">Get-together</small>
+                                </h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="w-full sm:max-w-[200px]">
+                        <a href="#" class="block hover:opacity-80">
+                            <div class="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                                <img src="../assets/layout/msg-white.svg" alt="msg">
+                                <h2 class="ml-[12px] text-[22px] tracking-wide text-brown-dark font-black">
+                                    心得交流
+                                    <small class="block text-[10px] text-white">Forum</small>
+                                </h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Footer Contact -->
+            <section
+                class="mt-6 pt-6 border-t border-white text-white sm:py-4 sm:ml-[48px] md:mt-0 md:pl-[64px] md:border-t-0 md:border-l">
+                <div class="mx-auto max-w-[320px] pl-8 sm:pl-0">
+                    <h3 class="text-xl font-black tracking-wider">
+                        聯繫我們 Contact us
+                    </h3>
+                    <ul class="mt-[16px] text-sm leading-6 font-medium tracking-wide">
+                        <li>電話 02-22222222</li>
+                        <li>Email tttt0000@gmail.com</li>
+                        <li>地址 台北市中山區民權一路145號</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Page Top -->
+        <div class="absolute -top-14 right-[7%] hover:scale-110">
+            <a class="flex justify-center items-center w-24 h-24 border-white border-[3px] bg-green-normal rounded-3xl"
+                href="#">
+                <p class="text-lg font-black tracking-wide text-center text-white">
+                    PAGE<br>TOP
+                </p>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        green: {
+                            dark: "#678E40",
+                            normal: "#91AF74",
+                            light: "#ABC592",
+                        },
+                        brown: {
+                            dark: "#543816",
+                            normal: "#A3907A",
+                            light: "#D0CCC6",
+                        },
+                        yellow: {
+                            dark: "#D7A10A",
+                            normal: "#EFC141",
+                            light: "#F7D575",
+                        },
+                        cyan: {
+                            dark: "#4D9895",
+                            normal: "#93C9C8",
+                        },
+                        gray: {
+                            dark: "#EFEAE6",
+                            normal: "#F9F5F2",
+                        },
+                        traffic: {
+                            red: "#ED6351",
+                            yellow: "#F4C247",
+                            green: "#83D35E"
+                        }
+                    },
+                    letterSpacing: {
+                        wide: '0.1rem',
+                        wider: '0.2rem',
+                        widest: '0.3rem',
+                    },
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
