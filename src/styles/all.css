@@ -48,6 +48,90 @@ img {
   white-space: normal;
 }
 
+/* Checkbox Style */
+.checkbox__style {
+  cursor: pointer;
+}
+/* Hidden Default Style */
+.checkbox__style input[type="checkbox"] {
+  display: none;
+}
+/* Checkbox Border */
+.checkbox__style .checkmark::before {
+  content: "";
+  outline: 1px solid #543816;
+  border-radius: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  transition: all 0.1s;
+}
+/* Checked Style */
+.checkbox__style input[type="checkbox"]:checked + .checkmark::before {
+  outline: 0;
+}
+/* Checkbox Color */
+.checkbox--yellow input[type="checkbox"]:checked + .checkmark::before {
+  background-color: #EFC141;
+}
+.checkbox--cyan input[type="checkbox"]:checked + .checkmark::before {
+  background-color: #4D9895;
+}
+.checkbox--green input[type="checkbox"]:checked + .checkmark::before {
+  background-color: #ABC592;
+}
+
+/* Slider Style */
+input[type="range"] {
+  width: 100%; /* 可依需求調整寬度 */
+  -webkit-appearance: none; /* 重設預設樣式 */
+  background: transparent; /* 將預設軌道設為透明 */
+}
+/* Slider Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  transform: translateY(-6px); /* 滑塊位置 */
+  width: 20px; /* 滑塊寬度 */
+  height: 20px; /* 滑塊高度 */
+  background-color: #A3907A; /* 滑塊顏色 */
+  cursor: pointer; /* 滑過時的指標形狀 */
+  border-radius: 50%; /* 圓形滑塊 */
+  -webkit-appearance: none;
+  appearance: none;
+  transition: all 0.2s;
+}
+/* Slider Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background-color: #eee; /* 軌道顏色 */
+  border-radius: 5px; /* 軌道圓角 */
+}
+/* Range Color */
+.range--yellow input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #EFC141;
+}
+.range--cyan input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4D9895;
+}
+.range--green input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #ABC592;
+}
+
+/* Toggle Expand */
+.toggle--click + .toggle--hidden {
+  display: none;
+  /* overflow: hidden; */
+  height: 0;
+}
+.toggle--click + .toggle--expand {
+  max-height: 800px;
+  display: block;
+}
+
 /* Scroll Ball Animation */
 .scroll {
   position: relative;
@@ -119,13 +203,27 @@ img {
   position: absolute;
   bottom: -10px;
   height: 3px;
-  background-color: #543816;
+  background-color: #ABC592;
   right: 0;
   transition: all 0.3s;
 }
 .nav__list__link:hover::after {
-  width: 102%;
-  left: -2px;
+  width: 100%;
+  left: 0;
+}
+.nav__list__menu {
+  width: 125%;
+  position: absolute;
+  z-index: 100;
+  left: -11px;
+  top: 40px;
+  text-align: center;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.5s;
+}
+.nav__list__link:hover + .nav__list__menu, .nav__list__menu:hover {
+  height: 200px;
 }
 
 /* Zoom */

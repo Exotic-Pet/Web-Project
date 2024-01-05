@@ -27,27 +27,66 @@
                 <i class="fa-solid fa-bars"></i>
             </a>
             <!-- PC Menu -->
-            <ul class="items-center hidden font-bold tracking-wide text-center lg:flex">
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
+            <ul class="gap-x-4 items-center hidden font-bold tracking-wide text-center lg:flex">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵探店</a>
+                    <!-- Expand Menu -->
+                    <div class="nav__list__menu">
+                        <ul class="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
+                            <li class="text-[16px] font-semibold">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">特寵咖啡廳</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">特寵專賣店</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">特寵醫院</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="./event.html">特寵活動</a>
                 </li>
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵介紹</a>
+                    <!-- Expand Menu -->
+                    <div class="nav__list__menu">
+                        <ul class="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
+                            <li class="text-[16px] font-semibold">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">兩棲爬蟲類</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">兔、鼠類</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">鳥類</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">節肢動物類</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">聚會揪團</a>
                 </li>
-                <li class="nav__list min-w-[104px]">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">心得交流</a>
                 </li>
                 <!-- Account Info -->
                 <li class="ml-[16px]">
-                    <a class="flex items-center p-2 text-white rounded-full bg-brown-dark" href="#">
-                        <img class="max-w-[40px]" src="../assets/layout/account-green.svg" alt="account">
-                        <h2 class="ml-2 mr-1 text-[18px] hover:text-green-light">我的帳號</h2>
+                    <a class="flex items-center p-2 text-white rounded-full bg-brown-dark group" href="#">
+                        <img class="max-w-[40px] group-hover:hidden" src="../assets/layout/account-brown.svg"
+                            alt="account-brown">
+                        <img class="max-w-[40px] hidden group-hover:block" src="../assets/layout/account-green.svg"
+                            alt="account-green">
+                        <h2 class="ml-2 mr-1 text-[18px]">我的帳號</h2>
                     </a>
                 </li>
             </ul>
@@ -55,7 +94,8 @@
     </header>
 
     <!-- Banner -->
-    <div class="bg-yellow-normal bg-no-repeat bg-center bg-[url('../assets/store/cafe-banner.svg')] min-h-[133px]"></div>
+    <div class="bg-yellow-normal bg-no-repeat bg-center bg-[url('../assets/store/cafe-banner.svg')] min-h-[133px]">
+    </div>
 
     <!-- Cafe Page -->
     <main class="flex flex-wrap md:justify-between xl:flex-nowrap">
@@ -66,7 +106,8 @@
                     <div class="relative">
                         <input type="text" placeholder="搜尋"
                             class="text-brown-normal text-[26px] w-[388px] rounded-full border-2 border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal">
-                        <img class="absolute cursor-pointer right-5 top-3 hover:scale-125" src="../assets/store/search.svg" alt="search">
+                        <img class="absolute cursor-pointer right-5 top-3 hover:scale-125"
+                            src="../assets/store/search.svg" alt="search">
                     </div>
                 </form>
                 <!-- Search Place -->
@@ -74,57 +115,135 @@
                 <form action="">
                     <ul>
                         <li>
-                            <a href="#" class="flex justify-between">
-                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">你想去哪？</h3>
-                                <img src="../assets/store/arrow-top.svg" alt="arrow-top" class="hover:-rotate-180">
+                            <a href="#" class="toggle--click flex justify-between">
+                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">
+                                    你想去哪？
+                                </h3>
+                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom"
+                                    class="hover:-rotate-180">
                             </a>
-                            <div class="flex mb-8 text-xl mt-7">
-                                <label class="w-1/4 text-brown-dark"><input type="checkbox" name="button1" id="north" class="mx-2">北部</label>
-                                <label class="w-1/4 text-brown-dark"><input type="checkbox" name="button1" id="center" class="mx-2">中部</label>
-                                <label class="w-1/4 text-brown-dark"><input type="checkbox" name="button1" id="south" class="mx-2">南部</label>
-                                <label class="w-1/4 text-brown-dark"><input type="checkbox" name="button1" id="east" class="mx-2">東部</label>
+                            <div class="toggle--hidden checkbox__style checkbox--yellow flex mb-8 text-xl mt-7">
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="area" value="北部">
+                                    <span class="checkmark px-3">北部</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="area" value="中部">
+                                    <span class="checkmark px-3">中部</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="area" value="南部">
+                                    <span class="checkmark px-3">南部</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="area" value="東部">
+                                    <span class="checkmark px-3">東部</span>
+                                </label>
                             </div>
                         </li>
-                        <li class="my-6 border-y-2">
+                        <li class="mt-6 border-t-2">
                             <a href="#" class="flex justify-between my-5">
-                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">想找什麼？</h3>
-                                <img src="../assets/store/arrow-top.svg" alt="arrow-top" class="hover:-rotate-180">
+                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">
+                                    想找什麼？
+                                </h3>
+                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom"
+                                    class="hover:-rotate-180">
                             </a>
-                            <div class="flex flex-wrap mb-8 text-xl mt-7">
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">守宮</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">蛇</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">兔子</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">狐獴</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">蜥蜴</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">鸚鵡</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">烏龜</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark"><input type="checkbox" name="button1" id=""><span class="pl-3">水豚</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark whitespace-nowrap"><input type="checkbox" name="button1" id=""><span class="pl-3">草泥馬</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark whitespace-nowrap"><input type="checkbox" name="button1" id=""><span class="pl-3">柯爾鴨</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark whitespace-nowrap"><input type="checkbox" name="button1" id=""><span class="pl-3">天竺鼠</span></label>
-                                <label class="w-1/4 px-2 text-brown-dark "><input type="checkbox" name="button1" id=""><span class="pl-3">浣熊</span></label>
+                            <div class="checkbox__style checkbox--yellow flex flex-wrap mb-8 mt-7 text-xl">
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="守宮">
+                                    <span class="checkmark px-3">守宮</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="蛇">
+                                    <span class="checkmark px-3">蛇</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="兔子">
+                                    <span class="checkmark px-3">兔子</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="狐獴">
+                                    <span class="checkmark px-3">狐獴</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="蜥蜴">
+                                    <span class="checkmark px-3">蜥蜴</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="鸚鵡">
+                                    <span class="checkmark px-3">鸚鵡</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="烏龜">
+                                    <span class="checkmark px-3">烏龜</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="水豚">
+                                    <span class="checkmark px-3">水豚</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="草泥馬">
+                                    <span class="checkmark px-3">草泥馬</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="柯爾鴨">
+                                    <span class="checkmark px-3">柯爾鴨</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="天竺鼠">
+                                    <span class="checkmark px-3">天竺鼠</span>
+                                </label>
+                                <label
+                                    class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
+                                    <input type="checkbox" name="animal" value="浣熊">
+                                    <span class="checkmark px-3">浣熊</span>
+                                </label>
                             </div>
-                            <button class="mx-auto block text-xl text-brown-dark rounded-full w-[106px] h-[36px] border-solid border-2 border-brown-dark mb-9 hover:bg-yellow-light">查看更多</button>
+                            <button
+                                class="mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:bg-yellow-light">
+                                查看更多
+                            </button>
                         </li>
-                        <li>
-                            <a href="#" class="flex justify-between">
-                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">想花多少？</h3>
-                                <img src="../assets/store/arrow-top.svg" alt="arrow-top" class="hover:-rotate-180">
+                        <li class="mt-6 border-t-2">
+                            <a href="#" class="flex justify-between mt-5">
+                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">
+                                    想花多少？</h3>
+                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom"
+                                    class="hover:-rotate-180">
                             </a>
-                            <div>
-                                <input type="range" min="0" max="800" step="1" value="0" name='moneyRange' class="w-full mt-9">
-                                <div class="flex">
-                                    <p class="ml-[84px] text-xl font-bold text-brown-normal">200</p>
-                                    <p class="ml-[56px] text-xl font-bold text-brown-normal">400</p>
-                                    <p class="ml-[56px] text-xl font-bold text-brown-normal">600</p>
-                                    <p class="ml-[56px] text-xl font-bold text-brown-normal">800</p>
+                            <div class="range--yellow">
+                                <input type="range" min="0" max="800" step="1" value="0" name='moneyRange'
+                                    class="w-full mt-9">
+                                <div class="flex mt-3">
+                                    <p class="flex-1 text-right text-xl font-bold text-brown-normal">200</p>
+                                    <p class="flex-1 text-right text-xl font-bold text-brown-normal">400</p>
+                                    <p class="flex-1 text-right text-xl font-bold text-brown-normal">600</p>
+                                    <p class="flex-1 text-right text-xl font-bold text-brown-normal">800</p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                     <div class="mt-14 text-brown-dark">
-                        <button class="hover:scale-110 mx-auto block text-2xl font-bold bg-yellow-light rounded-full w-[213px] h-[49px]">開始搜尋</button>
-                        <button class="hover:scale-110 mx-auto block text-2xl font-bold bg-brown-light rounded-full w-[213px] h-[49px] mt-4">清除條件</button>
+                        <button
+                            class="hover:scale-110 mx-auto block text-[20px] font-bold bg-yellow-light rounded-full w-[213px] h-[49px]">開始搜尋</button>
+                        <button
+                            class="hover:scale-110 mx-auto block text-[20px] font-bold bg-brown-light rounded-full w-[213px] h-[49px] mt-4">清除條件</button>
                     </div>
                 </form>
             </div>
@@ -132,138 +251,170 @@
         <!-- Store List -->
         <section class="mt-10 xl:ml-11">
             <ul class="flex flex-col items-center justify-center sm:flex-row">
-                <li class="w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-brown-dark hover:bg-brown-normal">
+                <li
+                    class="w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent hover:bg-gray-dark active:bg-brown-normal">
                     <a href="#" class="flex py-5 px-7 group">
-                        <img src="../assets/store/coffee.svg" alt="cafe" class="group-hover:hidden">
-                        <img src="../assets/store/coffee-white.svg" alt="cafe" class="hidden group-hover:inline">
-                        <h4 class="ml-3 text-xl font-bold tracking-wide text-brown-normal group-hover:text-white">特寵<br>咖啡廳</h4>
+                        <img src="../assets/store/coffee.svg" alt="cafe" class="group-active:hidden">
+                        <img src="../assets/store/coffee-white.svg" alt="cafe" class="hidden group-active:block">
+                        <h4 class="ml-3 text-xl font-bold tracking-wide text-brown-normal group-active:text-white">
+                            特寵<br>咖啡廳</h4>
                     </a>
                 </li>
-                <li class="w-[195px] my-2 border-2 border-solid rounded-full sm:mx-8 border-brown-light hover:border-brown-dark hover:bg-brown-normal">
+                <li
+                    class="w-[195px] my-2 border-2 border-solid rounded-full sm:mx-8 border-brown-light hover:border-transparent hover:bg-gray-dark active:bg-brown-normal">
                     <a href="#" class="flex py-5 px-7 group">
-                        <img src="../assets/store/shop.svg" alt="store" class="group-hover:hidden">
-                        <img src="../assets/store/shop-white.svg" alt="store" class="hidden group-hover:inline">
-                        <h4 class="ml-3 text-xl font-bold tracking-wide text-brown-normal group-hover:text-white">特寵<br>專賣店</h4>
+                        <img src="../assets/store/shop.svg" alt="store" class="group-active:hidden">
+                        <img src="../assets/store/shop-white.svg" alt="store" class="hidden group-active:block">
+                        <h4 class="ml-3 text-xl font-bold tracking-wide text-brown-normal group-active:text-white">
+                            特寵<br>專賣店</h4>
                     </a>
                 </li>
-                <li class="w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-brown-dark hover:bg-brown-normal"">
-                    <a href="#" class="flex py-5 pl-7 pr-9 group">
-                        <img src="../assets/store/hospital.svg" alt="hospital" class="group-hover:hidden">
-                        <img src="../assets/store/hospital-white.svg" alt="hospital" class="hidden group-hover:inline">
-                        <h4 class="ml-3 text-xl font-bold tracking-wide text-brown-normal group-hover:text-white">特寵<br>醫院</h4>
+                <li
+                    class="w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent hover:bg-gray-dark active:bg-brown-normal">
+                    <a href=" #" class="flex py-5 pl-7 pr-9 group">
+                        <img src="../assets/store/hospital.svg" alt="hospital" class="group-active:hidden">
+                        <img src="../assets/store/hospital-white.svg" alt="hospital" class="hidden group-active:block">
+                        <h4 class="ml-3 text-xl font-bold tracking-wide text-brown-normal group-active:text-white">
+                            特寵<br>醫院
+                        </h4>
                     </a>
                 </li>
             </ul>
             <div class="bg-gray-dark xl:rounded-tl-[75px] pb-2 w-full pt-[66px] mt-10">
-                <ul class=" md:ml-[70px] flex flex-wrap gap-7 justify-center">
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px]">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">玩蟒人生<span class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
+                <ul class="md:ml-[70px] flex flex-wrap gap-7 justify-center">
+                    <li
+                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">玩蟒人生<span
+                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
                         <figure class="relative">
                             <img src="../assets/store/store-img.png" alt="store" class="mt-[17px]">
                             <img src="../assets/store/like.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
                             </li>
-                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">
+                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
                                 #龜</li>
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] h-[70px] tracking-wide">只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
+                        <p class="text-base text-brown-dark w-[300px] tracking-wide">
+                            只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                         </p>
-                        <a href="#" class="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <a href="#"
+                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px]">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
+                    <li
+                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
+                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
                         <figure class="relative">
                             <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
                             </li>
-                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">
+                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
                                 #龜</li>
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] h-[70px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
-                        <a href="#" class="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <p class="text-base text-brown-dark w-[300px] tracking-wide">
+                            只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
+                        </p>
+                        <a href="#"
+                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px]">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
+                    <li
+                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
+                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
                         <figure class="relative">
                             <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
                             </li>
-                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">
+                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
                                 #龜</li>
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] h-[70px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
-                        <a href="#" class="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
+                        </p>
+                        <a href="#"
+                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px]">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
+                    <li
+                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
+                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
                         <figure class="relative">
                             <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
                             <img src="../assets/store/like.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
                             </li>
-                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">
+                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
                                 #龜</li>
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] h-[70px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
-                        <a href="#" class="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
+                        </p>
+                        <a href="#"
+                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px]">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
+                    <li
+                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
+                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
                         <figure class="relative">
                             <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
                             </li>
-                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">
+                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
                                 #龜</li>
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] h-[70px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
-                        <a href="#" class="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
+                        </p>
+                        <a href="#"
+                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
-                    <li class="bg-white rounded-xl px-[35px] py-[30px] w-[375px]">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
+                    <li
+                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
+                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
                         <figure class="relative">
                             <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
                             </li>
-                            <li class="px-2 mx-1 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">
+                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
                                 #龜</li>
-                            <li class="px-2 border-2 border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] h-[70px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥</p>
-                        <a href="#" class="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-cyan-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
+                        </p>
+                        <a href="#"
+                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
                     </li>
                 </ul>
                 <ul class="flex justify-center my-24">
