@@ -60,7 +60,7 @@ input::placeholder {
   margin: 0 auto;
 }
 .toggle--click + .toggle--open {
-  max-height: 1000px;
+  max-height: 500px;
 }
 
 /* Checkbox Style */
