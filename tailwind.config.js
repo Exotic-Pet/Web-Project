@@ -38,6 +38,9 @@ export default {
         'overview-cafe': "url('./src/assets/store/overview-cafe.svg')",
         'overview-store': "url('./src/assets/store/overview-store.svg')",
         'overview-hospital': "url('./src/assets/store/overview-hospital.svg')",
+        'cafe-banner': "url('./src/assets/store/cafe-banner.svg')",
+        'store-banner': "url('./src/assets/store/store-banner.svg')",
+        'hospital-banner': "url('./src/assets/store/hospital-banner.svg')",
       }
     },
   },

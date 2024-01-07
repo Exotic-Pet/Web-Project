@@ -99,7 +99,7 @@
 
     <!-- Cafe Page -->
     <main class="flex flex-wrap md:justify-between xl:flex-nowrap">
-        <aside class="mt-20 xl:ml-20 w-[388px] mx-auto">
+        <aside class="mt-20 w-[388px] mx-auto xl:ml-20">
             <div>
                 <!-- Search Bar -->
                 <form action="" class="flex justify-around">
@@ -116,13 +116,12 @@
                     <ul>
                         <li>
                             <a href="#" class="toggle--click flex justify-between">
-                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">
+                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
                                     你想去哪？
                                 </h3>
-                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom"
-                                    class="hover:-rotate-180">
+                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom" class="hover:scale-125">
                             </a>
-                            <div class="toggle--hidden checkbox__style checkbox--yellow flex mb-8 text-xl mt-7">
+                            <div class="toggle--close checkbox__style checkbox--yellow flex text-xl">
                                 <label
                                     class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
                                     <input type="checkbox" name="area" value="北部">
@@ -146,14 +145,13 @@
                             </div>
                         </li>
                         <li class="mt-6 border-t-2">
-                            <a href="#" class="flex justify-between my-5">
-                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">
+                            <a href="#" class="toggle--click flex justify-between my-5">
+                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
                                     想找什麼？
                                 </h3>
-                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom"
-                                    class="hover:-rotate-180">
+                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom" class="hover:scale-125">
                             </a>
-                            <div class="checkbox__style checkbox--yellow flex flex-wrap mb-8 mt-7 text-xl">
+                            <div class="toggle--close checkbox__style checkbox--yellow flex flex-wrap text-xl">
                                 <label
                                     class="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
                                     <input type="checkbox" name="animal" value="守宮">
@@ -214,20 +212,18 @@
                                     <input type="checkbox" name="animal" value="浣熊">
                                     <span class="checkmark px-3">浣熊</span>
                                 </label>
+                                <button class="mt-8 mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:bg-yellow-light">
+                                    查看更多
+                                </button>
                             </div>
-                            <button
-                                class="mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:bg-yellow-light">
-                                查看更多
-                            </button>
                         </li>
-                        <li class="mt-6 border-t-2">
-                            <a href="#" class="flex justify-between mt-5">
-                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:text-yellow-normal">
+                        <li class="border-t-2">
+                            <a href="#" class="toggle--click flex justify-between mt-5">
+                                <h3 class="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
                                     想花多少？</h3>
-                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom"
-                                    class="hover:-rotate-180">
+                                <img src="../assets/store/arrow-bottom.svg" alt="arrow-bottom" class="hover:scale-125">
                             </a>
-                            <div class="range--yellow">
+                            <div class="toggle--close range--yellow">
                                 <input type="range" min="0" max="800" step="1" value="0" name='moneyRange'
                                     class="w-full mt-9">
                                 <div class="flex mt-3">
@@ -240,10 +236,8 @@
                         </li>
                     </ul>
                     <div class="mt-14 text-brown-dark">
-                        <button
-                            class="hover:scale-110 mx-auto block text-[20px] font-bold bg-yellow-light rounded-full w-[213px] h-[49px]">開始搜尋</button>
-                        <button
-                            class="hover:scale-110 mx-auto block text-[20px] font-bold bg-brown-light rounded-full w-[213px] h-[49px] mt-4">清除條件</button>
+                        <button class="hover:text-white mx-auto block text-[20px] font-bold bg-yellow-light rounded-full w-[213px] h-[49px]">開始搜尋</button>
+                        <button class="hover:text-white mx-auto block text-[20px] font-bold bg-brown-light rounded-full w-[213px] h-[49px] mt-4">清除條件</button>
                     </div>
                 </form>
             </div>
@@ -281,13 +275,14 @@
                 </li>
             </ul>
             <div class="bg-gray-dark xl:rounded-tl-[75px] pb-2 w-full pt-[66px] mt-10">
-                <ul class="md:ml-[70px] flex flex-wrap gap-7 justify-center">
-                    <li
-                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">玩蟒人生<span
-                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
-                        <figure class="relative">
-                            <img src="../assets/store/store-img.png" alt="store" class="mt-[17px]">
+                <ul class="flex flex-wrap gap-7 justify-center">
+                    <li class="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">
+                            玩蟒人生
+                            <span class="text-lg font-bold text-brown-normal">Pythonism</span>
+                        </h3>
+                        <figure class="relative mt-4 mb-2">
+                            <img src="../assets/store/store-img.png" alt="store" class="w-full">
                             <img src="../assets/store/like.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
@@ -299,18 +294,18 @@
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] tracking-wide">
+                        <p class="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
                             只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                         </p>
-                        <a href="#"
-                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <a href="#" class="mt-6 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110">查看更多</a>
                     </li>
-                    <li
-                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
-                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
-                        <figure class="relative">
-                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
+                    <li class="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">
+                            玩蟒人生
+                            <span class="text-lg font-bold text-brown-normal">Pythonism</span>
+                        </h3>
+                        <figure class="relative mt-4 mb-2">
+                            <img src="../assets/store/store-img.png" alt="store" class="w-full">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
@@ -322,18 +317,18 @@
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] tracking-wide">
+                        <p class="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
                             只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                         </p>
-                        <a href="#"
-                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <a href="#" class="mt-6 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110">查看更多</a>
                     </li>
-                    <li
-                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
-                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
-                        <figure class="relative">
-                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
+                    <li class="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">
+                            玩蟒人生
+                            <span class="text-lg font-bold text-brown-normal">Pythonism</span>
+                        </h3>
+                        <figure class="relative mt-4 mb-2">
+                            <img src="../assets/store/store-img.png" alt="store" class="w-full">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
@@ -345,39 +340,18 @@
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
+                        <p class="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
+                            只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                         </p>
-                        <a href="#"
-                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <a href="#" class="mt-6 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110">查看更多</a>
                     </li>
-                    <li
-                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
-                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
-                        <figure class="relative">
-                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
-                            <img src="../assets/store/like.svg" alt="like" class="absolute -bottom-2 -right-1">
-                        </figure>
-                        <ul class="flex my-2">
-                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
-                            </li>
-                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                                #龜</li>
-                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
-                            </li>
-                        </ul>
-                        <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
-                        </p>
-                        <a href="#"
-                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
-                    </li>
-                    <li
-                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
-                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
-                        <figure class="relative">
-                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
+                    <li class="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">
+                            玩蟒人生
+                            <span class="text-lg font-bold text-brown-normal">Pythonism</span>
+                        </h3>
+                        <figure class="relative mt-4 mb-2">
+                            <img src="../assets/store/store-img.png" alt="store" class="w-full">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
@@ -389,17 +363,18 @@
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
+                        <p class="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
+                            只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                         </p>
-                        <a href="#"
-                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <a href="#" class="mt-6 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110">查看更多</a>
                     </li>
-                    <li
-                        class="bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">肉球森林<span
-                                class="ml-2 text-lg font-bold text-brown-normal">Pythonism</span></h3>
-                        <figure class="relative">
-                            <img src="../assets/store/store-img.png" alt="store" class="my-[17px]">
+                    <li class="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">
+                            玩蟒人生
+                            <span class="text-lg font-bold text-brown-normal">Pythonism</span>
+                        </h3>
+                        <figure class="relative mt-4 mb-2">
+                            <img src="../assets/store/store-img.png" alt="store" class="w-full">
                             <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
                         </figure>
                         <ul class="flex my-2">
@@ -411,10 +386,33 @@
                             </li>
                         </ul>
                         <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
-                        <p class="text-base text-brown-dark w-[300px] tracking-wide">店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥
+                        <p class="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
+                            只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                         </p>
-                        <a href="#"
-                            class="mt-6 ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
+                        <a href="#" class="mt-6 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110">查看更多</a>
+                    </li>
+                    <li class="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
+                        <h3 class="text-3xl font-bold tracking-wide text-yellow-dark">
+                            玩蟒人生
+                            <span class="text-lg font-bold text-brown-normal">Pythonism</span>
+                        </h3>
+                        <figure class="relative mt-4 mb-2">
+                            <img src="../assets/store/store-img.png" alt="store" class="w-full">
+                            <img src="../assets/store/dislike.svg" alt="like" class="absolute -bottom-2 -right-1">
+                        </figure>
+                        <ul class="flex my-2">
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#蛇
+                            </li>
+                            <li class="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
+                                #龜</li>
+                            <li class="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">#守宮
+                            </li>
+                        </ul>
+                        <h4 class="text-xl font-bold tracking-wide text-brown-dark">以球蟒為主的咖啡廳！</h4>
+                        <p class="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
+                            只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
+                        </p>
+                        <a href="#" class="mt-6 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110">查看更多</a>
                     </li>
                 </ul>
                 <ul class="flex justify-center my-24">
