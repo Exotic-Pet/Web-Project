@@ -13,7 +13,7 @@
 
 <body>
     <!-- Header -->
-    <header class="py-[16px]">
+    <header class="py-[14px] fixed top-0 z-10 w-full shadow-md bg-white">
         <!-- Navbar -->
         <nav class="flex items-center justify-between px-4 mx-auto leading-none lg:px-8 2xl:px-0 2xl:container">
             <h1>
@@ -27,27 +27,66 @@
                 <i class="fa-solid fa-bars"></i>
             </a>
             <!-- PC Menu -->
-            <ul class="items-center hidden font-black tracking-wide text-center lg:flex">
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
+            <ul class="items-center hidden font-bold tracking-wide text-center gap-x-4 lg:flex">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵探店</a>
+                    <!-- Expand Menu -->
+                    <div class="nav__list__menu">
+                        <ul class="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
+                            <li class="text-[16px] font-semibold">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">特寵咖啡廳</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">特寵專賣店</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">特寵醫院</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
-                    <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵活動</a>
+                <li class="nav__list">
+                    <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="./event.html">特寵活動</a>
                 </li>
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">特寵介紹</a>
+                    <!-- Expand Menu -->
+                    <div class="nav__list__menu">
+                        <ul class="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
+                            <li class="text-[16px] font-semibold">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">兩棲爬蟲類</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">兔、鼠類</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">鳥類</a>
+                            </li>
+                            <li class="text-[16px] font-semibold">
+                                <hr class="max-w-[80%] mx-auto border-white">
+                                <a class="block py-3 text-white hover:text-yellow-light" href="#">節肢動物類</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav__list min-w-[104px] border-r border-brown-light">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">聚會揪團</a>
                 </li>
-                <li class="nav__list min-w-[104px]">
+                <li class="nav__list">
                     <a class="nav__list__link py-2 text-brown-dark text-[20px]" href="#">心得交流</a>
                 </li>
                 <!-- Account Info -->
                 <li class="ml-[16px]">
-                    <a class="flex items-center p-2 text-white rounded-full bg-brown-dark" href="#">
-                        <img class="max-w-[40px]" src="../assets/layout/account-brown.svg" alt="account">
-                        <h2 class="ml-2 mr-1 text-[18px] hover:text-green-light">我的帳號</h2>
+                    <a class="flex items-center p-2 text-white rounded-full bg-brown-dark group" href="#">
+                        <img class="max-w-[40px] group-hover:hidden" src="../assets/layout/account-brown.svg"
+                            alt="account-brown">
+                        <img class="max-w-[40px] hidden group-hover:block" src="../assets/layout/account-green.svg"
+                            alt="account-green">
+                        <h2 class="ml-2 mr-1 text-[18px]">我的帳號</h2>
                     </a>
                 </li>
             </ul>
@@ -55,7 +94,7 @@
     </header>
 
     <!-- Content Info -->
-    <main class="container grid justify-center grid-cols-12 mx-auto mt-11 mb-32 gap-x-[50px]">
+    <main class="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
         <aside class="col-span-3 mt-9">
             <!-- Search Bar -->
             <form action="" class="flex justify-around">
@@ -114,54 +153,75 @@
                     </div>
                     <h2 class="text-2xl font-bold text-brown-dark">節肢動物類</h2>
                 </div>
-                <div class="w-[121px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                <div class="w-[121px] h-[58px] bg-green-normal rounded-t-[20px] pt-3 mr-[52px]">
                     <h2 class="text-2xl font-bold text-center text-white">捕鳥蛛</h2>
                 </div>
             </div>
-            <div class="bg-green-light rounded-[22px] rounded-tl-none">
-                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">地棲捕鳥蛛</h3>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
+                <div class="flex justify-center mx-[93px] mb-6">
+                    <div class="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
+                    <figure class="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                        <h3 class="text-2xl font-bold text-green-dark">地棲捕鳥蛛</h3>
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                    </figure>
+                </div>
                 <div class="flex justify-center mx-8 px-14 gap-x-[22px]">
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">肥尾守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">瘤尾守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">豹貓守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
                     </div>
                 </div>
-                <h3 class="mt-6 mb-6 text-3xl font-bold text-center text-white">樹棲捕鳥蛛</h3>
+                <div class="flex justify-center mx-[93px] my-6">
+                    <figure class="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                        <h3 class="text-2xl font-bold text-green-dark">樹棲捕鳥蛛</h3>
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                    </figure>
+                    <div class="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
+                </div>
                 <div class="flex justify-center mx-8 px-14 gap-x-[22px]">
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">肥尾守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">瘤尾守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">豹貓守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
                     </div>
                 </div>
-                <h3 class="mt-6 mb-6 text-3xl font-bold text-center text-white">穴居捕鳥蛛</h3>
+                <div class="flex justify-center mx-[93px] my-6">
+                    <div class="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
+                    <figure class="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                        <h3 class="text-2xl font-bold text-green-dark">穴居捕鳥蛛</h3>
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                    </figure>
+                </div>
                 <div class="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
                     </div>
                 </div>
             </div>
@@ -175,12 +235,19 @@
                     </div>
                     <h2 class="text-2xl font-bold text-brown-dark">節肢動物類</h2>
                 </div>
-                <div class="w-[121px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                <div class="w-[121px] h-[58px] bg-green-normal rounded-t-[20px] pt-3 mr-[52px]">
                     <h2 class="text-2xl font-bold text-center text-white">蠍子</h2>
                 </div>
             </div>
-            <div class="bg-green-light rounded-[22px] rounded-tl-none">
-                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">雨林蠍子</h3>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
+                <div class="flex justify-center mx-[93px] mb-6">
+                    <div class="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
+                    <figure class="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                        <h3 class="text-2xl font-bold text-green-dark">雨林蠍子</h3>
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                    </figure>
+                </div>
                 <div class="flex justify-center mx-8 px-14 gap-x-[22px]">
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample1.jfif')] bg-no-repeat">
                         <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">雨林蠍子</h4>
@@ -195,7 +262,14 @@
                         <h4 class="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">雨林蠍子</h4>
                     </div>
                 </div>
-                <h3 class="mt-6 mb-6 text-3xl font-bold text-center text-white">沙漠蠍子</h3>
+                <div class="flex justify-center mx-[93px] my-6">
+                    <figure class="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                        <h3 class="text-2xl font-bold text-green-dark">沙漠蠍子</h3>
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                    </figure>
+                    <div class="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
+                </div>
                 <div class="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample2.jfif')] bg-no-repeat">
                         <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">沙漠蠍子</h4>
@@ -221,24 +295,31 @@
                     </div>
                     <h2 class="text-2xl font-bold text-brown-dark">節肢動物類</h2>
                 </div>
-                <div class="w-[121px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                <div class="w-[121px] h-[58px] bg-green-normal rounded-t-[20px] pt-3 mr-[52px]">
                     <h2 class="text-2xl font-bold text-center text-white">蜈蚣</h2>
                 </div>
             </div>
-            <div class="bg-green-light rounded-[22px] rounded-tl-none">
-                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">蜈蚣</h3>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
+                <div class="flex justify-center mx-[93px] mb-6">
+                    <div class="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
+                    <figure class="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                        <h3 class="text-2xl font-bold text-green-dark">蜈蚣</h3>
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                    </figure>
+                </div>
                 <div class="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
                     </div>
                 </div>
             </div>
@@ -252,24 +333,31 @@
                     </div>
                     <h2 class="text-2xl font-bold text-brown-dark">節肢動物類</h2>
                 </div>
-                <div class="w-[121px] h-[58px] bg-green-light rounded-t-[20px] pt-3 mr-[52px]">
+                <div class="w-[121px] h-[58px] bg-green-normal rounded-t-[20px] pt-3 mr-[52px]">
                     <h2 class="text-2xl font-bold text-center text-white">馬陸</h2>
                 </div>
             </div>
-            <div class="bg-green-light rounded-[22px] rounded-tl-none">
-                <h3 class="pt-10 mb-6 text-3xl font-bold text-center text-white">馬陸</h3>
+            <div class="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
+                <div class="flex justify-center mx-[93px] mb-6">
+                    <div class="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
+                    <figure class="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                        <h3 class="text-2xl font-bold text-green-dark">馬陸</h3>
+                        <img src="../assets/reptile/titledeco.svg" alt="deco" class="h-[21px] w-[21px]">
+                    </figure>
+                </div>
                 <div class="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
                     </div>
                     <div class="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                        <h4 class="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
                     </div>
                 </div>
             </div>
