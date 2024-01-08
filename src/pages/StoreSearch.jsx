@@ -157,7 +157,7 @@ export default function StoreSearch() {
                     <input type="checkbox" name="animal" value="浣熊" />
                     <span className="checkmark px-3">浣熊</span>
                   </label>
-                  <button className="mt-8 mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:bg-yellow-light">
+                  <button className="see__more mt-8 mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:bg-yellow-light">
                     查看更多
                   </button>
                 </div>
@@ -313,7 +313,7 @@ export default function StoreSearch() {
                   只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                 </p>
                 <Link
-                  to="/store-overview/cafe"
+                  to="/page/store-search/content"
                   href="#"
                   className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
                 >
@@ -353,7 +353,7 @@ export default function StoreSearch() {
                   只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                 </p>
                 <Link
-                  to="/store-overview/cafe"
+                  to="/page/store-search/content"
                   href="#"
                   className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
                 >
@@ -393,7 +393,7 @@ export default function StoreSearch() {
                   只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                 </p>
                 <Link
-                  to="/store-overview/cafe"
+                  to="/page/store-search/content"
                   href="#"
                   className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
                 >
@@ -433,7 +433,7 @@ export default function StoreSearch() {
                   只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                 </p>
                 <Link
-                  to="/store-overview/cafe"
+                  to="/page/store-search/content"
                   href="#"
                   className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
                 >
@@ -473,7 +473,7 @@ export default function StoreSearch() {
                   只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                 </p>
                 <Link
-                  to="/store-overview/cafe"
+                  to="/page/store-search/content"
                   href="#"
                   className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
                 >
@@ -513,7 +513,7 @@ export default function StoreSearch() {
                   只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
                 </p>
                 <Link
-                  to="/store-overview/cafe"
+                  to="/page/store-search/content"
                   href="#"
                   className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
                 >

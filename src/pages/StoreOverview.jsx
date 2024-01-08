@@ -8,11 +8,11 @@ import hospitalCounter from "../assets/store/hospital-counter.svg";
 
 export default function StoreOverview() {
   return (
-    <main className="mt-8 mb-32">
+    <main className="mt-28 mb-32">
       <div className="container mx-auto px-2 lg:px-0">
         <ul className="flex flex-col gap-x-10 gap-y-8 lg:flex-row">
           <li className="flex-1 overflow-hidden">
-            <Link to="/store-overview/cafe">
+            <Link to="/page/store-search">
               <div className="min-h-[688px] relative group duration-700 hover:border-yellow-normal border-4 border-transparent rounded-[52px] px-8 pt-6 bg-overview-cafe bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-4 tracking-widest text-[100px] font-light">

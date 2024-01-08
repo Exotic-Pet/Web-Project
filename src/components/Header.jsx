@@ -8,7 +8,7 @@ import accountGreen from "../assets/layout/account-green.svg";
 
 export default function Header() {
   return (
-    <header className="py-[14px] fixed top-0 z-10 w-full shadow-md bg-white">
+    <header className="py-[16px] fixed top-0 z-10 w-full shadow-md bg-white xl:py-[14px]">
       {/* <!-- Navbar --> */}
       <nav className="leading-none flex items-center justify-between mx-auto px-4 lg:px-8 2xl:px-0 2xl:container">
         <h1>
@@ -25,7 +25,7 @@ export default function Header() {
         <ul className="gap-x-4 items-center hidden font-bold tracking-wide text-center lg:flex">
           <li className="nav__list">
             <Link
-              to="/"
+              to="/page/store-overview"
               className="nav__list__link py-2 text-brown-dark text-[20px]"
               href="#"
             >
@@ -35,12 +35,12 @@ export default function Header() {
             <div className="nav__list__menu">
               <ul className="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
                 <li className="text-[16px] font-semibold">
-                  <a
+                  <Link
+                    to="/page/store-search"
                     className="block py-3 text-white hover:text-yellow-light"
-                    href="#"
                   >
                     特寵咖啡廳
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-[16px] font-semibold">
                   <hr className="max-w-[80%] mx-auto border-white" />

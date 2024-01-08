@@ -58,7 +58,7 @@ input::placeholder {
   overflow: hidden;
   max-height: 0;
 }
-.toggle--click + .toggle--close button {
+.toggle--click + .toggle--close .see__more {
   margin: 0 auto;
 }
 .toggle--click + .toggle--open {
