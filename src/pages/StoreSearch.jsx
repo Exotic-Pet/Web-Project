@@ -13,17 +13,17 @@ import likeIcon from "../assets/store/like.svg";
 import dislikeIcon from "../assets/store/dislike.svg";
 
 export default function StoreSearch() {
-  const [isAreaToggle, setIsAreaToggle] = useState(false);
-  const [isSearchToggle, setIsSearchToggle] = useState(false);
-  const [isPriceToggle, setIsPriceToggle] = useState(false);
+  const [isAreaExpand, setIsAreaExpand] = useState(false);
+  const [isSearchExpand, setIsSearchExpand] = useState(false);
+  const [isPriceExpand, setIsPriceExpand] = useState(false);
 
   // Click Handlers Function
-  const handlerAreaToggle = () => setIsAreaToggle(!isAreaToggle);
-  const handlerSearchToggle = () => setIsSearchToggle(!isSearchToggle);
-  const handlerPriceToggle = () => setIsPriceToggle(!isPriceToggle);
+  const handlerAreaToggle = () => setIsAreaExpand(!isAreaExpand);
+  const handlerSearchToggle = () => setIsSearchExpand(!isSearchExpand);
+  const handlerPriceToggle = () => setIsPriceExpand(!isPriceExpand);
 
-  // Toggle Class State
-  const toggleExpandState = (type) => (type ? `toggle--open` : `toggle--close`);
+  // Toggle Class Style
+  const toggleExpandStyle = (type) => (type ? `toggle--open` : `toggle--close`);
 
   return (
     <>
@@ -56,7 +56,7 @@ export default function StoreSearch() {
               <li>
                 <div
                   className="toggle--click flex justify-between cursor-pointer"
-                  onMouseDown={() => handlerAreaToggle()}
+                  onMouseDown={handlerAreaToggle}
                 >
                   <h3 className="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
                     你想去哪？
@@ -69,7 +69,7 @@ export default function StoreSearch() {
                 </div>
                 <div
                   className={
-                    toggleExpandState(isAreaToggle) + " " + "checkbox__style checkbox--yellow flex flex-wrap text-xl"
+                    toggleExpandStyle(isAreaExpand) + " checkbox__style checkbox--yellow flex flex-wrap text-xl"
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
@@ -93,7 +93,7 @@ export default function StoreSearch() {
               <li className="mt-6 border-t-2">
                 <div
                   className="toggle--click flex justify-between my-5 cursor-pointer"
-                  onMouseDown={() => handlerSearchToggle()}
+                  onMouseDown={handlerSearchToggle}
                 >
                   <h3 className="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
                     想找什麼？
@@ -106,7 +106,7 @@ export default function StoreSearch() {
                 </div>
                 <div
                   className={
-                    toggleExpandState(isSearchToggle) + " " + "checkbox__style checkbox--yellow flex flex-wrap text-xl"
+                    toggleExpandStyle(isSearchExpand) + " checkbox__style checkbox--yellow flex flex-wrap text-xl"
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
@@ -165,7 +165,7 @@ export default function StoreSearch() {
               <li className="border-t-2">
                 <div
                   className="toggle--click flex justify-between mt-5 cursor-pointer"
-                  onMouseDown={() => handlerPriceToggle()}
+                  onMouseDown={handlerPriceToggle}
                 >
                   <h3 className="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
                     想花多少？
@@ -178,7 +178,7 @@ export default function StoreSearch() {
                 </div>
                 <div
                   className={
-                    toggleExpandState(isPriceToggle) + " " + "range--yellow"
+                    toggleExpandStyle(isPriceExpand) + " range--yellow"
                   }
                 >
                   <input

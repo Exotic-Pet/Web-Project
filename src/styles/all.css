@@ -8,15 +8,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base HTML Setting */
+/* Base Setting */
 *, *::after, *::before {
   box-sizing: border-box;
   transition: all 0.25s;
+  scroll-behavior: smooth;
   /* outline: 1px solid #000; */
 }
-html, body {
+body {
   font-family: 'Noto Sans TC', sans-serif;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-top: 84px !important; /* Header Height */
 }
 img {
   max-width: 100%;
