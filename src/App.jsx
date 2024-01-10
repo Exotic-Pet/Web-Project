@@ -8,6 +8,7 @@ import StoreOverview from "./pages/StoreOverview";
 import StoreSearch from "./pages/StoreSearch";
 import StoreContent from "./pages/StoreContent";
 
+
 export default function App() {
   return (
     <BrowserRouter>

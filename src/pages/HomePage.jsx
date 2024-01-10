@@ -1,3 +1,10 @@
+import { useEffect } from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+// Components
+import HomeHeader from "../components/HomeHeader";
+import Footer from "../components/Footer";
+// Images
 import arrowRight from "../assets/index/arrow-right.svg";
 import newsImg_1 from "../assets/index/news-1.png";
 import chameleonImg from "../assets/index/chameleon.svg";
@@ -15,11 +22,12 @@ import hotImg_4 from "../assets/index/hot-4.png";
 import appDemo from "../assets/index/APP-demo.svg";
 import googlePlay from "../assets/index/google-play.png";
 import appStore from "../assets/index/app-store.png";
-// Components
-import HomeHeader from "../components/HomeHeader";
-import Footer from "../components/Footer";
 
 export default function HomePage() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <HomeHeader />
@@ -167,7 +175,7 @@ export default function HomePage() {
         <div className="mt-56 py-32 bg-cover bg-no-repeat bg-center bg-[url('../assets/index/hot-bg.svg')]">
           <article className="relative">
             {/*  <!-- Chameleon --> */}
-            <img
+            <img data-aos="zoom-in" data-aos-duration="500"
               className="absolute w-44 md:w-60 -top-[280px] left-20 hover:scale-110"
               src={chameleonImg}
               alt="chameleon"
@@ -184,32 +192,32 @@ export default function HomePage() {
                 看看大家都在討論什麼！
               </p>
               {/*  <!-- Hot Deco Element --> */}
-              <img
+              <img data-aos="fade-lfet" data-aos-duration="1000"
                 className="zoom__slow absolute w-5 md:w-10 top-[50%] left-[4%] md:left-[8%]"
                 src={deco_1}
                 alt="deco"
               />
-              <img
+              <img data-aos="fade-lfet" data-aos-duration="1000"
                 className="zoom__fast absolute w-5 md:w-10 top-[82%] left-[10%] md:left-[16%]"
                 src={deco_2}
                 alt="deco"
               />
-              <img
+              <img data-aos="fade-lfet" data-aos-duration="1000"
                 className="zoom__slow absolute w-5 md:w-10 top-[5%] left-[14%] md:left-[20%]"
                 src={deco_3}
                 alt="deco"
               />
-              <img
+              <img data-aos="fade-lfet" data-aos-duration="1000"
                 className="zoom__fast absolute w-5 md:w-10 top-0 right-[14%] md:right-[22%]"
                 src={deco_4}
                 alt="deco"
               />
-              <img
+              <img data-aos="fade-lfet" data-aos-duration="1000"
                 className="zoom__slow absolute w-5 md:w-10 top-[80%] right-[8%] md:right-[15%]"
                 src={deco_5}
                 alt="deco"
               />
-              <img
+              <img data-aos="fade-lfet" data-aos-duration="1000"
                 className="zoom__fast absolute w-5 md:w-10 top-[8%] right-[4%] md:right-[10%]"
                 src={deco_6}
                 alt="deco"
@@ -383,10 +391,10 @@ export default function HomePage() {
         </div>
         {/*  <!-- Follow APP Info --> */}
         <div className="container mx-auto my-36 px-2 lg:px-0 flex gap-6 justify-evenly items-center flex-col lg:flex-row">
-          <figure>
+          <figure data-aos="zoom-in" data-aos-duration="1000">
             <img src={appDemo} alt="phone" />
           </figure>
-          <section className="text-center">
+          <section data-aos="fade-lfet" data-aos-duration="1000" className="text-center">
             <h2 className="text-[40px] text-green-normal tracking-widest font-black">
               APP瀏覽更方便
             </h2>
