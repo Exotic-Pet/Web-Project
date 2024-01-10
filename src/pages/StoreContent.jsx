@@ -15,7 +15,7 @@ import time from '../assets/store/time.svg';
 export default function StoreContent() {
     return (
     // Store Content
-    <main className="container mx-auto overflow-hidden md:flex">
+    <main className="mt-[84px] container mx-auto overflow-hidden md:flex">
         <article className="mt-8 px-2 lg:px-0">
             <h4 className="flex items-center text-base font-bold text-white mb-[13px]">
                 <div className="w-[117px] h-[29px] bg-label bg-no-repeat flex justify-center items-center">

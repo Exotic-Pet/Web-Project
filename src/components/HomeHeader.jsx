@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "../styles/all.css";
@@ -22,6 +25,10 @@ import bannerBg from "../assets/index/banner-bg.svg";
 import bannerImg from "../assets/index/banner.svg";
 
 export default function HomeHeader() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <header className="py-[16px] fixed top-0 z-10 w-full shadow-md bg-white xl:hidden">
@@ -141,32 +148,32 @@ export default function HomeHeader() {
             <img className="xl:hidden" src={bannerImg} alt="banner" />
             <img className="hidden xl:block" src={bannerBg} alt="banner-bg" />
             {/* <!-- Animal --> */}
-            <img
+            <img data-aos="zoom-in" data-aos-delay="250"
               className="hidden xl:block absolute top-40 left-16 hover:-translate-y-3"
               src={snakeImg}
               alt="snake"
             />
-            <img
+            <img data-aos="zoom-in" data-aos-delay="500"
               className="hidden xl:block absolute bottom-16 left-24 hover:-translate-y-3"
               src={hamsterImg}
               alt="hamster"
             />
-            <img
+            <img data-aos="zoom-in" data-aos-delay="750"
               className="hidden xl:block absolute top-60 left-80 hover:-translate-y-3"
               src={geckoImg}
               alt="gecko"
             />
-            <img
+            <img data-aos="zoom-in" data-aos-delay="1000"
               className="hidden xl:block absolute top-32 right-[24%] hover:-translate-y-3"
               src={parrotImg}
               alt="parrot"
             />
-            <img
+            <img data-aos="zoom-in" data-aos-delay="1250"
               className="hidden xl:block absolute bottom-12 right-72 hover:-translate-y-3"
               src={turtleImg}
               alt="turtle"
             />
-            <img
+            <img data-aos="zoom-in" data-aos-delay="1500"
               className="hidden xl:block absolute bottom-40 right-16 hover:-translate-y-3"
               src={duckImg}
               alt="duck"
