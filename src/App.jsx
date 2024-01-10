@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import StoreOverview from "./pages/StoreOverview";
 import StoreSearch from "./pages/StoreSearch";
 import StoreContent from "./pages/StoreContent";
+import ExoticOverview from "./pages/ExoticOverview";
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="store-overview" element={<StoreOverview />} />
             <Route path="store-search" element={<StoreSearch />} />
             <Route path="store-search/content" element={<StoreContent />} />
+            <Route path="exotic-overview" element={<ExoticOverview />} />
           </Route>
         </Routes>
       </AutoScrollTop>

@@ -27,7 +27,7 @@ export default function StoreOverview() {
             </Link>
           </li>
           <li className="flex-1">
-            <Link to="/store-overview/">
+            <Link to="/page/store-search">
               <div className="relative group duration-700 hover:border-green-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] mb-9 p-6 bg-overview-store bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-3 tracking-widest text-[50px] font-light">
@@ -40,7 +40,7 @@ export default function StoreOverview() {
                 <img className="absolute duration-700 opacity-0 bottom-2 -right-44 group-hover:right-[14%] group-hover:opacity-100" src={storeDuck} alt="duck" />
               </div>
             </Link>
-            <Link to="/store-overview/">
+            <Link to="/page/store-search">
               <div className="relative group duration-700 hover:border-cyan-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] p-6 bg-overview-hospital bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-3 tracking-widest text-[50px] font-light">

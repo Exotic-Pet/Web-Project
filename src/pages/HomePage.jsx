@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 // Components
+import AosInit from "../components/AosInit";
 import HomeHeader from "../components/HomeHeader";
 import Footer from "../components/Footer";
 // Images
@@ -24,9 +22,7 @@ import googlePlay from "../assets/index/google-play.png";
 import appStore from "../assets/index/app-store.png";
 
 export default function HomePage() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  AosInit();
 
   return (
     <>
@@ -75,7 +71,11 @@ export default function HomePage() {
             </div>
             {/*  <!-- News List --> */}
             <ul className="mt-[24px] py-[16px] border-t-2 border-brown-normal">
-              <li className="mt-[56px] flex gap-5 md:gap-10">
+              <li
+                data-aos="fade-in"
+                data-aos-duration="500"
+                className="mt-[56px] flex gap-5 md:gap-10"
+              >
                 {/*  <!-- News Date --> */}
                 <h4 className="hidden md:flex items-center ">
                   <div className="p-[20px] rounded-xl bg-green-light text-brown-dark font-bold text-center">
@@ -106,7 +106,11 @@ export default function HomePage() {
                   </figure>
                 </article>
               </li>
-              <li className="mt-[56px] flex gap-5 md:gap-10">
+              <li
+                data-aos="fade-in"
+                data-aos-duration="500"
+                className="mt-[56px] flex gap-5 md:gap-10"
+              >
                 {/*  <!-- News Date --> */}
                 <h4 className="hidden md:flex items-center ">
                   <div className="p-[20px] rounded-xl bg-yellow-normal text-brown-dark font-bold text-center">
@@ -137,7 +141,11 @@ export default function HomePage() {
                   </figure>
                 </article>
               </li>
-              <li className="mt-[56px] flex gap-5 md:gap-10">
+              <li
+                data-aos="fade-in"
+                data-aos-duration="500"
+                className="mt-[56px] flex gap-5 md:gap-10"
+              >
                 {/*  <!-- News Date --> */}
                 <h4 className="hidden md:flex items-center ">
                   <div className="p-[20px] rounded-xl bg-green-light text-brown-dark font-bold text-center">
@@ -175,7 +183,9 @@ export default function HomePage() {
         <div className="mt-56 py-32 bg-cover bg-no-repeat bg-center bg-[url('../assets/index/hot-bg.svg')]">
           <article className="relative">
             {/*  <!-- Chameleon --> */}
-            <img data-aos="zoom-in" data-aos-duration="500"
+            <img
+              data-aos="zoom-in"
+              data-aos-duration="500"
               className="absolute w-44 md:w-60 -top-[280px] left-20 hover:scale-110"
               src={chameleonImg}
               alt="chameleon"
@@ -192,32 +202,44 @@ export default function HomePage() {
                 看看大家都在討論什麼！
               </p>
               {/*  <!-- Hot Deco Element --> */}
-              <img data-aos="fade-lfet" data-aos-duration="1000"
+              <img
+                data-aos="zoom-in"
+                data-aos-delay="600"
                 className="zoom__slow absolute w-5 md:w-10 top-[50%] left-[4%] md:left-[8%]"
                 src={deco_1}
                 alt="deco"
               />
-              <img data-aos="fade-lfet" data-aos-duration="1000"
+              <img
+                data-aos="zoom-in"
+                data-aos-delay="400"
                 className="zoom__fast absolute w-5 md:w-10 top-[82%] left-[10%] md:left-[16%]"
                 src={deco_2}
                 alt="deco"
               />
-              <img data-aos="fade-lfet" data-aos-duration="1000"
+              <img
+                data-aos="zoom-in"
+                data-aos-delay="200"
                 className="zoom__slow absolute w-5 md:w-10 top-[5%] left-[14%] md:left-[20%]"
                 src={deco_3}
                 alt="deco"
               />
-              <img data-aos="fade-lfet" data-aos-duration="1000"
+              <img
+                data-aos="zoom-in"
+                data-aos-delay="200"
                 className="zoom__fast absolute w-5 md:w-10 top-0 right-[14%] md:right-[22%]"
                 src={deco_4}
                 alt="deco"
               />
-              <img data-aos="fade-lfet" data-aos-duration="1000"
+              <img
+                data-aos="zoom-in"
+                data-aos-delay="400"
                 className="zoom__slow absolute w-5 md:w-10 top-[80%] right-[8%] md:right-[15%]"
                 src={deco_5}
                 alt="deco"
               />
-              <img data-aos="fade-lfet" data-aos-duration="1000"
+              <img
+                data-aos="zoom-in"
+                data-aos-delay="600"
                 className="zoom__fast absolute w-5 md:w-10 top-[8%] right-[4%] md:right-[10%]"
                 src={deco_6}
                 alt="deco"
@@ -394,7 +416,11 @@ export default function HomePage() {
           <figure data-aos="zoom-in" data-aos-duration="1000">
             <img src={appDemo} alt="phone" />
           </figure>
-          <section data-aos="fade-lfet" data-aos-duration="1000" className="text-center">
+          <section
+            data-aos="fade-lfet"
+            data-aos-duration="1000"
+            className="text-center"
+          >
             <h2 className="text-[40px] text-green-normal tracking-widest font-black">
               APP瀏覽更方便
             </h2>

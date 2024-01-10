@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import AosInit from "./AosInit";
 import "../styles/all.css";
 
 import logo from "../assets/layout/LOGO.svg";
@@ -25,9 +23,7 @@ import bannerBg from "../assets/index/banner-bg.svg";
 import bannerImg from "../assets/index/banner.svg";
 
 export default function HomeHeader() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  AosInit();
 
   return (
     <>
@@ -84,7 +80,7 @@ export default function HomeHeader() {
                 </a>
               </li>
               <li className="mt-[16px]">
-                <a href="#" className="flex items-center hover:opacity-70">
+                <Link to="/page/exotic-overview" className="cursor-pointer flex items-center hover:opacity-70">
                   <img src={introGreen} alt="intro" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
                     特寵介紹
@@ -92,7 +88,7 @@ export default function HomeHeader() {
                       Introduction
                     </span>
                   </h2>
-                </a>
+                </Link>
               </li>
               <li className="mt-[16px]">
                 <a href="#" className="flex items-center hover:opacity-70">
@@ -148,33 +144,33 @@ export default function HomeHeader() {
             <img className="xl:hidden" src={bannerImg} alt="banner" />
             <img className="hidden xl:block" src={bannerBg} alt="banner-bg" />
             {/* <!-- Animal --> */}
-            <img data-aos="zoom-in" data-aos-delay="250"
-              className="hidden xl:block absolute top-40 left-16 hover:-translate-y-3"
+            <img data-aos="zoom-in" data-aos-delay="200"
+              className="hidden xl:block absolute top-40 left-16"
               src={snakeImg}
               alt="snake"
             />
-            <img data-aos="zoom-in" data-aos-delay="500"
-              className="hidden xl:block absolute bottom-16 left-24 hover:-translate-y-3"
+            <img data-aos="zoom-in" data-aos-delay="600"
+              className="hidden xl:block absolute bottom-16 left-24"
               src={hamsterImg}
               alt="hamster"
             />
-            <img data-aos="zoom-in" data-aos-delay="750"
-              className="hidden xl:block absolute top-60 left-80 hover:-translate-y-3"
+            <img data-aos="zoom-in" data-aos-delay="1000"
+              className="hidden xl:block absolute top-60 left-80"
               src={geckoImg}
               alt="gecko"
             />
-            <img data-aos="zoom-in" data-aos-delay="1000"
-              className="hidden xl:block absolute top-32 right-[24%] hover:-translate-y-3"
+            <img data-aos="zoom-in" data-aos-delay="1200"
+              className="hidden xl:block absolute top-32 right-[24%]"
               src={parrotImg}
               alt="parrot"
             />
-            <img data-aos="zoom-in" data-aos-delay="1250"
-              className="hidden xl:block absolute bottom-12 right-72 hover:-translate-y-3"
+            <img data-aos="zoom-in" data-aos-delay="800"
+              className="hidden xl:block absolute bottom-12 right-72"
               src={turtleImg}
               alt="turtle"
             />
-            <img data-aos="zoom-in" data-aos-delay="1500"
-              className="hidden xl:block absolute bottom-40 right-16 hover:-translate-y-3"
+            <img data-aos="zoom-in" data-aos-delay="400"
+              className="hidden xl:block absolute bottom-40 right-16"
               src={duckImg}
               alt="duck"
             />

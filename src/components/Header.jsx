@@ -72,12 +72,12 @@ export default function Header() {
             </a>
           </li>
           <li className="nav__list">
-            <a
-              className="nav__list__link py-2 text-brown-dark text-[20px]"
-              href="#"
+            <Link
+              to="/page/exotic-overview"
+              className="nav__list__link cursor-pointer py-2 text-brown-dark text-[20px]"
             >
               特寵介紹
-            </a>
+            </Link>
             {/* <!-- Expand Menu --> */}
             <div className="nav__list__menu">
               <ul className="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
