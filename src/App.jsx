@@ -15,7 +15,6 @@ import Arthropoda from "./pages/Arthropoda";
 import EventPage from "./pages/EventPage";
 import CommunityPage from "./pages/CommunityPage";
 
-
 export default function App() {
   return (
     <BrowserRouter>
