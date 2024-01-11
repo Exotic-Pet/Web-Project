@@ -28,7 +28,7 @@ export default function StoreSearch() {
   return (
     <>
       {/* <!-- Banner --> */}
-      <div className="mt-[84px] bg-yellow-normal bg-no-repeat bg-center bg-cafe-banner min-h-[133px]"></div>
+      <div className="mt-[84px] bg-yellow-normal bg-no-repeat bg-center bg-[url('../assets/store/cafe-banner.svg')] min-h-[133px]"></div>
       {/* Store Content */}
       <main className="flex flex-wrap md:justify-between xl:flex-nowrap">
         <aside className="mt-20 w-[388px] mx-auto xl:ml-20">

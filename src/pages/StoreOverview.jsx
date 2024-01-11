@@ -13,7 +13,7 @@ export default function StoreOverview() {
         <ul className="flex flex-col gap-x-10 gap-y-8 lg:flex-row">
           <li className="flex-1 overflow-hidden">
             <Link to="/page/store-search">
-              <div className="min-h-[688px] relative group duration-700 hover:border-yellow-normal border-4 border-transparent rounded-[52px] px-8 pt-6 bg-overview-cafe bg-center bg-no-repeat bg-cover">
+              <div className="min-h-[688px] relative group duration-700 hover:border-yellow-normal border-4 border-transparent rounded-[52px] px-8 pt-6 bg-[url('../assets/store/overview-cafe.svg')] bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-4 tracking-widest text-[100px] font-light">
                     Cafe
@@ -28,7 +28,7 @@ export default function StoreOverview() {
           </li>
           <li className="flex-1">
             <Link to="/page/store-search">
-              <div className="relative group duration-700 hover:border-green-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] mb-9 p-6 bg-overview-store bg-center bg-no-repeat bg-cover">
+              <div className="relative group duration-700 hover:border-green-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] mb-9 p-6 bg-[url('../assets/store/overview-store.svg')] bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-3 tracking-widest text-[50px] font-light">
                     Store
@@ -41,7 +41,7 @@ export default function StoreOverview() {
               </div>
             </Link>
             <Link to="/page/store-search">
-              <div className="relative group duration-700 hover:border-cyan-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] p-6 bg-overview-hospital bg-center bg-no-repeat bg-cover">
+              <div className="relative group duration-700 hover:border-cyan-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] p-6 bg-[url('../assets/store/overview-hospital.svg')] bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-3 tracking-widest text-[50px] font-light">
                     Hospital
