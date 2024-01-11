@@ -2,7 +2,7 @@ import searchIcon from '../assets/store/search.svg';
 import arrowTop from '../assets/reptile/arrow-top.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
 
-export default function StoreContent() {
+export default function Aves() {
     return (
         <>
             <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
@@ -46,8 +46,8 @@ export default function StoreContent() {
                 <section className="col-span-9 tracking-wide">
                     {/*Parrot*/}
                     <div className="flex justify-between">
-                        <div className="w-[281px] h-[58px] bg-brown-light flex justify-between items-center rounded-t-[20px]">
-                            <div className="flex ml-7">
+                        <div className="w-[281px] h-[58px] bg-brown-light flex items-center rounded-t-[20px]">
+                            <div className="flex mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
