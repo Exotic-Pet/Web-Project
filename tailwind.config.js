@@ -27,6 +27,11 @@ export default {
           dark: "#EFEAE6",
           normal: "#F9F5F2",
         },
+        traffic: {
+          red: "#ED6351",
+          yellow: "#F4C247",
+          green: "#83D35E"
+        },
       },
       letterSpacing: {
         wide: "0.1rem",
