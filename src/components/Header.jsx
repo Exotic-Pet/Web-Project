@@ -64,12 +64,12 @@ export default function Header() {
             </div>
           </li>
           <li className="nav__list">
-            <a
+            <Link
+              to="/page/event"
               className="nav__list__link py-2 text-brown-dark text-[20px]"
-              href="./event.html"
             >
               特寵活動
-            </a>
+            </Link>
           </li>
           <li className="nav__list">
             <Link

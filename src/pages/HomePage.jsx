@@ -22,7 +22,59 @@ import googlePlay from "../assets/index/google-play.png";
 import appStore from "../assets/index/app-store.png";
 
 export default function HomePage() {
+  // AOS Init
   AosInit();
+  // Hot Articles Data
+  const hotArticlesData = [
+    {
+      postTime: 23,
+      animal: "烏龜",
+      title: "養到超黏人陸龜",
+      imgUrl: hotImg_1,
+      content:
+        "嗨👋我是豆包 黃金歐陸 帥哥一枚 我超級愛在我媽媽身上睡覺 如果不躺在媽媽身上我會一直挖我的小屋吵他 直到他把我放在他肥肥又溫暖的肚子上 我才會乖乖的睡覺💤",
+    },
+    {
+      postTime: 5,
+      animal: "守宮",
+      title: "(圖多)當一隻冬天的守宮🦖",
+      imgUrl: hotImg_2,
+      content:
+        "先來一張可愛的小朋友，天氣變冷了🍂 我也開始被重用了！！！像這樣！！或這樣！！看看那個小手手！！！",
+    },
+    {
+      postTime: 1,
+      animal: "兔子",
+      title: "兔子放風聖地推薦",
+      imgUrl: hotImg_3,
+      content:
+        "自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅） 不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）",
+    },
+    {
+      postTime: 1,
+      animal: "倉鼠",
+      title: "關於倉鼠飼養",
+      imgUrl: hotImg_4,
+      content:
+        "最近在社團常看到新手分享倉鼠飼養 但似乎沒有接收到正確的飼養資訊 基礎飼養上愛鼠協會官網即可 今天來分享一下大家比較少談到的科養。 關於科養 甚麼是科養?為什麼要科養?倉鼠一定要科養嗎? 🌟隨著動保意識抬頭，飼養寵物不再只是將動物關起來，給他們食物跟水維持基本溫飽，動物的身心靈健康，也漸漸的越來越被重視。 🌟科養是科學飼養的簡稱，通常是指德國飼養標準，德國有著全世界最嚴格的倉鼠飼養標準，這些標準有些是德國科學家根據實驗而得，例如籠具大小、墊材厚度還有豐容(enrichment)等，其中最重要的就是豐容，許多標準基於豐容應運而生。",
+    },
+    {
+      postTime: 23,
+      animal: "烏龜",
+      title: "養到超黏人陸龜",
+      imgUrl: hotImg_1,
+      content:
+        "嗨👋我是豆包 黃金歐陸 帥哥一枚 我超級愛在我媽媽身上睡覺 如果不躺在媽媽身上我會一直挖我的小屋吵他 直到他把我放在他肥肥又溫暖的肚子上 我才會乖乖的睡覺💤",
+    },
+    {
+      postTime: 5,
+      animal: "守宮",
+      title: "(圖多)當一隻冬天的守宮🦖",
+      imgUrl: hotImg_2,
+      content:
+        "先來一張可愛的小朋友，天氣變冷了🍂 我也開始被重用了！！！像這樣！！或這樣！！看看那個小手手！！！",
+    },
+  ];
 
   return (
     <>
@@ -248,156 +300,33 @@ export default function HomePage() {
             {/*  <!-- Hot Cards List --> */}
             <div className="container mx-auto overflow-hidden">
               <ul className="auto__scroll w-[2400px] sm:w-[2600px] mt-[120px] flex flex-nowrap gap-8 pl-2">
-                {/*  <!-- Card Info --> */}
-                <li className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
-                  <h4 className="text-sm text-cyan-normal font-medium">
-                    烏龜
-                    <span className="text-brown-normal font-normal">
-                      <img
-                        className="inline-block ml-1 mb-[2px]"
-                        src={timeIcon}
-                        alt="time"
-                      />
-                      23小時前
-                    </span>
-                  </h4>
-                  <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
-                    養到超黏人陸龜
-                  </h3>
-                  <figure className="mt-3">
-                    <img className="w-full" src={hotImg_1} alt="hot" />
-                  </figure>
-                  <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
-                    嗨👋我是豆包 黃金歐陸 帥哥一枚 我超級愛在我媽媽身上睡覺
-                    如果不躺在媽媽身上我會一直挖我的小屋吵他
-                    直到他把我放在他肥肥又溫暖的肚子上 我才會乖乖的睡覺💤
-                  </p>
-                </li>
-                {/*  <!-- Card Info --> */}
-                <li className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
-                  <h4 className="text-sm text-cyan-normal font-medium">
-                    守宮
-                    <span className="text-brown-normal font-normal">
-                      <img
-                        className="inline-block ml-1 mb-[2px]"
-                        src={timeIcon}
-                        alt="time"
-                      />
-                      5小時前
-                    </span>
-                  </h4>
-                  <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
-                    (圖多)當一隻冬天的守宮🦖
-                  </h3>
-                  <figure className="mt-3">
-                    <img className="w-full" src={hotImg_2} alt="hot" />
-                  </figure>
-                  <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
-                    先來一張可愛的小朋友，天氣變冷了🍂
-                    我也開始被重用了！！！像這樣！！或這樣！！看看那個小手手！！！
-                  </p>
-                </li>
-                {/*  <!-- Card Info --> */}
-                <li className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
-                  <h4 className="text-sm text-cyan-normal font-medium">
-                    兔子
-                    <span className="text-brown-normal font-normal">
-                      <img
-                        className="inline-block ml-1 mb-[2px]"
-                        src={timeIcon}
-                        alt="time"
-                      />
-                      1小時前
-                    </span>
-                  </h4>
-                  <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
-                    兔子放風聖地推薦
-                  </h3>
-                  <figure className="mt-3">
-                    <img className="w-full" src={hotImg_3} alt="hot" />
-                  </figure>
-                  <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
-                    自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
-                    不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
-                  </p>
-                </li>
-                {/*  <!-- Card Info --> */}
-                <li className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
-                  <h4 className="text-sm text-cyan-normal font-medium">
-                    倉鼠
-                    <span className="text-brown-normal font-normal">
-                      <img
-                        className="inline-block ml-1 mb-[2px]"
-                        src={timeIcon}
-                        alt="time"
-                      />
-                      1小時前
-                    </span>
-                  </h4>
-                  <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
-                    關於倉鼠飼養
-                  </h3>
-                  <figure className="mt-3">
-                    <img className="w-full" src={hotImg_4} alt="hot" />
-                  </figure>
-                  <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
-                    最近在社團常看到新手分享倉鼠飼養
-                    但似乎沒有接收到正確的飼養資訊 基礎飼養上愛鼠協會官網即可
-                    今天來分享一下大家比較少談到的科養。 關於科養
-                    甚麼是科養?為什麼要科養?倉鼠一定要科養嗎?
-                    🌟隨著動保意識抬頭，飼養寵物不再只是將動物關起來，給他們食物跟水維持基本溫飽，動物的身心靈健康，也漸漸的越來越被重視。
-                    🌟科養是科學飼養的簡稱，通常是指德國飼養標準，德國有著全世界最嚴格的倉鼠飼養標準，這些標準有些是德國科學家根據實驗而得，例如籠具大小、墊材厚度還有豐容(enrichment)等，其中最重要的就是豐容，許多標準基於豐容應運而生。
-                  </p>
-                </li>
-                {/*  <!-- Card Info --> */}
-                <li className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
-                  <h4 className="text-sm text-cyan-normal font-medium">
-                    烏龜
-                    <span className="text-brown-normal font-normal">
-                      <img
-                        className="inline-block ml-1 mb-[2px]"
-                        src={timeIcon}
-                        alt="time"
-                      />
-                      23小時前
-                    </span>
-                  </h4>
-                  <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
-                    養到超黏人陸龜
-                  </h3>
-                  <figure className="mt-3">
-                    <img className="w-full" src={hotImg_1} alt="hot" />
-                  </figure>
-                  <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
-                    嗨👋我是豆包 黃金歐陸 帥哥一枚 我超級愛在我媽媽身上睡覺
-                    如果不躺在媽媽身上我會一直挖我的小屋吵他
-                    直到他把我放在他肥肥又溫暖的肚子上 我才會乖乖的睡覺💤
-                  </p>
-                </li>
-                {/*  <!-- Card Info --> */}
-                <li className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal">
-                  <h4 className="text-sm text-cyan-normal font-medium">
-                    守宮
-                    <span className="text-brown-normal font-normal">
-                      <img
-                        className="inline-block ml-1 mb-[2px]"
-                        src={timeIcon}
-                        alt="time"
-                      />
-                      5小時前
-                    </span>
-                  </h4>
-                  <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
-                    (圖多)當一隻冬天的守宮🦖
-                  </h3>
-                  <figure className="mt-3">
-                    <img className="w-full" src={hotImg_2} alt="hot" />
-                  </figure>
-                  <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
-                    先來一張可愛的小朋友，天氣變冷了🍂
-                    我也開始被重用了！！！像這樣！！或這樣！！看看那個小手手！！！
-                  </p>
-                </li>
+                {hotArticlesData.map((article, index) => (
+                  <li
+                    key={index}
+                    className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal"
+                  >
+                    <h4 className="text-sm text-cyan-normal font-medium">
+                      {article.animal}
+                      <span className="text-brown-normal font-normal">
+                        <img
+                          className="inline-block ml-1 mb-[2px]"
+                          src={timeIcon}
+                          alt="time"
+                        />
+                        {article.postTime}小時前
+                      </span>
+                    </h4>
+                    <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
+                      {article.title}
+                    </h3>
+                    <figure className="mt-3">
+                      <img className="w-full" src={article.imgUrl} alt="hot" />
+                    </figure>
+                    <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
+                      {article.content}
+                    </p>
+                  </li>
+                ))}
               </ul>
             </div>
             {/*  <!-- See More Button --> */}
