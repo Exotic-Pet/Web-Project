@@ -47,7 +47,7 @@ export default function Footer() {
               </a>
             </li>
             <li className="w-full sm:max-w-[200px]">
-              <Link to="/page/exotic-overview" className="cursor-pointer block hover:opacity-80">
+              <Link to="/page/exotic-overview" className="block cursor-pointer hover:opacity-80">
                 <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
                   <img src={introWhite} alt="intro" />
                   <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
@@ -60,7 +60,7 @@ export default function Footer() {
               </Link>
             </li>
             <li className="w-full sm:max-w-[200px]">
-              <a href="#" className="block hover:opacity-80">
+              <Link to="/page/event" className="block hover:opacity-80">
                 <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
                   <img src={peopleWhite} alt="people" />
                   <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
@@ -70,10 +70,10 @@ export default function Footer() {
                     </small>
                   </h2>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className="w-full sm:max-w-[200px]">
-              <a href="#" className="block hover:opacity-80">
+              <Link to="/page/community" className="block hover:opacity-80">
                 <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
                   <img src={msgWhite} alt="msg" />
                   <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
@@ -83,7 +83,7 @@ export default function Footer() {
                     </small>
                   </h2>
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

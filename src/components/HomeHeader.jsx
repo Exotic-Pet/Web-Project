@@ -28,7 +28,7 @@ export default function HomeHeader() {
   return (
     <>
       <header className="py-[16px] fixed top-0 z-10 w-full shadow-md bg-white xl:hidden">
-        <nav className="leading-none flex items-center justify-between mx-auto px-4 lg:px-8 2xl:px-0 2xl:container">
+        <nav className="flex items-center justify-between px-4 mx-auto leading-none lg:px-8 2xl:px-0 2xl:container">
           <h1>
             <strong className="hidden">特寵生活</strong>
             <Link to="/" className="hover:opacity-70">
@@ -80,7 +80,7 @@ export default function HomeHeader() {
                 </a>
               </li>
               <li className="mt-[16px]">
-                <Link to="/page/exotic-overview" className="cursor-pointer flex items-center hover:opacity-70">
+                <Link to="/page/exotic-overview" className="flex items-center cursor-pointer hover:opacity-70">
                   <img src={introGreen} alt="intro" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
                     特寵介紹
@@ -91,7 +91,7 @@ export default function HomeHeader() {
                 </Link>
               </li>
               <li className="mt-[16px]">
-                <a href="#" className="flex items-center hover:opacity-70">
+                <Link to="/page/event" className="flex items-center hover:opacity-70">
                   <img src={peopleGreen} alt="people" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
                     聚會揪團
@@ -99,10 +99,10 @@ export default function HomeHeader() {
                       Get-together
                     </span>
                   </h2>
-                </a>
+                </Link>
               </li>
               <li className="mt-[16px]">
-                <a href="#" className="flex items-center hover:opacity-70">
+                <Link to="/page/community" className="flex items-center hover:opacity-70">
                   <img src={msgGreen} alt="msg" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
                     心得交流
@@ -110,7 +110,7 @@ export default function HomeHeader() {
                       Forum
                     </span>
                   </h2>
-                </a>
+                </Link>
               </li>
             </ul>
             {/* <!-- Download Link --> */}
@@ -134,7 +134,7 @@ export default function HomeHeader() {
                 Scroll
               </p>
               <div className="scroll my-[4px] pb-2">
-                <div className="scroll__line my-1 border-b-2 border-green-normal"></div>
+                <div className="my-1 border-b-2 scroll__line border-green-normal"></div>
                 <div className="scroll__ball bg-brown-dark"></div>
               </div>
             </div>
@@ -145,17 +145,17 @@ export default function HomeHeader() {
             <img className="hidden xl:block" src={bannerBg} alt="banner-bg" />
             {/* <!-- Animal --> */}
             <img data-aos="zoom-in" data-aos-delay="200"
-              className="hidden xl:block absolute top-40 left-16"
+              className="absolute hidden xl:block top-40 left-16"
               src={snakeImg}
               alt="snake"
             />
             <img data-aos="zoom-in" data-aos-delay="600"
-              className="hidden xl:block absolute bottom-16 left-24"
+              className="absolute hidden xl:block bottom-16 left-24"
               src={hamsterImg}
               alt="hamster"
             />
             <img data-aos="zoom-in" data-aos-delay="1000"
-              className="hidden xl:block absolute top-60 left-80"
+              className="absolute hidden xl:block top-60 left-80"
               src={geckoImg}
               alt="gecko"
             />
@@ -165,12 +165,12 @@ export default function HomeHeader() {
               alt="parrot"
             />
             <img data-aos="zoom-in" data-aos-delay="800"
-              className="hidden xl:block absolute bottom-12 right-72"
+              className="absolute hidden xl:block bottom-12 right-72"
               src={turtleImg}
               alt="turtle"
             />
             <img data-aos="zoom-in" data-aos-delay="400"
-              className="hidden xl:block absolute bottom-40 right-16"
+              className="absolute hidden xl:block bottom-40 right-16"
               src={duckImg}
               alt="duck"
             />

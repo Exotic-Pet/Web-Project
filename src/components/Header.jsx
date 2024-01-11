@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="py-[16px] fixed top-0 z-10 w-full shadow-md bg-white xl:py-[14px]">
       {/* <!-- Navbar --> */}
-      <nav className="leading-none flex items-center justify-between mx-auto px-4 lg:px-8 2xl:px-0 2xl:container">
+      <nav className="flex items-center justify-between px-4 mx-auto leading-none lg:px-8 2xl:px-0 2xl:container">
         <h1>
           <strong className="hidden">特寵生活</strong>
           <Link to="/" className="hover:opacity-70">
@@ -22,7 +22,7 @@ export default function Header() {
           <FontAwesomeIcon icon={faBars} />
         </a>
         {/* <!-- PC Menu --> */}
-        <ul className="gap-x-4 items-center hidden font-bold tracking-wide text-center lg:flex">
+        <ul className="items-center hidden font-bold tracking-wide text-center gap-x-4 lg:flex">
           <li className="nav__list">
             <Link
               to="/page/store-overview"
@@ -82,58 +82,58 @@ export default function Header() {
             <div className="nav__list__menu">
               <ul className="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
                 <li className="text-[16px] font-semibold">
-                  <a
+                  <Link
                     className="block py-3 text-white hover:text-yellow-light"
-                    href="#"
+                    to="/page/exotic-overview/amphibiansAndreptile"
                   >
                     兩棲爬蟲類
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-[16px] font-semibold">
                   <hr className="max-w-[80%] mx-auto border-white" />
-                  <a
+                  <Link
                     className="block py-3 text-white hover:text-yellow-light"
-                    href="#"
+                    to="/page/exotic-overview/leporidaeAndmuriodea"
                   >
                     兔、鼠類
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-[16px] font-semibold">
                   <hr className="max-w-[80%] mx-auto border-white" />
-                  <a
+                  <Link
                     className="block py-3 text-white hover:text-yellow-light"
-                    href="#"
+                    to="/page/exotic-overview/aves"
                   >
                     鳥類
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-[16px] font-semibold">
                   <hr className="max-w-[80%] mx-auto border-white" />
-                  <a
+                  <Link
                     className="block py-3 text-white hover:text-yellow-light"
-                    href="#"
+                    to="/page/exotic-overview/arthropoda"
                   >
                     節肢動物類
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </li>
           <li className="nav__list">
-            <a
+            <Link
               className="nav__list__link py-2 text-brown-dark text-[20px]"
-              href="#"
+              to="/page/event"
             >
               聚會揪團
-            </a>
+            </Link>
           </li>
           <li className="nav__list">
-            <a
+            <Link
               className="nav__list__link py-2 text-brown-dark text-[20px]"
-              href="#"
+              to="/page/community"
             >
               心得交流
-            </a>
+            </Link>
           </li>
           {/* <!-- Account Info --> */}
           <li className="ml-[16px]">
