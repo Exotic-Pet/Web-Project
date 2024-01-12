@@ -74,7 +74,7 @@ export default function StoreContent() {
                     <li className="text-base text-brown-dark">最新</li>
                 </ul>
                 <div className="container mx-auto mt-6">{/*容器*/}
-                    <ul className="grid grid-cols-3 gap-6">{/*格線*/}
+                    <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">{/*格線*/}
                         <li className="col-span-1">
                             <ul className="flex flex-col gap-4">
                                 {/*中*/}
