@@ -1,6 +1,7 @@
 import searchIcon from '../assets/store/search.svg';
 import arrowTop from '../assets/reptile/arrow-top.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
+import { Link } from 'react-router-dom';
 
 
 export default function AmphibiansAndReptile() {
@@ -82,9 +83,11 @@ export default function AmphibiansAndReptile() {
                             </figure>
                         </div>
                         <div className="flex justify-center mx-8 px-14 gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample1.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
-                            </div>
+                            <Link to="intropage">
+                                <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample1.png')] bg-no-repeat">
+                                    <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
+                                </div>
+                            </Link>
                             <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample2.png')] bg-no-repeat">
                                 <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">肥尾守宮</h4>
                             </div>

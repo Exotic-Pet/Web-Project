@@ -9,6 +9,7 @@ import StoreSearch from "./pages/StoreSearch";
 import StoreContent from "./pages/StoreContent";
 import ExoticOverview from "./pages/ExoticOverview";
 import AmphibiansAndReptile from "./pages/AmphibiansAndReptile";
+import IntroPage from "./pages/IntroPage";
 import LeporidaeAndMuriodea from "./pages/LeporidaeAndMuriodea";
 import Aves from "./pages/Aves";
 import Arthropoda from "./pages/Arthropoda";
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="store-search/content" element={<StoreContent />} />
             <Route path="exotic-overview" element={<ExoticOverview />} />
             <Route path="exotic-overview/amphibiansAndreptile" element={<AmphibiansAndReptile />} />
+            <Route path="exotic-overview/amphibiansAndreptile/intropage" element={<IntroPage />} />
             <Route path="exotic-overview/leporidaeAndmuriodea" element={<LeporidaeAndMuriodea />} />
             <Route path="exotic-overview/aves" element={<Aves />} />
             <Route path="exotic-overview/arthropoda" element={<Arthropoda />} />
