@@ -8,7 +8,7 @@ import shopIcon from "../assets/store/shop.svg";
 import shopWhiteIcon from "../assets/store/shop-white.svg";
 import hospitalIcon from "../assets/store/hospital.svg";
 import hospitalWhiteIcon from "../assets/store/hospital-white.svg";
-import storeImg from "../assets/store/store-img.png";
+import storeImg_1 from "../assets/store/store-img-1.png";
 import likeIcon from "../assets/store/like.svg";
 import dislikeIcon from "../assets/store/dislike.svg";
 
@@ -23,8 +23,87 @@ export default function StoreSearch() {
   const handlerPriceToggle = () => setIsPriceExpand(!isPriceExpand);
 
   // Toggle Class Style
-  const toggleExpandStyle = (type) => (type ? `toggle--open` : `toggle--close`);
-  const toggleArrowState = (expandState) => (expandState ? `-rotate-180` : ``);
+  const toggleExpandStyle = (type) => (type ? "toggle--open" : "toggle--close");
+  const toggleArrowState = (expandState) => (expandState ? "-rotate-180" : "");
+
+  // explore Store Data
+  const [exploreStoreData, setExploreStoreData] = useState([
+    {
+      title: "玩蟒人生",
+      subTitle: "Pythonism",
+      imgPath: storeImg_1,
+      label: ["蛇", "龜", "守宮"],
+      contentTitle: "以球蟒為主的咖啡廳！",
+      content:
+        "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+      like: true,
+      articlePath: "/page/store-search/content",
+    },
+    {
+      title: "玩蟒人生2",
+      subTitle: "Pythonism",
+      imgPath: storeImg_1,
+      label: ["蛇", "龜", "守宮"],
+      contentTitle: "以球蟒為主的咖啡廳！",
+      content:
+        "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+      like: false,
+      articlePath: "/page/store-search/content",
+    },
+    {
+      title: "玩蟒人生3",
+      subTitle: "Pythonism",
+      imgPath: storeImg_1,
+      label: ["蛇", "龜", "守宮"],
+      contentTitle: "以球蟒為主的咖啡廳！",
+      content:
+        "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+      like: false,
+      articlePath: "/page/store-search/content",
+    },
+    {
+      title: "玩蟒人生4",
+      subTitle: "Pythonism",
+      imgPath: storeImg_1,
+      label: ["蛇", "龜", "守宮"],
+      contentTitle: "以球蟒為主的咖啡廳！",
+      content:
+        "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+      like: false,
+      articlePath: "/page/store-search/content",
+    },
+    {
+      title: "玩蟒人生5",
+      subTitle: "Pythonism",
+      imgPath: storeImg_1,
+      label: ["蛇", "龜", "守宮"],
+      contentTitle: "以球蟒為主的咖啡廳！",
+      content:
+        "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+      like: false,
+      articlePath: "/page/store-search/content",
+    },
+    {
+      title: "玩蟒人生6",
+      subTitle: "Pythonism",
+      imgPath: storeImg_1,
+      label: ["蛇", "龜", "守宮"],
+      contentTitle: "以球蟒為主的咖啡廳！",
+      content:
+        "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+      like: true,
+      articlePath: "/page/store-search/content",
+    },
+  ]);
+
+  // Toggle Like State
+  const toggleLike = (index) => {
+    setExploreStoreData((currentData) =>
+      currentData.map((item, itemIndex) =>
+        itemIndex === index ? { ...item, like: !item.like } : item
+      )
+    );
+  };
 
   return (
     <>
@@ -65,12 +144,16 @@ export default function StoreSearch() {
                   <img
                     src={arrowBottom}
                     alt="arrow-bottom"
-                    className={toggleArrowState(isAreaExpand) + " duration-100 hover:scale-125"}
+                    className={
+                      toggleArrowState(isAreaExpand) +
+                      " duration-100 hover:scale-125"
+                    }
                   />
                 </div>
                 <div
                   className={
-                    toggleExpandStyle(isAreaExpand) + " checkbox__style checkbox--yellow flex flex-wrap text-xl"
+                    toggleExpandStyle(isAreaExpand) +
+                    " checkbox__style checkbox--yellow flex flex-wrap text-xl"
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
@@ -102,12 +185,16 @@ export default function StoreSearch() {
                   <img
                     src={arrowBottom}
                     alt="arrow-bottom"
-                    className={toggleArrowState(isSearchExpand) + " duration-100 hover:scale-125"}
+                    className={
+                      toggleArrowState(isSearchExpand) +
+                      " duration-100 hover:scale-125"
+                    }
                   />
                 </div>
                 <div
                   className={
-                    toggleExpandStyle(isSearchExpand) + " checkbox__style checkbox--yellow flex flex-wrap text-xl"
+                    toggleExpandStyle(isSearchExpand) +
+                    " checkbox__style checkbox--yellow flex flex-wrap text-xl"
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
@@ -174,7 +261,10 @@ export default function StoreSearch() {
                   <img
                     src={arrowBottom}
                     alt="arrow-bottom"
-                    className={toggleArrowState(isPriceExpand) + " duration-100 hover:scale-125"}
+                    className={
+                      toggleArrowState(isPriceExpand) +
+                      " duration-100 hover:scale-125"
+                    }
                   />
                 </div>
                 <div
@@ -281,246 +371,50 @@ export default function StoreSearch() {
           </ul>
           <div className="bg-gray-dark xl:rounded-tl-[75px] pb-2 w-full pt-[66px] mt-10">
             <ul className="flex flex-wrap gap-7 justify-center">
-              <li className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
-                  玩蟒人生
-                  <span className="ml-2 text-lg font-bold text-brown-normal">
-                    Pythonism
-                  </span>
-                </h3>
-                <figure className="relative mt-4 mb-2">
-                  <img src={storeImg} alt="store" className="w-full" />
-                  <img
-                    src={likeIcon}
-                    alt="like"
-                    className="absolute -bottom-2 -right-1"
-                  />
-                </figure>
-                <ul className="flex my-2">
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #蛇
-                  </li>
-                  <li className="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #龜
-                  </li>
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #守宮
-                  </li>
-                </ul>
-                <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-                  以球蟒為主的咖啡廳！
-                </h4>
-                <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-                  只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
-                </p>
-                <Link
-                  to="/page/store-search/content"
-                  href="#"
-                  className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
+              {exploreStoreData?.map((store, index) => (
+                <li
+                  key={index}
+                  className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal"
                 >
-                  查看更多
-                </Link>
-              </li>
-              <li className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
-                  玩蟒人生
-                  <span className="ml-2 text-lg font-bold text-brown-normal">
-                    Pythonism
-                  </span>
-                </h3>
-                <figure className="relative mt-4 mb-2">
-                  <img src={storeImg} alt="store" className="w-full" />
-                  <img
-                    src={dislikeIcon}
-                    alt="like"
-                    className="absolute -bottom-2 -right-1"
-                  />
-                </figure>
-                <ul className="flex my-2">
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #蛇
-                  </li>
-                  <li className="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #龜
-                  </li>
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #守宮
-                  </li>
-                </ul>
-                <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-                  以球蟒為主的咖啡廳！
-                </h4>
-                <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-                  只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
-                </p>
-                <Link
-                  to="/page/store-search/content"
-                  href="#"
-                  className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
-                >
-                  查看更多
-                </Link>
-              </li>
-              <li className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
-                  玩蟒人生
-                  <span className="ml-2 text-lg font-bold text-brown-normal">
-                    Pythonism
-                  </span>
-                </h3>
-                <figure className="relative mt-4 mb-2">
-                  <img src={storeImg} alt="store" className="w-full" />
-                  <img
-                    src={dislikeIcon}
-                    alt="like"
-                    className="absolute -bottom-2 -right-1"
-                  />
-                </figure>
-                <ul className="flex my-2">
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #蛇
-                  </li>
-                  <li className="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #龜
-                  </li>
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #守宮
-                  </li>
-                </ul>
-                <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-                  以球蟒為主的咖啡廳！
-                </h4>
-                <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-                  只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
-                </p>
-                <Link
-                  to="/page/store-search/content"
-                  href="#"
-                  className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
-                >
-                  查看更多
-                </Link>
-              </li>
-              <li className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
-                  玩蟒人生
-                  <span className="ml-2 text-lg font-bold text-brown-normal">
-                    Pythonism
-                  </span>
-                </h3>
-                <figure className="relative mt-4 mb-2">
-                  <img src={storeImg} alt="store" className="w-full" />
-                  <img
-                    src={dislikeIcon}
-                    alt="like"
-                    className="absolute -bottom-2 -right-1"
-                  />
-                </figure>
-                <ul className="flex my-2">
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #蛇
-                  </li>
-                  <li className="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #龜
-                  </li>
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #守宮
-                  </li>
-                </ul>
-                <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-                  以球蟒為主的咖啡廳！
-                </h4>
-                <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-                  只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
-                </p>
-                <Link
-                  to="/page/store-search/content"
-                  href="#"
-                  className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
-                >
-                  查看更多
-                </Link>
-              </li>
-              <li className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
-                  玩蟒人生
-                  <span className="ml-2 text-lg font-bold text-brown-normal">
-                    Pythonism
-                  </span>
-                </h3>
-                <figure className="relative mt-4 mb-2">
-                  <img src={storeImg} alt="store" className="w-full" />
-                  <img
-                    src={dislikeIcon}
-                    alt="like"
-                    className="absolute -bottom-2 -right-1"
-                  />
-                </figure>
-                <ul className="flex my-2">
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #蛇
-                  </li>
-                  <li className="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #龜
-                  </li>
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #守宮
-                  </li>
-                </ul>
-                <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-                  以球蟒為主的咖啡廳！
-                </h4>
-                <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-                  只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
-                </p>
-                <Link
-                  to="/page/store-search/content"
-                  href="#"
-                  className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
-                >
-                  查看更多
-                </Link>
-              </li>
-              <li className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-                <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
-                  玩蟒人生
-                  <span className="ml-2 text-lg font-bold text-brown-normal">
-                    Pythonism
-                  </span>
-                </h3>
-                <figure className="relative mt-4 mb-2">
-                  <img src={storeImg} alt="store" className="w-full" />
-                  <img
-                    src={dislikeIcon}
-                    alt="like"
-                    className="absolute -bottom-2 -right-1"
-                  />
-                </figure>
-                <ul className="flex my-2">
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #蛇
-                  </li>
-                  <li className="px-2 mx-1 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #龜
-                  </li>
-                  <li className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl">
-                    #守宮
-                  </li>
-                </ul>
-                <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-                  以球蟒為主的咖啡廳！
-                </h4>
-                <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-                  只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！
-                </p>
-                <Link
-                  to="/page/store-search/content"
-                  href="#"
-                  className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
-                >
-                  查看更多
-                </Link>
-              </li>
+                  <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
+                    {store.title}
+                    <span className="ml-2 text-lg font-bold text-brown-normal">
+                      {store.subTitle}
+                    </span>
+                  </h3>
+                  <figure className="relative mt-4 mb-2">
+                    <img src={store.imgPath} alt="store" className="w-full" />
+                    <img
+                      onClick={() => toggleLike(index)}
+                      src={store.like ? likeIcon : dislikeIcon}
+                      alt="like"
+                      className="absolute -bottom-2 -right-1 cursor-pointer"
+                    />
+                  </figure>
+                  <ul className="flex my-2 gap-x-2">
+                    {store?.label?.map((labelItem, labelIndex) => (
+                      <li
+                        key={labelIndex}
+                        className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl"
+                      >
+                        {`#${labelItem}`}
+                      </li>
+                    ))}
+                  </ul>
+                  <h4 className="text-xl font-bold tracking-wide text-brown-dark">
+                    {store.contentTitle}
+                  </h4>
+                  <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
+                    {store.content}
+                  </p>
+                  <Link
+                    to={store.articlePath}
+                    className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
+                  >
+                    查看更多
+                  </Link>
+                </li>
+              ))}
             </ul>
             <ul className="flex gap-x-2 justify-center mt-16 mb-24">
               <li>
