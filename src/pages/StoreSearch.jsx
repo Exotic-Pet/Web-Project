@@ -24,6 +24,7 @@ export default function StoreSearch() {
 
   // Toggle Class Style
   const toggleExpandStyle = (type) => (type ? `toggle--open` : `toggle--close`);
+  const toggleArrowState = (expandState) => (expandState ? `-rotate-180` : ``);
 
   return (
     <>
@@ -64,7 +65,7 @@ export default function StoreSearch() {
                   <img
                     src={arrowBottom}
                     alt="arrow-bottom"
-                    className="hover:scale-125"
+                    className={toggleArrowState(isAreaExpand) + " duration-100 hover:scale-125"}
                   />
                 </div>
                 <div
@@ -101,7 +102,7 @@ export default function StoreSearch() {
                   <img
                     src={arrowBottom}
                     alt="arrow-bottom"
-                    className="hover:scale-125"
+                    className={toggleArrowState(isSearchExpand) + " duration-100 hover:scale-125"}
                   />
                 </div>
                 <div
@@ -173,7 +174,7 @@ export default function StoreSearch() {
                   <img
                     src={arrowBottom}
                     alt="arrow-bottom"
-                    className="hover:scale-125"
+                    className={toggleArrowState(isPriceExpand) + " duration-100 hover:scale-125"}
                   />
                 </div>
                 <div
