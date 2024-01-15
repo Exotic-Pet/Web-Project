@@ -1,4 +1,14 @@
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 import introPhoto from "../assets/intropage/intro-photo.png";
+import introPhoto2 from "../assets/intropage/intro-photo2.png";
+import introPhoto3 from "../assets/intropage/intro-photo3.png";
+import introPhoto4 from "../assets/intropage/intro-photo4.png";
+import introPhoto5 from "../assets/intropage/intro-photo5.png";
 import file from "../assets/intropage/file.svg";
 import introImg1 from "../assets/intropage/intro-img1.png";
 import introImg2 from "../assets/intropage/intro-img2.png";
@@ -22,7 +32,24 @@ export default function IntroPage() {
         <main className="mt-32">
             <div className="container flex items-center mx-auto gap-x-16">
                 <figure className="bg-[url('../assets/intropage/img-background.svg')] bg-no-repeat bg-center bg-contain p-11">
-                    <img src={introPhoto} alt="introphoto" className="w-[450px]" />
+                    {/* <img src={introPhoto} alt="introphoto" className="w-[450px]" /> */}
+                    <Swiper pagination={true} modules={[Pagination]} className="w-64 mySwiper rounded-[30px]">
+                        <SwiperSlide>
+                            <img src={introPhoto} alt="introphoto" className="w-[450px] justify-center items-center" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={introPhoto2} alt="introphoto" className="w-[450px] justify-center items-center" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={introPhoto3} alt="introphoto" className="w-[450px] justify-center items-center" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={introPhoto4} alt="introphoto" className="w-[450px] justify-center items-center" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={introPhoto5} alt="introphoto" className="w-[450px] justify-center items-center" />
+                        </SwiperSlide>
+                    </Swiper>
                 </figure>
                 <div className="pr-[87px]">
                     <div className="flex items-center justify-between ">

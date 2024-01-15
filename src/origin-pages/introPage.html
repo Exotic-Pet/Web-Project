@@ -58,7 +58,24 @@
     <main class="mt-16">
         <div class="container flex items-center mx-auto gap-x-16">
             <figure class="bg-[url('../assets/intropage/img-background.svg')] bg-no-repeat bg-center bg-contain p-11">
-                <img src="../assets/intropage/intro-photo.png" alt="introphoto" class="w-[450px]">
+                <!-- <img src="../assets/intropage/intro-photo.png" alt="introphoto" class="w-[450px]"> -->
+                <swiper-container class="w-64 mySwiper" pagination="true">
+                    <swiper-slide class="items-center justify-center bg-white rounded-[30px]">
+                        <img src="../assets/intropage/intro-photo.png" alt="introphoto" class="">
+                    </swiper-slide>
+                    <swiper-slide class="items-center justify-center bg-white rounded-[30px]">
+                        <img src="../assets/intropage/intro-photo2.png" alt="introphoto" class="">
+                    </swiper-slide>
+                    <swiper-slide class="items-center justify-center bg-white rounded-[30px]">
+                        <img src="../assets/intropage/intro-photo3.png" alt="introphoto" class="">
+                    </swiper-slide>
+                    <swiper-slide class="items-center justify-center bg-white rounded-[30px]">
+                        <img src="../assets/intropage/intro-photo4.png" alt="introphoto" class="">
+                    </swiper-slide>
+                    <swiper-slide class="items-center justify-center bg-white rounded-[30px]">
+                        <img src="../assets/intropage/intro-photo5.png" alt="introphoto" class="">
+                    </swiper-slide>
+                </swiper-container>
             </figure>
             <div class="pr-[87px]">
                 <div class="flex items-center justify-between ">
@@ -413,6 +430,10 @@
             }
         }
     </script>
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 </body>
 
 </html>
