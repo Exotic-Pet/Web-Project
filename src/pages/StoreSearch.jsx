@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
+// Banner
+import cafeBanner from "../assets/store/cafe-banner.svg";
+import specialtyBanner from "../assets/store/store-banner.svg";
+import hospitalBanner from "../assets/store/hospital-banner.svg";
+// Photos
 import searchIcon from "../assets/store/search.svg";
 import arrowBottom from "../assets/store/arrow-bottom.svg";
 import coffeeIcon from "../assets/store/coffee.svg";
@@ -20,6 +25,31 @@ export default function StoreSearch() {
   // Current Category
   const [currentCategory, setCurrentCategory] = useState("cafe");
 
+  // Category Banner Path
+  const categoryBannerPath = (
+    currentCategory === "cafe"
+      ? cafeBanner
+      : currentCategory === "specialtyStore"
+      ? specialtyBanner
+      : currentCategory === "hospital"
+      ? hospitalBanner
+      : null
+  );
+  // Category Colors
+  const categoryColor = (
+    currentCategory === "cafe"
+      ? "yellow"
+      : currentCategory === "specialtyStore"
+      ? "green"
+      : currentCategory === "hospital"
+      ? "cyan"
+      : null
+  );
+  // Category Colors Depth
+  const colorDepth = currentCategory === "hospital" ? "normal" : "light";
+  // Background Colors Depth
+  const backgroundColorDepth = currentCategory !== "specialtyStore" ? "normal" : "light";
+
   // Collapse Search Menu
   const [isAreaExpand, setIsAreaExpand] = useState(false);
   const [isSearchExpand, setIsSearchExpand] = useState(false);
@@ -34,7 +64,7 @@ export default function StoreSearch() {
   const toggleExpandStyle = (type) => (type ? "toggle--open" : "toggle--close");
   const toggleArrowState = (expandState) => (expandState ? "-rotate-180" : "");
 
-  // explore Store Data
+  // Explore Store Data
   const [exploreStoreData, setExploreStoreData] = useState({
     cafe: [
       {
@@ -57,8 +87,7 @@ export default function StoreSearch() {
         imgPath: cafeImg_2,
         label: ["水豚", "柯爾鴨"],
         contentTitle: "水豚陪伴的咖啡廳！",
-        content:
-        "只需要消費200元，就可以體驗和水豚一起玩耍做朋友哦！",
+        content: "只需要消費200元，就可以體驗和水豚一起玩耍做朋友哦！",
         like: false,
         articlePath: "/page/store-search/content",
         price: 200,
@@ -135,6 +164,17 @@ export default function StoreSearch() {
         like: false,
         articlePath: "/page/store-search/content",
       },
+      {
+        title: "丘丘寵物3",
+        subTitle: "Pet Shop",
+        area: "北部",
+        imgPath: specialtyImg_1,
+        label: ["兔子", "倉鼠", "刺蝟"],
+        contentTitle: "寵物美容為主的專賣店！",
+        content: "各式各樣的美容服務都有哦～歡迎來改造自家小寶貝吧！",
+        like: false,
+        articlePath: "/page/store-search/content",
+      },
     ],
     hospital: [
       {
@@ -161,24 +201,39 @@ export default function StoreSearch() {
         like: false,
         articlePath: "/page/store-search/content",
       },
+      {
+        title: "伊甸動物醫院3",
+        subTitle: "Eden",
+        area: "北部",
+        imgPath: hospitalImg_1,
+        label: ["兔子", "鳥", "青蛙"],
+        contentTitle: "有特寵門診的醫院！",
+        content:
+          "隨著飼養寵物的種類日漸增多，我們也有專門獸醫師負責兔、貂、鳥、猴、魚與爬蟲類等動物～",
+        like: false,
+        articlePath: "/page/store-search/content",
+      },
     ],
   });
 
   // Toggle Like State
-  const toggleLike = useCallback((category, index) => {
-    setExploreStoreData((currentData) => ({
-      ...currentData,
-      [category]: currentData[category].map((item, itemIndex) =>
-        itemIndex === index ? { ...item, like: !item.like } : item
-      ),
-    }));
-  }, [setExploreStoreData]);
+  const toggleLike = useCallback(
+    (category, index) => {
+      setExploreStoreData((currentData) => ({
+        ...currentData,
+        [category]: currentData[category].map((item, itemIndex) =>
+          itemIndex === index ? { ...item, like: !item.like } : item
+        ),
+      }));
+    },
+    [setExploreStoreData]
+  );
 
   // StoreList Component
   const StoreList = ({ store, index, toggleLike }) => {
     return (
-      <li className="flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-yellow-normal">
-        <h3 className="text-3xl font-bold tracking-wide text-yellow-dark">
+      <li className={`flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-${categoryColor}-normal`}>
+        <h3 className={`text-3xl font-bold tracking-wide text-${categoryColor}-dark`}>
           {store.title}
           <span className="ml-2 text-lg font-bold text-brown-normal">
             {store.subTitle}
@@ -201,7 +256,7 @@ export default function StoreSearch() {
           {store?.label?.map((labelItem, labelIndex) => (
             <li
               key={labelIndex}
-              className="px-2 border border-solid text-yellow-dark border-yellow-dark rounded-3xl"
+              className={`px-2 border border-solid text-${categoryColor}-dark border-${categoryColor}-dark rounded-3xl`}
             >
               {`#${labelItem}`}
             </li>
@@ -215,7 +270,7 @@ export default function StoreSearch() {
         </p>
         <Link
           to={store.articlePath}
-          className="mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-yellow-dark text-brown-dark hover:scale-110"
+          className={`mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-${categoryColor}-dark text-brown-dark hover:scale-110`}
         >
           查看更多
         </Link>
@@ -223,15 +278,21 @@ export default function StoreSearch() {
     );
   };
 
-  const filterStoreData = useCallback((category) => setCurrentCategory(category), []);
+  // Filter Data Category
+  const filterStoreData = useCallback(
+    (category) => setCurrentCategory(category),
+    []
+  );
 
   return (
     <>
       {/* <!-- Banner --> */}
-      <div className="mt-[84px] bg-yellow-normal bg-no-repeat bg-center bg-[url('../assets/store/cafe-banner.svg')] min-h-[133px]"></div>
+      <div className={`mt-[84px] bg-${categoryColor}-${backgroundColorDepth} duration-0 min-h-[133px]`}>
+        <img className="mx-auto min-h-[133px] object-cover" src={categoryBannerPath} />
+      </div>
       {/* Store Content */}
-      <main className="flex flex-wrap md:justify-between xl:flex-nowrap">
-        <aside className="flex-1 mt-20 w-[388px] mx-auto xl:ml-20">
+      <main className="flex flex-col gap-x-4 flex-wrap md:justify-between xl:flex-row">
+        <aside className="xl:flex-1 mt-20 w-[388px] mx-auto xl:ml-20">
           {/* <!-- Search Bar --> */}
           <form action="" className="flex justify-around">
             <div className="relative">
@@ -258,7 +319,7 @@ export default function StoreSearch() {
                   className="toggle--click flex justify-between cursor-pointer"
                   onMouseDown={handlerAreaToggle}
                 >
-                  <h3 className="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
+                  <h3 className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}>
                     你想去哪？
                   </h3>
                   <img
@@ -273,7 +334,7 @@ export default function StoreSearch() {
                 <div
                   className={
                     toggleExpandStyle(isAreaExpand) +
-                    " checkbox__style checkbox--yellow flex flex-wrap text-xl"
+                    ` checkbox__style checkbox--${categoryColor} flex flex-wrap text-xl`
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
@@ -299,7 +360,7 @@ export default function StoreSearch() {
                   className="toggle--click flex justify-between my-5 cursor-pointer"
                   onMouseDown={handlerSearchToggle}
                 >
-                  <h3 className="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
+                  <h3 className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}>
                     想找什麼？
                   </h3>
                   <img
@@ -314,7 +375,7 @@ export default function StoreSearch() {
                 <div
                   className={
                     toggleExpandStyle(isSearchExpand) +
-                    " checkbox__style checkbox--yellow flex flex-wrap text-xl"
+                    ` checkbox__style checkbox--${categoryColor} flex flex-wrap text-xl`
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
@@ -365,17 +426,17 @@ export default function StoreSearch() {
                     <input type="checkbox" name="animal" value="浣熊" />
                     <span className="checkmark px-3">浣熊</span>
                   </label>
-                  <button className="see__more mt-8 mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:bg-yellow-light">
+                  <button className="see__more mt-8 mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:border-yellow-light">
                     查看更多
                   </button>
                 </div>
               </li>
-              <li className="border-t-2">
+              <li className={`${currentCategory === "cafe" ? "block" : "hidden"} border-t-2`}>
                 <div
                   className="toggle--click flex justify-between mt-5 cursor-pointer"
                   onMouseDown={handlerPriceToggle}
                 >
-                  <h3 className="text-2xl font-bold tracking-wider text-yellow-dark hover:opacity-70">
+                  <h3 className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}>
                     想花多少？
                   </h3>
                   <img
@@ -402,24 +463,24 @@ export default function StoreSearch() {
                     className="w-full mt-9"
                   />
                   <div className="flex mt-3">
-                    <p className="flex-1 text-right text-xl font-bold text-brown-normal">
+                    <span className="flex-1 text-right text-xl font-bold text-brown-normal">
                       200
-                    </p>
-                    <p className="flex-1 text-right text-xl font-bold text-brown-normal">
+                    </span>
+                    <span className="flex-1 text-right text-xl font-bold text-brown-normal">
                       400
-                    </p>
-                    <p className="flex-1 text-right text-xl font-bold text-brown-normal">
+                    </span>
+                    <span className="flex-1 text-right text-xl font-bold text-brown-normal">
                       600
-                    </p>
-                    <p className="flex-1 text-right text-xl font-bold text-brown-normal">
+                    </span>
+                    <span className="flex-1 text-right text-xl font-bold text-brown-normal">
                       800
-                    </p>
+                    </span>
                   </div>
                 </div>
               </li>
             </ul>
             <div className="mt-14 text-brown-dark">
-              <button className="hover:text-white mx-auto block text-[20px] font-bold bg-yellow-light rounded-full w-[213px] h-[49px]">
+              <button className={`hover:text-white mx-auto block text-[20px] font-bold bg-${categoryColor}-${colorDepth} rounded-full w-[213px] h-[49px]`}>
                 開始搜尋
               </button>
               <button className="hover:text-white mx-auto block text-[20px] font-bold bg-brown-light rounded-full w-[213px] h-[49px] mt-4">
@@ -429,9 +490,16 @@ export default function StoreSearch() {
           </form>
         </aside>
         {/* <!-- Store List --> */}
-        <section className="flex-[3] mt-10 xl:ml-11">
+        <section className="flex-1 xl:flex-[3] mt-10 xl:ml-11">
           <ul className="flex flex-col items-center justify-center sm:flex-row">
-            <li className={(currentCategory === "cafe" ? "bg-brown-normal" : "bg-white hover:bg-gray-dark") + " w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent active:bg-brown-normal"}>
+            <li
+              className={
+                (currentCategory === "cafe"
+                  ? "bg-brown-normal"
+                  : "bg-white hover:bg-gray-dark") +
+                " w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent active:bg-brown-normal"
+              }
+            >
               <div
                 className="flex py-5 px-7 group cursor-pointer"
                 onClick={() => filterStoreData("cafe")}
@@ -439,21 +507,41 @@ export default function StoreSearch() {
                 <img
                   src={coffeeIcon}
                   alt="cafe"
-                  className={(currentCategory === "cafe" ? "hidden" : "block") + " group-active:hidden"}
+                  className={
+                    (currentCategory === "cafe" ? "hidden" : "block") +
+                    " group-active:hidden"
+                  }
                 />
                 <img
                   src={coffeeWhiteIcon}
                   alt="cafe"
-                  className={(currentCategory === "cafe" ? "block" : "hidden") + " group-active:block"}
+                  className={
+                    (currentCategory === "cafe" ? "block" : "hidden") +
+                    " group-active:block"
+                  }
                 />
-                <h4 className={(currentCategory === "cafe" ? "text-white" : "text-brown-normal") + " ml-3 text-xl font-bold tracking-wide group-active:text-white"}>
+                <h4
+                  className={
+                    (currentCategory === "cafe"
+                      ? "text-white"
+                      : "text-brown-normal") +
+                    " ml-3 text-xl font-bold tracking-wide group-active:text-white"
+                  }
+                >
                   特寵
                   <br />
                   咖啡廳
                 </h4>
               </div>
             </li>
-            <li className={(currentCategory === "specialtyStore" ? "bg-brown-normal" : "bg-white hover:bg-gray-dark") + " w-[195px] my-2 border-2 border-solid rounded-full sm:mx-8 border-brown-light hover:border-transparent active:bg-brown-normal"}>
+            <li
+              className={
+                (currentCategory === "specialtyStore"
+                  ? "bg-brown-normal"
+                  : "bg-white hover:bg-gray-dark") +
+                " w-[195px] my-2 border-2 border-solid rounded-full sm:mx-8 border-brown-light hover:border-transparent active:bg-brown-normal"
+              }
+            >
               <div
                 className="flex py-5 px-7 group cursor-pointer"
                 onClick={() => filterStoreData("specialtyStore")}
@@ -461,21 +549,43 @@ export default function StoreSearch() {
                 <img
                   src={shopIcon}
                   alt="store"
-                  className={(currentCategory === "specialtyStore" ? "hidden" : "block") + " group-active:hidden"}
+                  className={
+                    (currentCategory === "specialtyStore"
+                      ? "hidden"
+                      : "block") + " group-active:hidden"
+                  }
                 />
                 <img
                   src={shopWhiteIcon}
                   alt="store"
-                  className={(currentCategory === "specialtyStore" ? "block" : "hidden") + " group-active:block"}
+                  className={
+                    (currentCategory === "specialtyStore"
+                      ? "block"
+                      : "hidden") + " group-active:block"
+                  }
                 />
-                <h4 className={(currentCategory === "specialtyStore" ? "text-white" : "text-brown-normal") + " ml-3 text-xl font-bold tracking-wide text-brown-normal group-active:text-white"}>
+                <h4
+                  className={
+                    (currentCategory === "specialtyStore"
+                      ? "text-white"
+                      : "text-brown-normal") +
+                    " ml-3 text-xl font-bold tracking-wide text-brown-normal group-active:text-white"
+                  }
+                >
                   特寵
                   <br />
                   專賣店
                 </h4>
               </div>
             </li>
-            <li className={(currentCategory === "hospital" ? "bg-brown-normal" : "bg-white hover:bg-gray-dark") + " w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent active:bg-brown-normal"}>
+            <li
+              className={
+                (currentCategory === "hospital"
+                  ? "bg-brown-normal"
+                  : "bg-white hover:bg-gray-dark") +
+                " w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent active:bg-brown-normal"
+              }
+            >
               <div
                 className="flex py-5 pl-7 pr-9 group cursor-pointer"
                 onClick={() => filterStoreData("hospital")}
@@ -483,14 +593,27 @@ export default function StoreSearch() {
                 <img
                   src={hospitalIcon}
                   alt="hospital"
-                  className={(currentCategory === "hospital" ? "hidden" : "block") + " group-active:hidden"}
+                  className={
+                    (currentCategory === "hospital" ? "hidden" : "block") +
+                    " group-active:hidden"
+                  }
                 />
                 <img
                   src={hospitalWhiteIcon}
                   alt="hospital"
-                  className={(currentCategory === "hospital" ? "block" : "hidden") + " group-active:block"}
+                  className={
+                    (currentCategory === "hospital" ? "block" : "hidden") +
+                    " group-active:block"
+                  }
                 />
-                <h4 className={(currentCategory === "hospital" ? "text-white" : "text-brown-normal") + " ml-3 text-xl font-bold tracking-wide text-brown-normal group-active:text-white"}>
+                <h4
+                  className={
+                    (currentCategory === "hospital"
+                      ? "text-white"
+                      : "text-brown-normal") +
+                    " ml-3 text-xl font-bold tracking-wide text-brown-normal group-active:text-white"
+                  }
+                >
                   特寵
                   <br />
                   醫院

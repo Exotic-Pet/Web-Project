@@ -95,7 +95,7 @@ input::placeholder {
   background-color: #EFC141;
 }
 .checkbox--cyan input[type="checkbox"]:checked + .checkmark::before {
-  background-color: #4D9895;
+  background-color: #93C9C8;
 }
 .checkbox--green input[type="checkbox"]:checked + .checkmark::before {
   background-color: #ABC592;
