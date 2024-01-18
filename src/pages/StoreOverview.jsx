@@ -12,7 +12,7 @@ export default function StoreOverview() {
       <div className="container mx-auto px-2 lg:px-0">
         <ul className="flex flex-col gap-x-10 gap-y-8 lg:flex-row">
           <li className="flex-1 overflow-hidden">
-            <Link to="/page/store-search">
+            <Link to="/page/store-search" state={{ category: "cafe" }}>
               <div className="min-h-[688px] relative group duration-700 hover:border-yellow-normal border-4 border-transparent rounded-[52px] px-8 pt-6 bg-[url('../assets/store/overview-cafe.svg')] bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-4 tracking-widest text-[100px] font-light">
@@ -27,7 +27,7 @@ export default function StoreOverview() {
             </Link>
           </li>
           <li className="flex-1">
-            <Link to="/page/store-search">
+            <Link to="/page/store-search" state={{ category: "specialtyStore" }}>
               <div className="relative group duration-700 hover:border-green-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] mb-9 p-6 bg-[url('../assets/store/overview-store.svg')] bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-3 tracking-widest text-[50px] font-light">
@@ -40,7 +40,7 @@ export default function StoreOverview() {
                 <img className="absolute duration-700 opacity-0 bottom-2 -right-44 group-hover:right-[14%] group-hover:opacity-100" src={storeDuck} alt="duck" />
               </div>
             </Link>
-            <Link to="/page/store-search">
+            <Link to="/page/store-search" state={{ category: "hospital" }}>
               <div className="relative group duration-700 hover:border-cyan-normal border-4 border-transparent rounded-[36px] overflow-hidden min-h-[326px] p-6 bg-[url('../assets/store/overview-hospital.svg')] bg-center bg-no-repeat bg-cover">
                 <h3 className="text-brown-dark text-right leading-none">
                   <div className="mb-3 tracking-widest text-[50px] font-light">

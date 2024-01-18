@@ -35,30 +35,27 @@ export default function Header() {
             <div className="nav__list__menu">
               <ul className="py-1 bg-brown-dark rounded-bl-xl rounded-br-xl">
                 <li className="text-[16px] font-semibold">
-                  <Link
-                    to="/page/store-search"
-                    className="block py-3 text-white hover:text-yellow-light"
+                  <Link to="/page/store-search" state={{ category: "cafe" }}
+                    className="block cursor-pointer py-3 text-white hover:text-yellow-light"
                   >
                     特寵咖啡廳
                   </Link>
                 </li>
                 <li className="text-[16px] font-semibold">
                   <hr className="max-w-[80%] mx-auto border-white" />
-                  <a
-                    className="block py-3 text-white hover:text-yellow-light"
-                    href="#"
+                  <Link to="/page/store-search" state={{ category: "specialtyStore" }}
+                    className="block cursor-pointer py-3 text-white hover:text-yellow-light"
                   >
                     特寵專賣店
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-[16px] font-semibold">
                   <hr className="max-w-[80%] mx-auto border-white" />
-                  <a
-                    className="block py-3 text-white hover:text-yellow-light"
-                    href="#"
+                  <Link to="/page/store-search" state={{ category: "hospital" }}
+                    className="block cursor-pointer py-3 text-white hover:text-yellow-light"
                   >
                     特寵醫院
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

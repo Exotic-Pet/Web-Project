@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState, useCallback } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useCallback } from "react";
 
 // Banner
 import cafeBanner from "../assets/store/cafe-banner.svg";
@@ -22,29 +22,36 @@ import likeIcon from "../assets/store/like.svg";
 import dislikeIcon from "../assets/store/dislike.svg";
 
 export default function StoreSearch() {
+  const location = useLocation();
+
   // Current Category
   const [currentCategory, setCurrentCategory] = useState("cafe");
 
+  // State Update
+  useEffect(() => {
+    if (location.state?.category) {
+      setCurrentCategory(location.state.category);
+    }
+  }, [location.state]);
+
   // Category Banner Path
-  const categoryBannerPath = (
+  const categoryBannerPath =
     currentCategory === "cafe"
       ? cafeBanner
       : currentCategory === "specialtyStore"
       ? specialtyBanner
       : currentCategory === "hospital"
       ? hospitalBanner
-      : null
-  );
+      : null;
   // Category Colors
-  const categoryColor = (
+  const categoryColor =
     currentCategory === "cafe"
       ? "yellow"
       : currentCategory === "specialtyStore"
       ? "green"
       : currentCategory === "hospital"
       ? "cyan"
-      : null
-  );
+      : null;
   // Category Colors Depth
   const colorDepth = currentCategory === "hospital" ? "normal" : "light";
   // Background Colors Depth
@@ -68,6 +75,7 @@ export default function StoreSearch() {
   const [exploreStoreData, setExploreStoreData] = useState({
     cafe: [
       {
+        id: 1,
         title: "玩蟒人生",
         subTitle: "Pythonism",
         area: "北部",
@@ -81,6 +89,7 @@ export default function StoreSearch() {
         price: 100,
       },
       {
+        id: 2,
         title: "水豚騎士",
         subTitle: "Capybara",
         area: "北部",
@@ -93,6 +102,7 @@ export default function StoreSearch() {
         price: 200,
       },
       {
+        id: 3,
         title: "玩蟒人生3",
         subTitle: "Pythonism",
         area: "北部",
@@ -105,6 +115,7 @@ export default function StoreSearch() {
         articlePath: "/page/store-search/content",
       },
       {
+        id: 4,
         title: "玩蟒人生4",
         subTitle: "Pythonism",
         area: "北部",
@@ -117,6 +128,7 @@ export default function StoreSearch() {
         articlePath: "/page/store-search/content",
       },
       {
+        id: 5,
         title: "玩蟒人生5",
         subTitle: "Pythonism",
         area: "北部",
@@ -129,6 +141,7 @@ export default function StoreSearch() {
         articlePath: "/page/store-search/content",
       },
       {
+        id: 6,
         title: "玩蟒人生6",
         subTitle: "Pythonism",
         area: "北部",
@@ -143,6 +156,7 @@ export default function StoreSearch() {
     ],
     specialtyStore: [
       {
+        id: 1,
         title: "丘丘寵物",
         subTitle: "Pet Shop",
         area: "北部",
@@ -154,6 +168,7 @@ export default function StoreSearch() {
         articlePath: "/page/store-search/content",
       },
       {
+        id: 2,
         title: "丘丘寵物2",
         subTitle: "Pet Shop",
         area: "北部",
@@ -165,7 +180,20 @@ export default function StoreSearch() {
         articlePath: "/page/store-search/content",
       },
       {
+        id: 3,
         title: "丘丘寵物3",
+        subTitle: "Pet Shop",
+        area: "北部",
+        imgPath: specialtyImg_1,
+        label: ["兔子", "倉鼠", "刺蝟"],
+        contentTitle: "寵物美容為主的專賣店！",
+        content: "各式各樣的美容服務都有哦～歡迎來改造自家小寶貝吧！",
+        like: false,
+        articlePath: "/page/store-search/content",
+      },
+      {
+        id: 4,
+        title: "丘丘寵物4",
         subTitle: "Pet Shop",
         area: "北部",
         imgPath: specialtyImg_1,
@@ -178,6 +206,7 @@ export default function StoreSearch() {
     ],
     hospital: [
       {
+        id: 1,
         title: "伊甸動物醫院",
         subTitle: "Eden",
         area: "北部",
@@ -190,6 +219,7 @@ export default function StoreSearch() {
         articlePath: "/page/store-search/content",
       },
       {
+        id: 2,
         title: "伊甸動物醫院2",
         subTitle: "Eden",
         area: "北部",
@@ -202,7 +232,21 @@ export default function StoreSearch() {
         articlePath: "/page/store-search/content",
       },
       {
+        id: 3,
         title: "伊甸動物醫院3",
+        subTitle: "Eden",
+        area: "北部",
+        imgPath: hospitalImg_1,
+        label: ["兔子", "鳥", "青蛙"],
+        contentTitle: "有特寵門診的醫院！",
+        content:
+          "隨著飼養寵物的種類日漸增多，我們也有專門獸醫師負責兔、貂、鳥、猴、魚與爬蟲類等動物～",
+        like: false,
+        articlePath: "/page/store-search/content",
+      },
+      {
+        id: 4,
+        title: "伊甸動物醫院4",
         subTitle: "Eden",
         area: "北部",
         imgPath: hospitalImg_1,
@@ -232,8 +276,12 @@ export default function StoreSearch() {
   // StoreList Component
   const StoreList = ({ store, index, toggleLike }) => {
     return (
-      <li className={`flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-${categoryColor}-normal`}>
-        <h3 className={`text-3xl font-bold tracking-wide text-${categoryColor}-dark`}>
+      <li
+        className={`flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-${categoryColor}-normal`}
+      >
+        <h3
+          className={`text-3xl font-bold tracking-wide text-${categoryColor}-dark`}
+        >
           {store.title}
           <span className="ml-2 text-lg font-bold text-brown-normal">
             {store.subTitle}
@@ -284,11 +332,18 @@ export default function StoreSearch() {
     []
   );
 
+  
+
   return (
     <>
       {/* <!-- Banner --> */}
-      <div className={`mt-[84px] bg-${categoryColor}-${backgroundColorDepth} duration-0 min-h-[133px]`}>
-        <img className="mx-auto min-h-[133px] object-cover" src={categoryBannerPath} />
+      <div
+        className={`mt-[84px] bg-${categoryColor}-${backgroundColorDepth} duration-0 min-h-[133px]`}
+      >
+        <img
+          className="mx-auto min-h-[133px] object-cover"
+          src={categoryBannerPath}
+        />
       </div>
       {/* Store Content */}
       <main className="flex flex-col gap-x-4 flex-wrap md:justify-between xl:flex-row">
@@ -319,7 +374,9 @@ export default function StoreSearch() {
                   className="toggle--click flex justify-between cursor-pointer"
                   onMouseDown={handlerAreaToggle}
                 >
-                  <h3 className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}>
+                  <h3
+                    className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}
+                  >
                     你想去哪？
                   </h3>
                   <img
@@ -360,7 +417,9 @@ export default function StoreSearch() {
                   className="toggle--click flex justify-between my-5 cursor-pointer"
                   onMouseDown={handlerSearchToggle}
                 >
-                  <h3 className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}>
+                  <h3
+                    className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}
+                  >
                     想找什麼？
                   </h3>
                   <img
@@ -431,12 +490,18 @@ export default function StoreSearch() {
                   </button>
                 </div>
               </li>
-              <li className={`${currentCategory === "cafe" ? "block" : "hidden"} border-t-2`}>
+              <li
+                className={`${
+                  currentCategory === "cafe" ? "block" : "hidden"
+                } border-t-2`}
+              >
                 <div
                   className="toggle--click flex justify-between mt-5 cursor-pointer"
                   onMouseDown={handlerPriceToggle}
                 >
-                  <h3 className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}>
+                  <h3
+                    className={`text-2xl font-bold tracking-wider text-${categoryColor}-dark hover:opacity-70`}
+                  >
                     想花多少？
                   </h3>
                   <img
@@ -480,7 +545,9 @@ export default function StoreSearch() {
               </li>
             </ul>
             <div className="mt-14 text-brown-dark">
-              <button className={`hover:text-white mx-auto block text-[20px] font-bold bg-${categoryColor}-${colorDepth} rounded-full w-[213px] h-[49px]`}>
+              <button
+                className={`hover:text-white mx-auto block text-[20px] font-bold bg-${categoryColor}-${colorDepth} rounded-full w-[213px] h-[49px]`}
+              >
                 開始搜尋
               </button>
               <button className="hover:text-white mx-auto block text-[20px] font-bold bg-brown-light rounded-full w-[213px] h-[49px] mt-4">
@@ -625,7 +692,7 @@ export default function StoreSearch() {
             <ul className="flex flex-wrap gap-7 justify-center">
               {exploreStoreData[currentCategory]?.map((store, index) => (
                 <StoreList
-                  key={index}
+                  key={store.id}
                   store={store}
                   index={index}
                   toggleLike={() => toggleLike(currentCategory, index)}
