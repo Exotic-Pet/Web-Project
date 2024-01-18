@@ -14,12 +14,15 @@ import shopIcon from "../assets/store/shop.svg";
 import shopWhiteIcon from "../assets/store/shop-white.svg";
 import hospitalIcon from "../assets/store/hospital.svg";
 import hospitalWhiteIcon from "../assets/store/hospital-white.svg";
-import cafeImg_1 from "../assets/store/cafe-img-1.png";
-import cafeImg_2 from "../assets/store/cafe-img-2.png";
-import specialtyImg_1 from "../assets/store/specialty-img-1.png";
-import hospitalImg_1 from "../assets/store/hospital-img-1.png";
 import likeIcon from "../assets/store/like.svg";
 import dislikeIcon from "../assets/store/dislike.svg";
+// Store Photos
+import cafeImg_1 from "../assets/store/cafe-img-1.png";
+import cafeImg_2 from "../assets/store/cafe-img-2.png";
+import cafeImg_3 from "../assets/store/cafe-img-3.png";
+import cafeImg_4 from "../assets/store/cafe-img-4.png";
+import specialtyImg_1 from "../assets/store/specialty-img-1.png";
+import hospitalImg_1 from "../assets/store/hospital-img-1.png";
 
 export default function StoreSearch() {
   const location = useLocation();
@@ -55,7 +58,8 @@ export default function StoreSearch() {
   // Category Colors Depth
   const colorDepth = currentCategory === "hospital" ? "normal" : "light";
   // Background Colors Depth
-  const backgroundColorDepth = currentCategory !== "specialtyStore" ? "normal" : "light";
+  const backgroundColorDepth =
+    currentCategory !== "specialtyStore" ? "normal" : "light";
 
   // Collapse Search Menu
   const [isAreaExpand, setIsAreaExpand] = useState(false);
@@ -103,27 +107,27 @@ export default function StoreSearch() {
       },
       {
         id: 3,
-        title: "玩蟒人生3",
-        subTitle: "Pythonism",
+        title: "肉球森林",
+        subTitle: "Paws Forest",
         area: "北部",
-        imgPath: cafeImg_1,
-        label: ["蛇", "龜", "守宮"],
-        contentTitle: "以球蟒為主的咖啡廳！",
+        imgPath: cafeImg_3,
+        label: ["狐獴", "大嘴鳥"],
+        contentTitle: "來與小動物互動吧！",
         content:
-          "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+          "店內除了有大家喜愛的貓咪，還有飼養狐獴和大嘴鳥，可以和可愛的小動物互動，是十分熱門的咖啡廳！",
         like: false,
         articlePath: "/page/store-search/content",
       },
       {
         id: 4,
-        title: "玩蟒人生4",
-        subTitle: "Pythonism",
+        title: "微迷野林咖啡館",
+        subTitle: "Cafe",
         area: "北部",
-        imgPath: cafeImg_1,
-        label: ["蛇", "龜", "守宮"],
-        contentTitle: "以球蟒為主的咖啡廳！",
+        imgPath: cafeImg_4,
+        label: ["剌蝟", "守宮"],
+        contentTitle: "充滿綠意的寵物咖啡館！",
         content:
-          "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+          "【微迷野林咖啡館】適合喜歡大自然、喜歡小動物的朋友，也很適合喜歡動物的親子家庭～",
         like: false,
         articlePath: "/page/store-search/content",
       },
@@ -328,11 +332,26 @@ export default function StoreSearch() {
 
   // Filter Data Category
   const filterStoreData = useCallback(
-    (category) => setCurrentCategory(category),
-    []
+    (category) => {
+      setCurrentCategory(category);
+      setSearchResults([]);
+      setSearchInput('');
+    },
+    [],
   );
 
-  
+  // Search Data
+  const [searchInput, setSearchInput] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = () => {
+    const results = exploreStoreData[currentCategory].filter(
+      (store) =>
+        store.title.toLowerCase().includes(searchInput.toLowerCase()) ||
+        store.content.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    setSearchResults(results);
+  };
 
   return (
     <>
@@ -349,25 +368,29 @@ export default function StoreSearch() {
       <main className="flex flex-col gap-x-4 flex-wrap md:justify-between xl:flex-row">
         <aside className="xl:flex-1 mt-20 w-[388px] mx-auto xl:ml-20">
           {/* <!-- Search Bar --> */}
-          <form action="" className="flex justify-around">
+          <div className="flex justify-around">
             <div className="relative">
               <input
                 type="text"
                 placeholder="搜尋"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                onFocus={() => setSearchInput('')}
                 className="text-brown-normal text-[26px] w-[388px] rounded-full border-2 border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal"
               />
               <img
                 className="absolute cursor-pointer right-5 top-3 hover:scale-125"
                 src={searchIcon}
                 alt="search"
+                onClick={handleSearch}
               />
             </div>
-          </form>
+          </div>
           {/* <!-- Search Place --> */}
           <h2 className="text-3xl font-bold tracking-wider text-center text-brown-dark m-7">
             進階搜尋
           </h2>
-          <form action="">
+          <div>
             <ul>
               <li>
                 <div
@@ -554,7 +577,7 @@ export default function StoreSearch() {
                 清除條件
               </button>
             </div>
-          </form>
+          </div>
         </aside>
         {/* <!-- Store List --> */}
         <section className="flex-1 xl:flex-[3] mt-10 xl:ml-11">
@@ -690,7 +713,10 @@ export default function StoreSearch() {
           </ul>
           <div className="bg-gray-dark xl:rounded-tl-[75px] pb-2 w-full pt-[66px] mt-10">
             <ul className="flex flex-wrap gap-7 justify-center">
-              {exploreStoreData[currentCategory]?.map((store, index) => (
+              {(searchResults.length > 0
+                ? searchResults
+                : exploreStoreData[currentCategory]
+              ).map((store, index) => (
                 <StoreList
                   key={store.id}
                   store={store}
