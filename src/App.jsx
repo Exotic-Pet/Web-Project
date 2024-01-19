@@ -14,7 +14,9 @@ import LeporidaeAndMuriodea from "./pages/LeporidaeAndMuriodea";
 import Aves from "./pages/Aves";
 import Arthropoda from "./pages/Arthropoda";
 import EventPage from "./pages/EventPage";
+import EventPageContent from "./pages/EventContent";
 import CommunityPage from "./pages/CommunityPage";
+import CommunityPageContent from "./pages/CommunityContent";
 
 export default function App() {
   return (
@@ -33,7 +35,9 @@ export default function App() {
             <Route path="exotic-overview/aves" element={<Aves />} />
             <Route path="exotic-overview/arthropoda" element={<Arthropoda />} />
             <Route path="event" element={<EventPage />} />
+            <Route path="event/content" element={<EventPageContent />} />
             <Route path="community" element={<CommunityPage />} />
+            <Route path="community/content" element={<CommunityPageContent />} />
           </Route>
         </Routes>
       </AutoScrollTop>
