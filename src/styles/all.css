@@ -55,6 +55,32 @@ input::placeholder, textarea::placeholder {
   white-space: normal;
 }
 
+/* LightBox Style */
+.lightBox__scrollbar::-webkit-scrollbar {
+  width: 28px;
+}
+.lightBox__scrollbar::-webkit-scrollbar-track {
+  margin: 80px 0 20px 0;
+  background: linear-gradient(to right, 
+  transparent,
+  transparent 45%,
+  #A3907A 45%,
+  #A3907A 55%,
+  transparent 55%,
+  transparent);
+}
+.lightBox__scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background: radial-gradient(circle at center, 
+  #91AF74 18%,
+  transparent 18%);
+}
+.lightBox__scrollbar::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(circle at center, 
+  #ABC592 18%,
+  transparent 18%);
+}
+
 /* Toggle Expand */
 .toggle--click + .toggle--close {
   overflow: hidden;

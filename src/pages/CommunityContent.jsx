@@ -27,11 +27,11 @@ export default function CommunityContent({ isOpen, onToggle, onClose }) {
       onClick={(e) => onToggle(e)}
     >
       <article
-        className="lightBox__content max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-hidden overflow-y-auto relative bg-white border-[3px] border-cyan-dark rounded-[20px] px-4 lg:px-20 py-[30px]"
+        className="lightBox__content lightBox__scrollbar max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-16 py-[30px]"
         onClick={(e) => e.stopPropagation()}
       >
         <div 
-        className="absolute cursor-pointer hover:opacity-80 rounded-full top-6 right-6 w-11 h-11 bg-cyan-normal"
+        className="absolute cursor-pointer hover:opacity-80 rounded-full top-6 right-0 w-11 h-11 bg-cyan-normal"
         onClick={() => onClose()}
         >
           <div className="relative cursor-pointer">
