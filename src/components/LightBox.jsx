@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/all.css";
 import CommunityContent from "../pages/CommunityContent";
+import SignUp from "../pages/SignUp";
 
 export default function LightBox({ type }) {
   const [lightBoxState, setLightBoxState] = useState(false);
@@ -28,10 +29,14 @@ export default function LightBox({ type }) {
         );
       case "EVENT CONTENT":
         return <div className="">活動</div>;
-      case "SIGN IN":
-        return <div className="">登入</div>;
       case "SIGN UP":
-        return <div className="">註冊</div>;
+        return (
+          <SignUp
+            isOpen={lightBoxState}
+            onToggle={handleToggleLightBox}
+            onClose={handleCloseButtonClick}
+          />
+        );
       default:
         break;
     }
@@ -39,25 +44,6 @@ export default function LightBox({ type }) {
 
   return (
     <>
-      {/* <div
-        className={`${isOpenLightBox} absolute top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center`}
-        onClick={(e) => handleToggleLightBox(e)}
-      >
-        <article
-          className="light__box__content max-w-[888px] max-h-[85vh] overflow-y-scroll relative bg-white"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div
-            className="sticky ml-auto cursor-pointer hover:-translate-y-1 rounded-full top-6 right-6 w-11 h-11 bg-cyan-normal"
-            onClick={() => handleCloseButtonClick()}
-          >
-            <div className="relative cursor-pointer">
-              <div className="w-[30px] bg-white -bottom-6 left-[16%] absolute h-[3px] rotate-45"></div>
-              <div className="w-[30px] bg-white -bottom-6 left-[16%] absolute h-[3px] -rotate-45"></div>
-            </div>
-          </div>
-        </article>
-      </div> */}
       <button
         className="p-3 rounded-full block mx-auto bg-blue-400 text-white"
         onClick={(e) => handleToggleLightBox(e)}
@@ -65,7 +51,7 @@ export default function LightBox({ type }) {
         切換燈箱
       </button>
 
-      {lightBoxContent("COMMUNITY CONTENT")}
+      {lightBoxContent("SIGN UP")}
     </>
   );
 }
