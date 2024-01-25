@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/all.css";
 import CommunityContent from "../pages/CommunityContent";
-import SignUp from "../pages/SignUp";
+import SignIn from "../pages/SignIn";
 
 export default function LightBox({ type }) {
   const [lightBoxState, setLightBoxState] = useState(false);
@@ -31,7 +31,7 @@ export default function LightBox({ type }) {
         return <div className="">活動</div>;
       case "SIGN UP":
         return (
-          <SignUp
+          <SignIn
             isOpen={lightBoxState}
             onToggle={handleToggleLightBox}
             onClose={handleCloseButtonClick}

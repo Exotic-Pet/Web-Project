@@ -1,11 +1,15 @@
+import { useState } from "react";
 import "../styles/all.css";
 
-import googleIcon from "../assets/signUp/google.svg";
-import facebookIcon from "../assets/signUp/facebook.svg";
-import lineIcon from "../assets/signUp/line.svg";
+import googleIcon from "../assets/signIn/google.svg";
+import facebookIcon from "../assets/signIn/facebook.svg";
+import lineIcon from "../assets/signIn/line.svg";
 
-export default function SignUp({ isOpen, onToggle }) {
+export default function SignIn({ isOpen, onToggle }) {
+  const [isSignIn, setIsSignIn] = useState(true);
+
   const isOpenLightBox = isOpen ? "block" : "hidden";
+
   return (
     <div
       className={`${isOpenLightBox} absolute top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center`}
@@ -16,10 +20,20 @@ export default function SignUp({ isOpen, onToggle }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex gap-x-3 px-6 py-[14px] bg-gray-dark rounded-full">
-          <button className="text-green-dark bg-white flex-1 py-3 font-bold text-xl rounded-full tracking-wider hover:opacity-80">
+          <button
+            className={`${
+              isSignIn ? "text-green-dark bg-white" : "text-brown-dark"
+            } " flex-1 py-3 font-bold text-xl rounded-full tracking-wider hover:opacity-80`}
+            onClick={() => setIsSignIn(true)}
+          >
             登入
           </button>
-          <button className="text-brown-dark flex-1 py-3 font-bold text-xl rounded-full tracking-wider hover:opacity-80">
+          <button
+            className={`${
+              isSignIn ? "text-brown-dark" : "text-green-dark bg-white"
+            } " flex-1 py-3 font-bold text-xl rounded-full tracking-wider hover:opacity-80`}
+            onClick={() => setIsSignIn(false)}
+          >
             註冊
           </button>
         </div>
@@ -30,7 +44,7 @@ export default function SignUp({ isOpen, onToggle }) {
               className="px-6 py-[10px] mt-2 sm:mt-0 block sm:inline sm:min-w-[320px] border border-[1.5px] border-brown-normal rounded-full"
               type="email"
               id="account"
-              placeholder="請輸入使用者名稱 / Email"
+              placeholder={`請輸入${isSignIn ? "使用者名稱 / " : ""}Email`}
             />
           </label>
           <label htmlFor="password" className="mb-9 block">
@@ -42,8 +56,8 @@ export default function SignUp({ isOpen, onToggle }) {
               placeholder="請輸入密碼"
             />
           </label>
-          <button className="bg-green-light block rounded-full w-full py-4 tracking-widest font-bold text-xl hover:text-white">
-            登 入
+          <button className="bg-green-light block rounded-full w-full py-4 tracking-wider font-bold text-xl hover:text-white">
+            {isSignIn ? "登 入" : "註冊會員"}
           </button>
           <div className="mt-6 flex justify-evenly">
             <button className="text-[18px] font-bold tracking-wide hover:text-brown-normal">
@@ -57,13 +71,27 @@ export default function SignUp({ isOpen, onToggle }) {
         <section className="">
           <div className="mb-6 flex gap-x-6 justify-between items-center">
             <hr className=" border-brown-normal flex-1" />
-            <h3 className="text-brown-normal tracking-normal">其他登入方式</h3>
+            <h3 className="text-brown-normal tracking-normal">
+              其他{isSignIn ? "登入" : "註冊"}方式
+            </h3>
             <hr className=" border-brown-normal flex-1" />
           </div>
           <figure className="flex gap-x-4 justify-center">
-            <img className="cursor-pointer hover:-translate-y-1" src={googleIcon} alt="google" />
-            <img className="cursor-pointer hover:-translate-y-1" src={facebookIcon} alt="facebook" />
-            <img className="cursor-pointer hover:-translate-y-1" src={lineIcon} alt="line" />
+            <img
+              className="cursor-pointer hover:-translate-y-1"
+              src={googleIcon}
+              alt="google"
+            />
+            <img
+              className="cursor-pointer hover:-translate-y-1"
+              src={facebookIcon}
+              alt="facebook"
+            />
+            <img
+              className="cursor-pointer hover:-translate-y-1"
+              src={lineIcon}
+              alt="line"
+            />
           </figure>
         </section>
       </article>
