@@ -28,13 +28,19 @@ import feedBox7 from "../assets/intropage/feedbox-img7.png";
 
 
 export default function IntroPage() {
+    const swpImg = [introPhoto, introPhoto2, introPhoto3, introPhoto4, introPhoto5]
     return (
         <main className="mt-32">
             <div className="container flex items-center mx-auto gap-x-16">
                 <figure className="bg-[url('../assets/intropage/img-background.svg')] bg-no-repeat bg-center bg-contain p-11">
                     {/* <img src={introPhoto} alt="introphoto" className="w-[450px]" /> */}
                     <Swiper pagination={true} modules={[Pagination]} className="w-64 mySwiper rounded-[30px]">
-                        <SwiperSlide>
+                        {swpImg.map((photo, i) =>(
+                            <SwiperSlide key={i}>
+                            <img src={photo} alt="introphoto" className="w-[450px] justify-center items-center" />
+                            </SwiperSlide>
+                        ))}
+                        {/* <SwiperSlide>
                             <img src={introPhoto} alt="introphoto" className="w-[450px] justify-center items-center" />
                         </SwiperSlide>
                         <SwiperSlide>
@@ -48,7 +54,7 @@ export default function IntroPage() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img src={introPhoto5} alt="introphoto" className="w-[450px] justify-center items-center" />
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </figure>
                 <div className="pr-[87px]">
