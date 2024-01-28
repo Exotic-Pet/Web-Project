@@ -5,15 +5,13 @@ import googleIcon from "../assets/signIn/google.svg";
 import facebookIcon from "../assets/signIn/facebook.svg";
 import lineIcon from "../assets/signIn/line.svg";
 
-export default function SignIn({ isOpen, onToggle }) {
+export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
   const [isSignIn, setIsSignIn] = useState(true);
-
-  const isOpenLightBox = isOpen ? "block" : "hidden";
 
   return (
     <div
-      className={`${isOpenLightBox} absolute top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center`}
-      onClick={(e) => onToggle(e)}
+      className="fixed z-50 top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center"
+      onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
         className="lightBox__content max-w-[90%] lg:max-w-[548px] max-h-[90vh] overflow-y-auto tracking-wide bg-white rounded-[20px] p-6 md:p-12"

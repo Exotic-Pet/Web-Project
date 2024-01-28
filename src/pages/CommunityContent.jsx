@@ -16,15 +16,13 @@ import selecticon from "../assets/communitycontent/select-icon.svg";
 import selectbtn from "../assets/communitycontent/select-click.svg";
 import open from "../assets/communitycontent/triangle-down.svg";
 import photobtn from "../assets/communitycontent/photo-icon.svg";
-// import triangle from "../assets/communitycontent/triangle-up.svg";
 
-export default function CommunityContent({ isOpen, onToggle, onClose }) {
-  const isOpenLightBox = isOpen ? "block" : "hidden";
+export default function CommunityContent({ isOpenState, setIsOpenState, toggleState }) {
 
   return (
     <div
-      className={`${isOpenLightBox} absolute top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center`}
-      onClick={(e) => onToggle(e)}
+      className="fixed z-50 top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center"
+      onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
         className="lightBox__content lightBox__scrollbar max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-16 py-[30px]"
@@ -32,7 +30,7 @@ export default function CommunityContent({ isOpen, onToggle, onClose }) {
       >
         <div 
         className="absolute cursor-pointer hover:opacity-80 rounded-full top-6 right-0 w-11 h-11 bg-cyan-normal"
-        onClick={() => onClose()}
+        onClick={() => setIsOpenState(false)}
         >
           <div className="relative cursor-pointer">
             <div className="w-[30px] bg-white -bottom-6 left-[16%] absolute h-[3px] rotate-45"></div>

@@ -1,30 +1,34 @@
-import { useState } from "react";
+// import { motion, AnimatePresence } from 'framer-motion';
 import "../styles/all.css";
 import CommunityContent from "../pages/CommunityContent";
 import SignIn from "../pages/SignIn";
 
-export default function LightBox({ type }) {
-  const [lightBoxState, setLightBoxState] = useState(false);
-  const handleToggleLightBox = (event) => {
+export default function LightBox({
+  communityLightBoxState,
+  setCommunityLightBoxState,
+  isSignInLightBoxState,
+  setSignInLightBoxState,
+  type,
+}) {
+  const handleToggleLightBox = (event, typeState, setTypeState) => {
     if (
       !event.target.classList.contains("lightBox__content") &&
       !event.target.closest(".lightBox__content")
     ) {
-      setLightBoxState(!lightBoxState);
+      setTypeState(!typeState);
     }
     // Stop event propagation
     event.stopPropagation();
   };
-  const handleCloseButtonClick = () => setLightBoxState(false);
 
-  const lightBoxContent = (currentType) => {
-    switch (type || currentType) {
+  const lightBoxContent = () => {
+    switch (type) {
       case "COMMUNITY CONTENT":
         return (
           <CommunityContent
-            isOpen={lightBoxState}
-            onToggle={handleToggleLightBox}
-            onClose={handleCloseButtonClick}
+            isOpenState={communityLightBoxState}
+            setIsOpenState={setCommunityLightBoxState}
+            toggleState={handleToggleLightBox}
           />
         );
       case "EVENT CONTENT":
@@ -32,9 +36,9 @@ export default function LightBox({ type }) {
       case "SIGN UP":
         return (
           <SignIn
-            isOpen={lightBoxState}
-            onToggle={handleToggleLightBox}
-            onClose={handleCloseButtonClick}
+            isOpenState={isSignInLightBoxState}
+            setIsOpenState={setSignInLightBoxState}
+            toggleState={handleToggleLightBox}
           />
         );
       default:
@@ -42,16 +46,11 @@ export default function LightBox({ type }) {
     }
   };
 
-  return (
-    <>
-      <button
-        className="p-3 rounded-full block mx-auto bg-blue-400 text-white"
-        onClick={(e) => handleToggleLightBox(e)}
-      >
-        切換燈箱
-      </button>
+  const lightBoxState = communityLightBoxState || isSignInLightBoxState;
 
-      {lightBoxContent("SIGN UP")}
-    </>
+  return (
+    <div className={lightBoxState ? "block" : "hidden"}>
+      {lightBoxContent()}
+    </div>
   );
 }
