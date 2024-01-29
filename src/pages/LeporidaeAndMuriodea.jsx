@@ -11,7 +11,7 @@ export default function LeporidaeAndMuriodea() {
                     <form action="" className="flex justify-around">
                         <div className="relative">
                             <input type="text" placeholder="搜尋"
-                                className="text-brown-normal text-xl w-[258px] rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-green-normal" />
+                                className="text-brown-normal text-xl w-[258px] rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal" />
                             <img className="absolute w-5 cursor-pointer right-4 top-[11px] hover:scale-125"
                                 src={searchIcon} alt="search" />
                         </div>
