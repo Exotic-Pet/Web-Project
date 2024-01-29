@@ -52,7 +52,7 @@ export default function Header() {
                     <Link
                       to="/page/store-search"
                       state={{ category: "cafe" }}
-                      className="block cursor-pointer py-3 text-white hover:text-yellow-light"
+                      className="block py-3 text-white cursor-pointer hover:text-yellow-light"
                     >
                       特寵咖啡廳
                     </Link>
@@ -62,7 +62,7 @@ export default function Header() {
                     <Link
                       to="/page/store-search"
                       state={{ category: "specialtyStore" }}
-                      className="block cursor-pointer py-3 text-white hover:text-yellow-light"
+                      className="block py-3 text-white cursor-pointer hover:text-yellow-light"
                     >
                       特寵專賣店
                     </Link>
@@ -72,7 +72,7 @@ export default function Header() {
                     <Link
                       to="/page/store-search"
                       state={{ category: "hospital" }}
-                      className="block cursor-pointer py-3 text-white hover:text-yellow-light"
+                      className="block py-3 text-white cursor-pointer hover:text-yellow-light"
                     >
                       特寵醫院
                     </Link>
@@ -139,7 +139,7 @@ export default function Header() {
             <li className="nav__list">
               <Link
                 className="nav__list__link py-2 text-brown-dark text-[20px]"
-                to="/page/event"
+                to="/page/gathering"
               >
                 聚會揪團
               </Link>
@@ -155,7 +155,7 @@ export default function Header() {
             {/* <!-- Account Info --> */}
             <li className="ml-[16px]">
               <div
-                className="cursor-pointer flex items-center p-2 text-white rounded-full bg-brown-dark group"
+                className="flex items-center p-2 text-white rounded-full cursor-pointer bg-brown-dark group"
                 onClick={() => setSignInLightBoxState(true)}
               >
                 <img

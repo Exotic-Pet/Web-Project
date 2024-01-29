@@ -15,6 +15,7 @@ import Aves from "./pages/Aves";
 import Arthropoda from "./pages/Arthropoda";
 import EventPage from "./pages/EventPage";
 import EventPageContent from "./pages/EventContent";
+import Gathering from "./pages/Gathering";
 import CommunityPage from "./pages/CommunityPage";
 import CommunityPageContent from "./pages/CommunityContent";
 
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="exotic-overview/arthropoda" element={<Arthropoda />} />
             <Route path="event" element={<EventPage />} />
             <Route path="event/content" element={<EventPageContent />} />
+            <Route path="gathering" element={<Gathering />}></Route>
             <Route path="community" element={<CommunityPage />} />
             <Route path="community/content" element={<CommunityPageContent />} />
           </Route>

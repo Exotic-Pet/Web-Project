@@ -91,7 +91,7 @@ export default function HomeHeader() {
                 </Link>
               </li>
               <li className="mt-[16px]">
-                <Link to="/page/event" className="flex items-center hover:opacity-70">
+                <Link to="/page/gathering" className="flex items-center hover:opacity-70">
                   <img src={peopleGreen} alt="people" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
                     聚會揪團
