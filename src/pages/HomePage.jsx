@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // Components
 import AosInit from "../components/AosInit";
 import HomeHeader from "../components/HomeHeader";
@@ -110,7 +111,10 @@ export default function HomePage() {
               </div>
               {/*  <!-- See More --> */}
               <div className="move py-[8px] hidden md:block">
-                <a className="flex items-center pl-[56px]" href="#">
+                <Link 
+                  to="/page/store-overview"
+                  className="cursor-pointer flex items-center pl-[56px]" 
+                >
                   <figure>
                     <img src={arrowRight} alt="arrow" />
                   </figure>
@@ -118,7 +122,7 @@ export default function HomePage() {
                     查看更多
                   </p>
                   <div className="move__ball bg-yellow-normal"></div>
-                </a>
+                </Link>
               </div>
             </div>
             {/*  <!-- News List --> */}
@@ -331,12 +335,12 @@ export default function HomePage() {
             </div>
             {/*  <!-- See More Button --> */}
             <div className="mt-20 flex justify-center text-xl text-center tracking-wide font-bold">
-              <a
-                href="#"
+              <Link
+                to="/page/community"
                 className="py-2 w-[288px] bg-white border-2 rounded-full border-cyan-normal text-brown-dark hover:text-white hover:bg-cyan-normal"
               >
                 查看更多文章
-              </a>
+              </Link>
             </div>
           </article>
         </div>
