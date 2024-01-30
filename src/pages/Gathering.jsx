@@ -1,12 +1,31 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import interestIcon from "../assets/gathering/interest-icon.svg";
+import shareIcon from "../assets/gathering/share-icon.svg";
 import yellowDot from "../assets/gathering/deco-1.svg";
 import cross from "../assets/gathering/deco-2.svg";
+import locationClick from "../assets/gathering/location-click.svg";
+import locationUnclick from "../assets/gathering/location-unclick.svg";
+
 import number_1 from "../assets/gathering/number-1.svg";
 import number_2 from "../assets/gathering/number-2.svg";
 import number_3 from "../assets/gathering/number-3.svg";
 import rankingsPhoto_1 from "../assets/gathering/rankings-photo-1.png";
 import rankingsPhoto_2 from "../assets/gathering/rankings-photo-2.png";
 import rankingsPhoto_3 from "../assets/gathering/rankings-photo-3.png";
+
+import fogs from "../assets/gathering/fogs-color.svg";
+import fogsNoColor from "../assets/gathering/fogs-nocolor.svg";
+import rabbits from "../assets/gathering/rabbits-color.svg";
+import rabbitsNoColor from "../assets/gathering/rabbits-nocolor.svg";
+import rats from "../assets/gathering/rats-color.svg";
+import ratsNoColor from "../assets/gathering/rats-nocolor.svg";
+import birds from "../assets/gathering/birds-color.svg";
+import birdsNoColor from "../assets/gathering/birds-nocolor.svg";
+import others from "../assets/gathering/others-color.svg";
+import othersNoColor from "../assets/gathering/others-nocolor.svg";
+
 import cardPhoto_1 from "../assets/gathering/card-photo-1.png";
 import cardPhoto_2 from "../assets/gathering/card-photo-2.png";
 import cardPhoto_3 from "../assets/gathering/card-photo-3.png";
@@ -18,6 +37,81 @@ import cardPhoto_8 from "../assets/gathering/card-photo-8.png";
 import cardPhoto_9 from "../assets/gathering/card-photo-9.png";
 
 export default function Gathering() {
+  // Area State
+  const [selectArea, setSelectArea] = useState("北部");
+
+  // Category Data
+  const [categoryTagData, setCategoryTagData] = useState([
+    {
+      id: 1,
+      category: "爬蟲兩棲",
+      icon: fogs,
+      iconNoColor: fogsNoColor,
+      selectState: false,
+    },
+    {
+      id: 2,
+      category: "兔子",
+      icon: rabbits,
+      iconNoColor: rabbitsNoColor,
+      selectState: false,
+    },
+    {
+      id: 3,
+      category: "鼠",
+      icon: rats,
+      iconNoColor: ratsNoColor,
+      selectState: false,
+    },
+    {
+      id: 4,
+      category: "鳥",
+      icon: birds,
+      iconNoColor: birdsNoColor,
+      selectState: false,
+    },
+    {
+      id: 5,
+      category: "其他",
+      icon: others,
+      iconNoColor: othersNoColor,
+      selectState: false,
+    },
+  ]);
+
+  const toggleSelectState = (id) => {
+    const updatedCategoryTagData = categoryTagData.map((category) =>
+      category.id === id
+        ? { ...category, selectState: !category.selectState }
+        : category
+    );
+    // Update the selected
+    setCategoryTagData(updatedCategoryTagData);
+  };
+
+  // Category Tag
+  const CategoryTag = ({ category }) => (
+    <li
+      className={`${
+        category.selectState ? "bg-green-light" : "bg-brown-light"
+      } flex gap-x-3 items-center rounded-full py-4 px-5 cursor-pointer hover:opacity-80`}
+      onClick={() => toggleSelectState(category.id)}
+    >
+      <img
+        className={category.selectState ? "hidden" : "block"}
+        src={category.iconNoColor}
+        alt="icon-no-color"
+      />
+      <img
+        className={category.selectState ? "block" : "hidden"}
+        src={category.icon}
+        alt="icon-color"
+      />
+      <h5 className="text-brown-dark text-xl font-bold">{category.category}</h5>
+    </li>
+  );
+
+  // Rankings Data
   const rankingsData = [
     {
       id: 1,
@@ -48,11 +142,144 @@ export default function Gathering() {
     },
   ];
 
+  // Ranking Component
+  const RankingCard = ({ card }) => (
+    <li key={card.id} className="flex-1 flex gap-5">
+      <figure className="relative">
+        <img src={card.photoPath} alt="ranking" />
+        <img
+          src={card.rankPhotoPath}
+          alt="number"
+          className="absolute -top-8 -left-8"
+        />
+      </figure>
+      <section className="flex flex-col justify-between w-[188px]">
+        <div className="leading-7 text-sm">
+          <h5 className="text-brown-normal">{card.category}</h5>
+          <h4 className="text-brown-dark font-bold text-[16px]">
+            {card.title}
+          </h4>
+          <h6 className="text-brown-normal">{card.date}</h6>
+          <p className="text-green-dark  font-medium">{card.location}</p>
+        </div>
+        <Link
+          to=""
+          className="ml-auto mb-1 text-green-dark border-b border-brown-normal hover:scale-125"
+        >
+          MORE
+        </Link>
+      </section>
+    </li>
+  );
+
+  // Gathering Data
+  const gatheringData = [
+    {
+      id: 1,
+      area: "北部",
+      popular: 100,
+      photoPath: cardPhoto_1,
+      title: "鬆鬆飼主交流聚",
+      category: "爬蟲兩棲",
+      date: "2024/5/15 (六)",
+      locationTitle: "南港捷運站前空地",
+      interest: false,
+    },
+    {
+      id: 2,
+      area: "北部",
+      popular: 200,
+      photoPath: cardPhoto_2,
+      title: "北部毛蜘蛛小聚會",
+      category: "其他",
+      date: "2024/3/4 (六)",
+      locationTitle: "西門派對空間",
+      interest: false,
+    },
+    {
+      id: 3,
+      area: "北部",
+      popular: 60,
+      photoPath: cardPhoto_3,
+      title: "台北愛蛇聚會",
+      category: "爬蟲兩棲",
+      date: "2024/4/16 (六)",
+      locationTitle: "玩蟒人生",
+      interest: false,
+    },
+    {
+      id: 4,
+      area: "南部",
+      popular: 178,
+      photoPath: cardPhoto_4,
+      title: "愛鼠社團聚(高雄)",
+      category: "鼠",
+      date: "2024/4/14 (日)",
+      locationTitle: "WORK HUB",
+      interest: false,
+    },
+    {
+      id: 5,
+      area: "南部",
+      popular: 333,
+      photoPath: cardPhoto_5,
+      title: "2024愛兔工會認養會",
+      category: "兔",
+      date: "2024/5/13 (六)",
+      locationTitle: "高雄公園",
+      interest: false,
+    },
+    {
+      id: 6,
+      area: "東部",
+      popular: 203,
+      photoPath: cardPhoto_6,
+      title: "東部樹棲守宮小爬聚",
+      category: "爬蟲兩棲",
+      date: "2024/5/9 (六)",
+      locationTitle: "好時光空間",
+      interest: false,
+    },
+    {
+      id: 7,
+      area: "中部",
+      popular: 50,
+      photoPath: cardPhoto_7,
+      title: "特寵交流小型聚會",
+      category: "爬蟲兩棲",
+      date: "2024/6/6 (六)",
+      locationTitle: "爬咖啡",
+      interest: false,
+    },
+    {
+      id: 8,
+      area: "北部",
+      popular: 666,
+      photoPath: cardPhoto_8,
+      title: "北部鳥友聚會",
+      category: "鳥",
+      date: "2024/7/16 (六)",
+      locationTitle: "派洛特咖啡廳",
+      interest: false,
+    },
+    {
+      id: 9,
+      area: "北部",
+      popular: 666,
+      photoPath: cardPhoto_9,
+      title: "集合！天竺鼠車車！",
+      category: "鼠",
+      date: "2024/4/6 (日)",
+      locationTitle: "大安森林公園",
+      interest: false,
+    },
+  ];
+
   return (
     <>
       {/* Banner */}
       <div className="bg-green-light bg-no-repeat bg-center bg-[url('../assets/gathering/banner.svg')] min-h-[133px] mt-20"></div>
-      <main className="container justify-center mx-auto mt-[42px] mb-24">
+      <main className="container justify-center mx-auto mt-[42px] mb-28">
         <div className="text-center">
           <h2 className="relative text-3xl font-bold text-brown-normal tracking-wider">
             在<span className="font-bold text-brown-dark">特寵生活</span>
@@ -66,7 +293,7 @@ export default function Gathering() {
           </h2>
           <p className="mt-1 text-xl text-green-normal">快來認識更多同好吧！</p>
         </div>
-        <div className="mt-8 mb-10 px-12">
+        <div className="mt-8 mb-14 px-12">
           <div className="py-3 flex justify-center items-center">
             <hr className="flex-1 border-yellow-normal border" />
             <figure className="px-14 flex items-center gap-x-4 rounded-[30px] bg-yellow-normal ">
@@ -80,38 +307,194 @@ export default function Gathering() {
           </div>
           {/* Rankings */}
           <ul className="my-12 px-10 flex justify-between gap-6">
-            {rankingsData?.map((item) => (
-              <li key={item.id} className="flex-1 flex gap-5">
-                <figure className="relative">
-                  <img src={item.photoPath} alt="ranking" />
-                  <img
-                    src={item.rankPhotoPath}
-                    alt="number"
-                    className="absolute -top-8 -left-8"
-                  />
-                </figure>
-                <section className="flex flex-col justify-between">
-                  <div className="leading-7 text-sm">
-                    <h5 className="text-brown-normal">{item.category}</h5>
-                    <h4 className="text-brown-dark font-bold text-[16px]">
-                      {item.title}
-                    </h4>
-                    <h6 className="text-brown-normal">{item.date}</h6>
-                    <p className="text-green-dark  font-medium">
-                      {item.location}
-                    </p>
-                  </div>
-                  <Link
-                    to=""
-                    className="ml-auto mb-1 text-green-dark border-b border-brown-normal hover:scale-125"
-                  >
-                    MORE
-                  </Link>
-                </section>
-              </li>
+            {rankingsData?.map((card) => (
+              <RankingCard card={card} key={card.id} />
             ))}
           </ul>
           <hr className="border border-yellow-normal" />
+        </div>
+        {/* Filter Area */}
+        <ul className="flex justify-between items-end text-center tracking-wider">
+          <li className="flex-1">
+            <div
+              onClick={() => setSelectArea("北部")}
+              className={`${
+                selectArea === "北部"
+                  ? "bg-gray-normal border-2 border-b-0"
+                  : "bg-green-light border-b"
+              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+            >
+              <img
+                className={`${
+                  selectArea === "北部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationClick}
+                alt="location"
+              />
+              <img
+                className={`${
+                  selectArea !== "北部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationUnclick}
+                alt="location"
+              />
+              <h3
+                className={`${
+                  selectArea === "北部" ? "text-green-dark" : "text-white"
+                } font-bold text-2xl`}
+              >
+                北部
+              </h3>
+            </div>
+          </li>
+          <li className="flex-1">
+            <div
+              onClick={() => setSelectArea("中部")}
+              className={`${
+                selectArea === "中部"
+                  ? "bg-gray-normal border-2 border-b-0"
+                  : "bg-green-light border-b"
+              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+            >
+              <img
+                className={`${
+                  selectArea === "中部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationClick}
+                alt="location"
+              />
+              <img
+                className={`${
+                  selectArea !== "中部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationUnclick}
+                alt="location"
+              />
+              <h3
+                className={`${
+                  selectArea === "中部" ? "text-green-dark" : "text-white"
+                } font-bold text-2xl`}
+              >
+                中部
+              </h3>
+            </div>
+          </li>
+          <li className="flex-1">
+            <div
+              onClick={() => setSelectArea("南部")}
+              className={`${
+                selectArea === "南部"
+                  ? "bg-gray-normal border-2 border-b-0"
+                  : "bg-green-light border-b"
+              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+            >
+              <img
+                className={`${
+                  selectArea === "南部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationClick}
+                alt="location"
+              />
+              <img
+                className={`${
+                  selectArea !== "南部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationUnclick}
+                alt="location"
+              />
+              <h3
+                className={`${
+                  selectArea === "南部" ? "text-green-dark" : "text-white"
+                } font-bold text-2xl`}
+              >
+                南部
+              </h3>
+            </div>
+          </li>
+          <li className="flex-1">
+            <div
+              onClick={() => setSelectArea("東部")}
+              className={`${
+                selectArea === "東部"
+                  ? "bg-gray-normal border-2 border-b-0"
+                  : "bg-green-light border-b"
+              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+            >
+              <img
+                className={`${
+                  selectArea === "東部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationClick}
+                alt="location"
+              />
+              <img
+                className={`${
+                  selectArea !== "東部" ? "block" : "hidden"
+                } mr-[6px]`}
+                src={locationUnclick}
+                alt="location"
+              />
+              <h3
+                className={`${
+                  selectArea === "東部" ? "text-green-dark" : "text-white"
+                } font-bold text-2xl`}
+              >
+                東部
+              </h3>
+            </div>
+          </li>
+        </ul>
+        {/* Content */}
+        <div className="py-16 bg-gray-normal border-2 border-t-0 rounded-bl-[20px] rounded-br-[20px]">
+          <div className="flex gap-x-6 justify-center items-center tracking-wider">
+            <h4 className="text-brown-dark text-2xl font-bold w-[56px]">
+              全部分類
+            </h4>
+            <ul className="flex gap-x-6">
+              {categoryTagData?.map((category) => (
+                <CategoryTag category={category} key={category.id} />
+              ))}
+            </ul>
+          </div>
+          <div className="px-24">
+            {/* Sort Data */}
+            <div className="mt-[72px] flex gap-x-4 justify-end text-brown-dark leading-4">
+              <h4 className="pr-4 border-r border-brown-normal">排序</h4>
+              <button className="hover:text-brown-normal">熱門</button>
+              <button className="hover:text-brown-normal">最新</button>
+            </div>
+            {/* Card List */}
+            <ul className="mt-7 flex gap-[30px] items-center">
+              <li className="px-[30px] py-6 rounded-2xl shadow-xl bg-white">
+                <div className="leading-relaxed">
+                  <h5 className="text-brown-normal">爬蟲兩棲</h5>
+                  <h4 className="text-brown-dark font-bold text-[16px]">
+                    鬆鬆飼主交流聚
+                  </h4>
+                  <h6 className="text-brown-normal">2024/5/15 (六)</h6>
+                  <p className="text-green-dark  font-medium">
+                    南港捷運站前空地
+                  </p>
+                </div>
+                <figure className="my-5">
+                  <img src={cardPhoto_1} alt="card-photo" />
+                </figure>
+                <div className="flex gap-x-4 justify-between items-center">
+                  <button className="bg-green-light w-[236px] py-[6px] rounded-full">
+                    <span className="flex gap-x-2 justify-center items-center">
+                      <img src={interestIcon} alt="interest" />
+                      <h6 className="text-[18px] font-bold text-brown-dark">
+                        有興趣
+                      </h6>
+                    </span>
+                  </button>
+                  <button className="w-[38px] h-[38px] flex justify-center items-center rounded-full bg-brown-normal">
+                    <img src={shareIcon} alt="share" />
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
     </>
