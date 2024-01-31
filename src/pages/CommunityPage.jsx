@@ -95,13 +95,11 @@ export default function CommunityPage() {
             <h3 className="text-xl text-brown-dark">蛇</h3>
           </li>
         </ul>
-        <ul className="flex justify-end my-4 gap-x-3">
-          <li className="pr-4 text-base border-r text-brown-dark border-brown-normal">
-            排序
-          </li>
-          <li className="text-base text-brown-dark">熱門</li>
-          <li className="text-base text-brown-dark">最新</li>
-        </ul>
+				<div className="my-4 flex gap-x-4 justify-end text-brown-dark leading-4">
+              <h4 className="pr-4 border-r border-brown-normal">排序</h4>
+              <button className="hover:text-brown-normal">熱門</button>
+              <button className="hover:text-brown-normal">最新</button>
+            </div>
         <div className="container mx-auto mt-6">
           {/*容器*/}
           <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

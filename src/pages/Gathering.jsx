@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import createIcon from "../assets/gathering/create-icon.svg";
+import salamandridae from "../assets/gathering/Salamandridae.svg";
 import interestIcon from "../assets/gathering/interest-icon.svg";
 import shareIcon from "../assets/gathering/share-icon.svg";
 import yellowDot from "../assets/gathering/deco-1.svg";
@@ -94,7 +96,7 @@ export default function Gathering() {
     <li
       className={`${
         category.selectState ? "bg-green-light" : "bg-brown-light"
-      } flex gap-x-3 items-center rounded-full py-4 px-5 cursor-pointer hover:opacity-80`}
+      } flex gap-x-3 items-center rounded-full p-2 lg:py-4 lg:px-5 cursor-pointer hover:opacity-80`}
       onClick={() => toggleSelectState(category.id)}
     >
       <img
@@ -107,7 +109,9 @@ export default function Gathering() {
         src={category.icon}
         alt="icon-color"
       />
-      <h5 className="text-brown-dark text-xl font-bold">{category.category}</h5>
+      <h5 className="hidden md:block text-brown-dark text-xl font-bold">
+        {category.category}
+      </h5>
     </li>
   );
 
@@ -144,13 +148,16 @@ export default function Gathering() {
 
   // Ranking Component
   const RankingCard = ({ card }) => (
-    <li key={card.id} className="flex-1 flex gap-5">
+    <li
+      key={card.id}
+      className="mx-auto flex-1 flex gap-5 p-3 rounded-xl hover:bg-gray-normal"
+    >
       <figure className="relative">
         <img src={card.photoPath} alt="ranking" />
         <img
           src={card.rankPhotoPath}
           alt="number"
-          className="absolute -top-8 -left-8"
+          className="absolute -top-6 lg:-top-7 -left-6 lg:-left-7"
         />
       </figure>
       <section className="flex flex-col justify-between w-[188px]">
@@ -160,7 +167,7 @@ export default function Gathering() {
             {card.title}
           </h4>
           <h6 className="text-brown-normal">{card.date}</h6>
-          <p className="text-green-dark  font-medium">{card.location}</p>
+          <p className="text-green-dark font-medium">{card.location}</p>
         </div>
         <Link
           to=""
@@ -275,6 +282,35 @@ export default function Gathering() {
     },
   ];
 
+  // DeepCopy Data
+  const gatheringDataDeepCopy = JSON.parse(JSON.stringify(gatheringData));
+
+  // Gathering Card
+  const GatheringCard = ({ card }) => (
+    <li className="p-6 rounded-2xl shadow-xl bg-white border-4 border-transparent hover:border-green-light">
+      <div className="leading-relaxed">
+        <h5 className="text-brown-normal">{card.category}</h5>
+        <h4 className="text-brown-dark font-bold text-[16px]">{card.title}</h4>
+        <h6 className="text-brown-normal">{card.date}</h6>
+        <p className="text-green-dark  font-medium">{card.locationTitle}</p>
+      </div>
+      <figure className="my-5">
+        <img className="w-full" src={card.photoPath} alt="card-photo" />
+      </figure>
+      <div className="flex gap-x-4 justify-between items-center">
+        <button className="flex-1 bg-green-light py-[6px] rounded-full hover:opacity-80">
+          <span className="flex gap-x-2 justify-center items-center">
+            <img src={interestIcon} alt="interest" />
+            <h6 className="text-[18px] font-bold text-brown-dark">有興趣</h6>
+          </span>
+        </button>
+        <button className="min-w-[38px] min-h-[38px] flex justify-center items-center rounded-full bg-brown-normal hover:opacity-80">
+          <img src={shareIcon} alt="share" />
+        </button>
+      </div>
+    </li>
+  );
+
   return (
     <>
       {/* Banner */}
@@ -293,20 +329,20 @@ export default function Gathering() {
           </h2>
           <p className="mt-1 text-xl text-green-normal">快來認識更多同好吧！</p>
         </div>
-        <div className="mt-8 mb-14 px-12">
+        <div className="mt-8 mb-14 px-2 lg:px-12">
           <div className="py-3 flex justify-center items-center">
             <hr className="flex-1 border-yellow-normal border" />
-            <figure className="px-14 flex items-center gap-x-4 rounded-[30px] bg-yellow-normal ">
-              <img src={cross} alt="cross" className="w-[21px]" />
+            <figure className="px-5 md:px-14 flex items-center gap-x-4 rounded-[30px] bg-yellow-normal ">
+              <img src={cross} alt="cross" className="w-4 sm:w-5" />
               <h3 className="py-3 text-2xl font-bold text-brown-dark tracking-wider">
                 人氣排行榜
               </h3>
-              <img src={cross} alt="cross" className="w-[21px]" />
+              <img src={cross} alt="cross" className="w-4 sm:w-5" />
             </figure>
             <hr className="flex-1 border-yellow-normal border" />
           </div>
-          {/* Rankings */}
-          <ul className="my-12 px-10 flex justify-between gap-6">
+          {/* Rankings List */}
+          <ul className="my-12 px-2 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
             {rankingsData?.map((card) => (
               <RankingCard card={card} key={card.id} />
             ))}
@@ -322,22 +358,24 @@ export default function Gathering() {
                 selectArea === "北部"
                   ? "bg-gray-normal border-2 border-b-0"
                   : "bg-green-light border-b"
-              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
             >
-              <img
-                className={`${
-                  selectArea === "北部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationClick}
-                alt="location"
-              />
-              <img
-                className={`${
-                  selectArea !== "北部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationUnclick}
-                alt="location"
-              />
+              <figure className="hidden sm:block">
+                <img
+                  className={`${
+                    selectArea === "北部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationClick}
+                  alt="location"
+                />
+                <img
+                  className={`${
+                    selectArea !== "北部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationUnclick}
+                  alt="location"
+                />
+              </figure>
               <h3
                 className={`${
                   selectArea === "北部" ? "text-green-dark" : "text-white"
@@ -354,22 +392,24 @@ export default function Gathering() {
                 selectArea === "中部"
                   ? "bg-gray-normal border-2 border-b-0"
                   : "bg-green-light border-b"
-              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
             >
-              <img
-                className={`${
-                  selectArea === "中部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationClick}
-                alt="location"
-              />
-              <img
-                className={`${
-                  selectArea !== "中部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationUnclick}
-                alt="location"
-              />
+              <figure className="hidden sm:block">
+                <img
+                  className={`${
+                    selectArea === "中部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationClick}
+                  alt="location"
+                />
+                <img
+                  className={`${
+                    selectArea !== "中部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationUnclick}
+                  alt="location"
+                />
+              </figure>
               <h3
                 className={`${
                   selectArea === "中部" ? "text-green-dark" : "text-white"
@@ -386,22 +426,24 @@ export default function Gathering() {
                 selectArea === "南部"
                   ? "bg-gray-normal border-2 border-b-0"
                   : "bg-green-light border-b"
-              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
             >
-              <img
-                className={`${
-                  selectArea === "南部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationClick}
-                alt="location"
-              />
-              <img
-                className={`${
-                  selectArea !== "南部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationUnclick}
-                alt="location"
-              />
+              <figure className="hidden sm:block">
+                <img
+                  className={`${
+                    selectArea === "南部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationClick}
+                  alt="location"
+                />
+                <img
+                  className={`${
+                    selectArea !== "南部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationUnclick}
+                  alt="location"
+                />
+              </figure>
               <h3
                 className={`${
                   selectArea === "南部" ? "text-green-dark" : "text-white"
@@ -418,22 +460,24 @@ export default function Gathering() {
                 selectArea === "東部"
                   ? "bg-gray-normal border-2 border-b-0"
                   : "bg-green-light border-b"
-              } duration-100 py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
+              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
             >
-              <img
-                className={`${
-                  selectArea === "東部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationClick}
-                alt="location"
-              />
-              <img
-                className={`${
-                  selectArea !== "東部" ? "block" : "hidden"
-                } mr-[6px]`}
-                src={locationUnclick}
-                alt="location"
-              />
+              <figure className="hidden sm:block">
+                <img
+                  className={`${
+                    selectArea === "東部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationClick}
+                  alt="location"
+                />
+                <img
+                  className={`${
+                    selectArea !== "東部" ? "block" : "hidden"
+                  } mr-[6px]`}
+                  src={locationUnclick}
+                  alt="location"
+                />
+              </figure>
               <h3
                 className={`${
                   selectArea === "東部" ? "text-green-dark" : "text-white"
@@ -446,17 +490,17 @@ export default function Gathering() {
         </ul>
         {/* Content */}
         <div className="py-16 bg-gray-normal border-2 border-t-0 rounded-bl-[20px] rounded-br-[20px]">
-          <div className="flex gap-x-6 justify-center items-center tracking-wider">
-            <h4 className="text-brown-dark text-2xl font-bold w-[56px]">
+          <div className="flex gap-x-6 px-2 lg:px-0 justify-center items-center tracking-wider">
+            <h4 className="hidden lg:block text-brown-dark text-2xl font-bold w-[56px]">
               全部分類
             </h4>
-            <ul className="flex gap-x-6">
+            <ul className="flex gap-x-2 md:gap-x-6 overflow-x-auto">
               {categoryTagData?.map((category) => (
                 <CategoryTag category={category} key={category.id} />
               ))}
             </ul>
           </div>
-          <div className="px-24">
+          <div className="px-8 md:px-24">
             {/* Sort Data */}
             <div className="mt-[72px] flex gap-x-4 justify-end text-brown-dark leading-4">
               <h4 className="pr-4 border-r border-brown-normal">排序</h4>
@@ -464,39 +508,75 @@ export default function Gathering() {
               <button className="hover:text-brown-normal">最新</button>
             </div>
             {/* Card List */}
-            <ul className="mt-7 flex gap-[30px] items-center">
-              <li className="px-[30px] py-6 rounded-2xl shadow-xl bg-white">
-                <div className="leading-relaxed">
-                  <h5 className="text-brown-normal">爬蟲兩棲</h5>
-                  <h4 className="text-brown-dark font-bold text-[16px]">
-                    鬆鬆飼主交流聚
-                  </h4>
-                  <h6 className="text-brown-normal">2024/5/15 (六)</h6>
-                  <p className="text-green-dark  font-medium">
-                    南港捷運站前空地
-                  </p>
-                </div>
-                <figure className="my-5">
-                  <img src={cardPhoto_1} alt="card-photo" />
-                </figure>
-                <div className="flex gap-x-4 justify-between items-center">
-                  <button className="bg-green-light w-[236px] py-[6px] rounded-full">
-                    <span className="flex gap-x-2 justify-center items-center">
-                      <img src={interestIcon} alt="interest" />
-                      <h6 className="text-[18px] font-bold text-brown-dark">
-                        有興趣
-                      </h6>
-                    </span>
-                  </button>
-                  <button className="w-[38px] h-[38px] flex justify-center items-center rounded-full bg-brown-normal">
-                    <img src={shareIcon} alt="share" />
-                  </button>
-                </div>
+            <ul className="mt-7 gap-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {gatheringData?.map((card) => (
+                <GatheringCard card={card} key={card.id} />
+              ))}
+            </ul>
+            {/* Pagination */}
+            <ul className="flex gap-x-1 justify-center mt-16">
+              <li>
+                <a
+                  href="#"
+                  className="hover:-translate-y-[6px] block p-2 text-xl font-bold text-brown-dark border-b-2 border-green-dark"
+                >
+                  1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:-translate-y-[6px] block p-2 text-xl font-bold text-brown-dark"
+                >
+                  2
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:-translate-y-[6px] block p-2 text-xl font-bold text-brown-dark"
+                >
+                  3
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:-translate-y-[6px] block p-2 text-xl font-bold text-brown-dark"
+                >
+                  ...
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:-translate-y-[6px] block p-2 text-xl font-bold text-brown-dark"
+                >
+                  尾數頁
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </main>
+      {/* Create Gathering Button */}
+      <button className="fixed top-[72%] right-0 block tracking-wide font-bold group scale-75 translate-x-5 md:scale-100 md:translate-x-3">
+        <div className="relative flex gap-x-3 items-center py-6 px-5 bg-green-dark rounded-tl-3xl rounded-bl-3xl">
+          <img
+            className="absolute -z-20 -top-24 w-[144px] h-[108px] left-[20%] duration-300 opacity-0 group-hover:opacity-100"
+            src={salamandridae}
+            alt="animal"
+          />
+          <img
+            className="duration-300 group-hover:-rotate-180"
+            src={createIcon}
+            alt="create"
+          />
+          <h3 className="duration-300 text-xl text-white whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[112px]">
+            創建新揪團
+          </h3>
+        </div>
+      </button>
     </>
   );
 }
