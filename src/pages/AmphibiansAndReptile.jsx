@@ -1,10 +1,73 @@
+import { Link } from 'react-router-dom';
+import React, { useRef, useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 import searchIcon from '../assets/store/search.svg';
 import arrowTop from '../assets/reptile/arrow-top.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
-import { Link } from 'react-router-dom';
+//image for cards
+import geck1 from '../assets/reptile/gecko/ground_Scorpion-Tailed-geck.jpg';
+import geck2 from '../assets/reptile/gecko/grounded_Fat-Tailed-Gecko.png';
+import geck3 from '../assets/reptile/gecko/grounded_Helmet-Gecko.jpg';
+import geck4 from '../assets/reptile/gecko/grounded_Knob-tailed-Gecko.jpeg';
+import geck5 from '../assets/reptile/gecko/grounded_namib-gecko.jpeg';
+import geck6 from '../assets/reptile/gecko/grounded_ocelot-gecko.jpg';
+import geck7 from '../assets/reptile/gecko/grounded_Viper-gecko.webp';
+import geck8 from '../assets/reptile/gecko/grounded_wonder-gecko.jpg';
+//CustomCSS
+import "../styles/swiperstyle.css";
 
 
 export default function AmphibiansAndReptile() {
+    const [swiperRef, setSwiperRef] = useState(null);
+
+    const geckGrounded =[
+        {
+            id:"1",
+            bgimg: geck1 ,
+            title:"測試守宮",
+        },
+        {
+            id:"2",
+            bgimg: geck2 ,
+            title:"肥尾守宮",
+        },
+        {
+            id:"3",
+            bgimg: geck3 ,
+            title:"瘤尾守宮",
+        },
+        {
+            id:"4",
+            bgimg: geck4 ,
+            title:"豹貓守宮",
+        },
+        {
+            id:"5",
+            bgimg: geck5 ,
+            title:"豹貓守宮",
+        },
+        {
+            id:"6",
+            bgimg: geck6 ,
+            title:"豹貓守宮",
+        },
+        {
+            id:"7",
+            bgimg: geck7 ,
+            title:"豹貓守宮",
+        },
+        {
+            id:"8",
+            bgimg: geck8 ,
+            title:"豹貓守宮",
+        },
+    ]
+
     return (
         <>
             <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
@@ -82,22 +145,42 @@ export default function AmphibiansAndReptile() {
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 gap-x-[22px]">
-                            <Link to="intropage">
-                                <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample1.png')] bg-no-repeat">
-                                    <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">豹紋守宮</h4>
-                                </div>
-                            </Link>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample2.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">肥尾守宮</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample3.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">瘤尾守宮</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-[url('../assets/reptile/sample4.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">豹貓守宮</h4>
-                            </div>
-                        </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={-15}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper w-[900px] mg "
+                        // breakpoints={{
+                        //     390:{
+                        //         slidesPerView: 1,
+                        //         spaceBetween: 0,
+                        //     },
+                        //     768:{
+                        //         slidesPerView: 2,
+                        //         spaceBetween: -60,
+                        //     },
+                        //     1024:{
+                        //         slidesPerView: 3,
+                        //         spaceBetween: -60,
+                        //     }
+                        // }}
+                        >
+                            {geckGrounded.map((image,id) =>(
+                                <SwiperSlide className='' key={id}>
+                                    <Link to="intropage">
+                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center] bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                         <div className="flex justify-center mx-[93px] my-6">
                             <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />

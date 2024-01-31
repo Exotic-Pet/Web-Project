@@ -1,18 +1,42 @@
-.swp > .swiper-wrapper{padding-left: 75px;}
-
+/* 通用 */
 .swiper-button-prev , 
 .swiper-button-next{
     background: no-repeat;
     background-size: contain;
     background-position: center;
-    color: #A3907A;
     width: 38px;
     height: 38px;
 }
-.swiper-button-prev{
+
+
+/* for EventContent */
+.swp > .swiper-wrapper{padding-left: 75px}
+.swp > .swiper-button-prev{background-image: url('../assets/eventcontent/button-prev.svg')}
+.swp > .swiper-button-next{background-image: url('../assets/eventcontent/button-next.svg')}
+
+/* for EventPage */
+.mainswp-btn{position: relative;}
+.mainswp-btn > .swiper-button-prev{
+    background-image: url('../assets/event/main-swp-btn-prev.svg');
+    position: absolute;
+    /* left: 330px; */
+    left: 23%;
+    
+}
+.mainswp-btn > .swiper-button-next{
+    background-image: url('../assets/event/main-swp-btn-next.svg');
+    position: absolute;
+    /* right: 330px; */
+    right: 23%;
+}
+.mainswp-btn > .swiper-wrapper > .swiper-slide-prev,
+.mainswp-btn > .swiper-wrapper > .swiper-slide-next{
+    opacity: 0.5;
+}
+.hotevent-swp > .swiper-button-prev {
     background-image: url('../assets/eventcontent/button-prev.svg');
 }
-.swiper-button-next{
+.hotevent-swp > .swiper-button-next {
     background-image: url('../assets/eventcontent/button-next.svg');
 }
 
@@ -20,11 +44,31 @@
 .swiper-button-next::after{
     display: none;
 }
-
+/* introPage */
 .swiper-pagination-bullet-active{
     background-color: #4D9895;
 }
 
 .swiper-pagination{
     position: static;
+}
+
+.mg{
+    /* border: 1px solid #000; */
+    position: relative;
+    padding-left: 50px;
+}
+.mg a{
+    display: block;
+    width: 181px;
+}
+.mg > .swiper-button-prev::after{
+    display: block;
+    color: white;
+}
+.mg > .swiper-button-next::after{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0;
 }

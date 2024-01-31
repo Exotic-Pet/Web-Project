@@ -66,7 +66,7 @@ export default function HomeHeader() {
                 </Link>
               </li>
               <li className="mt-[16px]">
-                <a href="#" className="flex items-center hover:opacity-70">
+                <Link to="/page/event" className="flex items-center hover:opacity-70">
                   <img
                     src={calendarGreen}
                     alt="calendar"
@@ -77,7 +77,7 @@ export default function HomeHeader() {
                       Exotic pet event
                     </span>
                   </h2>
-                </a>
+                </Link>
               </li>
               <li className="mt-[16px]">
                 <Link to="/page/exotic-overview" className="flex items-center cursor-pointer hover:opacity-70">
