@@ -36,7 +36,7 @@ export default function Header() {
             <FontAwesomeIcon icon={faBars} />
           </a>
           {/* <!-- PC Menu --> */}
-          <ul className="items-center hidden font-bold tracking-wide text-center gap-x-4 lg:flex">
+          <ul className="items-center hidden font-bold tracking-wide text-center gap-x-6 lg:flex">
             <li className="nav__list">
               <Link
                 to="/page/store-overview"
