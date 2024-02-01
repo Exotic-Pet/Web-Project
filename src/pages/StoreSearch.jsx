@@ -508,7 +508,7 @@ export default function StoreSearch() {
                     <input type="checkbox" name="animal" value="浣熊" />
                     <span className="checkmark px-3">浣熊</span>
                   </label>
-                  <button className="see__more mt-8 mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border-2 border-brown-dark mb-9 hover:border-yellow-light">
+                  <button className="see__more mt-8 mx-auto block text-xl text-brown-dark rounded-full w-[106px] py-1 border border-brown-dark mb-9 hover:opacity-60">
                     查看更多
                   </button>
                 </div>

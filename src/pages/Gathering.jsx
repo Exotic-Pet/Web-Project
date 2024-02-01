@@ -95,8 +95,8 @@ export default function Gathering() {
   const CategoryTag = ({ category }) => (
     <li
       className={`${
-        category.selectState ? "bg-green-light" : "bg-brown-light"
-      } flex gap-x-3 items-center rounded-full p-2 lg:py-4 lg:px-5 cursor-pointer hover:opacity-80`}
+        category.selectState ? "bg-green-light" : "bg-brown-light hover:opacity-80"
+      } flex gap-x-3 items-center rounded-full p-2 lg:py-4 lg:px-5 cursor-pointer`}
       onClick={() => toggleSelectState(category.id)}
     >
       <img
@@ -283,11 +283,11 @@ export default function Gathering() {
   ];
 
   // DeepCopy Data
-  const gatheringDataDeepCopy = JSON.parse(JSON.stringify(gatheringData));
+  // const gatheringDataDeepCopy = JSON.parse(JSON.stringify(gatheringData));
 
   // Gathering Card
   const GatheringCard = ({ card }) => (
-    <li className="p-6 rounded-2xl shadow-xl bg-white border-4 border-transparent hover:border-green-light">
+    <li className="p-6 rounded-2xl shadow-xl bg-white border-2 border-transparent hover:border-green-light">
       <div className="leading-relaxed">
         <h5 className="text-brown-normal">{card.category}</h5>
         <h4 className="text-brown-dark font-bold text-[16px]">{card.title}</h4>

@@ -6,6 +6,7 @@
 3. Tailwind CSS
 4. Swiper
 5. AOS
+6. Framer-Motion
 
 ## 目前未完成項目
 1. ✅ HomePage "查看更多文章" 需設定 Link 連到 CommunityPage 頁面。
@@ -23,7 +24,7 @@
 13. IntroPage ＲＷＤ 待完成
 14. CommunityPage ＲＷＤ 待調整，篩選欄選擇該項目出現對應內容
 15. CommunityPage 卡片愛心、收藏 Icon 點擊效果待完成
-16. CommunityPage "我要發文" hover 動畫待完成
+16. ✅ CommunityPage "我要發文" hover 動畫待完成
 
 ## 待詢問項目
 1. 首頁 熱門文章上方多兩個插圖
