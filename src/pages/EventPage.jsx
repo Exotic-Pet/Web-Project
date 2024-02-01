@@ -319,33 +319,33 @@ export default function StoreContent() {
                             <div className="flex mt-[26px]">
                                 <p className="text-base font-bold text-brown-dark ml-[20px] mr-[50px] sm:mx-[70px] whitespace-nowrap">地區</p>
                                 <ul className="flex flex-wrap gap-x-2">
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">全台</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">北部</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">中部</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">南部</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">東部</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">全台</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">北部</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">中部</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">南部</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">東部</li>
                                 </ul>
                             </div>
                             <div className="flex mt-5">
                                 <p className="text-base font-bold text-brown-dark ml-[20px] mr-[50px] sm:mx-[70px] whitespace-nowrap">日期</p>
                                 <ul className="flex flex-wrap gap-x-2">
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">全部日期</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">今天</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">本周末</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">7天內</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">30天內</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">全部日期</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">今天</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">本周末</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">7天內</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">30天內</li>
                                 </ul>
                             </div>
                             <div className="flex mt-5">
                                 <p className="text-base font-bold text-brown-dark ml-[20px] mr-[18px] sm:ml-[72px] sm:mr-[36px] whitespace-nowrap">活動分類</p>
                                 <ul className="flex flex-wrap gap-x-2">
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">全部分類</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">展覽</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">市集</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">親子活動</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">快閃活動</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">線上活動</li>
-                                    <li className="px-2 text-base bg-opacity-0 border-2 border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">其他</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">全部分類</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">展覽</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">市集</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">親子活動</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">快閃活動</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">線上活動</li>
+                                    <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">其他</li>
                                 </ul>
                             </div>
                         </form>
