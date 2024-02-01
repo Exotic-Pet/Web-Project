@@ -21,11 +21,11 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
 
   return (
     <div
-      className="fixed z-50 top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center"
+      className="fixed z-40 top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center"
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
-        className="lightBox__content lightBox__scrollbar max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-16 py-[30px]"
+        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--cyan max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-16 py-[30px]"
         onClick={(e) => e.stopPropagation()}
       >
         <div 

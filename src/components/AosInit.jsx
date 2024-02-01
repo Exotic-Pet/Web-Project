@@ -4,8 +4,6 @@ import 'aos/dist/aos.css';
 
 export default function AosInit() {
   useEffect(() => {
-    AOS.init({
-      once: true,
-    });
+    AOS.init();
   }, []);
 }

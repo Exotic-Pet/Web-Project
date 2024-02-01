@@ -1,5 +1,5 @@
-// import { motion, AnimatePresence } from 'framer-motion';
 import "../styles/all.css";
+import { motion, AnimatePresence } from "framer-motion";
 import CommunityContent from "../pages/CommunityContent";
 import SignIn from "../pages/SignIn";
 
@@ -25,21 +25,41 @@ export default function LightBox({
     switch (type) {
       case "COMMUNITY CONTENT":
         return (
-          <CommunityContent
-            isOpenState={communityLightBoxState}
-            setIsOpenState={setCommunityLightBoxState}
-            toggleState={handleToggleLightBox}
-          />
+          communityLightBoxState && (
+            <AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <CommunityContent
+                  isOpenState={communityLightBoxState}
+                  setIsOpenState={setCommunityLightBoxState}
+                  toggleState={handleToggleLightBox}
+                />
+              </motion.div>
+            </AnimatePresence>
+          )
         );
       case "EVENT CONTENT":
         return <div className="">活動</div>;
       case "SIGN UP":
         return (
-          <SignIn
-            isOpenState={isSignInLightBoxState}
-            setIsOpenState={setSignInLightBoxState}
-            toggleState={handleToggleLightBox}
-          />
+          isSignInLightBoxState && (
+            <AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <SignIn
+                  isOpenState={isSignInLightBoxState}
+                  setIsOpenState={setSignInLightBoxState}
+                  toggleState={handleToggleLightBox}
+                />
+              </motion.div>
+            </AnimatePresence>
+          )
         );
       default:
         break;

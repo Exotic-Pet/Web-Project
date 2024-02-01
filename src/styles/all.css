@@ -64,22 +64,25 @@ input::placeholder, textarea::placeholder {
   background: linear-gradient(to right, 
   transparent,
   transparent 45%,
-  #A3907A 45%,
-  #A3907A 55%,
+  #D0CCC6 45%,
+  #D0CCC6 55%,
   transparent 55%,
   transparent);
 }
 .lightBox__scrollbar::-webkit-scrollbar-thumb {
-  border-radius: 99px;
-  background: radial-gradient(circle at center, 
-  #91AF74 18%,
-  transparent 18%);
+  border-radius: 100px;
 }
-.lightBox__scrollbar::-webkit-scrollbar-thumb:hover {
+.lightBox__scrollbar--cyan::-webkit-scrollbar-thumb {
   background: radial-gradient(circle at center, 
-  #ABC592 18%,
-  transparent 18%);
+  #93C9C8 12%,
+  transparent 12%);
 }
+.lightBox__scrollbar--green::-webkit-scrollbar-thumb {
+  background: radial-gradient(circle at center, 
+  #ABC592 4%,
+  transparent 4%);
+}
+
 
 /* Toggle Expand */
 .toggle--click + .toggle--close {
@@ -127,6 +130,11 @@ input::placeholder, textarea::placeholder {
 }
 .checkbox--green input[type="checkbox"]:checked + .checkmark::before {
   background-color: #ABC592;
+}
+
+/* Input Focus Style */
+.input__style--green:focus {
+  outline: 1.5px solid #ABC592;
 }
 
 /* Slider Style */
