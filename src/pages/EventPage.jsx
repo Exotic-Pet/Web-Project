@@ -20,6 +20,7 @@ import eventImg9 from '../assets/event/event-img9.svg';
 import plate from '../assets/event/plate-1.svg';
 import searchIcon from '../assets/event/event-search.svg';
 import "../styles/swiperstyle.css";
+import { Link } from 'react-router-dom';
 
 
 export default function StoreContent() {
@@ -102,6 +103,62 @@ export default function StoreContent() {
             date: "2024/10/07 (六) - 10/08 (日)"
         },
     ]
+    const searchCard = [
+        {   
+            imgUrl: eventImg7,
+            category: "展覽",
+            title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
+            date: "2024/6/22 (六)-6/23 (日)"
+        },
+        {
+            imgUrl: eventImg8,
+            category: "展覽",
+            title: "台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館",
+            date: "2024/8/26 (六)-8/27 (日)"
+        },
+        {
+            imgUrl: eventImg9,
+            category: "展覽",
+            title: "台中｜2024台灣爬蟲季｜台中世貿二館",
+            date: "2024/6/22 (六)-6/23 (日)"
+        },
+        {   
+            imgUrl: eventImg7,
+            category: "展覽",
+            title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
+            date: "2024/6/22 (六)-6/23 (日)"
+        },
+        {
+            imgUrl: eventImg8,
+            category: "展覽",
+            title: "台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館",
+            date: "2024/8/26 (六)-8/27 (日)"
+        },
+        {
+            imgUrl: eventImg9,
+            category: "展覽",
+            title: "台中｜2024台灣爬蟲季｜台中世貿二館",
+            date: "2024/6/22 (六)-6/23 (日)"
+        },
+        {   
+            imgUrl: eventImg7,
+            category: "展覽",
+            title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
+            date: "2024/6/22 (六)-6/23 (日)"
+        },
+        {
+            imgUrl: eventImg8,
+            category: "展覽",
+            title: "台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館",
+            date: "2024/8/26 (六)-8/27 (日)"
+        },
+        {
+            imgUrl: eventImg9,
+            category: "展覽",
+            title: "台中｜2024台灣爬蟲季｜台中世貿二館",
+            date: "2024/6/22 (六)-6/23 (日)"
+        },
+    ]
 
     return (
         <>
@@ -141,8 +198,8 @@ export default function StoreContent() {
                 </Swiper>
                 
                 {/*Banner*/}
-                <div className="bg-green-light bg-no-repeat pt-5 bg-center bg-cover bg-[url('../assets/event/event-banner.svg')] min-h-[128px] mt-[55px]">
-                        <h2 className='text-white text-[40px] font-bold text-center'>特寵活動不能錯過</h2>
+                <div className=" bg-green-light bg-no-repeat pt-4 bg-center bg-cover bg-[url('../assets/event/event-banner.svg')] min-h-[128px] mt-[55px]">
+                        <h2 className='text-white text-[40px] font-bold text-center mb-1'>特寵活動不能錯過</h2>
                         <h3 className='text-xl text-center text-brown-dark'>幫你搜集好熱門活動及資訊，全台特寵活動即時掌握！</h3>
                 </div>
                 {/*Event Info*/}
@@ -184,15 +241,16 @@ export default function StoreContent() {
                             }}
                         >
                             {hotEvents.map((hotEvent, i) => (
-                                <SwiperSlide className='mb-4 '>
-                                    <li key={i} className="bg-white mx-auto shadow-xl rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5">
-                                        <img src={hotEvent.imgUrl} alt="event" className="mt-[30px] w-full" />
-                                        <p className="mt-4 text-base text-brown-normal">{hotEvent.category}</p>
-                                        <h3 className="mt-1 text-xl font-bold tracking-wide text-brown-dark">{hotEvent.title}</h3>
-                                        <p className="font-bold text-base text-green-dark w-[300px] h-[70px] tracking-wide">{hotEvent.date}</p>
-                                        <a href="#"
-                                            className="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-green-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
-                                    </li>
+                                <SwiperSlide className='mt-5 mb-4'>
+                                    <Link to="/page/event/content">
+                                        <li key={i} className=" shadow-md bg-white mx-auto rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5">
+                                            <img src={hotEvent.imgUrl} alt="event" className="mt-[30px] w-full" />
+                                            <p className="mt-4 text-base text-brown-normal">{hotEvent.category}</p>
+                                            <h3 className="mt-1 text-xl font-bold tracking-wide text-brown-dark">{hotEvent.title}</h3>
+                                            <p className="font-bold text-base text-green-dark w-[300px] h-[70px] tracking-wide">{hotEvent.date}</p>
+                                            <p className="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-green-dark text-brown-dark right-9">查看更多</p>
+                                        </li>
+                                    </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -232,24 +290,26 @@ export default function StoreContent() {
                             }}
                         >
                             {featuredEvents.map((featuredEvent, i) => (
-                                <SwiperSlide className='mb-4'>
-                                    <li key={i} className="mx-auto bg-white shadow-xl rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5">
-                                        <img src={featuredEvent.imgUrl} alt="event" className="mt-[30px] w-full" />
-                                        <p className="mt-4 text-base text-brown-normal">{featuredEvent.category}</p>
-                                        <h3 className="mt-1 text-xl font-bold tracking-wide text-brown-dark">{featuredEvent.title}</h3>
-                                        <p className="font-bold text-base text-green-dark w-[300px] h-[70px] tracking-wide">{featuredEvent.date}</p>
-                                        <a href="#"
-                                            className="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-green-dark text-brown-dark right-9 hover:scale-110">查看更多</a>
-                                    </li>
+                                <SwiperSlide className='mt-5 mb-4'>
+                                    <Link to="/page/event/content">
+                                        <li key={i} className="mx-auto bg-white shadow-md rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5">
+                                            <img src={featuredEvent.imgUrl} alt="event" className="mt-[30px] w-full" />
+                                            <p className="mt-4 text-base text-brown-normal">{featuredEvent.category}</p>
+                                            <h3 className="mt-1 text-xl font-bold tracking-wide text-brown-dark">{featuredEvent.title}</h3>
+                                            <p className="font-bold text-base text-green-dark w-[300px] h-[70px] tracking-wide">{featuredEvent.date}</p>
+                                            <p className="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-green-dark text-brown-dark right-9">查看更多</p>
+                                        </li>
+                                    </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
                     </div>
                     {/*Search*/}
-                    <div className="mx-auto max-w-[778px]  border-solid border-2 rounded-xl bg-white mt-[68px] border-brown-normal pb-[33px]">
+                    <div className="relative mx-auto max-w-[778px]  border-solid border-2 rounded-xl bg-white mt-[68px] border-brown-normal pb-[33px]">
                         {/*Selector*/}
-                        <form action="" className="relative justify-center text-center">
-                            {/* <img src={plate} alt="plate-1" className="md:block  absolute -right-[127px] -z-20 hidden" /> */}
+                        <img src={plate} alt="plate-1" className="absolute -right-[148px]"/>
+                        <form action="" className="justify-center text-center ">
+                            
                             <div className="relative mx-[68px]">
                                 <input type="text" placeholder="搜尋活動/場地/舉辦方"
                                     className="w-full py-2 text-base text-center border-2 border-solid rounded-full text-brown-dark bg-yellow-light focus:outline-brown-normal mt-7" />
@@ -292,115 +352,21 @@ export default function StoreContent() {
                     </div>
                     {/*Search Result*/}
                     <div className="">
-                        <ul className="flex mt-[70px] flex-wrap justify-center  gap-x-[60px] gap-y-11">
-                            <li className="w-[335px] mb-11">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg7} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/6/22 (六)-6/23 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] mb-11">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg8} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark ellipsis-2">台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/8/26 (六)-8/27 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] mb-11">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg9} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台中｜2024台灣爬蟲季｜台中世貿二館</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/6/22 (六)-6/23 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] mb-11">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg7} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/6/22 (六)-6/23 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] mb-11">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg8} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台北｜2024 水美園 - 創四季 【植栽、 爬蟲...</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/8/26 (六)-8/27 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] mb-11">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg9} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台中｜2024台灣爬蟲季｜台中世貿二館</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/6/22 (六)-6/23 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] ">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg7} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/6/22 (六)-6/23 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] ">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg8} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台北｜2024 水美園 - 創四季 【植栽、 爬蟲...</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/8/26 (六)-8/27 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li className="w-[335px] ">
-                                <a href="#" className="flex hover:scale-110">
-                                    <img src={eventImg9} alt="event" className="mr-5" />
-                                    <div>
-                                        <p className="text-xs text-brown-normal mb-[6px]">展覽</p>
-                                        <h3 className="text-base font-bold text-brown-dark">台中｜2024台灣爬蟲季｜台中世貿二館</h3>
-                                        <p className="text-xs text-green-dark mb-[45px]">2024/6/22 (六)-6/23 (日)</p>
-                                        <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
-                                        </h4>
-                                    </div>
-                                </a>
-                            </li>
+                        <ul className="flex mt-[70px] flex-wrap justify-center gap-x-[50px]">
+                            {searchCard.map((card, i)=>(
+                                <li key={i} className="w-[335px] mb-11 hover:bg-white group hover:rounded-2xl px-3 pt-5">
+                                    <a href="#" className="flex gap-x-5">
+                                        <img src={card.imgUrl} alt="event" className="duration-500 group-hover:-translate-y-3" />
+                                        <div>
+                                            <p className="text-xs text-brown-normal mb-[6px]">{card.category}</p>
+                                            <h3 className="text-base font-bold text-brown-dark ellipsis-2">{card.title}</h3>
+                                            <p className="text-xs text-green-dark mb-[45px]">{card.date}</p>
+                                            <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">MORE
+                                            </h4>
+                                        </div>
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     {/*Page Number*/}
