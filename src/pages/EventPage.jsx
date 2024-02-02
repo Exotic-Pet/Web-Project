@@ -19,6 +19,10 @@ import eventImg8 from '../assets/event/event-img8.svg';
 import eventImg9 from '../assets/event/event-img9.svg';
 import plate from '../assets/event/plate-1.svg';
 import searchIcon from '../assets/event/event-search.svg';
+import arrow from '../assets/event/arrow.svg';
+import deco from '../assets/event/deco.svg';
+import allrats from '../assets/event/all-rats.svg';
+import allreptiles from '../assets/event/all-reptiles.svg';
 import "../styles/swiperstyle.css";
 import { Link } from 'react-router-dom';
 
@@ -26,7 +30,7 @@ import { Link } from 'react-router-dom';
 export default function StoreContent() {
     const [swiperRef, setSwiperRef] = useState(null);
 
-    const mainSwpImage = [mainImg1, mainImg2, mainImg3];
+    const mainSwpImage = [mainImg1, mainImg2, mainImg3,mainImg1, mainImg2, mainImg3,mainImg1, mainImg2, mainImg3];
     const hotEvents = [
         {
             imgUrl: eventImg1,
@@ -169,6 +173,7 @@ export default function StoreContent() {
                         slidesPerView={2}
                         centeredSlides={true}
                         spaceBetween={60}
+                        loop={true}
                         pagination={{
                             type: 'custom',
                         }}
@@ -305,7 +310,7 @@ export default function StoreContent() {
                         </Swiper>
                     </div>
                     {/*Search*/}
-                    <div className="relative mx-auto max-w-[778px]  border-solid border-2 rounded-xl bg-white mt-[68px] border-brown-normal pb-[33px]">
+                    <div className="relative mx-auto max-w-[778px] border-solid border-2 rounded-xl bg-white mt-[68px] border-brown-normal pb-[33px]">
                         {/*Selector*/}
                         <img src={plate} alt="plate-1" className="absolute -right-[148px]"/>
                         <form action="" className="justify-center text-center ">
@@ -388,6 +393,53 @@ export default function StoreContent() {
                                 <a href="#" className="px-2 text-xl font-bold text-brown-dark">尾數頁</a>
                             </li>
                         </ul>
+                    </div>
+                    <div className='md:flex gap-x-[30px] mx-auto justify-center items-start'>
+                        {/* 每月精選 */}
+                        <div className='bg-white relative border-4 rounded-[30px] overflow-hidden border-cyan-normal pt-[50px] bg-no-repeat inline-block'>
+                            <h3 className='mx-8 text-3xl font-bold text-center text-brown-dark border-b-[1px] border-brown-dark pb-4'>每月<br/>精選</h3>
+                            <p className='mx-8 mt-3 text-base text-brown-dark mb-[18px]'>Monthly<br/>Selection</p>
+                            <figure className=' rounded-t-[30px] bg-cyan-normal pt-[27px] pb-[30px]'>
+                                <img src={arrow} alt="arrow" className='mx-auto mb-[18px]'/>
+                                <p className='text-lg font-bold text-center text-brown-dark'>更多文章</p>
+                            </figure>
+                        </div>
+                        <div>
+                            {/* 寵物鼠品種大集合 */}
+                            <div className='flex justify-between pl-[55px] border-4 rounded-[30px] border-brown-normal overflow-hidden'>
+                                <div className='xl:flex'>
+                                    <div className='relative z-10 max-w-[350px] mr-[38px] my-7'>
+                                        <img src={deco} alt="deco" className='absolute -z-10 -left-4 -top-1' />
+                                        <h3 className='pb-2 mb-2 text-3xl font-bold tracking-wider border-b text-brown-dark border-brown-light'>寵物鼠品種大集合</h3>
+                                        <p className='text-brown-normal'>寵物鼠品種眾多，包括活潑的黃金鼠、親人的花枝鼠、哪種最適合自己飼養呢？</p>
+                                    </div>
+                                    <img src={allrats} alt="image" className='mr-[18px] my-7'/>
+                                </div>
+                                <div className='flex pr-6 bg-brown-normal pl-9 rounded-l-[18px] items-center gap-x-[10px] h-auto'>
+                                    <h4 className='text-xl font-medium text-brown-dark'>探索<br/>更多</h4>
+                                    <figure className=''>
+                                        <img src={arrow} alt="arrow" className='px-3 pt-[18px] pb-6 bg-white rounded-full' />
+                                    </figure>
+                                </div>
+                            </div>
+                            {/* 爬寵特輯 */}
+                            <div className='flex justify-between pl-[55px] border-4 rounded-[30px] border-green-light overflow-hidden mt-2'>
+                                <div className='xl:flex'>
+                                    <div className='relative z-10 max-w-[330px] mr-[50px] my-7'>
+                                        <img src={deco} alt="deco" className='absolute -z-10 -left-4 -top-1' />
+                                        <h3 className='pb-2 mb-2 text-3xl font-bold tracking-wider border-b text-brown-dark border-green-light'>爬寵特輯</h3>
+                                        <p className='text-brown-normal'>爬寵好多...要如何挑選一支適合自己的呢？<br/>關於新手養爬寵你必須知道的事！</p>
+                                    </div>
+                                    <img src={allreptiles} alt="image" className='mr-[50px] my-7'/>
+                                </div>
+                                <div className='flex pr-6 bg-green-light pl-9 rounded-l-[18px] items-center gap-x-[10px] h-auto'>
+                                    <h4 className='text-xl font-medium text-brown-dark'>探索<br/>更多</h4>
+                                    <figure className=''>
+                                        <img src={arrow} alt="arrow" className='px-3 pt-[18px] pb-6 bg-white rounded-full' />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>

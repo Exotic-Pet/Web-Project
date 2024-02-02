@@ -61,7 +61,7 @@ export default function IntroPage() {
                     <div className="flex items-center justify-between ">
                         <div>
                             <h3 className="text-2xl text-brown-normal">Leopard Gecko</h3>
-                            <h2 className="text-cyan-dark font-black text-[40px]">豹紋守宮</h2>
+                            <h2 className="text-cyan-dark font-bold text-[40px]">豹紋守宮</h2>
                         </div>
                         <h3 className="block w-[80px] pt-3 h-[80px] text-xl font-bold text-center text-white rounded-full bg-brown-dark">兩棲<br />爬蟲</h3>
                     </div>
@@ -181,14 +181,14 @@ export default function IntroPage() {
                     <figure
                         className="bg-[url('../assets/intropage/title-bg.svg')] text-center bg-no-repeat bg-center mt-[67px] py-5">
                         <h2 className="text-3xl font-bold text-cyan-dark">飼養豹紋守宮需要哪些設備？</h2>
-                        <p className="mt-3 text-lg font-black text-brown-dark">飼養守宮主要需要準備：飼養箱、底材、加溫墊、躲避屋、水盆、溫濕度計，共6樣設備！</p>
+                        <p className="mt-3 text-lg font-bold text-brown-dark">飼養守宮主要需要準備：飼養箱、底材、加溫墊、躲避屋、水盆、溫濕度計，共6樣設備！</p>
                     </figure>
                     <ul>
                         <li className="flex mt-[73px]">
                             <img src={feedBox1} alt="equipment" className="ml-[79px] mr-[51px]" />
                             <div className="mt-[32px]">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">飼養箱</h4>
-                                <p className="text-lg font-black text-brown-dark mr-[140px]">
+                                <p className="text-lg font-bold text-brown-dark mr-[140px]">
                                     首先，飼養箱是養豹紋守宮的必需品，雖然牠對環境要求不高，但為了提供豹紋守宮舒適的生活環境，需要一個至少 30 x 30 x 20
                                     的飼養箱，且不宜過小或過大。因為過小的飼養箱可能會給牠們壓迫感，甚至會因此而無法正常長大；過大的飼養箱若沒有足夠的躲避空間，可能會使牠感到不安。</p>
                             </div>
@@ -197,7 +197,7 @@ export default function IntroPage() {
                             <img src={feedBox2} alt="equipment" className="rounded-[20px] ml-[79px] mr-[51px]" />
                             <div className="mt-[32px]">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">底材</h4>
-                                <p className="text-lg font-black text-brown-dark  mr-[140px]">
+                                <p className="text-lg font-bold text-brown-dark  mr-[140px]">
                                     在挑選底材時，建議選擇一個容易清潔的底材，像是：廚房紙巾、赤玉土、椰土等，不過要注意的是，不要為了好看而選用沙類、木屑等細小的底材，因為很容易造成豹紋守宮誤食。曾經就發生過守宮死亡後解剖來看，結果肚子全是沙的慘狀。
                                 </p>
                             </div>
@@ -206,7 +206,7 @@ export default function IntroPage() {
                             <img src={feedBox3} alt="equipment" className="rounded-[20px] ml-[79px] mr-[51px]" />
                             <div className="mt-[32px]">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">加溫墊</h4>
-                                <p className="text-lg font-black text-brown-dark  mr-[140px]">
+                                <p className="text-lg font-bold text-brown-dark  mr-[140px]">
                                     由於豹紋守宮是變溫動物，代表牠們的體溫會隨著環境溫度而變化，所以加溫需求對於爬蟲來說相當重要，最好的方法就是將加溫墊可以放在飼養箱「底部」的某一側，並讓它們躺在上面取暖。不過要注意的是，溫度要控制好，且不要與守宮直接接觸，以避免守宮燙傷。
                                 </p>
                             </div>
@@ -215,7 +215,7 @@ export default function IntroPage() {
                             <img src={feedBox4} alt="equipment" className="rounded-[20px] ml-[79px] mr-[51px]" />
                             <div className="mt-[32px]">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">躲避屋</h4>
-                                <p className="text-lg font-black text-brown-dark mr-[140px]">躲避屋的重要性有 2
+                                <p className="text-lg font-bold text-brown-dark mr-[140px]">躲避屋的重要性有 2
                                     點，一是豹紋守宮的天性習慣在遮蔽處找安全感，因此需要提供躲避屋給牠們，如果缺乏隱蔽空間，守宮可能會感到不安，進而對健康產生負面影響，甚至會影響牠們的食慾和行為表現。二是豹紋守宮在脫皮時，若有磨擦系數足夠且表面粗糙的躲避屋，可以幫助牠們順利脫皮。
                                 </p>
                             </div>
@@ -224,7 +224,7 @@ export default function IntroPage() {
                             <img src={feedBox5} alt="equipment" className="ml-[79px] mr-[51px] rounded-[20px]" />
                             <div className="mt-[32px]">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">水盆</h4>
-                                <p className="text-lg font-black text-brown-dark mr-[140px]">
+                                <p className="text-lg font-bold text-brown-dark mr-[140px]">
                                     如同人類一樣，豹紋守宮也需要飲水，所以提供乾淨的水源非常重要，建議可以將水盆放至飼養箱冷區（無加溫墊那區），並隨時保持清潔，以避免細菌孳生。</p>
                             </div>
                         </li>
@@ -232,7 +232,7 @@ export default function IntroPage() {
                             <img src={feedBox6} alt="equipment" className="ml-[79px] mr-[51px]" />
                             <div className="mt-[32px]">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">溫濕度計</h4>
-                                <p className="text-lg font-black text-brown-dark mr-[140px]">由於豹紋守宮需要溫度在 25～32 度之間，濕度 40%～70%
+                                <p className="text-lg font-bold text-brown-dark mr-[140px]">由於豹紋守宮需要溫度在 25～32 度之間，濕度 40%～70%
                                     之間的飼養環境，因此適當的溫度控制非常重要；而準備溫濕度計，則可以幫助飼主確認飼養箱的溫度是否在適宜範圍內，也需準備紅外線測溫槍，更加確定溫度及濕度，以提供豹紋守宮一個健康的生活環境。
                                 </p>
                             </div>
@@ -242,7 +242,7 @@ export default function IntroPage() {
                         className="flex border-y-[1px] border-solid border-brown-normal pt-[65px] pb-[58px] mt-[75px] mb-[49px] mx-[78px]">
                         <div className="ml-[78px] mr-[43px]">
                             <h2
-                                className="text-brown-dark text-3xl font-black text-center py-[10px] bg-cyan-normal rounded-[53px] ">
+                                className="text-brown-dark text-3xl font-bold text-center py-[10px] bg-cyan-normal rounded-[53px] ">
                                 豹紋守宮為何會變白？</h2>
                             <ul className="text-base text-brown-dark mt-[30px]">
                                 <li className="list-disc">守宮數個月會脫皮一次；發現守宮的身體變白，就是即將要脫皮的信號。發現將脫皮的徵兆後，請讓飼育箱內保持一定濕度，並放置水盆保持。</li>
@@ -252,7 +252,7 @@ export default function IntroPage() {
                         </div>
                         <img src={feedBox7} alt="img" className="rounded-[20px] my-auto" />
                     </div>
-                    <p className="text-lg font-black text-brown-dark mx-[81px]">
+                    <p className="text-lg font-bold text-brown-dark mx-[81px]">
                         豹紋守宮是一種地棲型（在地面生活）的晨昏性（清晨和黃昏時間內活動）動物，其飼養門檻低、環境要求不高、不占空間不吵鬧，再加上可愛溫馴的個性等優點，成為了多數人的首選爬蟲類寵物；且如果你是從未接觸過爬蟲類的新手，豹紋守宮更是入坑推薦的入門爬蟲寵物！
                     </p>
                     <figure
