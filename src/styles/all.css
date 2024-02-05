@@ -79,8 +79,8 @@ input::placeholder, textarea::placeholder {
 }
 .lightBox__scrollbar--green::-webkit-scrollbar-thumb {
   background: radial-gradient(circle at center, 
-  #ABC592 4%,
-  transparent 4%);
+  #ABC592 8%,
+  transparent 8%);
 }
 
 
