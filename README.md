@@ -7,6 +7,7 @@
 4. Swiper
 5. AOS
 6. Framer-Motion
+7. SweetAlert 2
 
 ## 目前未完成項目
 1. ✅ HomePage "查看更多文章" 需設定 Link 連到 CommunityPage 頁面。
@@ -15,7 +16,7 @@
 4. StoreSearch 進階搜尋功能未完成（開始搜尋、清除條件）
 5. StoreSearch 如果找不到資料，需放上查無資料的圖片
 6. EventPage ＲＷＤ、輪播器、活動主辦方待完成
-7. EventContent 燈箱效果待完成
+7. ✅ EventContent 燈箱效果待完成
 8. 特寵介紹 各種類目錄收合選單未完成
 9. 特寵介紹 輪播效果未完成
 10. 特寵介紹 ＲＷＤ 待完成

@@ -1,9 +1,12 @@
 import "../styles/all.css";
 import { motion, AnimatePresence } from "framer-motion";
+import EventContent from "../pages/EventContent";
 import CommunityContent from "../pages/CommunityContent";
 import SignIn from "../pages/SignIn";
 
 export default function LightBox({
+  eventLightBoxState,
+  setEventLightBoxState,
   communityLightBoxState,
   setCommunityLightBoxState,
   isSignInLightBoxState,
@@ -25,52 +28,47 @@ export default function LightBox({
     switch (type) {
       case "COMMUNITY CONTENT":
         return (
-          communityLightBoxState && (
-            <AnimatePresence>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <CommunityContent
-                  isOpenState={communityLightBoxState}
-                  setIsOpenState={setCommunityLightBoxState}
-                  toggleState={handleToggleLightBox}
-                />
-              </motion.div>
-            </AnimatePresence>
-          )
+          <CommunityContent
+            isOpenState={communityLightBoxState}
+            setIsOpenState={setCommunityLightBoxState}
+            toggleState={handleToggleLightBox}
+          />
         );
       case "EVENT CONTENT":
-        return <div className="">活動</div>;
+        return (
+          <EventContent
+            isOpenState={eventLightBoxState}
+            setIsOpenState={setEventLightBoxState}
+            toggleState={handleToggleLightBox}
+          />
+        );
       case "SIGN UP":
         return (
-          isSignInLightBoxState && (
-            <AnimatePresence>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <SignIn
-                  isOpenState={isSignInLightBoxState}
-                  setIsOpenState={setSignInLightBoxState}
-                  toggleState={handleToggleLightBox}
-                />
-              </motion.div>
-            </AnimatePresence>
-          )
+          <SignIn
+            isOpenState={isSignInLightBoxState}
+            setIsOpenState={setSignInLightBoxState}
+            toggleState={handleToggleLightBox}
+          />
         );
       default:
         break;
     }
   };
 
-  const lightBoxState = communityLightBoxState || isSignInLightBoxState;
+  const lightBoxState = eventLightBoxState || communityLightBoxState || isSignInLightBoxState;
 
   return (
-    <div className={lightBoxState ? "block" : "hidden"}>
-      {lightBoxContent()}
-    </div>
+    lightBoxState && (
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.05 }}
+        >
+          {lightBoxContent()}
+        </motion.div>
+      </AnimatePresence>
+    )
   );
 }
