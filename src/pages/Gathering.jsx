@@ -95,7 +95,9 @@ export default function Gathering() {
   const CategoryTag = ({ category }) => (
     <li
       className={`${
-        category.selectState ? "bg-green-light" : "bg-brown-light hover:opacity-80"
+        category.selectState
+          ? "bg-green-light"
+          : "bg-brown-light hover:opacity-80"
       } flex gap-x-3 items-center rounded-full p-2 lg:py-4 lg:px-5 cursor-pointer`}
       onClick={() => toggleSelectState(category.id)}
     >
@@ -148,34 +150,36 @@ export default function Gathering() {
 
   // Ranking Component
   const RankingCard = ({ card }) => (
-    <li
-      key={card.id}
-      className="mx-auto flex-1 flex gap-5 p-3 rounded-xl hover:bg-gray-normal"
-    >
-      <figure className="relative">
-        <img src={card.photoPath} alt="ranking" />
-        <img
-          src={card.rankPhotoPath}
-          alt="number"
-          className="absolute -top-6 lg:-top-7 -left-6 lg:-left-7"
-        />
-      </figure>
-      <section className="flex flex-col justify-between w-[188px]">
-        <div className="leading-7 text-sm">
-          <h5 className="text-brown-normal">{card.category}</h5>
-          <h4 className="text-brown-dark font-bold text-[16px]">
-            {card.title}
-          </h4>
-          <h6 className="text-brown-normal">{card.date}</h6>
-          <p className="text-green-dark font-medium">{card.location}</p>
-        </div>
-        <Link
-          to=""
-          className="ml-auto mb-1 text-green-dark border-b border-brown-normal hover:scale-125"
-        >
-          MORE
-        </Link>
-      </section>
+    <li className="flex-1 mx-auto">
+      <Link
+        to="content"
+        className="flex gap-5 p-3 rounded-xl cursor-pointer hover:bg-gray-normal"
+      >
+        <figure className="relative">
+          <img src={card.photoPath} alt="ranking" />
+          <img
+            src={card.rankPhotoPath}
+            alt="number"
+            className="absolute -top-6 lg:-top-7 -left-6 lg:-left-7"
+          />
+        </figure>
+        <section className="flex flex-col justify-between w-[188px]">
+          <div className="leading-7 text-sm">
+            <h5 className="text-brown-normal">{card.category}</h5>
+            <h4 className="text-brown-dark font-bold text-[16px]">
+              {card.title}
+            </h4>
+            <h6 className="text-brown-normal">{card.date}</h6>
+            <p className="text-green-dark font-medium">{card.location}</p>
+          </div>
+          <Link
+            to="content"
+            className="ml-auto mb-1 text-green-dark border-b border-brown-normal hover:scale-110"
+          >
+            MORE
+          </Link>
+        </section>
+      </Link>
     </li>
   );
 

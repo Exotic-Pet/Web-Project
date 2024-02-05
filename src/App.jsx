@@ -1,5 +1,4 @@
-import { Routes, Route } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./styles/all.css";
 import AutoScrollTop from "./components/AutoScrollTop";
 import Layout from "./components/Layout";
@@ -15,9 +14,9 @@ import LeporidaeAndMuriodea from "./pages/LeporidaeAndMuriodea";
 import Aves from "./pages/Aves";
 import Arthropoda from "./pages/Arthropoda";
 import EventPage from "./pages/EventPage";
-import EventPageLayout from "./components/EventPageLayout";
-import EventPageContent from "./pages/EventContent";
 import Gathering from "./pages/Gathering";
+import GatheringContent from "./pages/GatheringContent";
+import GatheringLayout from "./components/GatheringLayout";
 import CommunityPage from "./pages/CommunityPage";
 import CommunityPageContent from "./pages/CommunityContent";
 
@@ -40,10 +39,10 @@ export default function App() {
               <Route path="arthropoda" element={<Arthropoda />} />
             </Route>
             <Route path="event" element={<EventPage />} />
-            <Route path="event" element={<EventPageLayout />} >
-              <Route path="content" element={<EventPageContent />} />
+            <Route path="gathering" element={<Gathering />} />
+            <Route path="gathering" element={<GatheringLayout />} >
+              <Route path="content" element={<GatheringContent />} />
             </Route>
-            <Route path="gathering" element={<Gathering />}></Route>
             <Route path="community" element={<CommunityPage />} />
             <Route path="community/content" element={<CommunityPageContent />} />
           </Route>
