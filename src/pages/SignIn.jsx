@@ -14,6 +14,7 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
   const [account, setAccount] = useState("");
   const [password, setPassword] = useState("");
 
+  // Handle Submit 
   const handleSubmit = () => {
     if (isSignIn) {
       const storedAccount = localStorage.getItem("account");
@@ -25,6 +26,7 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
           icon: "success",
           confirmButtonText: "前往探索",
           backdrop: true,
+          timer: 2000,
         });
         setIsOpenState(false);
       } else {
@@ -34,6 +36,7 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
           icon: "error",
           confirmButtonText: "重新嘗試",
           backdrop: true,
+          timer: 2000,
         });
       }
     } else {
@@ -46,7 +49,10 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
           icon: "success",
           confirmButtonText: "確定",
           backdrop: true,
+          timer: 2000,
         }).then(() => {
+          // Change to SignIn Page
+          setIsSignIn(true);
           // Reset Input Text
           setAccount("");
           setPassword("");
@@ -57,6 +63,7 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
           icon: "error",
           confirmButtonText: "重新嘗試",
           backdrop: true,
+          timer: 2000,
         });
       }
     }
@@ -114,7 +121,7 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
           </label>
           <button
             className="bg-green-light block rounded-full w-full py-4 tracking-wider font-bold text-xl hover:text-white"
-            onClick={handleSubmit}
+            onClick={() => handleSubmit()}
           >
             {isSignIn ? "登 入" : "註冊會員"}
           </button>
