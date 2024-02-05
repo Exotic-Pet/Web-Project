@@ -17,6 +17,8 @@ export default function CommunityPage() {
 	// LightBox State
   const [communityLightBoxState, setCommunityLightBoxState] = useState(false);
 
+	// Article Data
+
   return (
     <>
       {/* LightBox */}

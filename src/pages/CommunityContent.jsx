@@ -25,7 +25,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
-        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--cyan max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-16 py-[30px]"
+        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--cyan max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-8 py-[30px]"
         onClick={(e) => e.stopPropagation()}
       >
         <div 
