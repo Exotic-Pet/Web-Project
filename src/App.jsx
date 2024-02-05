@@ -22,7 +22,7 @@ import CommunityPageContent from "./pages/CommunityContent";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Web-Project">
       <AutoScrollTop>
         <Routes>
           <Route index element={<HomePage />} />
