@@ -308,7 +308,7 @@ export default function StoreSearch() {
           {store?.label?.map((labelItem, labelIndex) => (
             <li
               key={labelIndex}
-              className={`px-2 border border-solid text-${categoryColor}-dark border-${categoryColor}-dark rounded-3xl`}
+              className={`px-2 border border-solid text-${categoryColor}-dark border-${categoryColor}-normal rounded-3xl`}
             >
               {`#${labelItem}`}
             </li>
@@ -322,7 +322,7 @@ export default function StoreSearch() {
         </p>
         <Link
           to={store.articlePath}
-          className={`mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-${categoryColor}-dark text-brown-dark hover:scale-110`}
+          className={`mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-${categoryColor}-normal text-brown-dark hover:scale-110`}
         >
           查看更多
         </Link>
