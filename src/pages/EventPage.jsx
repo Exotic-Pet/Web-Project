@@ -366,7 +366,7 @@ export default function StoreContent() {
             <img
               src={plate}
               alt="plate-1"
-              className="absolute -right-[148px]"
+              className="hidden md:block absolute -right-[148px]"
             />
             <form action="" className="justify-center text-center ">
               <div className="relative mx-[68px]">

@@ -14,20 +14,20 @@ export default function Footer() {
     <footer>
       <div className="py-[64px] relative bg-yellow-normal">
         <div className="container flex flex-col justify-center mx-auto md:flex-row">
-          <nav className="flex flex-col justify-center md:flex-row">
+          <nav className="flex flex-col gap-y-6 justify-center md:flex-row">
             <h2 className="md:mr-[44px]">
               <strong className="hidden">特寵生活</strong>
               <Link to="/" className="hover:opacity-80">
                 <img className="mx-auto" src={logo} alt="logo" />
               </Link>
             </h2>
-            <ul className="max-w-[450px] mx-auto flex justify-center flex-wrap mt-8 sm:justify-start sm:mt-0 md:justify-start sm:max-w-[600px]">
-              <li className="w-full sm:max-w-[200px]">
+            <ul className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <li className="">
                 <Link
                   to="/page/store-overview"
                   className="block hover:opacity-80"
                 >
-                  <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                  <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={homeWhite} alt="home" />
                     <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
                       特寵探店
@@ -38,9 +38,12 @@ export default function Footer() {
                   </div>
                 </Link>
               </li>
-              <li className="w-full sm:max-w-[200px]">
-                <a href="#" className="block hover:opacity-80">
-                  <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+              <li className="">
+                <Link
+                  to="/page/event"
+                  className="block hover:opacity-80"
+                >
+                  <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={calendarWhite} alt="calendar" />
                     <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
                       特寵活動
@@ -49,14 +52,14 @@ export default function Footer() {
                       </small>
                     </h2>
                   </div>
-                </a>
+                </Link>
               </li>
-              <li className="w-full sm:max-w-[200px]">
+              <li className="">
                 <Link
                   to="/page/exotic-overview"
                   className="block cursor-pointer hover:opacity-80"
                 >
-                  <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                  <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={introWhite} alt="intro" />
                     <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
                       特寵介紹
@@ -67,9 +70,9 @@ export default function Footer() {
                   </div>
                 </Link>
               </li>
-              <li className="w-full sm:max-w-[200px]">
-                <Link to="/page/event" className="block hover:opacity-80">
-                  <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+              <li className="">
+                <Link to="/page/gathering" className="block hover:opacity-80">
+                  <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={peopleWhite} alt="people" />
                     <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
                       聚會揪團
@@ -80,9 +83,9 @@ export default function Footer() {
                   </div>
                 </Link>
               </li>
-              <li className="w-full sm:max-w-[200px]">
+              <li className="">
                 <Link to="/page/community" className="block hover:opacity-80">
-                  <div className="max-w-[200px] mx-auto flex items-center py-2 md:py-0">
+                  <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={msgWhite} alt="msg" />
                     <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
                       心得交流
