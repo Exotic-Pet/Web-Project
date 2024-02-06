@@ -22,7 +22,7 @@ export default function Header() {
           type="SIGN UP"
         />
       )}
-      <header className="py-[16px] fixed top-0 z-10 w-full shadow-md bg-white xl:py-[14px]">
+      <header className="py-[16px] fixed top-0 z-20 w-full shadow-md bg-white xl:py-[14px]">
         {/* <!-- Navbar --> */}
         <nav className="flex items-center justify-between px-4 mx-auto leading-none lg:px-8 2xl:px-0 2xl:container">
           <h1>
