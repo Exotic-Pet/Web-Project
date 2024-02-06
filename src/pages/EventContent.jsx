@@ -12,7 +12,7 @@ export default function EventContent({ isOpenState, setIsOpenState, toggleState 
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
-        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--green max-w-[90%] lg:max-w-[1064px] max-h-[90vh] overflow-y-auto relative bg-white border-4 mx-auto border-[3px] border-green-dark rounded-[20px] py-12"
+        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--green max-w-[90%] lg:max-w-[1064px] max-h-[90vh] overflow-y-auto relative bg-white mx-auto border-[3px] border-green-dark rounded-[20px] py-12"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="px-8 py-[30px]">

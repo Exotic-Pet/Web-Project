@@ -25,7 +25,6 @@ import feedBox4 from "../assets/intropage/feedbox-img4.png";
 import feedBox5 from "../assets/intropage/feedbox-img5.png";
 import feedBox6 from "../assets/intropage/feedbox-img6.png";
 import feedBox7 from "../assets/intropage/feedbox-img7.png";
-import FbShare from "../components/FacebookShare";
 
 
 export default function IntroPage() {
@@ -254,7 +253,6 @@ export default function IntroPage() {
                             <a href=""><li className="list-disc">守宮購買前必看：如何挑選 1 隻健康的守宮？</li></a>
                         </ul>
                     </div>
-                    <FbShare/>
                 </div>
             </div>
         </main>

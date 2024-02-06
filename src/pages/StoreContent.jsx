@@ -22,6 +22,7 @@ import telephone from '../assets/store/telephone.svg';
 import location from '../assets/store/location.svg';
 import yasumi from '../assets/store/yasumi.svg';
 import time from '../assets/store/time.svg';
+import FbShare from "../components/FacebookShare";
 
 export default function StoreContent() {
     return (
@@ -41,6 +42,7 @@ export default function StoreContent() {
             <div className="flex justify-end border-b-2 mb-9 pb-[18px] border-brown-normal items-center">
                 <p className="text-base font-bold text-brown-normal">分享文章</p>
                 <a href="#"><img src={shareFacebook} alt="facebook分享" className="mx-[11px]" /></a>
+                <FbShare/>
                 <a href="#"><img src={shareLine} alt="line分享" /></a>
             </div>
             <p className="text-base font-bold text-brown-dark">【Pythonism玩蟒人生】是一家以球蟒和爬蟲為主題的咖啡館，在捷運大橋頭站附近。這裡的低消僅需一杯飲料，就能與各種球蟒或爬蟲類互動。老闆本身是專業的球蟒繁殖者，對於爬蟲類的知識有豐富的瞭解，客人可以隨時向他諮詢！【Pythonism玩蟒人生】是間非常特別的咖啡廳～</p>
