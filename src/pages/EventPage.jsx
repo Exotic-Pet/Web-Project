@@ -337,27 +337,25 @@ export default function StoreContent() {
             >
               {featuredEvents.map((featuredEvent, i) => (
                 <SwiperSlide className="mt-5 mb-4" key={i}>
-                  <div className="cursor-pointer" onClick={() => setEventLightBoxState(true)}>
-                    <li className="mx-auto bg-white shadow-md rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5">
-                      <img
-                        src={featuredEvent.imgUrl}
-                        alt="event"
-                        className="mt-[30px] w-full"
-                      />
-                      <p className="mt-4 text-base text-brown-normal">
-                        {featuredEvent.category}
-                      </p>
-                      <h3 className="mt-1 text-xl font-bold tracking-wide text-brown-dark">
-                        {featuredEvent.title}
-                      </h3>
-                      <p className="font-bold text-base text-green-dark w-[300px] h-[70px] tracking-wide">
-                        {featuredEvent.date}
-                      </p>
-                      <p className="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-green-dark text-brown-dark right-9">
-                        查看更多
-                      </p>
-                    </li>
-                  </div>
+                  <li className="cursor-pointer mx-auto bg-white shadow-md rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5" onClick={() => setEventLightBoxState(true)}>
+                    <img
+                      src={featuredEvent.imgUrl}
+                      alt="event"
+                      className="mt-[30px] w-full"
+                    />
+                    <p className="mt-4 text-base text-brown-normal">
+                      {featuredEvent.category}
+                    </p>
+                    <h3 className="mt-1 text-xl font-bold tracking-wide text-brown-dark">
+                      {featuredEvent.title}
+                    </h3>
+                    <p className="font-bold text-base text-green-dark w-[300px] h-[70px] tracking-wide">
+                      {featuredEvent.date}
+                    </p>
+                    <p className="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-green-dark text-brown-dark right-9">
+                      查看更多
+                    </p>
+                  </li>
                 </SwiperSlide>
               ))}
             </Swiper>
