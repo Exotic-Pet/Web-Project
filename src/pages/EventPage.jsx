@@ -203,6 +203,10 @@ export default function StoreContent() {
           modules={[Pagination, Navigation]}
           className="w-full mb-4 mySwiper mainswp-btn"
           breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
             390: {
               slidesPerView: 2,
               spaceBetween: 30,
@@ -212,7 +216,7 @@ export default function StoreContent() {
               spaceBetween: 30,
             },
             1024: {
-              // slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 60,
             },
           }}
@@ -273,8 +277,7 @@ export default function StoreContent() {
             >
               {hotEvents.map((hotEvent, i) => (
                 <SwiperSlide className="mt-5 mb-4" key={i}>
-                  <div className="cursor-pointer" onClick={() => setEventLightBoxState(true)}>
-                    <li className=" shadow-md bg-white mx-auto rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5">
+                  <li className="cursor-pointer shadow-md bg-white mx-auto rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5" onClick={() => setEventLightBoxState(true)}>
                       <img
                         src={hotEvent.imgUrl}
                         alt="event"
@@ -292,8 +295,7 @@ export default function StoreContent() {
                       <p className="ml-auto text-center block max-w-[80px] pb-1 text-lg font-bold border-b-2 border-green-dark text-brown-dark right-9">
                         查看更多
                       </p>
-                    </li>
-                  </div>
+                  </li>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -523,7 +525,7 @@ export default function StoreContent() {
           </div>
           <div className="md:flex gap-x-[30px] mx-auto justify-center items-start">
             {/* 每月精選 */}
-            <div className="relative bg-white relative border-4 rounded-[30px] overflow-hidden border-cyan-normal pt-[50px] inline-block">
+            <div className="relative bg-white border-4 rounded-[30px] overflow-hidden border-cyan-normal pt-[50px] inline-block">
               <img
                 className="absolute top-[10px] right-[10px]"
                 src={monthlySelection}

@@ -33,6 +33,14 @@
 .mainswp-btn > .swiper-wrapper > .swiper-slide-next{
     opacity: 0.5;
 }
+@media (max-width: 390px) {
+    .mainswp-btn > .swiper-button-prev{
+        left: 0;
+    }
+    .mainswp-btn > .swiper-button-next{
+        right: 0;
+    }
+}
 .hotevent-swp > .swiper-button-prev {
     background-image: url('../assets/eventcontent/button-prev.svg');
 }
@@ -52,12 +60,11 @@
 .swiper-pagination{
     position: static;
 }
-
+/* 各分類特寵 */
 .mg{
     /* border: 1px solid #000; */
     position: relative;
-    padding-left: 50px;
-}
+    padding-left: 33px;}
 .mg a{
     display: block;
     width: 181px;
@@ -65,10 +72,16 @@
 .mg > .swiper-button-prev::after{
     display: block;
     color: white;
+    /* position: absolute;
+    left: 0; */
+    position: relative;
+    translate: -15px 0;
 }
 .mg > .swiper-button-next::after{
     display: block;
     color: white;
-    position: absolute;
-    right: 0;
+    /* position: absolute;
+    right: 0; */
+    position: relative;
+    translate: 15px 0;
 }
