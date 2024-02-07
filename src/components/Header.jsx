@@ -3,14 +3,19 @@ import { useState } from "react";
 import LightBox from "../components/LightBox";
 import "../styles/all.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/layout/LOGO.svg";
 import accountBrown from "../assets/layout/account-brown.svg";
 import accountGreen from "../assets/layout/account-green.svg";
 
+import homeGreen from "../assets/index/home-green.svg";
+import calendarGreen from "../assets/index/calendar-green.svg";
+import introGreen from "../assets/index/intro-green.svg";
+import peopleGreen from "../assets/index/people-green.svg";
+import msgGreen from "../assets/index/msg-green.svg";
+
 export default function Header() {
   const [isSignInLightBoxState, setSignInLightBoxState] = useState(false);
+  const [isMenuActive, setIsMenuActive] = useState(false);
 
   return (
     <>
@@ -31,17 +36,113 @@ export default function Header() {
               <img className="max-w-[48px]" src={logo} alt="logo" />
             </Link>
           </h1>
-          {/* <!-- Mobile Menu --> */}
-          <a className="text-4xl text-brown-dark lg:hidden" href="#">
-            <FontAwesomeIcon icon={faBars} />
-          </a>
+          {/* Mobile Hamburger Menu */}
+          <svg
+            className={`${isMenuActive ? "active" : ""} ham ham6 lg:hidden`}
+            viewBox="0 0 100 100"
+            width="60"
+            onClick={() => setIsMenuActive(!isMenuActive)}
+          >
+            <path
+              className="line top"
+              d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
+            />
+            <path
+              className="line middle"
+              d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
+            />
+            <path
+              className="line bottom"
+              d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
+            />
+          </svg>
+          {/* Expand Menu */}
+          <ul
+            className={`${
+              isMenuActive ? "menu--open" : "menu--close"
+            } overflow-hidden absolute top-[92px] left-0 right-0 bg-brown-dark tracking-wide ease-out duration-500 lg:hidden`}
+          >
+            <li>
+              <Link
+                to="/page/store-overview"
+                className="flex gap-x-2 justify-center items-center py-4 mt-4 group"
+                onClick={() => setIsMenuActive(false)}
+              >
+                <img src={homeGreen} alt="icon" className="w-10" />
+                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                  特寵探店
+                </h2>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/page/event"
+                className="flex gap-x-2 justify-center items-center py-4 group"
+                onClick={() => setIsMenuActive(false)}
+              >
+                <img src={calendarGreen} alt="icon" className="w-10" />
+                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                  特寵活動
+                </h2>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/page/exotic-overview"
+                className="flex gap-x-2 justify-center items-center py-4 group"
+                onClick={() => setIsMenuActive(false)}
+              >
+                <img src={introGreen} alt="icon" className="w-10" />
+                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                  特寵介紹
+                </h2>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/page/gathering"
+                className="flex gap-x-2 justify-center items-center py-4 group"
+                onClick={() => setIsMenuActive(false)}
+              >
+                <img src={peopleGreen} alt="icon" className="w-10" />
+                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                  聚會揪團
+                </h2>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/page/community"
+                className="flex gap-x-2 justify-center items-center py-4 group"
+                onClick={() => setIsMenuActive(false)}
+              >
+                <img src={msgGreen} alt="icon" className="w-10" />
+                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                  心得交流
+                </h2>
+              </Link>
+            </li>
+            <li>
+              <div
+                className="flex gap-x-2 justify-center items-center cursor-pointer py-4 mb-4 group"
+                onClick={() => {
+                  setSignInLightBoxState(true);
+                  setIsMenuActive(false);
+                }}
+              >
+                <img src={accountGreen} alt="icon" className="w-10" />
+                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                  我的帳號
+                </h2>
+              </div>
+            </li>
+          </ul>
           {/* <!-- PC Menu --> */}
           <ul className="items-center hidden font-bold tracking-wide text-center gap-x-6 lg:flex">
             <li className="nav__list">
               <Link
                 to="/page/store-overview"
                 className="nav__list__link py-2 text-brown-dark text-[20px]"
-                href="#"
               >
                 特寵探店
               </Link>
