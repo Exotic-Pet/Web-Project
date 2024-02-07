@@ -1,8 +1,16 @@
+import React, {useState} from 'react';
 import searchIcon from '../assets/store/search.svg';
-import arrowTop from '../assets/reptile/arrow-top.svg';
+import arrowDown from '../assets/reptile/arrow-down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
 
 export default function Aves() {
+    const [isParrotExpand, setIsParrotExpand] = useState(false);
+
+    const handlerParrotToggle = () => setIsParrotExpand(!isParrotExpand);
+
+    const toggleExpandStyle = (type) => (type ? "toggle--open" : "toggle--close");
+    const toggleArrowState = (expandState) => (expandState ? "-rotate-180" : "");
+
     return (
         <>
             <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
@@ -22,13 +30,15 @@ export default function Aves() {
                         <h2 className="mb-6 text-2xl font-bold text-cyan-dark">鳥類</h2>
                         <ul>
                             <li>
-                                <a href="#" className="flex justify-between">
-                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark">鸚鵡</h3>
-                                    <img src={arrowTop} alt="arrow-top" />
+                                <a className="flex justify-between toggle--click cursor-pointer" onMouseDown={handlerParrotToggle}>
+                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">鸚鵡</h3>
+                                    <img src={arrowDown} alt="arrow" className={toggleArrowState(isParrotExpand) +' duration-100 hover:scale-125'} />
                                 </a>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">大型鸚鵡</a></h3>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">中型鸚鵡</a></h3>
-                                <h3 className="mt-1 mb-[10px] text-xl text-brown-dark"><a href="#">小型鸚鵡</a></h3>
+                                <div className={toggleExpandStyle(isParrotExpand)}>
+                                    <h3 className="mt-2 text-xl text-brown-dark"><a href="#">大型鸚鵡</a></h3>
+                                    <h3 className="mt-2 text-xl text-brown-dark"><a href="#">中型鸚鵡</a></h3>
+                                    <h3 className="mt-2 mb-[10px] text-xl text-brown-dark"><a href="#">小型鸚鵡</a></h3>
+                                </div>
                             </li>
                             <li className="pt-4 border-t border-solid border-brown-normal">
                                 <a href="#" className="flex items-center justify-between mb-[10px]">

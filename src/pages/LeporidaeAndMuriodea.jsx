@@ -1,48 +1,65 @@
+import React, { useState} from 'react';
 import searchIcon from '../assets/store/search.svg';
-import arrowTop from '../assets/reptile/arrow-top.svg';
+import arrowDown from '../assets/reptile/arrow-down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
 
 export default function LeporidaeAndMuriodea() {
+    const [isRabbitExpand, setIsRabbitExpand] = useState(false);
+    const [isRatExpand, setIsRatExpand] = useState(false);
+
+    const handlerRabbitToggle = () => setIsRabbitExpand(!isRabbitExpand);
+    const handlerRatToggle = () => setIsRatExpand(!isRatExpand);
+
+    const toggleExpandStyle = (type) => (type ? "toggle--open" : "toggle--close");
+    const toggleArrowState = (expandState) => (expandState ? "-rotate-180" : "");
+
     return (
         <>
             <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
                 <aside className="col-span-3 mt-9">
-                    {/*Search Bar*/}
-                    <form action="" className="flex justify-around">
-                        <div className="relative">
-                            <input type="text" placeholder="搜尋"
-                                className="text-brown-normal text-xl w-[258px] rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal" />
-                            <img className="absolute w-5 cursor-pointer right-4 top-[11px] hover:scale-125"
-                                src={searchIcon} alt="search" />
-                        </div>
-                    </form>
-                    {/*Search Place*/}
-                    <h2 className="text-3xl font-black tracking-wider text-center text-brown-normal m-7">索引目錄</h2>
-                    <form action="">
-                        <h2 className="mb-6 text-2xl font-bold text-yellow-dark">兔、鼠類</h2>
-                        <ul>
-                            <li>
-                                <a href="#" className="flex justify-between">
-                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark">兔子</h3>
-                                    <img src={arrowTop} alt="arrow-top"/>
-                                </a>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">長毛兔</a></h3>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">垂耳兔</a></h3>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">白兔</a></h3>
-                                <h3 className="mt-1 mb-[10px] text-xl text-brown-dark"><a href="#">其他</a></h3>
-                            </li>
-                            <li className="pt-4 border-t border-solid border-brown-normal">
-                                <a href="#" className="flex items-center justify-between mb-[10px]">
-                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark">鼠</h3>
-                                    <img src={arrowTop} alt="arrow-top"/>
-                                </a>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">倉鼠</a></h3>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">天竺鼠</a></h3>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">絲絨鼠</a></h3>
-                                <h3 className="mt-1 mb-[10px] text-xl text-brown-dark"><a href="#">其他</a></h3>
-                            </li>
-                        </ul>
-                    </form>
+                    <div className='sticky top-44'>
+                        {/*Search Bar*/}
+                        <form action="" className="flex justify-around">
+                            <div className="relative">
+                                <input type="text" placeholder="搜尋"
+                                    className="text-brown-normal text-xl w-[258px] rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal" />
+                                <img className="absolute w-5 cursor-pointer right-4 top-[11px] hover:scale-125"
+                                    src={searchIcon} alt="search" />
+                            </div>
+                        </form>
+                        {/*Search Place*/}
+                        <h2 className="text-3xl font-black tracking-wider text-center text-brown-normal m-7">索引目錄</h2>
+                        <form action="">
+                            <h2 className="mb-6 text-2xl font-bold text-yellow-dark">兔、鼠類</h2>
+                            <ul>
+                                <li>
+                                    <a className=" cursor-pointer flex justify-between toggle--click" onMouseDown={handlerRabbitToggle}>
+                                        <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">兔子</h3>
+                                        <img src={arrowDown} alt="arrow" className={toggleArrowState(isRabbitExpand) +' duration-100 hover:scale-125'}/>
+                                    </a>
+                                    <div className={toggleExpandStyle(isRabbitExpand)}>
+                                        <h3 className="mt-2 text-xl text-brown-dark"><a href="#">長毛兔</a></h3>
+                                        <h3 className="mt-2 text-xl text-brown-dark"><a href="#">垂耳兔</a></h3>
+                                        <h3 className="mt-2 text-xl text-brown-dark"><a href="#">白兔</a></h3>
+                                        <h3 className="mt-2 mb-[10px] text-xl text-brown-dark"><a href="#">其他</a></h3>
+                                    </div>
+                                    
+                                </li>
+                                <li className="pt-4 border-t border-solid border-brown-normal" >
+                                    <a className=" cursor-pointer flex items-center justify-between toggle--click" onMouseDown={handlerRatToggle}>
+                                        <h3 className="text-xl font-bold tracking-wider text-brown-dark">鼠</h3>
+                                        <img src={arrowDown} alt="arrow" className={toggleArrowState(isRatExpand) +' duration-100 hover:scale-125'}/>
+                                    </a>
+                                    <div className={toggleExpandStyle(isRatExpand)}>
+                                        <h3 className="mt-2 text-xl text-brown-dark"><a href="#">倉鼠</a></h3>
+                                        <h3 className="mt-2 text-xl text-brown-dark"><a href="#">天竺鼠</a></h3>
+                                        <h3 className="mt-2 text-xl text-brown-dark"><a href="#">絲絨鼠</a></h3>
+                                        <h3 className="mt-2 mb-[10px] text-xl text-brown-dark"><a href="#">其他</a></h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
                 </aside>
                 <section className="col-span-9 tracking-wide">
                     {/*Rabbit*/}

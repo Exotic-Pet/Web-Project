@@ -39,7 +39,7 @@ export default function StoreContent() {
                 <span className="ml-4 font-bold text-brown-normal">2023.12.08</span>
             </h4>
             <h2 className="text-3xl font-bold text-cyan-dark mb-[18px] tracking-wider">玩蟒人生Pythonimd｜球蟒咖啡廳～各種球蟒、玉米蛇、爬蟲類零距離接觸，台北大橋頭捷運站另類咖啡館</h2>
-            <div className="flex justify-end border-b-2 mb-9 pb-[18px] border-brown-normal items-center">
+            <div className="flex justify-end border-b-2 mb-9 pb-[18px] border-brown-normal items-center mt-7">
                 <p className="text-base font-bold text-brown-normal">分享文章</p>
                 <a href="#"><img src={shareFacebook} alt="facebook分享" className="mx-[11px]" /></a>
                 <FbShare/>

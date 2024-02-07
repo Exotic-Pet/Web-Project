@@ -1,8 +1,18 @@
+import React,{useState} from 'react';
 import searchIcon from '../assets/store/search.svg';
-import arrowTop from '../assets/reptile/arrow-top.svg';
+import arrowDown from '../assets/reptile/arrow-Down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
 
 export default function Arthropoda() {
+    const [isSpiderExpand, setIsSpiderExpand] = useState(false);
+    const [isScorpionExpand, setIsScorpionExpand] = useState(false);
+
+    const handlerSpiderToggle = () => setIsSpiderExpand(!isSpiderExpand);
+    const handlerScorpionToggle = () => setIsScorpionExpand(!isScorpionExpand);
+
+    const toggleExpandStyle = (type) => (type ? "toggle--open" : "toggle--close");
+    const toggleArrowState = (expandState) => (expandState ? "-rotate-180" : "");
+
     return (
         <>
             <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
@@ -22,21 +32,25 @@ export default function Arthropoda() {
                         <h2 className="mb-6 text-2xl font-bold text-green-dark">節肢動物類</h2>
                         <ul>
                             <li>
-                                <a href="#" className="flex justify-between">
-                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark">捕鳥蛛</h3>
-                                    <img src={arrowTop} alt="arrow-top" />
+                                <a className="flex justify-between toggle--click cursor-pointer" onMouseDown={handlerSpiderToggle}>
+                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">捕鳥蛛</h3>
+                                    <img src={arrowDown} alt="arrow" className={toggleArrowState(isSpiderExpand) +' duration-100 hover:scale-125'}/>
                                 </a>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">地棲捕鳥蛛</a></h3>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">樹棲捕鳥蛛</a></h3>
-                                <h3 className="mt-1 mb-[10px] text-xl text-brown-dark"><a href="#">穴居捕鳥蛛</a></h3>
+                                <div className={toggleExpandStyle(isSpiderExpand)}>
+                                    <h3 className="mt-2 text-xl text-brown-dark"><a href="#">地棲捕鳥蛛</a></h3>
+                                    <h3 className="mt-2 text-xl text-brown-dark"><a href="#">樹棲捕鳥蛛</a></h3>
+                                    <h3 className="mt-2 mb-[10px] text-xl text-brown-dark"><a href="#">穴居捕鳥蛛</a></h3>
+                                </div>
                             </li>
                             <li className="pt-4 border-t border-solid border-brown-normal">
-                                <a href="#" className="flex items-center justify-between mb-[10px]">
-                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark">蠍子</h3>
-                                    <img src={arrowTop} alt="arrow-top" />
+                                <a className="flex justify-between toggle--click cursor-pointer" onMouseDown={handlerScorpionToggle}>
+                                    <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">蠍子</h3>
+                                    <img src={arrowDown} alt="arrow" className={toggleArrowState(isScorpionExpand) +' duration-100 hover:scale-125'}/>
                                 </a>
-                                <h3 className="mt-2 text-xl text-brown-dark"><a href="#">雨林蝦子</a></h3>
-                                <h3 className="mt-1 mb-[10px] text-xl text-brown-dark"><a href="#">沙漠蠍子</a></h3>
+                                <div className={toggleExpandStyle(isScorpionExpand)}>
+                                    <h3 className="mt-2 text-xl text-brown-dark"><a href="#">雨林蝦子</a></h3>
+                                    <h3 className="mt-1 mb-[10px] text-xl text-brown-dark"><a href="#">沙漠蠍子</a></h3>
+                                </div>
                             </li>
                             <li className="pt-4 border-t border-solid border-brown-normal">
                                 <a href="#" className="flex items-center justify-between mb-[10px]">

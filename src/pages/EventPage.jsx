@@ -523,7 +523,7 @@ export default function StoreContent() {
           </div>
           <div className="md:flex gap-x-[30px] mx-auto justify-center items-start">
             {/* 每月精選 */}
-            <div className="relative bg-white border-4 rounded-[30px] overflow-hidden border-cyan-normal pt-[50px] inline-block">
+            <div className="relative bg-white border-4 rounded-[30px] overflow-hidden border-cyan-normal pt-[50px] md:w-[145px]">
               <img
                 className="absolute top-[10px] right-[10px]"
                 src={monthlySelection}
@@ -548,8 +548,8 @@ export default function StoreContent() {
             </div>
             <div>
               {/* 寵物鼠品種大集合 */}
-              <div className="flex justify-between pl-[55px] border-4 rounded-[30px] border-brown-normal overflow-hidden">
-                <div className="xl:flex">
+              <div className="sm:flex justify-between sm:pl-[55px] border-4 rounded-[30px] border-brown-normal overflow-hidden my-4 md:my-0">
+                <div className="xl:flex ml-8 sm:ml-0">
                   <div className="relative z-10 max-w-[350px] mr-[38px] my-7">
                     <img
                       src={deco}
@@ -565,8 +565,8 @@ export default function StoreContent() {
                   </div>
                   <img src={allrats} alt="image" className="mr-[18px] my-7" />
                 </div>
-                <div className="flex pr-6 bg-brown-normal pl-9 rounded-l-[18px] items-center gap-x-[10px] h-auto">
-                  <h4 className="text-xl font-medium text-brown-dark">
+                <div className="flex pr-6 bg-brown-normal pl-9 justify-center sm:rounded-l-[18px] items-center gap-x-[10px] h-auto">
+                  <h4 className="text-xl font-medium text-brown-dark my-2">
                     探索
                     <br />
                     更多
@@ -581,8 +581,8 @@ export default function StoreContent() {
                 </div>
               </div>
               {/* 爬寵特輯 */}
-              <div className="flex justify-between pl-[55px] border-4 rounded-[30px] border-green-light overflow-hidden mt-2">
-                <div className="xl:flex">
+              <div className="sm:flex justify-between sm:pl-[55px] border-4 rounded-[30px] border-green-light overflow-hidden sm:mt-2">
+                <div className="xl:flex ml-8 sm:ml-0">
                   <div className="relative z-10 max-w-[330px] mr-[50px] my-7">
                     <img
                       src={deco}
@@ -604,8 +604,8 @@ export default function StoreContent() {
                     className="mr-[50px] my-7"
                   />
                 </div>
-                <div className="flex pr-6 bg-green-light pl-9 rounded-l-[18px] items-center gap-x-[10px] h-auto">
-                  <h4 className="text-xl font-medium text-brown-dark">
+                <div className="flex pr-6 bg-green-light pl-9 sm:rounded-l-[18px] justify-center items-center gap-x-[10px] h-auto">
+                  <h4 className="text-xl font-medium text-brown-dark my-2">
                     探索
                     <br />
                     更多

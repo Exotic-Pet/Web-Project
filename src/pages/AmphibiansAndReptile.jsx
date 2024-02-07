@@ -103,7 +103,7 @@ export default function AmphibiansAndReptile() {
                         <h2 className="mb-6 text-2xl font-bold text-green-dark">兩棲爬蟲類</h2>
                         <ul>
                             <li>
-                                <a className="flex justify-between toggle--click" onMouseDown={handlerGeckoToggle}>
+                                <a className="cursor-pointer flex justify-between toggle--click" onMouseDown={handlerGeckoToggle}>
                                     <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">守宮</h3>
                                     <img src={arrowDown} alt="arrow" className={toggleArrowState(isGeckoExpand) +' duration-100 hover:scale-125'}/>
                                 </a>
@@ -114,7 +114,7 @@ export default function AmphibiansAndReptile() {
                                 
                             </li>
                             <li className="pt-4 border-t border-solid border-brown-normal">
-                                <a className="flex justify-between toggle--click"  onMouseDown={handlerLizardToggle}>
+                                <a className="cursor-pointer flex justify-between toggle--click"  onMouseDown={handlerLizardToggle}>
                                     <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">蜥蜴(變色龍)</h3>
                                     <img src={arrowDown} alt="arrow" className={toggleArrowState(isLizardExpand) +' duration-100 hover:scale-125'}/>
                                 </a>
@@ -124,7 +124,7 @@ export default function AmphibiansAndReptile() {
                                 </div>
                             </li>
                             <li className="pt-4 border-t border-solid border-brown-normal">
-                                <a className="flex justify-between toggle--click"  onMouseDown={handlerTurtleToggle}>
+                                <a className="cursor-pointer flex justify-between toggle--click"  onMouseDown={handlerTurtleToggle}>
                                     <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">烏龜</h3>
                                     <img src={arrowDown} alt="arrow" className={toggleArrowState(isTurtleExpand) +' duration-100 hover:scale-125'}/>
                                 </a>
@@ -134,7 +134,7 @@ export default function AmphibiansAndReptile() {
                                 </div>
                             </li>
                             <li className="pt-4 border-t border-solid border-brown-normal">
-                                <a className="flex justify-between toggle--click"  onMouseDown={handlerSnakeToggle}>
+                                <a className="cursor-pointer flex justify-between toggle--click"  onMouseDown={handlerSnakeToggle}>
                                     <h3 className="text-xl font-bold tracking-wider text-brown-dark mb-[10px]">蛇</h3>
                                     <img src={arrowDown} alt="arrow" className={toggleArrowState(isSnakeExpand) +' duration-100 hover:scale-125'}/>
                                 </a>
