@@ -6,6 +6,12 @@ import Footer from "../components/Footer";
 // Images
 import arrowRight from "../assets/index/arrow-right.svg";
 import newsImg_1 from "../assets/index/news-1.png";
+import newsEvent_1 from "../assets/index/news-event-1.png";
+import newsEvent_2 from "../assets/index/news-event-2.png";
+import newsEvent_3 from "../assets/index/news-event-3.png";
+import newsStore_1 from "../assets/index/news-store-1.png";
+import newsStore_2 from "../assets/index/news-store-2.png";
+import newsStore_3 from "../assets/index/news-store-3.png";
 import chameleonImg from "../assets/index/chameleon.svg";
 import deco_1 from "../assets/index/deco-1.svg";
 import deco_2 from "../assets/index/deco-2.svg";
@@ -77,6 +83,63 @@ export default function HomePage() {
     },
   ];
 
+  const newsData = [
+  {
+    id: 1,
+    year: 2024,
+    date: "01.22",
+    type: "活動",
+    imgPath: newsEvent_1,
+    title: "全台最大的爬蟲博覽會，即將在花博登場！",
+    content: "親愛的爬蟲愛好者們，準備好了嗎？今年全台最大的爬蟲博覽會即將在花博登場！這將是一場爬蟲世界的盛宴，將展示各種令人驚嘆的爬蟲類動物，以及相關的設備、用品和知識。無論你是對爬蟲類動物充滿好奇心，還是已經是一位經驗豐富的飼主，這個博覽會都將是你不容錯過的活動！"
+  },
+  {
+    id: 2,
+    year: 2024,
+    date: "02.01",
+    type: "活動",
+    imgPath: newsEvent_2,
+    title: "零距離觸摸爬蟲類動物，大小朋友都可參加！親子活動推薦",
+    content: "一般人對爬蟲類動物往往感到恐懼，並且會避之唯恐不及。但許多家長或許已經發現，小朋友卻對這些生物感到非常感興趣，並且毫不畏懼。事實上，有許多團體舉辦各種爬蟲類動物的探索活動，這些活動讓小朋友能夠從實際體驗中認識和了解這些冷門動物的生態習性，並超越了書本上的知識。"
+  },
+  {
+    id: 3,
+    year: 2024,
+    date: "02.13",
+    type: "活動",
+    imgPath: newsEvent_3,
+    title: "高雄夢時代 - 鼠兔趣味競賽，歡迎飼主報名參加！",
+    content: "這場競賽將在高雄夢時代舉辦，是一個讓你和你的寵物一同參與的盛大活動。無論是你的兔子還是你的寵物鼠，都可以在這裡展現自己的才能，一展風采！比賽將包括各種有趣的趣味競賽項目，例如快樂小跑、障礙賽、食物競速等等。這些競賽既能展現你的寵物的活力和技巧，也能讓你們之間建立更加緊密的關係。"
+  },
+  {
+    id: 4,
+    year: 2024,
+    date: "02.20",
+    type: "店家",
+    imgPath: newsStore_1,
+    title: "另類寵物主題餐廳～10間不可錯過的特寵主題餐廳",
+    content: "這篇收錄的不是一般的貓咪或狗狗寵物餐廳，而是以狐獴、巨嘴鳥、兔子、守宮、球蟒、鸚鵡、鬆獅蜥等為主題的另類特寵主題餐廳。這份精選介紹了10間獨特的寵物主題餐廳，快來親密互動，與這些可愛的萌寵們共度美好時光吧。"
+  },
+  {
+    id: 5,
+    year: 2024,
+    date: "02.19",
+    type: "店家",
+    imgPath: newsStore_2,
+    title: "動物嘉年華餐廳，天竺鼠、貓咪、兔子同樂的歡樂饗宴！",
+    content: "這裡是兔子和天竺鼠們的冒險樂園。牠們在這裡玩耍、跳躍，總是充滿好奇心的樣子。您可以和兔子們互動，一同參與這場充滿歡樂的冒險，當然最吸引人的還是美味的饗宴。餐廳提供各種豐富的料理，滿足您的味蕾，同時，您可以在歡樂的氛圍中享受美食。"
+  },
+  {
+    id: 6,
+    year: 2024,
+    date: "02.17",
+    type: "店家",
+    imgPath: newsStore_3,
+    title: "與神秘的爬蟲類共度下午茶時光～還可跟牠們互動哦～",
+    content: "在這裡，與爬蟲們的互動是不可或缺的環節。餐廳提供了專業的爬蟲導覽員，他們會教你如何與這些生物進行親密接觸，讓你不僅能看到牠們，還能親手摸摸，甚至學習更多有趣的爬蟲知識。"
+  },
+];
+
   return (
     <>
       <HomeHeader />
@@ -111,9 +174,9 @@ export default function HomePage() {
               </div>
               {/*  <!-- See More --> */}
               <div className="move py-[8px] hidden md:block">
-                <Link 
+                <Link
                   to="/page/store-overview"
-                  className="cursor-pointer flex items-center pl-[56px]" 
+                  className="cursor-pointer flex items-center pl-[56px]"
                 >
                   <figure>
                     <img src={arrowRight} alt="arrow" />
@@ -135,19 +198,18 @@ export default function HomePage() {
                 {/*  <!-- News Date --> */}
                 <h4 className="hidden md:flex items-center ">
                   <div className="p-[20px] rounded-xl bg-green-light text-brown-dark font-bold text-center">
-                    2023
-                    <span className="block">02.04</span>
+                    2024
+                    <span className="block">01.22</span>
                   </div>
                 </h4>
                 {/*  <!-- News Content --> */}
                 <article className="flex flex-col-reverse md:flex-row gap-8 items-center md:border-l-2 border-brown-normal md:pl-6">
                   <div className="tracking-wide px-4">
                     <h3 className="ellipsis-2 text-brown-dark font-bold text-[24px]">
-                      另類寵物主題餐廳～ 10間不可錯過的特寵主題餐廳
+                      全台最大的爬蟲博覽會，即將在花博登場！
                     </h3>
-                    <p className="ellipsis-4 mt-[12px] text-brown-normal text-[20px] leading-8 text-justify">
-                      這篇收錄的不是貓咪或狗狗的寵物餐廳，而是另類特寵主題餐廳，像是狐獴、巨嘴鳥、兔子、守宮、球蟒、鬆獅蜥…
-                      此篇精選10間寵物主題餐廳，快來與萌寵們親密互動吧。
+                    <p className="ellipsis-3 mt-[12px] text-brown-normal text-[20px] leading-8 text-justify">
+                      親愛的爬蟲愛好者們，準備好了嗎？今年全台最大的爬蟲博覽會即將在花博登場！這將是一場爬蟲世界的盛宴，將展示各種令人驚嘆的爬蟲類動物，以及相關的設備、用品和知識。無論你是對爬蟲類動物充滿好奇心，還是已經是一位經驗豐富的飼主，這個博覽會都將是你不容錯過的活動！
                     </p>
                   </div>
                   {/*  <!-- News Photos --> */}
@@ -155,7 +217,7 @@ export default function HomePage() {
                     <a href="#">
                       <img
                         className="hover:scale-125"
-                        src={newsImg_1}
+                        src={newsStore_1}
                         alt="news photo"
                       />
                     </a>
@@ -170,19 +232,18 @@ export default function HomePage() {
                 {/*  <!-- News Date --> */}
                 <h4 className="hidden md:flex items-center ">
                   <div className="p-[20px] rounded-xl bg-yellow-normal text-brown-dark font-bold text-center">
-                    2023
-                    <span className="block">02.04</span>
+                    2024
+                    <span className="block">02.01</span>
                   </div>
                 </h4>
                 {/*  <!-- News Content --> */}
                 <article className="flex flex-col-reverse md:flex-row gap-8 items-center md:border-l-2 border-brown-normal md:pl-6">
                   <div className="tracking-wide px-4">
                     <h3 className="ellipsis-2 text-brown-dark font-bold text-[24px]">
-                      另類寵物主題餐廳～ 10間不可錯過的特寵主題餐廳
+                      零距離觸摸爬蟲類動物，大小朋友都可參加！親子活動推薦
                     </h3>
-                    <p className="ellipsis-4 mt-[12px] text-brown-normal text-[20px] leading-8 text-justify">
-                      這篇收錄的不是貓咪或狗狗的寵物餐廳，而是另類特寵主題餐廳，像是狐獴、巨嘴鳥、兔子、守宮、球蟒、鬆獅蜥…
-                      此篇精選10間寵物主題餐廳，快來與萌寵們親密互動吧。
+                    <p className="ellipsis-3 mt-[12px] text-brown-normal text-[20px] leading-8 text-justify">
+                      一般人對爬蟲類動物往往感到恐懼，並且會避之唯恐不及。但許多家長或許已經發現，小朋友卻對這些生物感到非常感興趣，並且毫不畏懼。事實上，有許多團體舉辦各種爬蟲類動物的探索活動，這些活動讓小朋友能夠從實際體驗中認識和了解這些冷門動物的生態習性，並超越了書本上的知識。
                     </p>
                   </div>
                   {/*  <!-- News Photos --> */}
@@ -190,7 +251,7 @@ export default function HomePage() {
                     <a href="#">
                       <img
                         className="hover:scale-125"
-                        src={newsImg_1}
+                        src={newsStore_2}
                         alt="news photo"
                       />
                     </a>
@@ -205,19 +266,18 @@ export default function HomePage() {
                 {/*  <!-- News Date --> */}
                 <h4 className="hidden md:flex items-center ">
                   <div className="p-[20px] rounded-xl bg-green-light text-brown-dark font-bold text-center">
-                    2023
-                    <span className="block">02.04</span>
+                    2024
+                    <span className="block">02.13</span>
                   </div>
                 </h4>
                 {/*  <!-- News Content --> */}
                 <article className="flex flex-col-reverse md:flex-row gap-8 items-center md:border-l-2 border-brown-normal md:pl-6">
                   <div className="tracking-wide px-4">
                     <h3 className="ellipsis-2 text-brown-dark font-bold text-[24px]">
-                      另類寵物主題餐廳～ 10間不可錯過的特寵主題餐廳
+                      高雄夢時代 - 鼠兔趣味競賽，歡迎飼主報名參加！
                     </h3>
-                    <p className="ellipsis-4 mt-[12px] text-brown-normal text-[20px] leading-8 text-justify">
-                      這篇收錄的不是貓咪或狗狗的寵物餐廳，而是另類特寵主題餐廳，像是狐獴、巨嘴鳥、兔子、守宮、球蟒、鬆獅蜥…
-                      此篇精選10間寵物主題餐廳，快來與萌寵們親密互動吧。
+                    <p className="ellipsis-3 mt-[12px] text-brown-normal text-[20px] leading-8 text-justify">
+                      這場競賽將在高雄夢時代舉辦，是一個讓你和你的寵物一同參與的盛大活動。無論是你的兔子還是你的寵物鼠，都可以在這裡展現自己的才能，一展風采！比賽將包括各種有趣的趣味競賽項目，例如快樂小跑、障礙賽、食物競速等等。這些競賽既能展現你的寵物的活力和技巧，也能讓你們之間建立更加緊密的關係。
                     </p>
                   </div>
                   {/*  <!-- News Photos --> */}
@@ -225,7 +285,7 @@ export default function HomePage() {
                     <a href="#">
                       <img
                         className="hover:scale-125"
-                        src={newsImg_1}
+                        src={newsStore_3}
                         alt="news photo"
                       />
                     </a>
