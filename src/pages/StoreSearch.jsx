@@ -376,10 +376,10 @@ export default function StoreSearch() {
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 onFocus={() => setSearchInput('')}
-                className="text-brown-normal text-[26px] w-[388px] rounded-full border-2 border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal"
+                className="text-brown-normal text-[18px] w-[388px] rounded-full border-[1.5px] border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal"
               />
               <img
-                className="absolute cursor-pointer right-5 top-3 hover:scale-125"
+                className="absolute cursor-pointer right-5 top-[6px] hover:scale-125"
                 src={searchIcon}
                 alt="search"
                 onClick={handleSearch}
@@ -435,7 +435,7 @@ export default function StoreSearch() {
                   </label>
                 </div>
               </li>
-              <li className="mt-6 border-t-2">
+              <li className="mt-6 border-t-2 border-brown-light">
                 <div
                   className="toggle--click flex justify-between my-5 cursor-pointer"
                   onMouseDown={handlerSearchToggle}
@@ -516,7 +516,7 @@ export default function StoreSearch() {
               <li
                 className={`${
                   currentCategory === "cafe" ? "block" : "hidden"
-                } border-t-2`}
+                } border-t-2 border-brown-light`}
               >
                 <div
                   className="toggle--click flex justify-between mt-5 cursor-pointer"
@@ -587,7 +587,7 @@ export default function StoreSearch() {
                 (currentCategory === "cafe"
                   ? "bg-brown-normal"
                   : "bg-white hover:bg-gray-dark") +
-                " w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent active:bg-brown-normal"
+                " w-[195px] border-2 border-solid rounded-full border-brown-normal hover:border-transparent active:bg-brown-normal"
               }
             >
               <div
@@ -629,7 +629,7 @@ export default function StoreSearch() {
                 (currentCategory === "specialtyStore"
                   ? "bg-brown-normal"
                   : "bg-white hover:bg-gray-dark") +
-                " w-[195px] my-2 border-2 border-solid rounded-full sm:mx-8 border-brown-light hover:border-transparent active:bg-brown-normal"
+                " w-[195px] my-2 border-2 border-solid rounded-full sm:mx-8 border-brown-normal hover:border-transparent active:bg-brown-normal"
               }
             >
               <div
@@ -673,7 +673,7 @@ export default function StoreSearch() {
                 (currentCategory === "hospital"
                   ? "bg-brown-normal"
                   : "bg-white hover:bg-gray-dark") +
-                " w-[195px] border-2 border-solid rounded-full border-brown-light hover:border-transparent active:bg-brown-normal"
+                " w-[195px] border-2 border-solid rounded-full border-brown-normal hover:border-transparent active:bg-brown-normal"
               }
             >
               <div
