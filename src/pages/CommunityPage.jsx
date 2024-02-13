@@ -32,9 +32,10 @@ export default function CommunityPage() {
       {/* Banner */}
       <div className="bg-cyan-normal bg-no-repeat bg-center bg-[url('../assets/community/banner.svg')] min-h-[133px] mt-20"></div>
       {/*Content Info*/}
-      <main className="container justify-center mx-auto mb-32 ">
-        <nav className="mt-8">
-          <ul className="flex justify-center gap-x-7">
+      <div className=" bg-gray-normal">
+        <main className="container justify-center mx-auto mb-32 ">
+        <nav className="pt-8">
+          <ul className="flex justify-center gap-x-8">
             <li className="pr-6 border-r border-solid border-brown-normal">
               <h2 className="text-2xl font-bold cursor-pointer text-brown-dark hover:text-cyan-dark">
                 全部
@@ -72,27 +73,27 @@ export default function CommunityPage() {
             </li>
           </ul>
         </nav>
-        <ul className="mt-4 py-3 flex border border-solid border-brown-light rounded-[41px] bg-white gap-x-5 max-w-[760px] justify-center mx-auto">
+        <ul className="mt-4 py-3 flex border border-solid border-brown-light rounded-[41px] bg-white gap-x-7 max-w-[760px] justify-center mx-auto">
           <li>
-            <h3 className="text-xl text-brown-dark cursor-pointer hover:text-brown-normal">守宮</h3>
+            <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">守宮</h3>
           </li>
           <li>
-            <h3 className="text-xl text-brown-dark cursor-pointer hover:text-brown-normal">蜥蜴</h3>
+            <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">蜥蜴</h3>
           </li>
           <li>
-            <h3 className="text-xl text-brown-dark cursor-pointer hover:text-brown-normal">變色龍</h3>
+            <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">變色龍</h3>
           </li>
           <li>
-            <h3 className="text-xl text-brown-dark cursor-pointer hover:text-brown-normal">烏龜</h3>
+            <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">烏龜</h3>
           </li>
           <li>
-            <h3 className="text-xl text-brown-dark cursor-pointer hover:text-brown-normal">青蛙</h3>
+            <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">青蛙</h3>
           </li>
           <li>
-            <h3 className="text-xl text-brown-dark cursor-pointer hover:text-brown-normal">蛇</h3>
+            <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">蛇</h3>
           </li>
           <li>
-            <h3 className="text-xl text-brown-dark cursor-pointer hover:text-brown-normal">其他</h3>
+            <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">其他</h3>
           </li>
         </ul>
 				<div className="my-4 flex gap-x-4 justify-end text-brown-dark leading-4">
@@ -587,7 +588,8 @@ export default function CommunityPage() {
             </li>
           </ul>
         </div>
-      </main>
+        </main>
+      </div>
 			{/*  */}
 			<button className="fixed top-[72%] right-0 block tracking-wide font-bold group scale-75 translate-x-5 md:scale-100 md:translate-x-3">
         <div className="relative flex gap-x-3 items-center py-6 px-5 bg-cyan-dark rounded-tl-3xl rounded-bl-3xl">

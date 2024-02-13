@@ -380,7 +380,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
             ></textarea>
           </div>
         </div>
-        <div className="border border-brown-normal rounded-[10px] p-4">
+        <div className="border border-brown-normal rounded-[10px] p-4 mb-8">
           <textarea
             placeholder="說些什麼參與討論吧！"
             rows="5"
