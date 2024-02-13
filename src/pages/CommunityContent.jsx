@@ -25,7 +25,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
-        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--cyan max-w-[90%] lg:max-w-[888px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-8 py-[30px]"
+        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--cyan max-w-[90%] lg:max-w-[1064px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-[104px] py-[30px]"
         onClick={(e) => e.stopPropagation()}
       >
         <div 
@@ -105,7 +105,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
             </li>
           </ul>
         </div>
-        <article className="text-base font-bold border-t text-brown-dark border-brown-normal pt-7 mb-11">
+        <article className="text-base border-t text-brown-dark border-brown-normal pt-7 mb-11">
           <ul>
             <li className="mb-4">
               在寵物飼養的領域中，德國科學飼養標準，俗稱「科養」，已經成為愛護寵物的新趨勢。科養的核心理念在於創造一個能夠滿足寵物天性需求的環境，進而讓牠們在身心層面都能夠維持快樂。
@@ -333,7 +333,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
           <div className="flex">
             <img src={user3} alt="user" className="h-[53px] mr-3" />
             <div className="mr-5">
-              <div className="flex justify-between">
+              <div className="flex justify-between mb-2">
                 <div className="flex items-center mb-2 gap-x-1">
                   <p className="text-base font-bold text-cyan-dark">筱嫻</p>
                   <p className="text-xs font-medium text-brown-normal border border-white bg-white rounded-[60px] ml-1 px-2 py-[2px]">
@@ -345,7 +345,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
                   <p className="text-brown-dark font-bold text-[15px] ">25</p>
                 </div>
               </div>
-              <p className="pb-5 text-base border-b text-brown-dark border-brown-normal">
+              <p className="pb-5 text-base text-brown-dark">
                 這個布置好漂亮😍，由於我預算和空間有限，我只能簡單弄一下環境。其實我有些擔心我為鼠準備的地方是不是夠有趣，但看起來牠似乎對外面的世界沒啥興趣，每次我放出來牠都馬上就自己跑回去。
                 K036這樣的布置是不是需要改進一下呢？還是有沒有其他更豐富的方式？
               </p>
@@ -384,7 +384,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
           <textarea
             placeholder="說些什麼參與討論吧！"
             rows="5"
-            className="w-full text-base text-brown-normal"
+            className="w-full text-base text-brown-normal p-2"
           />
           <div className="flex justify-between">
             <img src={photobtn} alt="addphoto" className="cursor-pointer" />
