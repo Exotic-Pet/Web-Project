@@ -236,13 +236,13 @@ export default function HomeHeader() {
             {/* <!-- Download Link --> */}
             <div className="mt-[32px]">
               <a
-                href="#"
+                href="https://play.google.com"
                 className="max-w-[200px] mx-auto block hover:opacity-70"
               >
                 <img src={googlePlay} alt="google-play" />
               </a>
               <a
-                href="#"
+                href="https://www.apple.com/tw/app-store"
                 className="max-w-[200px] mx-auto mt-[12px] block hover:opacity-70"
               >
                 <img src={appStore} alt="app-store" />
