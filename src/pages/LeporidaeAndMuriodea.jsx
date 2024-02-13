@@ -22,13 +22,13 @@ export default function LeporidaeAndMuriodea() {
                         <form action="" className="flex justify-around">
                             <div className="relative">
                                 <input type="text" placeholder="搜尋"
-                                    className="text-brown-normal text-xl w-[258px] rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal" />
+                                    className="text-brown-normal text-xl max-w-full rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal" />
                                 <img className="absolute w-5 cursor-pointer right-4 top-[11px] hover:scale-125"
                                     src={searchIcon} alt="search" />
                             </div>
                         </form>
                         {/*Search Place*/}
-                        <h2 className="text-3xl font-black tracking-wider text-center text-brown-normal m-7">索引目錄</h2>
+                        <h2 className="text-3xl font-bold tracking-wider text-center text-brown-normal m-7">索引目錄</h2>
                         <form action="">
                             <h2 className="mb-6 text-2xl font-bold text-yellow-dark">兔、鼠類</h2>
                             <ul>
@@ -64,16 +64,16 @@ export default function LeporidaeAndMuriodea() {
                 <section className="col-span-9 tracking-wide">
                     {/*Rabbit*/}
                     <div className="flex justify-between">
-                        <div className="w-[281px] h-[58px] bg-brown-light flex items-center rounded-t-[20px]">
+                        <div className="w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
                             <div className="flex mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
                             </div>
-                            <h2 className="text-2xl font-bold text-brown-dark">兔、鼠類</h2>
+                            <h2 className="text-xl font-bold text-brown-dark">兔、鼠類</h2>
                         </div>
-                        <div className="w-[121px] h-[58px] bg-yellow-dark rounded-t-[20px] pt-3 mr-[52px]">
-                            <h2 className="text-2xl font-bold text-center text-white">兔</h2>
+                        <div className="w-[121px] h-[58px] bg-yellow-dark rounded-t-[20px] pt-4 mr-[52px]">
+                            <h2 className="text-xl font-bold text-center text-white">兔</h2>
                         </div>
                     </div>
                     <div className="bg-yellow-normal rounded-[22px] rounded-tl-none pt-[45px]">
@@ -102,7 +102,7 @@ export default function LeporidaeAndMuriodea() {
                         <div className="flex justify-center mx-[93px] my-6">
                             <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-2xl font-bold text-yellow-dark">垂耳兔</h3>
+                                <h3 className="text-xl font-bold text-yellow-dark">垂耳兔</h3>
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
@@ -125,7 +125,7 @@ export default function LeporidaeAndMuriodea() {
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                             <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-2xl font-bold text-yellow-dark">白兔</h3>
+                                <h3 className="text-xl font-bold text-yellow-dark">白兔</h3>
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                         </div>
@@ -146,7 +146,7 @@ export default function LeporidaeAndMuriodea() {
                         <div className="flex justify-center mx-[93px] my-6">
                             <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-2xl font-bold text-yellow-dark">其他</h3>
+                                <h3 className="text-xl font-bold text-yellow-dark">其他</h3>
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
@@ -168,16 +168,16 @@ export default function LeporidaeAndMuriodea() {
                     </div>
                     {/*Rat*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-brown-light flex justify-between items-center rounded-t-[20px]">
+                        <div className="w-[281px] h-[58px] bg-gray-dark flex justify-between items-center rounded-t-[20px]">
                             <div className="flex ml-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
                             </div>
-                            <h2 className="text-2xl font-bold mr-[71px] text-brown-dark">兔、鼠類</h2>
+                            <h2 className="text-xl font-bold mr-[71px] text-brown-dark">兔、鼠類</h2>
                         </div>
-                        <div className="w-[121px] h-[58px] bg-yellow-dark rounded-t-[20px] pt-3 mr-[52px]">
-                            <h2 className="text-2xl font-bold text-center text-white">鼠</h2>
+                        <div className="w-[121px] h-[58px] bg-yellow-dark rounded-t-[20px] pt-4 mr-[52px]">
+                            <h2 className="text-xl font-bold text-center text-white">鼠</h2>
                         </div>
                     </div>
                     <div className="bg-yellow-normal rounded-[22px] rounded-tl-none pt-[45px]">
@@ -185,7 +185,7 @@ export default function LeporidaeAndMuriodea() {
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                             <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-2xl font-bold text-yellow-dark">倉鼠</h3>
+                                <h3 className="text-xl font-bold text-yellow-dark">倉鼠</h3>
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                         </div>
@@ -206,7 +206,7 @@ export default function LeporidaeAndMuriodea() {
                         <div className="flex justify-center mx-[93px] my-6">
                             <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-2xl font-bold text-yellow-dark">天竺鼠</h3>
+                                <h3 className="text-xl font-bold text-yellow-dark">天竺鼠</h3>
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
@@ -229,7 +229,7 @@ export default function LeporidaeAndMuriodea() {
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                             <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-2xl font-bold text-yellow-dark">絲絨鼠</h3>
+                                <h3 className="text-xl font-bold text-yellow-dark">絲絨鼠</h3>
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                         </div>
@@ -250,7 +250,7 @@ export default function LeporidaeAndMuriodea() {
                         <div className="flex justify-center mx-[93px] my-6">
                             <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-2xl font-bold text-yellow-dark">其他</h3>
+                                <h3 className="text-xl font-bold text-yellow-dark">其他</h3>
                                 <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
                             </figure>
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
