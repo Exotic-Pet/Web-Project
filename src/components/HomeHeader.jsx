@@ -169,7 +169,7 @@ export default function HomeHeader() {
                 >
                   <img src={homeGreen} alt="home" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
-                    特寵探店
+                    <span className="tracking-wide">特寵探店</span>
                     <span className="block text-[12px] text-brown-normal">
                       Exotic pet stores
                     </span>
@@ -183,7 +183,7 @@ export default function HomeHeader() {
                 >
                   <img src={calendarGreen} alt="calendar" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
-                    特寵活動
+                    <span className="tracking-wide">特寵活動</span>
                     <span className="block text-[12px] text-brown-normal">
                       Exotic pet event
                     </span>
@@ -197,7 +197,7 @@ export default function HomeHeader() {
                 >
                   <img src={introGreen} alt="intro" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
-                    特寵介紹
+                    <span className="tracking-wide">特寵介紹</span>
                     <span className="block text-[12px] text-brown-normal">
                       Introduction
                     </span>
@@ -211,7 +211,7 @@ export default function HomeHeader() {
                 >
                   <img src={peopleGreen} alt="people" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
-                    聚會揪團
+                    <span className="tracking-wide">聚會揪團</span>
                     <span className="block text-[12px] text-brown-normal">
                       Get-together
                     </span>
@@ -225,7 +225,7 @@ export default function HomeHeader() {
                 >
                   <img src={msgGreen} alt="msg" />
                   <h2 className="ml-[12px] text-[20px] text-brown-dark font-bold">
-                    心得交流
+                    <span className="tracking-wide">心得交流</span>
                     <span className="block text-[12px] text-brown-normal">
                       Forum
                     </span>
