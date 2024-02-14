@@ -4,19 +4,34 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import {Autoplay, Pagination, Navigation } from "swiper/modules";
 import mainImg1 from "../assets/event/main-swp-img1.png";
 import mainImg2 from "../assets/event/main-swp-img2.png";
 import mainImg3 from "../assets/event/main-swp-img3.png";
+import mainImg4 from "../assets/event/main-swp-img4.png";
+import mainImg5 from "../assets/event/main-swp-img5.png";
+import mainImg6 from "../assets/event/main-swp-img6.png";
 import eventImg1 from "../assets/event/event-img1.svg";
 import eventImg2 from "../assets/event/event-img2.svg";
 import eventImg3 from "../assets/event/event-img3.svg";
+import hotEventImg1 from "../assets/event/imageForEvent/hot-event-1.png";
+import hotEventImg2 from "../assets/event/imageForEvent/hot-event-2.png";
+import hotEventImg3 from "../assets/event/imageForEvent/hot-event-3.png";
 import eventImg4 from "../assets/event/event-img4.svg";
 import eventImg5 from "../assets/event/event-img5.svg";
 import eventImg6 from "../assets/event/event-img6.svg";
+import featureEventImg1 from "../assets/event/imageForEvent/feature-event-1.png";
+import featureEventImg2 from "../assets/event/imageForEvent/feature-event-2.png";
+import featureEventImg3 from "../assets/event/imageForEvent/feature-event-3.png";
 import eventImg7 from "../assets/event/event-img7.svg";
 import eventImg8 from "../assets/event/event-img8.svg";
 import eventImg9 from "../assets/event/event-img9.svg";
+import searchResultImg1 from "../assets/event/imageForEvent/search-result-1.png";
+import searchResultImg2 from "../assets/event/imageForEvent/search-result-2.png";
+import searchResultImg3 from "../assets/event/imageForEvent/search-result-3.png";
+import searchResultImg4 from "../assets/event/imageForEvent/search-result-4.png";
+import searchResultImg5 from "../assets/event/imageForEvent/search-result-5.png";
+import searchResultImg6 from "../assets/event/imageForEvent/search-result-6.png";
 import plate from "../assets/event/plate-1.svg";
 import searchIcon from "../assets/event/event-search.svg";
 import arrow from "../assets/event/arrow.svg";
@@ -24,6 +39,9 @@ import deco from "../assets/event/deco.svg";
 import allrats from "../assets/event/all-rats.svg";
 import allreptiles from "../assets/event/all-reptiles.svg";
 import monthlySelection from "../assets/event/monthly-selection.svg";
+import allRatsBanner from "../assets/event/all-rats-BN.svg";
+import allreptilesBanner from "../assets/event/all-reptiles-BN.svg";
+import monthlySelectionBanner from "../assets/event/monthly-selection-BN.svg";
 import "../styles/swiperstyle.css";
 // import { Link } from "react-router-dom";
 import LightBox from "../components/LightBox";
@@ -38,9 +56,9 @@ export default function StoreContent() {
     mainImg1,
     mainImg2,
     mainImg3,
-    mainImg1,
-    mainImg2,
-    mainImg3,
+    mainImg4,
+    mainImg5,
+    mainImg6,
   ];
   const hotEvents = [
     {
@@ -62,22 +80,22 @@ export default function StoreContent() {
       date: "2024/7/15 (六)-7/16 (日)",
     },
     {
-      imgUrl: eventImg1,
-      category: "展覽",
-      title: "艸植感市集",
+      imgUrl: hotEventImg1,
+      category: "講座",
+      title: "2024秋 - 室內動物觀察講座",
       date: "2024/11/11 (六)-11/13 (日)",
     },
     {
-      imgUrl: eventImg2,
+      imgUrl: hotEventImg2,
       category: "展覽",
-      title: "2024台灣兩棲爬蟲博覽會",
-      date: "2024/6/22 (六)-6/23 (日)",
+      title: "2024兩棲爬蟲特寵見面會",
+      date: "2024/2/23 (五)-2/25 (日)",
     },
     {
-      imgUrl: eventImg3,
-      category: "展覽",
-      title: "艸我的方向走來2.0",
-      date: "2024/7/15 (六)-7/16 (日)",
+      imgUrl: hotEventImg3,
+      category: "親子活動",
+      title: "我們與動物的關係建立",
+      date: "2024/7/15 (六)",
     },
   ];
   const featuredEvents = [
@@ -100,22 +118,22 @@ export default function StoreContent() {
       date: "2024/10/07 (六) - 10/08 (日)",
     },
     {
-      imgUrl: eventImg4,
+      imgUrl: featureEventImg1,
+      category: "講座",
+      title: "新竹親子動物觀察講座",
+      date: "2024/2/25（六）",
+    },
+    {
+      imgUrl: featureEventImg2,
       category: "快閃活動",
-      title: "叢林森遊會 爬蟲主題市集",
-      date: "2024/4/1 (六) - 4/2 (日)",
+      title: "動物觀察-咕溜蛇來囉",
+      date: "2024/6/22 (六)-6/23 (日)",
     },
     {
-      imgUrl: eventImg5,
-      category: "線上活動",
-      title: "台灣東部爬蟲的二三事",
-      date: "2024/10/12 (六)",
-    },
-    {
-      imgUrl: eventImg6,
-      category: "市集",
-      title: "2024 萌舺親子爬市集",
-      date: "2024/10/07 (六) - 10/08 (日)",
+      imgUrl: featureEventImg3,
+      category: "展覽",
+      title: "倉鼠の遊戲間",
+      date: "2024/2/07 (六)",
     },
   ];
   const searchCard = [
@@ -139,42 +157,42 @@ export default function StoreContent() {
       date: "2024/6/22 (六)-6/23 (日)",
     },
     {
-      imgUrl: eventImg7,
-      category: "展覽",
-      title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
+      imgUrl: searchResultImg1,
+      category: "快閃活動",
+      title: "台中｜動物觀察-咕溜蛇來囉｜蛇類觀察課",
       date: "2024/6/22 (六)-6/23 (日)",
     },
     {
-      imgUrl: eventImg8,
-      category: "展覽",
+      imgUrl: searchResultImg2,
+      category: "講座",
       title:
-        "台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館",
-      date: "2024/8/26 (六)-8/27 (日)",
+        "台中｜刺蝟、蜜袋鼯飼養照顧講座",
+      date: "2024/10/18 (三)",
     },
     {
-      imgUrl: eventImg9,
+      imgUrl: searchResultImg3,
       category: "展覽",
-      title: "台中｜2024台灣爬蟲季｜台中世貿二館",
-      date: "2024/6/22 (六)-6/23 (日)",
+      title: "台北｜2024兩棲爬蟲特寵見面會｜松菸文創園區",
+      date: "2024/2/23 (五)-2/25 (日)",
     },
     {
-      imgUrl: eventImg7,
-      category: "展覽",
-      title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
-      date: "2024/6/22 (六)-6/23 (日)",
+      imgUrl: searchResultImg4,
+      category: "講座",
+      title: "台北｜昆蟲種子教師研習｜台灣昆蟲館",
+      date: "2024/5/14 (六)",
     },
     {
-      imgUrl: eventImg8,
-      category: "展覽",
+      imgUrl: searchResultImg5,
+      category: "親子活動",
       title:
-        "台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館",
-      date: "2024/8/26 (六)-8/27 (日)",
+        "新竹｜親子動物觀察講座",
+      date: "2024/2/25 (六)",
     },
     {
-      imgUrl: eventImg9,
-      category: "展覽",
-      title: "台中｜2024台灣爬蟲季｜台中世貿二館",
-      date: "2024/6/22 (六)-6/23 (日)",
+      imgUrl: searchResultImg6,
+      category: "快閃活動",
+      title: "高雄｜牧草圓又圓中途兔兔送養會",
+      date: "2024/8/31 (六)",
     },
   ];
 
@@ -199,8 +217,12 @@ export default function StoreContent() {
           pagination={{
             type: "custom",
           }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Autoplay, Pagination, Navigation]}
           className="w-full mb-4 mySwiper mainswp-btn"
           breakpoints={{
             0: {
@@ -361,19 +383,21 @@ export default function StoreContent() {
             </Swiper>
           </div>
           {/*Search*/}
-          <div className="relative mx-auto max-w-[778px] border-solid border-2 rounded-xl bg-white mt-[68px] border-brown-normal pb-[33px]">
-            {/*Selector*/}
+          <div className=" relative hidden md:block">
             <img
               src={plate}
               alt="plate-1"
-              className="hidden md:block absolute -right-[148px]"
+              className=" absolute right-[130px] top-20"
             />
-            <form action="" className="justify-center text-center ">
+          </div>
+          <div className="relative mx-auto max-w-[778px] border-solid border-2 rounded-[30px] bg-white mt-[68px] border-brown-normal pb-[33px]">
+            {/*Selector*/}
+            <form action="" className="justify-center text-center">
               <div className="relative mx-[68px]">
                 <input
                   type="text"
                   placeholder="搜尋活動/場地/舉辦方"
-                  className="w-full py-2 text-base text-center border-2 border-solid rounded-full text-brown-dark bg-yellow-light focus:outline-brown-normal mt-7"
+                  className="w-full py-2 text-base text-center border-2 rounded-full text-brown-dark bg-yellow-light mt-7"
                 />
                 <img
                   className="absolute cursor-pointer hover:scale-125 bottom-[12px] left-[10%] sm:left-[25%] md:left-[30%]"
@@ -521,9 +545,20 @@ export default function StoreContent() {
               </li>
             </ul>
           </div>
-          <div className="md:flex gap-x-[30px] mx-auto justify-center items-start">
+          <div className="hidden sm:block">
+            <div className="flex gap-x-[30px] justify-center mx-auto">
+            <a href="#"><img src={monthlySelectionBanner} alt="" /></a>
+            <div>
+              <a href="#"><img src={allRatsBanner} alt="" className="mb-4"/></a>
+              <a href="#"><img src={allreptilesBanner} alt="" /></a>
+            </div>
+            </div>
+          </div>
+          <div className="sm:hidden mx-4">
+            <div className="md:flex gap-x-[30px] mx-auto justify-center items-start">
             {/* 每月精選 */}
-            <div className="relative bg-white border-4 rounded-[30px] overflow-hidden border-cyan-normal pt-[50px] md:w-[145px]">
+            <a href="#">
+              <div className="relative bg-white border-4 rounded-[30px] overflow-hidden border-cyan-normal pt-[50px] md:w-[145px]">
               <img
                 className="absolute top-[10px] right-[10px]"
                 src={monthlySelection}
@@ -545,10 +580,12 @@ export default function StoreContent() {
                   更多文章
                 </p>
               </figure>
-            </div>
+              </div>
+            </a>
             <div>
               {/* 寵物鼠品種大集合 */}
-              <div className="sm:flex justify-between sm:pl-[55px] border-4 rounded-[30px] border-brown-normal overflow-hidden my-4 md:my-0">
+              <a href="#">
+                <div className="sm:flex justify-between sm:pl-[55px] border-4 rounded-[30px] border-brown-normal overflow-hidden my-4 md:my-0">
                 <div className="xl:flex ml-8 sm:ml-0">
                   <div className="relative z-10 max-w-[350px] mr-[38px] my-7">
                     <img
@@ -579,9 +616,11 @@ export default function StoreContent() {
                     />
                   </figure>
                 </div>
-              </div>
+                </div>
+              </a>
               {/* 爬寵特輯 */}
-              <div className="sm:flex justify-between sm:pl-[55px] border-4 rounded-[30px] border-green-light overflow-hidden sm:mt-2">
+              <a href="#">
+                <div className="sm:flex justify-between sm:pl-[55px] border-4 rounded-[30px] border-green-light overflow-hidden sm:mt-2">
                 <div className="xl:flex ml-8 sm:ml-0">
                   <div className="relative z-10 max-w-[330px] mr-[50px] my-7">
                     <img
@@ -618,7 +657,15 @@ export default function StoreContent() {
                     />
                   </figure>
                 </div>
-              </div>
+                </div>
+              </a>
+            </div>
+            </div>
+          </div>
+          <div className="max-w-[1077px] border-t border-brown-light px-8 mx-auto mt-[51px] pt-[43px]">
+            <div className=" bg-gray-normal border border-brown-light rounded-[47px] py-[15px] mb-[90px] px-10 sm:px- sm:mx-20">
+                  <h4 className="text-brown-dark font-bold text-sm mb-[6px]">照片來源：各大售票及宣傳平台</h4>
+                  <p className="text-brown-dark font-medium text-sm mb-1">若您認為有侵權情形，煩請立即告知，我們將移除相關內容並下架，以確保維護相關權益。<br/>我們一向重視知識產權和合法使用，致力於建立一個公正、尊重著作權的環境，感謝您的合作與理解。</p>
             </div>
           </div>
         </div>

@@ -10,9 +10,17 @@
 
 
 /* for EventContent */
-.swp > .swiper-wrapper{padding-left: 75px}
-.swp > .swiper-button-prev{background-image: url('../assets/eventcontent/button-prev.svg')}
-.swp > .swiper-button-next{background-image: url('../assets/eventcontent/button-next.svg')}
+.swp > .swiper-wrapper{
+    padding-left: 45px;
+}
+.swp > .swiper-button-prev{
+    background-image: url('../assets/eventcontent/button-prev.svg');
+    translate: -10px 0;
+}
+.swp > .swiper-button-next{
+    background-image: url('../assets/eventcontent/button-next.svg');
+    translate: 10px 0;
+}
 
 /* for EventPage */
 .mainswp-btn{position: relative;}
@@ -43,9 +51,11 @@
 }
 .hotevent-swp > .swiper-button-prev {
     background-image: url('../assets/eventcontent/button-prev.svg');
+    translate: -10px 0;
 }
 .hotevent-swp > .swiper-button-next {
     background-image: url('../assets/eventcontent/button-next.svg');
+    translate: 10px 0;
 }
 
 .swiper-button-prev::after , 
