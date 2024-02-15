@@ -397,10 +397,10 @@ export default function StoreContent() {
                 <input
                   type="text"
                   placeholder="搜尋活動/場地/舉辦方"
-                  className="w-full py-2 text-base text-center border-2 rounded-full text-brown-dark bg-yellow-light mt-7"
+                  className=" focus-within:placeholder-opacity-20 w-full py-2 text-base text-center outline-none placeholder-brown-dark rounded-full text-brown-dark bg-yellow-light mt-7"
                 />
                 <img
-                  className="absolute cursor-pointer hover:scale-125 bottom-[12px] left-[10%] sm:left-[25%] md:left-[30%]"
+                  className="absolute cursor-pointer hover:scale-125 bottom-[10px] left-[10%] sm:left-[25%] md:left-[30%]"
                   src={searchIcon}
                   alt="search"
                 />
