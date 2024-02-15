@@ -28,9 +28,6 @@ img {
 input::placeholder, textarea::placeholder {
   color: #A3907A;
 }
-.placeholder-brown-dark > ::placeholder, textarea::placeholder {
-  color: #543816;
-}
 
 /* Utilities Class */
 .bg-black-65 {
