@@ -22,8 +22,7 @@ export default function ExoticOverview() {
         </Link>
         <div className="flex flex-col flex-wrap justify-center flex-1 gap-8 sm:flex-row">
             <Link to="/page/exotic-overview/leporidaeAndmuriodea">
-                <figure className="relative group">
-                    <img className="mx-auto border-4 border-opacity-0 border-yellow-normal rounded-[30px] hover:border-opacity-100" src={leporidaeAndMuroidea} alt="Leporidae & Muroidea" />
+                <figure className="relative group">                    <img className="mx-auto border-4 border-opacity-0 border-yellow-normal rounded-[30px] hover:border-opacity-100" src={leporidaeAndMuroidea} alt="Leporidae & Muroidea" />
                     <img className="absolute -top-[5%]  opacity-0 right-[40%] group-hover:opacity-100" src={flowerLeftIcon} alt="flower" />
                 </figure>
             </Link>
