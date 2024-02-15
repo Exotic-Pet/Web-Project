@@ -280,65 +280,67 @@ export default function StoreSearch() {
   // StoreList Component
   const StoreList = ({ store, index, toggleLike }) => {
     return (
-      <li
-        className={`flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-4 border-transparent hover:border-${categoryColor}-normal`}
-      >
-        <h3
-          className={`text-3xl font-bold tracking-wide text-${categoryColor}-dark`}
-        >
-          {store.title}
-          <span className="ml-2 text-lg font-bold text-brown-normal">
-            {store.subTitle}
-          </span>
-        </h3>
-        <figure className="relative mt-4 mb-2 overflow-hidden w-[300px] h-[200px]">
-          <img
-            src={store.imgPath}
-            alt="store"
-            className="w-full h-full rounded-2xl object-cover object-center"
-          />
-          <img
-            onClick={() => toggleLike(index)}
-            src={store.like ? likeIcon : dislikeIcon}
-            alt="like"
-            className="absolute -bottom-2 -right-1 cursor-pointer"
-          />
-        </figure>
-        <ul className="flex my-2 gap-x-2">
-          {store?.label?.map((labelItem, labelIndex) => (
-            <li
-              key={labelIndex}
-              className={`px-2 border border-solid text-${categoryColor}-dark border-${categoryColor}-normal rounded-3xl`}
-            >
-              {`#${labelItem}`}
-            </li>
-          ))}
-        </ul>
-        <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-          {store.contentTitle}
-        </h4>
-        <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-          {store.content}
-        </p>
+      <li>
         <Link
           to={store.articlePath}
-          className={`mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-${categoryColor}-normal text-brown-dark hover:scale-110`}
+          className={`flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-[3px] border-transparent hover:border-${categoryColor}-normal`}
         >
-          查看更多
+          <h3
+            className={`text-3xl font-bold tracking-wide text-${categoryColor}-dark`}
+          >
+            {store.title}
+            <span className="ml-2 text-lg font-bold text-brown-normal">
+              {store.subTitle}
+            </span>
+          </h3>
+          <figure className="relative mt-4 mb-2 overflow-hidden w-[300px] h-[200px]">
+            <img
+              src={store.imgPath}
+              alt="store"
+              className="w-full h-full rounded-2xl object-cover object-center"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <img
+              onClick={() => toggleLike(index)}
+              src={store.like ? likeIcon : dislikeIcon}
+              alt="like"
+              className="absolute -bottom-2 -right-1 cursor-pointer"
+              
+            />
+          </figure>
+          <ul className="flex my-2 gap-x-2">
+            {store?.label?.map((labelItem, labelIndex) => (
+              <li
+                key={labelIndex}
+                className={`px-2 border-[1.5px] border-solid text-${categoryColor}-dark border-${categoryColor}-normal rounded-3xl`}
+              >
+                {`#${labelItem}`}
+              </li>
+            ))}
+          </ul>
+          <h4 className="text-xl font-bold tracking-wide text-brown-dark">
+            {store.contentTitle}
+          </h4>
+          <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
+            {store.content}
+          </p>
+          <Link
+            to={store.articlePath}
+            className={`mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-${categoryColor}-normal text-brown-dark hover:scale-110`}
+          >
+            查看更多
+          </Link>
         </Link>
       </li>
     );
   };
 
   // Filter Data Category
-  const filterStoreData = useCallback(
-    (category) => {
-      setCurrentCategory(category);
-      setSearchResults([]);
-      setSearchInput('');
-    },
-    [],
-  );
+  const filterStoreData = useCallback((category) => {
+    setCurrentCategory(category);
+    setSearchResults([]);
+    setSearchInput("");
+  }, []);
 
   // Search Data
   const [searchInput, setSearchInput] = useState("");
@@ -375,11 +377,11 @@ export default function StoreSearch() {
                 placeholder="搜尋"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
-                onFocus={() => setSearchInput('')}
-                className="text-brown-normal text-[18px] w-[388px] rounded-full border-[1.5px] border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal"
+                onFocus={() => setSearchInput("")}
+                className="text-brown-normal text-[18px] w-[388px] rounded-full border-[1.5px] border-solid border-brown-normal py-[6px] pl-5 focus:outline-yellow-normal"
               />
               <img
-                className="absolute cursor-pointer right-5 top-[6px] hover:scale-125"
+                className="absolute w-7 cursor-pointer right-4 top-[8px] hover:scale-125"
                 src={searchIcon}
                 alt="search"
                 onClick={handleSearch}
@@ -414,7 +416,7 @@ export default function StoreSearch() {
                 <div
                   className={
                     toggleExpandStyle(isAreaExpand) +
-                    ` checkbox__style checkbox--${categoryColor} flex flex-wrap text-xl`
+                    ` checkbox__style checkbox--${categoryColor} flex flex-wrap text-xl text-center`
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">
@@ -457,7 +459,7 @@ export default function StoreSearch() {
                 <div
                   className={
                     toggleExpandStyle(isSearchExpand) +
-                    ` checkbox__style checkbox--${categoryColor} flex flex-wrap text-xl`
+                    ` checkbox__style checkbox--${categoryColor} flex flex-wrap text-xl text-center`
                   }
                 >
                   <label className="relative cursor-pointer w-1/4 mt-3 pl-5 text-brown-dark whitespace-nowrap">

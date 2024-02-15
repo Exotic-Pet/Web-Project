@@ -30,6 +30,9 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Utilities Class */
+.placeholder-brown-dark > ::placeholder, textarea::placeholder {
+  color: #543816;
+}
 .bg-black-65 {
   background-color: rgba(0, 0, 0, 0.65);
 }
@@ -149,7 +152,7 @@ input::placeholder, textarea::placeholder {
 /* Checkbox Border */
 .checkbox__style .checkmark::before {
   content: "";
-  outline: 1px solid #543816;
+  outline: 1.5px solid #A3907A;
   border-radius: 2px;
   display: inline-block;
   width: 20px;
@@ -159,19 +162,19 @@ input::placeholder, textarea::placeholder {
   left: 2px;
   transition: all 0.1s;
 }
-/* Checked Style */
-.checkbox__style input[type="checkbox"]:checked + .checkmark::before {
-  outline: 0;
-}
+
 /* Checkbox Color */
 .checkbox--yellow input[type="checkbox"]:checked + .checkmark::before {
   background-color: #EFC141;
+  outline: 1.5px solid #EFC141;
 }
 .checkbox--cyan input[type="checkbox"]:checked + .checkmark::before {
   background-color: #93C9C8;
+  outline: 1.5px solid #93C9C8;
 }
 .checkbox--green input[type="checkbox"]:checked + .checkmark::before {
   background-color: #ABC592;
+  outline: 1.5px solid #ABC592;
 }
 
 /* Input Focus Style */
@@ -188,7 +191,7 @@ input[type="range"] {
 /* Slider Thumb */
 input[type="range"]::-webkit-slider-thumb {
   position: relative;
-  transform: translateY(-6px); /* 滑塊位置 */
+  transform: translateY(-7.5px); /* 滑塊位置 */
   width: 20px; /* 滑塊寬度 */
   height: 20px; /* 滑塊高度 */
   background-color: #A3907A; /* 滑塊顏色 */
@@ -201,7 +204,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* Slider Track */
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8px;
+  height: 6px;
   background-color: #eee; /* 軌道顏色 */
   border-radius: 5px; /* 軌道圓角 */
 }
