@@ -1,6 +1,6 @@
 import "../styles/all.css";
 import shareFacebook from '../assets/store/share-facebook.svg';
-import shareLine from '../assets/store/share-line.svg';
+import shareLine from '../assets/store/share-line-2.svg';
 import mainImg1 from '../assets/store/imageForContent/mainImg-1.png';
 import mainImg2 from '../assets/store/imageForContent/mainImg-2.png';
 import mainImg3 from '../assets/store/imageForContent/mainImg-3.png';
@@ -26,6 +26,10 @@ import FbShare from "../components/FacebookShare";
 import LineShare from "../components/LineShare";
 
 export default function StoreContent() {
+    const handleLineShare = () => {
+        const shareUrl = "https://exotic-pet.github.io/Web-Project/"; // 替換成你想要分享的網址
+        window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`);
+    };
     return (
     // Store Content
     <>
@@ -44,7 +48,12 @@ export default function StoreContent() {
                 <p className="text-base font-bold text-brown-normal">分享文章</p>
                 {/* <a href="#"><img src={shareFacebook} alt="facebook分享" className="" /></a> */}
                 <FbShare/>
-                <LineShare/>
+                {/* <LineShare/> */}
+                <div onClick={handleLineShare} className=" cursor-pointer flex bg-line-normal rounded-md pl-1 pr-2 gap-x-1 items-center h-[29px]">
+                    <button><img src={shareLine} alt="" className="h-[25px]" /></button>
+                    <p className="text-white text-sm font-medium">分享</p>
+                </div>
+                
                 {/* <a href="#"><img src={shareLine} alt="line分享" /></a> */}
             </div>
             <p className="text-base font-bold text-brown-dark">【Pythonism玩蟒人生】是一家以球蟒和爬蟲為主題的咖啡館，在捷運大橋頭站附近。這裡的低消僅需一杯飲料，就能與各種球蟒或爬蟲類互動。老闆本身是專業的球蟒繁殖者，對於爬蟲類的知識有豐富的瞭解，客人可以隨時向他諮詢！【Pythonism玩蟒人生】是間非常特別的咖啡廳～</p>

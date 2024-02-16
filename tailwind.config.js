@@ -32,6 +32,9 @@ export default {
           yellow: "#F4C247",
           green: "#83D35E"
         },
+        line:{
+          normal: "#00B900",
+        }
       },
       letterSpacing: {
         wide: "0.1rem",
