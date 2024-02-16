@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import searchIcon from '../assets/store/search.svg';
-import arrowDown from '../assets/reptile/arrow-Down.svg';
+import arrowDown from '../assets/reptile/arrow-down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
 
 export default function Arthropoda() {
