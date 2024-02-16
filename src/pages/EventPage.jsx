@@ -52,6 +52,84 @@ export default function StoreContent() {
 
   const [swiperRef, setSwiperRef] = useState(null);
 
+  const [selectedArea, setSelectedArea] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  // const [cards, setCards] = useState(searchCard);
+  
+  const handleItemClick = (index) => {
+      setSelectedArea(index);
+      // filterCards();
+  };
+  const handleDateClick = (index) => {
+    setSelectedDate(index);
+    // filterCards();
+  };
+  const handleCategoryClick = (index) => {
+    setSelectedCategory(index);
+    // filterCards();
+  };
+
+  const areaListItems = () => {
+    const regions = ['全台', '北部', '中部', '南部', '東部'];
+
+    return regions.map((region, index) => (
+      <li
+        key={index}
+        className={`px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal ${
+          selectedArea === index ? 'text-white bg-green-normal bg-opacity-100' : 'hover:border-opacity-100 hover:bg-opacity-100'
+        }`}
+        onClick={() => handleItemClick(index)}
+      >
+        {region}
+      </li>
+    ));
+  };
+  
+  const dateListItems = () => {
+    const dates = ['全部日期', '今天', '本周末', '7天內', '30天內'];
+
+    return dates.map((date, index) => (
+      <li
+        key={index}
+        className={`px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal ${
+          selectedDate === index ? 'text-white bg-green-normal bg-opacity-100' : 'hover:border-opacity-100 hover:bg-opacity-100'
+        }`}
+        onClick={() => handleDateClick(index)}
+      >
+        {date}
+      </li>
+    ));
+  };
+
+  const categoryListItems = () => {
+    const categories = ['全部分類', '展覽', '市集', '親子活動', '快閃活動', '線上活動', '其他'];
+
+    return categories.map((category, index) => (
+      <li
+        key={index}
+        className={`px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal ${
+          selectedCategory === index ? 'text-white bg-green-normal bg-opacity-100' : 'hover:border-opacity-100 hover:bg-opacity-100'
+        }`}
+        onClick={() => handleCategoryClick(index)}
+      >
+        {category}
+      </li>
+    ));
+  };
+
+  const filterCards = () => {
+    const filteredCards = cards.filter(card => {
+      return (
+        (selectedArea === null || card.region === regions[selectedArea]) &&
+        (selectedDate === null || card.date === dates[selectedDate]) &&
+        (selectedCategory === null || card.category === categories[selectedCategory])
+      );
+    });
+  
+    setCards(filteredCards);
+  };
+
   const mainSwpImage = [
     mainImg1,
     mainImg2,
@@ -138,12 +216,16 @@ export default function StoreContent() {
   ];
   const searchCard = [
     {
+      id : "1",
+      region: "北部",
       imgUrl: eventImg7,
       category: "展覽",
       title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
       date: "2024/6/22 (六)-6/23 (日)",
     },
     {
+      id : "2",
+      region: "北部",
       imgUrl: eventImg8,
       category: "展覽",
       title:
@@ -151,18 +233,24 @@ export default function StoreContent() {
       date: "2024/8/26 (六)-8/27 (日)",
     },
     {
+      id : "3",
+      region: "中部",
       imgUrl: eventImg9,
       category: "展覽",
       title: "台中｜2024台灣爬蟲季｜台中世貿二館",
       date: "2024/6/22 (六)-6/23 (日)",
     },
     {
+      id : "4",
+      region: "中部",
       imgUrl: searchResultImg1,
       category: "快閃活動",
       title: "台中｜動物觀察-咕溜蛇來囉｜蛇類觀察課",
       date: "2024/6/22 (六)-6/23 (日)",
     },
     {
+      id : "5",
+      region: "中部",
       imgUrl: searchResultImg2,
       category: "講座",
       title:
@@ -170,25 +258,32 @@ export default function StoreContent() {
       date: "2024/10/18 (三)",
     },
     {
+      id : "6",
+      region: "北部",
       imgUrl: searchResultImg3,
       category: "展覽",
       title: "台北｜2024兩棲爬蟲特寵見面會｜松菸文創園區",
       date: "2024/2/23 (五)-2/25 (日)",
     },
     {
+      id : "7",
+      region: "北部",
       imgUrl: searchResultImg4,
       category: "講座",
       title: "台北｜昆蟲種子教師研習｜台灣昆蟲館",
       date: "2024/5/14 (六)",
     },
     {
+      id : "8",
+      region: "北部",
       imgUrl: searchResultImg5,
       category: "親子活動",
-      title:
-        "新竹｜親子動物觀察講座",
+      title: "新竹｜親子動物觀察講座",
       date: "2024/2/25 (六)",
     },
     {
+      id : "9",
+      region: "南部",
       imgUrl: searchResultImg6,
       category: "快閃活動",
       title: "高雄｜牧草圓又圓中途兔兔送養會",
@@ -410,7 +505,8 @@ export default function StoreContent() {
                   地區
                 </p>
                 <ul className="flex flex-wrap gap-x-2">
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
+                  {areaListItems()}
+                  {/* <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
                     全台
                   </li>
                   <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
@@ -424,7 +520,7 @@ export default function StoreContent() {
                   </li>
                   <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
                     東部
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="flex mt-5">
@@ -432,7 +528,8 @@ export default function StoreContent() {
                   日期
                 </p>
                 <ul className="flex flex-wrap gap-x-2">
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
+                  {dateListItems()}
+                  {/* <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
                     全部日期
                   </li>
                   <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
@@ -446,7 +543,7 @@ export default function StoreContent() {
                   </li>
                   <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
                     30天內
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="flex mt-5">
@@ -454,7 +551,8 @@ export default function StoreContent() {
                   活動分類
                 </p>
                 <ul className="flex flex-wrap gap-x-2">
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
+                  {categoryListItems()}
+                  {/* <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
                     全部分類
                   </li>
                   <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
@@ -474,7 +572,7 @@ export default function StoreContent() {
                   </li>
                   <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
                     其他
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </form>
