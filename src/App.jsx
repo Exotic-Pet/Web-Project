@@ -18,7 +18,6 @@ import Gathering from "./pages/Gathering";
 import GatheringContent from "./pages/GatheringContent";
 import GatheringLayout from "./components/GatheringLayout";
 import CommunityPage from "./pages/CommunityPage";
-import CommunityPageContent from "./pages/CommunityContent";
 
 export default function App() {
   return (
@@ -26,7 +25,7 @@ export default function App() {
       <AutoScrollTop>
         <Routes>
           <Route index element={<HomePage />} />
-          <Route path="/page" element={<Layout />}>
+          <Route path="/page" element={<Layout />} >
             <Route path="store-overview" element={<StoreOverview />} />
             <Route path="store-search" element={<StoreSearch />} />
             <Route path="store-search/content" element={<StoreContent />} />
@@ -44,7 +43,6 @@ export default function App() {
               <Route path="content" element={<GatheringContent />} />
             </Route>
             <Route path="community" element={<CommunityPage />} />
-            <Route path="community/content" element={<CommunityPageContent />} />
           </Route>
         </Routes>
       </AutoScrollTop>
