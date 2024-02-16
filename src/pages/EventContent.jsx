@@ -8,11 +8,11 @@ export default function EventContent({ isOpenState, setIsOpenState, toggleState 
 
   return (
     <main
-      className="fixed z-40 top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center"
+      className="fixed z-40 top-0 bottom-0 left-0 right-0 bg-brown-60 flex justify-center items-center"
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
-        className="px-20 lightBox__content lightBox__scrollbar lightBox__scrollbar--green max-w-[90%] lg:max-w-[1064px] max-h-[90vh] overflow-y-auto relative bg-white mx-auto border-[3px] border-green-dark rounded-[20px] py-12"
+        className="px-20 lightBox__content lightBox__scrollbar lightBox__scrollbar--md lightBox__scrollbar--green max-w-[90%] lg:max-w-[1064px] max-h-[90vh] overflow-y-auto relative bg-white mx-auto border-[3px] border-green-dark rounded-[20px] py-12"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="px-8 py-[30px]">

@@ -71,7 +71,7 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
 
   return (
     <div
-      className="fixed z-50 top-0 bottom-0 left-0 right-0 bg-black-65 flex justify-center items-center"
+      className="fixed z-50 top-0 bottom-0 left-0 right-0 bg-brown-60 flex justify-center items-center"
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
