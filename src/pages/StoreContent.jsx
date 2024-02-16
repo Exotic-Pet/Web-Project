@@ -27,8 +27,9 @@ import LineShare from "../components/LineShare";
 
 export default function StoreContent() {
     const handleLineShare = () => {
-        const shareUrl = "https://exotic-pet.github.io/Web-Project/"; // 替換成你想要分享的網址
-        window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`);
+        const windowFeatures = 'width=500,height=500,left=100,top=100';
+        const shareUrl = "https://exotic-pet.github.io/Web-Project/page/store-search/content"; // 替換成你想要分享的網址
+        window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`,'Custom Window',windowFeatures);
     };
     return (
     // Store Content
@@ -49,7 +50,7 @@ export default function StoreContent() {
                 {/* <a href="#"><img src={shareFacebook} alt="facebook分享" className="" /></a> */}
                 <FbShare/>
                 {/* <LineShare/> */}
-                <div onClick={handleLineShare} className=" cursor-pointer flex bg-line-normal rounded-md pl-1 pr-2 gap-x-1 items-center h-[29px]">
+                <div onClick={handleLineShare} className="cursor-pointer flex bg-line-normal rounded-md pl-1 pr-2 gap-x-1 items-center h-[29px]">
                     <button><img src={shareLine} alt="" className="h-[25px]" /></button>
                     <p className="text-white text-sm font-medium">分享</p>
                 </div>
