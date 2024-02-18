@@ -217,7 +217,7 @@ export default function HomePage() {
                     className={`${
                       currentNewsType === "活動"
                         ? "bg-green-normal text-white"
-                        : "bg-brown-light text-brown-dark"
+                        : "bg-gray-dark text-brown-dark"
                     } px-[22px] py-[7px] mr-6 rounded-full`}
                     onClick={() => setCurrentNewsType("活動")}
                   >
@@ -227,7 +227,7 @@ export default function HomePage() {
                     className={`${
                       currentNewsType === "店家"
                         ? "bg-green-normal text-white"
-                        : "bg-brown-light text-brown-dark"
+                        : "bg-gray-dark text-brown-dark"
                     } px-[22px] py-[7px] rounded-full`}
                     onClick={() => setCurrentNewsType("店家")}
                   >

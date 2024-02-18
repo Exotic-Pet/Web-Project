@@ -1,5 +1,5 @@
 import "../styles/all.css";
-import shareFacebook from '../assets/store/share-facebook.svg';
+// import shareFacebook from '../assets/store/share-facebook.svg';
 import shareLine from '../assets/store/share-line-2.svg';
 import mainImg1 from '../assets/store/imageForContent/mainImg-1.png';
 import mainImg2 from '../assets/store/imageForContent/mainImg-2.png';
@@ -23,7 +23,7 @@ import location from '../assets/store/location.svg';
 import yasumi from '../assets/store/yasumi.svg';
 import time from '../assets/store/time.svg';
 import FbShare from "../components/FacebookShare";
-import LineShare from "../components/LineShare";
+// import LineShare from "../components/LineShare";
 
 export default function StoreContent() {
     const handleLineShare = () => {
@@ -68,10 +68,12 @@ export default function StoreContent() {
                 <br/>如果你也喜歡蟒蛇和爬蟲動物，來【玩蟒人生Pythonism】只需點一杯飲料，就能跟他們親密接觸。極力推薦給大家！</p>
             <div className="flex flex-col mt-12 mb-20 pt-10 border-t-[20px] border-cyan-normal xl:flex-row">
                 <div className="mx-auto min-w-[374px] sm:w-[432px] h-[275px] xl:mr-[60px]">
-                    <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.716655041767!2d121.52333804856978!3d25.043688092922853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90a06f2c70d%3A0x1daef20b13b189f!2z54it6a6uUExVUy3lloTlsI7lr7rlupc!5e0!3m2!1szh-TW!2stw!4v1703740331398!5m2!1szh-TW!2stw"></iframe>
+                    <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2411.8581169309896!2d121.51359695259741!3d25.061757382613447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a93f8203703d%3A0xa5a2894737094309!2z546p6J-S5Lq655SfIFB5dGhvbmlzbQ!5e0!3m2!1szh-TW!2stw!4v1708258122414!5m2!1szh-TW!2stw"></iframe>
                 </div>
                 <div className="mt-12 xl:mt-0">
-                    <a href="#"><img src={facebook} alt="facebook" className="mb-[26px]" /></a>
+                    <a href="https://www.facebook.com/Pythonism">
+                        <img src={facebook} alt="facebook" className="mb-[26px] inline" />
+                    </a>
                     <h3 className="pb-3 mb-2 text-2xl font-bold border-b-2 border-solid text-cyan-dark border-brown-dark">玩蟒人生<span>Pythonism</span></h3>
                     <ul>
                         <li className="flex items-center">

@@ -133,7 +133,7 @@ export default function StoreSearch() {
       },
       {
         id: 5,
-        title: "玩蟒人生5",
+        title: "玩蟒人生",
         subTitle: "Pythonism",
         area: "北部",
         imgPath: cafeImg_1,
@@ -146,7 +146,7 @@ export default function StoreSearch() {
       },
       {
         id: 6,
-        title: "玩蟒人生6",
+        title: "玩蟒人生",
         subTitle: "Pythonism",
         area: "北部",
         imgPath: cafeImg_1,
@@ -173,7 +173,7 @@ export default function StoreSearch() {
       },
       {
         id: 2,
-        title: "丘丘寵物2",
+        title: "丘丘寵物",
         subTitle: "Pet Shop",
         area: "北部",
         imgPath: specialtyImg_1,
@@ -185,7 +185,7 @@ export default function StoreSearch() {
       },
       {
         id: 3,
-        title: "丘丘寵物3",
+        title: "丘丘寵物",
         subTitle: "Pet Shop",
         area: "北部",
         imgPath: specialtyImg_1,
@@ -197,7 +197,7 @@ export default function StoreSearch() {
       },
       {
         id: 4,
-        title: "丘丘寵物4",
+        title: "丘丘寵物",
         subTitle: "Pet Shop",
         area: "北部",
         imgPath: specialtyImg_1,
@@ -224,7 +224,7 @@ export default function StoreSearch() {
       },
       {
         id: 2,
-        title: "伊甸動物醫院2",
+        title: "伊甸動物醫院",
         subTitle: "Eden",
         area: "北部",
         imgPath: hospitalImg_1,
@@ -237,7 +237,7 @@ export default function StoreSearch() {
       },
       {
         id: 3,
-        title: "伊甸動物醫院3",
+        title: "伊甸動物醫院",
         subTitle: "Eden",
         area: "北部",
         imgPath: hospitalImg_1,
@@ -250,7 +250,7 @@ export default function StoreSearch() {
       },
       {
         id: 4,
-        title: "伊甸動物醫院4",
+        title: "伊甸動物醫院",
         subTitle: "Eden",
         area: "北部",
         imgPath: hospitalImg_1,
@@ -278,62 +278,59 @@ export default function StoreSearch() {
   );
 
   // StoreList Component
-  const StoreList = ({ store, index, toggleLike }) => {
-    return (
-      <li>
+  const StoreList = ({ store, index, toggleLike }) => (
+    <li>
+      <Link
+        to={store.articlePath}
+        className={`flex flex-col h-full bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-[3px] border-transparent hover:border-${categoryColor}-normal`}
+      >
+        <h3
+          className={`text-3xl font-bold tracking-wide text-${categoryColor}-dark`}
+        >
+          {store.title}
+          <span className="ml-2 text-lg font-bold text-brown-normal">
+            {store.subTitle}
+          </span>
+        </h3>
+        <figure className="relative mt-4 mb-2 overflow-hidden w-[300px] h-[200px]">
+          <img
+            src={store.imgPath}
+            alt="store"
+            className="w-full h-full rounded-2xl object-cover object-center"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <img
+            onClick={() => toggleLike(index)}
+            src={store.like ? likeIcon : dislikeIcon}
+            alt="like"
+            className="absolute -bottom-2 -right-1 cursor-pointer"
+          />
+        </figure>
+        <ul className="flex my-2 gap-x-2">
+          {store?.label?.map((labelItem, labelIndex) => (
+            <li
+              key={labelIndex}
+              className={`px-2 border-[1.5px] border-solid text-${categoryColor}-dark border-${categoryColor}-normal rounded-3xl`}
+            >
+              {`#${labelItem}`}
+            </li>
+          ))}
+        </ul>
+        <h4 className="text-xl font-bold tracking-wide text-brown-dark">
+          {store.contentTitle}
+        </h4>
+        <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
+          {store.content}
+        </p>
         <Link
           to={store.articlePath}
-          className={`flex flex-col bg-white rounded-xl px-[35px] py-[30px] w-[375px] border-[3px] border-transparent hover:border-${categoryColor}-normal`}
+          className={`mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-${categoryColor}-normal text-brown-dark hover:scale-110`}
         >
-          <h3
-            className={`text-3xl font-bold tracking-wide text-${categoryColor}-dark`}
-          >
-            {store.title}
-            <span className="ml-2 text-lg font-bold text-brown-normal">
-              {store.subTitle}
-            </span>
-          </h3>
-          <figure className="relative mt-4 mb-2 overflow-hidden w-[300px] h-[200px]">
-            <img
-              src={store.imgPath}
-              alt="store"
-              className="w-full h-full rounded-2xl object-cover object-center"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <img
-              onClick={() => toggleLike(index)}
-              src={store.like ? likeIcon : dislikeIcon}
-              alt="like"
-              className="absolute -bottom-2 -right-1 cursor-pointer"
-              
-            />
-          </figure>
-          <ul className="flex my-2 gap-x-2">
-            {store?.label?.map((labelItem, labelIndex) => (
-              <li
-                key={labelIndex}
-                className={`px-2 border-[1.5px] border-solid text-${categoryColor}-dark border-${categoryColor}-normal rounded-3xl`}
-              >
-                {`#${labelItem}`}
-              </li>
-            ))}
-          </ul>
-          <h4 className="text-xl font-bold tracking-wide text-brown-dark">
-            {store.contentTitle}
-          </h4>
-          <p className="flex-grow text-base text-brown-dark w-[300px] tracking-wide">
-            {store.content}
-          </p>
-          <Link
-            to={store.articlePath}
-            className={`mt-4 ml-auto text-center block w-[80px] pb-1 text-lg font-bold border-b-2 border-${categoryColor}-normal text-brown-dark hover:scale-110`}
-          >
-            查看更多
-          </Link>
+          查看更多
         </Link>
-      </li>
-    );
-  };
+      </Link>
+    </li>
+  );
 
   // Filter Data Category
   const filterStoreData = useCallback((category) => {

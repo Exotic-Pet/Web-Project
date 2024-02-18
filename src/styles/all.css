@@ -25,6 +25,9 @@ img {
   display: block;
   vertical-align: middle;
 }
+button {
+  user-select: none;
+}
 input::placeholder, textarea::placeholder {
   color: #A3907A;
 }

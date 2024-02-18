@@ -129,7 +129,7 @@ export default function Footer() {
       {/* CopyRight */}
       <strong className="py-4 block bg-brown-dark text-white text-center font-bold">
         {`Copyright © ${currentYear} 特寵生活 All Rights Reserved`}
-        <br className="block md:hidden" />（ 此為學生作品網站，非正式網站 ）
+        <br className="block md:hidden" />（ 此為練習作品網站，非正式網站 ）
       </strong>
     </footer>
   );
