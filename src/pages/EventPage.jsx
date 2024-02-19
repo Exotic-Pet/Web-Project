@@ -346,7 +346,7 @@ export default function StoreContent() {
         </Swiper>
 
         {/*Banner*/}
-        <div className="tracking-wide bg-green-light bg-no-repeat pt-4 bg-center bg-cover bg-[url('../assets/event/event-banner.svg')] min-h-[128px] mt-[55px]">
+        <div className="px-2 md:px-0 pb-2 md:mb-0 tracking-wide bg-green-light bg-no-repeat pt-4 bg-center bg-cover bg-[url('../assets/event/event-banner.svg')] min-h-[128px] mt-[55px]">
           <h2 className="text-white text-[40px] font-bold text-center mb-1">
             特寵活動不能錯過
           </h2>
