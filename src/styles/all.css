@@ -15,19 +15,23 @@
   scroll-behavior: smooth;
   /* outline: 1px solid #000; */
 }
+
 body {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   overflow-x: hidden;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
   vertical-align: middle;
 }
-button {
+
+button, label {
   user-select: none;
 }
+
 input::placeholder, textarea::placeholder {
   color: #A3907A;
 }
@@ -36,9 +40,11 @@ input::placeholder, textarea::placeholder {
 .placeholder-brown-dark > ::placeholder, textarea::placeholder {
   color: #543816;
 }
+
 .bg-brown-60 {
   background-color: rgba(84, 56, 22, 0.6);
 }
+
 .ellipsis-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -46,6 +52,7 @@ input::placeholder, textarea::placeholder {
   -webkit-box-orient: vertical;
   white-space: normal;
 }
+
 .ellipsis-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -53,6 +60,7 @@ input::placeholder, textarea::placeholder {
   -webkit-box-orient: vertical;
   white-space: normal;
 }
+
 .ellipsis-4 {
   overflow: hidden;
   display: -webkit-box;
@@ -71,34 +79,44 @@ input::placeholder, textarea::placeholder {
   -ms-user-select: none;
   user-select: none;
 }
+
 .line {
-  fill:none;
+  fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #543816; /* Color */
-  stroke-width:5.5;
-  stroke-linecap:round;
+  stroke: #543816;
+  /* Color */
+  stroke-width: 5.5;
+  stroke-linecap: round;
 }
+
 .ham6 .top {
   stroke-dasharray: 40 172;
 }
+
 .ham6 .middle {
   stroke-dasharray: 40 111;
 }
+
 .ham6 .bottom {
   stroke-dasharray: 40 172;
 }
+
 .ham6.active .top {
   stroke-dashoffset: -132px;
 }
+
 .ham6.active .middle {
   stroke-dashoffset: -71px;
 }
+
 .ham6.active .bottom {
   stroke-dashoffset: -132px;
 }
+
 .menu--close {
   max-height: 0;
 }
+
 .menu--open {
   max-height: 500px;
 }
@@ -107,44 +125,41 @@ input::placeholder, textarea::placeholder {
 .lightBox__scrollbar::-webkit-scrollbar {
   width: 28px;
 }
+
 .lightBox__scrollbar::-webkit-scrollbar-track {
-  background: linear-gradient(to right, 
-  transparent,
-  transparent 45%,
-  #D0CCC6 45%,
-  #D0CCC6 55%,
-  transparent 55%,
-  transparent);
+  background: linear-gradient(to right, transparent, transparent 45%, #D0CCC6 45%, #D0CCC6 55%, transparent 55%, transparent);
 }
+
 .lightBox__scrollbar--sm::-webkit-scrollbar-track {
   margin: 296px 0 20px 0;
 }
+
 .lightBox__scrollbar--md::-webkit-scrollbar-track {
   margin: 80px 0 20px 0;
 }
+
 .lightBox__scrollbar::-webkit-scrollbar-thumb {
   border-radius: 100px;
 }
+
 .lightBox__scrollbar--cyan::-webkit-scrollbar-thumb {
-  background: radial-gradient(circle at center, 
-  #93C9C8 16%,
-  transparent 16%);
-}
-.lightBox__scrollbar--green::-webkit-scrollbar-thumb {
-  background: radial-gradient(circle at center, 
-  #ABC592 8%,
-  transparent 8%);
+  background: radial-gradient(circle at center, #93C9C8 16%, transparent 16%);
 }
 
+.lightBox__scrollbar--green::-webkit-scrollbar-thumb {
+  background: radial-gradient(circle at center, #ABC592 8%, transparent 8%);
+}
 
 /* Toggle Expand */
 .toggle--click + .toggle--close {
   overflow: hidden;
   max-height: 0;
 }
+
 .toggle--click + .toggle--close .see__more {
   margin: 0 auto;
 }
+
 .toggle--click + .toggle--open {
   max-height: 500px;
 }
@@ -153,10 +168,12 @@ input::placeholder, textarea::placeholder {
 .checkbox__style {
   cursor: pointer;
 }
+
 /* Hidden Default Style */
-.checkbox__style input[type="checkbox"] {
+.checkbox__style input[type=checkbox] {
   display: none;
 }
+
 /* Checkbox Border */
 .checkbox__style .checkmark::before {
   content: "";
@@ -172,15 +189,17 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Checkbox Color */
-.checkbox--yellow input[type="checkbox"]:checked + .checkmark::before {
+.checkbox--yellow input[type=checkbox]:checked + .checkmark::before {
   background-color: #EFC141;
   outline: 1.5px solid #EFC141;
 }
-.checkbox--cyan input[type="checkbox"]:checked + .checkmark::before {
+
+.checkbox--cyan input[type=checkbox]:checked + .checkmark::before {
   background-color: #93C9C8;
   outline: 1.5px solid #93C9C8;
 }
-.checkbox--green input[type="checkbox"]:checked + .checkmark::before {
+
+.checkbox--green input[type=checkbox]:checked + .checkmark::before {
   background-color: #ABC592;
   outline: 1.5px solid #ABC592;
 }
@@ -191,39 +210,55 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Slider Style */
-input[type="range"] {
-  width: 100%; /* 可依需求調整寬度 */
-  -webkit-appearance: none; /* 重設預設樣式 */
-  background: transparent; /* 將預設軌道設為透明 */
+input[type=range] {
+  width: 100%;
+  /* 可依需求調整寬度 */
+  -webkit-appearance: none;
+  /* 重設預設樣式 */
+  background: transparent;
+  /* 將預設軌道設為透明 */
 }
+
 /* Slider Thumb */
-input[type="range"]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
   position: relative;
-  transform: translateY(-7.5px); /* 滑塊位置 */
-  width: 20px; /* 滑塊寬度 */
-  height: 20px; /* 滑塊高度 */
-  background-color: #A3907A; /* 滑塊顏色 */
-  cursor: pointer; /* 滑過時的指標形狀 */
-  border-radius: 50%; /* 圓形滑塊 */
+  transform: translateY(-7.5px);
+  /* 滑塊位置 */
+  width: 20px;
+  /* 滑塊寬度 */
+  height: 20px;
+  /* 滑塊高度 */
+  background-color: #A3907A;
+  /* 滑塊顏色 */
+  cursor: pointer;
+  /* 滑過時的指標形狀 */
+  border-radius: 50%;
+  /* 圓形滑塊 */
   -webkit-appearance: none;
   appearance: none;
   transition: all 0.2s;
 }
+
 /* Slider Track */
-input[type="range"]::-webkit-slider-runnable-track {
+input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
-  background-color: #eee; /* 軌道顏色 */
-  border-radius: 5px; /* 軌道圓角 */
+  background-color: #eee;
+  /* 軌道顏色 */
+  border-radius: 5px;
+  /* 軌道圓角 */
 }
+
 /* Range Color */
-.range--yellow input[type="range"]::-webkit-slider-runnable-track {
+.range--yellow input[type=range]::-webkit-slider-runnable-track {
   background-color: #EFC141;
 }
-.range--cyan input[type="range"]::-webkit-slider-runnable-track {
+
+.range--cyan input[type=range]::-webkit-slider-runnable-track {
   background-color: #4D9895;
 }
-.range--green input[type="range"]::-webkit-slider-runnable-track {
+
+.range--green input[type=range]::-webkit-slider-runnable-track {
   background-color: #ABC592;
 }
 
@@ -232,6 +267,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   position: relative;
   overflow: hidden;
 }
+
 .scroll__ball {
   position: absolute;
   top: 0;
@@ -241,6 +277,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   opacity: 0;
   animation: scroll-ball 4s ease-out infinite;
 }
+
 @keyframes scroll-ball {
   0% {
     right: -10px;
@@ -261,11 +298,11 @@ input[type="range"]::-webkit-slider-runnable-track {
     right: 90px;
   }
 }
-
 /* Move Ball */
 .move {
   position: relative;
 }
+
 .move__ball {
   position: absolute;
   top: 8px;
@@ -275,14 +312,17 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 50%;
   transition: all 0.5s ease-out;
 }
+
 .move:hover .move__ball {
   right: -13px;
   background-color: #91AF74;
   transform: scale(1.2);
 }
+
 .move__text {
   transition: all 0.5s ease-out;
 }
+
 .move:hover .move__text {
   color: white;
 }
@@ -291,6 +331,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 .nav__list {
   position: relative;
 }
+
 .nav__list__link::after {
   content: "";
   display: block;
@@ -302,10 +343,12 @@ input[type="range"]::-webkit-slider-runnable-track {
   right: 0;
   transition: all 0.3s;
 }
+
 .nav__list__link:hover::after {
   width: 100%;
   left: 0;
 }
+
 .nav__list__menu {
   width: 125%;
   position: absolute;
@@ -317,6 +360,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   max-height: 0;
   transition: all 0.5s;
 }
+
 .nav__list__link:hover + .nav__list__menu, .nav__list__menu:hover {
   max-height: 300px;
 }
@@ -325,9 +369,11 @@ input[type="range"]::-webkit-slider-runnable-track {
 .zoom__slow {
   animation: zoom 3s ease-in-out infinite alternate;
 }
+
 .zoom__fast {
   animation: zoom 2s ease-in infinite alternate;
 }
+
 @keyframes zoom {
   0% {
     transform: scale(0.7);
@@ -336,15 +382,16 @@ input[type="range"]::-webkit-slider-runnable-track {
     transform: scale(1);
   }
 }
-
 /* Auto Scroll Card */
 .auto__scroll {
   animation: auto-scroll 30s linear infinite;
   animation-direction: alternate;
 }
+
 .auto__scroll:hover {
   animation-play-state: paused;
 }
+
 @keyframes auto-scroll {
   0% {
     transform: translateX(0);
