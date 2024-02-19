@@ -320,12 +320,12 @@ export default function StoreContent() {
           modules={[Autoplay, Pagination, Navigation]}
           className="w-full mb-4 mySwiper mainswp-btn"
           breakpoints={{
-            0: {
+            360: {
               slidesPerView: 1,
               spaceBetween: 30,
             },
             390: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 30,
             },
             768: {
@@ -425,7 +425,7 @@ export default function StoreContent() {
               onSwiper={setSwiperRef}
               slidesPerView={3}
               centeredSlides={false}
-              spaceBetween={-30}
+              spaceBetween={-20}
               pagination={{
                 type: "custom",
               }}
@@ -482,10 +482,10 @@ export default function StoreContent() {
             <img
               src={plate}
               alt="plate-1"
-              className=" absolute right-[130px] top-20"
+              className=" absolute right-[130px] top-20 2xl:right-[260px]"
             />
           </div>
-          <div className="relative mx-auto max-w-[778px] border-solid border-2 rounded-[30px] bg-white mt-[68px] border-brown-normal pb-[33px]">
+          <div className="relative mx-1 xl:mx-auto max-w-[778px] border-solid border-2 rounded-[30px] bg-white mt-[68px] border-brown-normal pb-[33px]">
             {/*Selector*/}
             <form action="" className="justify-center text-center">
               <div className="relative mx-[68px]">
@@ -495,7 +495,7 @@ export default function StoreContent() {
                   className=" focus-within:placeholder-opacity-20 w-full py-2 text-base text-center outline-none placeholder-brown-dark rounded-full text-brown-dark bg-yellow-light mt-7"
                 />
                 <img
-                  className="absolute cursor-pointer hover:scale-125 bottom-[10px] left-[10%] sm:left-[25%] md:left-[30%]"
+                  className="absolute cursor-pointer hover:scale-125 bottom-[10px] left-[8%] sm:left-[25%] md:left-[30%]"
                   src={searchIcon}
                   alt="search"
                 />

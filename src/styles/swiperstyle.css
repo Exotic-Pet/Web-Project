@@ -12,6 +12,11 @@
 .swp > .swiper-wrapper {
   padding-left: 45px;
 }
+@media (max-width:390px) {
+  .swp > .swiper-wrapper {
+    padding-left: 27px;
+  }
+}
 .swp > .swiper-button-prev {
   background-image: url("../assets/eventcontent/button-prev.svg");
   translate: -10px 0;
@@ -41,7 +46,7 @@
 .mainswp-btn > .swiper-wrapper > .swiper-slide-next {
   opacity: 0.5;
 }
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   .mainswp-btn > .swiper-button-prev {
     left: 0;
   }
@@ -75,6 +80,11 @@
   /* border: 1px solid #000; */
   /* position: relative; */
   padding-left: 33px;
+}
+@media (max-width: 768px) {
+  .mg{
+    padding-left: 80px;
+  }
 }
 .mg a {
   display: block;
