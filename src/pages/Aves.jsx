@@ -1,9 +1,23 @@
+import { Link } from 'react-router-dom';
 import React, {useState} from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 import searchIcon from '../assets/store/search.svg';
 import arrowDown from '../assets/reptile/arrow-down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
+import parrotLg from '../assets/bird/parrot/sample1.jpg';
+import parrotMd from '../assets/bird/parrot/sample2.jfif';
+import parrotSm from '../assets/bird/parrot/sample3.jpg';
+//CustomCSS
+import "../styles/swiperstyle.css";
 
 export default function Aves() {
+    const [swiperRef, setSwiperRef] = useState(null);
+
     const [isParrotExpand, setIsParrotExpand] = useState(false);
 
     const handlerParrotToggle = () => setIsParrotExpand(!isParrotExpand);
@@ -11,10 +25,43 @@ export default function Aves() {
     const toggleExpandStyle = (type) => (type ? "toggle--open" : "toggle--close");
     const toggleArrowState = (expandState) => (expandState ? "-rotate-180" : "");
 
+    const parrotL = [
+        {
+            id:"1",
+            bgimg: parrotLg ,
+            title:"大型鸚鵡",
+        },
+        {
+            id:"2",
+            bgimg: parrotLg ,
+            title:"大型鸚鵡",
+        },
+        {
+            id:"3",
+            bgimg: parrotLg ,
+            title:"大型鸚鵡",
+        },
+        {
+            id:"4",
+            bgimg: parrotLg ,
+            title:"大型鸚鵡",
+        },
+        {
+            id:"5",
+            bgimg: parrotLg ,
+            title:"大型鸚鵡",
+        },
+        {
+            id:"6",
+            bgimg: parrotLg ,
+            title:"大型鸚鵡",
+        },
+    ]
+
     return (
         <>
-            <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
-                <aside className="col-span-3 mt-9">
+            <main className="container xl:grid justify-center xl:grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
+                <aside className="xl:col-span-3 mt-9 mx-6 xl:mx-0">
                     {/*Search Bar*/}
                     <form action="" className="flex justify-around">
                         <div className="relative">
@@ -53,165 +100,295 @@ export default function Aves() {
                         </ul>
                     </form>
                 </aside>
-                <section className="col-span-9 tracking-wide">
+                <section className="xl:col-span-9 tracking-wide mt-4 xl:mt-0">
                     {/*Parrot*/}
                     <div className="flex justify-between">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
-                            <div className="flex mx-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
+                            <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
                             </div>
-                            <h2 className="text-xl font-bold mr-[109px] text-brown-dark">鳥類</h2>
+                            <h2 className="text-xl font-bold text-brown-dark">鳥類</h2>
                         </div>
                         <div className="w-[121px] h-[58px] bg-cyan-dark rounded-t-[20px] pt-4 mr-[52px]">
                             <h2 className="text-xl font-bold text-center text-white">鸚鵡</h2>
                         </div>
                     </div>
-                    <div className="bg-cyan-normal rounded-[22px] rounded-tl-none pt-[45px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-cyan-normal rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-cyan-dark">大型鸚鵡</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-cyan-dark whitespace-nowrap">大型鸚鵡</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">大型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-cyan-dark">大型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-cyan-dark">大型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-cyan-dark">大型鸚鵡</h4>
-                            </div>
-                        </div>
-                        <div className="flex justify-center mx-[93px] my-6">
-                            <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {parrotL.map((image,id) =>(
+                                <SwiperSlide className='' key={id}>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <div className="flex justify-center xl:mx-[93px] my-6">
+                            <figure className="flex justify-center bg-white gap-x-3 mr-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                                 <h3 className="text-xl font-bold text-cyan-dark">中型鸚鵡</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">中型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-cyan-dark">中型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-cyan-dark">中型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-cyan-dark">中型鸚鵡</h4>
-                            </div>
-                        </div>
-                        <div className="flex justify-center mx-[93px] my-6">
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {parrotL.map((image,id) =>(
+                                <SwiperSlide className='' key={id}>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-cyan-dark">小型鸚鵡</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-cyan-dark whitespace-nowrap">小型鸚鵡</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample3.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">小型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample3.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">小型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample3.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">小型鸚鵡</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/parrot/sample3.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">小型鸚鵡</h4>
-                            </div>
-                        </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {parrotL.map((image,id) =>(
+                                <SwiperSlide className='' key={id}>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                     {/*Sparrow*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex justify-between items-center rounded-t-[20px]">
-                            <div className="flex ml-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
+                            <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
                             </div>
-                            <h2 className="text-xl font-bold mr-[109px] text-brown-dark">鳥類</h2>
+                            <h2 className="text-xl font-bold text-brown-dark">鳥類</h2>
                         </div>
                         <div className="w-[121px] h-[58px] bg-cyan-dark rounded-t-[20px] pt-4 mr-[52px]">
                             <h2 className="text-xl font-bold text-center text-white">雀科</h2>
                         </div>
                     </div>
-                    <div className="bg-cyan-normal rounded-[22px] rounded-tl-none pt-[45px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-cyan-normal rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-cyan-dark">雀科</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-cyan-dark whitespace-nowrap">雀科</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sparrow/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">雀科</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sparrow/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">雀科</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sparrow/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">雀科</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sparrow/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">雀科</h4>
-                            </div>
-                        </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {parrotL.map((image,id) =>(
+                                <SwiperSlide className='' key={id}>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                     {/*Other*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex justify-between items-center rounded-t-[20px]">
-                            <div className="flex ml-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
+                            <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
                             </div>
-                            <h2 className="text-xl font-bold mr-[109px] text-brown-dark">鳥類</h2>
+                            <h2 className="text-xl font-bold text-brown-dark">鳥類</h2>
                         </div>
                         <div className="w-[121px] h-[58px] bg-cyan-dark rounded-t-[20px] pt-4 mr-[52px]">
                             <h2 className="text-xl font-bold text-center text-white">其他</h2>
                         </div>
                     </div>
-                    <div className="bg-cyan-normal rounded-[22px] rounded-tl-none pt-[45px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-cyan-normal rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]"/>
-                                    <h3 className="text-xl font-bold text-cyan-dark">其他</h3>
-                                    <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]"/>
-                                    </figure>
-                                </div>
-                                <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                                    <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sample1.jfif')] bg-no-repeat">
-                                        <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">鳥類</h4>
-                                    </div>
-                                    <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sample1.jfif')] bg-no-repeat">
-                                        <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">鳥類</h4>
-                                    </div>
-                                    <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sample1.jfif')] bg-no-repeat">
-                                        <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">鳥類</h4>
-                                    </div>
-                                    <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/bird/sample1.jfif')] bg-no-repeat">
-                                        <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">鳥類</h4>
-                                    </div>
-                                </div>
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-cyan-dark whitespace-nowrap">其他</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                            </figure>
                         </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {parrotL.map((image,id) =>(
+                                <SwiperSlide className='' key={id}>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </section>
             </main>
         </>

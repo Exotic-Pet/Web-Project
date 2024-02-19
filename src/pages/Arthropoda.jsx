@@ -1,9 +1,21 @@
+import { Link } from 'react-router-dom';
 import React,{useState} from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 import searchIcon from '../assets/store/search.svg';
 import arrowDown from '../assets/reptile/arrow-down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
+import spider from '../assets/arthropods/tarantula/sample1.webp';
+//CustomCSS
+import "../styles/swiperstyle.css";
 
 export default function Arthropoda() {
+    const [swiperRef, setSwiperRef] = useState(null);
+
     const [isSpiderExpand, setIsSpiderExpand] = useState(false);
     const [isScorpionExpand, setIsScorpionExpand] = useState(false);
 
@@ -13,10 +25,43 @@ export default function Arthropoda() {
     const toggleExpandStyle = (type) => (type ? "toggle--open" : "toggle--close");
     const toggleArrowState = (expandState) => (expandState ? "-rotate-180" : "");
 
+    const tarantula =[
+        {
+            id:"1",
+            bgimg: spider ,
+            title:"地棲捕鳥蛛",
+        },
+        {
+            id:"2",
+            bgimg: spider ,
+            title:"地棲捕鳥蛛",
+        },
+        {
+            id:"3",
+            bgimg: spider ,
+            title:"地棲捕鳥蛛",
+        },
+        {
+            id:"4",
+            bgimg: spider ,
+            title:"地棲捕鳥蛛",
+        },
+        {
+            id:"5",
+            bgimg: spider ,
+            title:"地棲捕鳥蛛",
+        },
+        {
+            id:"6",
+            bgimg: spider ,
+            title:"地棲捕鳥蛛",
+        },
+    ]
+
     return (
         <>
-            <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
-                <aside className="col-span-3 mt-9">
+            <main className="container xl:grid justify-center xl:grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
+                <aside className="xl:col-span-3 mt-9 mx-6 xl:mx-0">
                     {/*Search Bar*/}
                     <form action="" className="flex justify-around">
                         <div className="relative">
@@ -65,11 +110,11 @@ export default function Arthropoda() {
                         </ul>
                     </form>
                 </aside>
-                <section className="col-span-9 tracking-wide">
+                <section className="xl:col-span-9 tracking-wide mt-4 xl:mt-0">
                     {/*tarantula*/}
                     <div className="flex justify-between">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
-                            <div className="flex mx-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
+                        <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
@@ -80,78 +125,156 @@ export default function Arthropoda() {
                             <h2 className="text-xl font-bold text-center text-white">捕鳥蛛</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-green-dark">地棲捕鳥蛛</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-green-dark whitespace-nowrap">地棲捕鳥蛛</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-[url('../assets/arthropods/tarantula/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">地棲捕鳥蛛</h4>
-                            </div>
-                        </div>
-                        <div className="flex justify-center mx-[93px] my-6">
-                            <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {tarantula.map((image,id) =>(
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <div className="flex justify-center xl:mx-[93px] my-6">
+                            <figure className="flex justify-center bg-white gap-x-3 mr-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                                 <h3 className="text-xl font-bold text-green-dark">樹棲捕鳥蛛</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-[url('../assets/arthropods/tarantula/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">樹棲捕鳥蛛</h4>
-                            </div>
-                        </div>
-                        <div className="flex justify-center mx-[93px] my-6">
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {tarantula.map((image,id) =>(
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-green-dark">穴居捕鳥蛛</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-green-dark whitespace-nowrap">穴居捕鳥蛛</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/tarantula/sample3.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">穴居捕鳥蛛</h4>
-                            </div>
-                        </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {tarantula.map((image,id) =>(
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                     {/*scorpion*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
-                            <div className="flex mx-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
+                        <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
@@ -162,56 +285,108 @@ export default function Arthropoda() {
                             <h2 className="text-xl font-bold text-center text-white">蠍子</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-green-dark">雨林蠍子</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-green-dark whitespace-nowrap">雨林蠍子</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample1.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">雨林蠍子</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample1.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">雨林蠍子</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample1.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">雨林蠍子</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-[url('../assets/arthropods/scorpion/sample1.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 opacity-0 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 text-center rounded-full bg-green-dark">雨林蠍子</h4>
-                            </div>
-                        </div>
-                        <div className="flex justify-center mx-[93px] my-6">
-                            <figure className="flex pl-[313px] bg-white gap-x-3 mr-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {tarantula.map((image,id) =>(
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <div className="flex justify-center xl:mx-[93px] my-6">
+                            <figure className="flex justify-center bg-white gap-x-3 mr-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                                 <h3 className="text-xl font-bold text-green-dark">沙漠蠍子</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">沙漠蠍子</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">沙漠蠍子</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">沙漠蠍子</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/scorpion/sample2.jfif')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">沙漠蠍子</h4>
-                            </div>
-                        </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {tarantula.map((image,id) =>(
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                     {/*Centipede*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-brown-light flex items-center rounded-t-[20px]">
-                            <div className="flex mx-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
+                        <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
@@ -222,34 +397,60 @@ export default function Arthropoda() {
                             <h2 className="text-xl font-bold text-center text-white">蜈蚣</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-green-dark">蜈蚣</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-green-dark whitespace-nowrap">蜈蚣</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/centipede/sample1.jpg')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">蜈蚣</h4>
-                            </div>
-                        </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {tarantula.map((image,id) =>(
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                     {/*Millipede*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
-                            <div className="flex mx-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]">
+                        <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
@@ -260,29 +461,55 @@ export default function Arthropoda() {
                             <h2 className="text-xl font-bold text-center text-white">馬陸</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
-                            <figure className="flex pl-[264px] bg-white gap-x-3 ml-[18px] rounded-[10px] h-[41px] w-full items-center">
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
-                                <h3 className="text-xl font-bold text-green-dark">馬陸</h3>
-                                <img src={titleDeco} alt="deco" className="h-[21px] w-[21px]" />
+                            <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
+                                <h3 className="text-xl font-bold text-green-dark whitespace-nowrap">馬陸</h3>
+                                <img src={titleDeco} alt="deco" className="w-[21px]" />
                             </figure>
                         </div>
-                        <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/arthropods/millipede/sample1.webp')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">馬陸</h4>
-                            </div>
-                        </div>
+                        <Swiper
+                        onSwiper={setSwiperRef}
+                        slidesPerView={4}
+                        centeredSlides={false}
+                        spaceBetween={10}
+                        pagination={{
+                            type: 'custom',
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
+                            390:{
+                                slidesPerView: 1,
+                            },
+                            768:{
+                                slidesPerView: 2,
+                            },
+                            1024:{
+                                slidesPerView: 3,
+                            },
+                            1280:{
+                                slidesPerView: 4,
+                                
+                            }
+                        }}
+                        >
+                            {tarantula.map((image,id) =>(
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
+                                    <Link to="intropage">
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                            <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
+                                        </div>
+                                    </Link>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </section>
             </main>

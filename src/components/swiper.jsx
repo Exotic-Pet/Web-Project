@@ -66,6 +66,10 @@ export default function swiper() {
                 modules={[Pagination, Navigation]}
                 className="mb-4 mySwiper swp mxa-w-[900px]"
                 breakpoints={{
+                    360:{
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                    },
                     390:{
                         slidesPerView: 1,
                         spaceBetween: 0,

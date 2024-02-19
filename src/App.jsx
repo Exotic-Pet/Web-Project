@@ -34,8 +34,11 @@ export default function App() {
               <Route path="amphibiansAndreptile" element={<AmphibiansAndReptile />} />
               <Route path="amphibiansAndreptile/intropage" element={<IntroPage />} />
               <Route path="leporidaeAndmuriodea" element={<LeporidaeAndMuriodea />} />
+              <Route path="leporidaeAndmuriodea/intropage" element={<IntroPage />} />
               <Route path="aves" element={<Aves />} />
+              <Route path="aves/intropage" element={<IntroPage />} />
               <Route path="arthropoda" element={<Arthropoda />} />
+              <Route path="arthropoda/intropage" element={<IntroPage />} />
             </Route>
             <Route path="event" element={<EventPage />} />
             <Route path="gathering" element={<Gathering />} />

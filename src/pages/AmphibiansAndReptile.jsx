@@ -7,7 +7,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import searchIcon from '../assets/store/search.svg';
-import arrowTop from '../assets/reptile/arrow-top.svg';
 import arrowDown from '../assets/reptile/arrow-down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
 //image for cards
@@ -85,8 +84,8 @@ export default function AmphibiansAndReptile() {
 
     return (
         <>
-            <main className="container grid justify-center grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
-                <aside className="col-span-3 mt-9 -translate-x-[360px] md:translate-x-0">
+            <main className="container xl:grid justify-center xl:grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
+                <aside className="xl:col-span-3 mt-9 mx-6 xl:mx-0">
                     <div className='sticky top-12'>
                         {/*Search Bar*/}
                         <form action="" className="flex justify-around mx-auto">
@@ -148,11 +147,11 @@ export default function AmphibiansAndReptile() {
                         </form>
                     </div>
                 </aside>
-                <section className="col-span-9 tracking-wide">
+                <section className="xl:col-span-9 tracking-wide mt-4 xl:mt-0">
                     {/*gecko*/}
                     <div className="flex justify-between">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]" id='groundGecko'>
-                            <div className="flex mx-7">
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex items-center rounded-t-[20px]" id='groundGecko'>
+                            <div className="flex mx-5 xl:mx-7">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
                                 <div className="w-3 h-3 rounded-full bg-traffic-green"></div>
@@ -160,11 +159,11 @@ export default function AmphibiansAndReptile() {
                             <h2 className="text-xl font-bold text-brown-dark">兩棲爬蟲類</h2>
                         </div>
                         <div className="w-[121px] h-[58px] bg-green-normal rounded-t-[20px] pt-4 mr-[52px]">
-                            <h2 className="text-xl font-bold text-center text-white">守宮</h2>
+                            <h2 className="text-xl font-semibold xl:font-bold text-center text-white">守宮</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                             <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
@@ -184,6 +183,9 @@ export default function AmphibiansAndReptile() {
                         modules={[Pagination, Navigation]}
                         className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -209,7 +211,7 @@ export default function AmphibiansAndReptile() {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="flex justify-center mx-[93px] my-6">
+                        <div className="flex justify-center xl:mx-[93px] my-6">
                             <figure className="flex justify-center bg-white gap-x-3 mr-[18px] rounded-[10px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
                                 <h3 className="text-xl font-bold text-green-dark">樹棲守宮</h3>
@@ -221,14 +223,17 @@ export default function AmphibiansAndReptile() {
                         onSwiper={setSwiperRef}
                         slidesPerView={4}
                         centeredSlides={false}
-                        spaceBetween={5}
+                        spaceBetween={10}
                         pagination={{
                             type: 'custom',
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper max-w-[900px] mg"
+                        className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -245,33 +250,19 @@ export default function AmphibiansAndReptile() {
                         }}
                         >
                             {geckGrounded.map((image,id) =>(
-                                <SwiperSlide className='' key={id}>
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
-                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
                                         </div>
                                     </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        {/* <div className="flex justify-center mx-8 px-14 pb-[54px] gap-x-[22px]">
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample1.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">樹棲守宮</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample2.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">樹棲守宮</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample3.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">樹棲守宮</h4>
-                            </div>
-                            <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-[url('../assets/reptile/sample4.png')] bg-no-repeat">
-                                <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">樹棲守宮</h4>
-                            </div>
-                        </div> */}
                     </div>
                     {/*lizard*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex justify-around items-center rounded-t-[20px]" id='groundedLizard'>
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex justify-around items-center rounded-t-[20px]" id='groundedLizard'>
                             <div className="flex">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
@@ -280,11 +271,11 @@ export default function AmphibiansAndReptile() {
                             <h2 className="text-xl font-bold text-brown-dark">兩棲爬蟲類</h2>
                         </div>
                         <div className="w-[220px] h-[58px] bg-green-normal rounded-t-[20px] pt-4 mr-[52px]">
-                            <h2 className="text-xl font-bold text-center text-white">蜥蜴(變色龍)</h2>
+                            <h2 className="text-xl xl:font-bold font-semibold text-center text-white">蜥蜴(變色龍)</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px]">
-                        <div className="flex justify-center mx-[93px] mb-6">
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6">
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                             <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
@@ -296,14 +287,17 @@ export default function AmphibiansAndReptile() {
                         onSwiper={setSwiperRef}
                         slidesPerView={4}
                         centeredSlides={false}
-                        spaceBetween={5}
+                        spaceBetween={10}
                         pagination={{
                             type: 'custom',
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper max-w-[900px] mg"
+                        className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -320,16 +314,16 @@ export default function AmphibiansAndReptile() {
                         }}
                         >
                             {geckGrounded.map((image,id) =>(
-                                <SwiperSlide className='' key={id} id='arborealLizard'>
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
-                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
                                         </div>
                                     </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="flex justify-center mx-[93px] my-6" >
+                        <div className="flex justify-center xl:mx-[93px] my-6" >
                             <figure className="flex bg-white gap-x-3 mr-[18px] rounded-[10px] justify-center w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
                                 <h3 className="text-xl font-bold text-green-dark">樹棲蜥蜴</h3>
@@ -341,14 +335,17 @@ export default function AmphibiansAndReptile() {
                         onSwiper={setSwiperRef}
                         slidesPerView={4}
                         centeredSlides={false}
-                        spaceBetween={5}
+                        spaceBetween={10}
                         pagination={{
                             type: 'custom',
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper max-w-[900px] mg"
+                        className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -365,9 +362,9 @@ export default function AmphibiansAndReptile() {
                         }}
                         >
                             {geckGrounded.map((image,id) =>(
-                                <SwiperSlide className='' key={id}>
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
-                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
                                         </div>
                                     </Link>
@@ -377,7 +374,7 @@ export default function AmphibiansAndReptile() {
                     </div>
                     {/*turtle*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex justify-around items-center rounded-t-[20px]" id='groundedTurtle'>
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex justify-around items-center rounded-t-[20px]" id='groundedTurtle'>
                             <div className="flex">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
@@ -386,11 +383,11 @@ export default function AmphibiansAndReptile() {
                             <h2 className="text-xl font-bold text-brown-dark">兩棲爬蟲類</h2>
                         </div>
                         <div className="w-[121px] h-[58px] bg-green-normal rounded-t-[20px] pt-4 mr-[52px]">
-                            <h2 className="text-xl font-bold text-center text-white">烏龜</h2>
+                            <h2 className="text-xl xl:font-bold font-semibold text-center text-white">烏龜</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px]">
-                        <div className="flex justify-center mx-[93px] mb-6" >
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6" >
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                             <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
@@ -402,14 +399,17 @@ export default function AmphibiansAndReptile() {
                         onSwiper={setSwiperRef}
                         slidesPerView={4}
                         centeredSlides={false}
-                        spaceBetween={5}
+                        spaceBetween={10}
                         pagination={{
                             type: 'custom',
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper max-w-[900px] mg"
+                        className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -426,16 +426,16 @@ export default function AmphibiansAndReptile() {
                         }}
                         >
                             {geckGrounded.map((image,id) =>(
-                                <SwiperSlide className='' key={id} id='waterTurtle'>
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
-                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
                                         </div>
                                     </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="flex justify-center mx-[93px] my-6">
+                        <div className="flex justify-center xl:mx-[93px] my-6">
                             <figure className="flex justify-center bg-white gap-x-3 mr-[18px] rounded-[10px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
                                 <h3 className="text-xl font-bold text-green-dark">水龜</h3>
@@ -447,14 +447,17 @@ export default function AmphibiansAndReptile() {
                         onSwiper={setSwiperRef}
                         slidesPerView={4}
                         centeredSlides={false}
-                        spaceBetween={5}
+                        spaceBetween={10}
                         pagination={{
                             type: 'custom',
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper max-w-[900px] mg"
+                        className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -471,9 +474,9 @@ export default function AmphibiansAndReptile() {
                         }}
                         >
                             {geckGrounded.map((image,id) =>(
-                                <SwiperSlide className='' key={id}>
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
-                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
                                         </div>
                                     </Link>
@@ -483,7 +486,7 @@ export default function AmphibiansAndReptile() {
                     </div>
                     {/*snake*/}
                     <div className="flex justify-between mt-6">
-                        <div className="w-[281px] h-[58px] bg-gray-dark flex justify-around items-center rounded-t-[20px]" id='groundedSnake'>
+                        <div className="mr-3 xl:mr-0 w-[281px] h-[58px] bg-gray-dark flex justify-around items-center rounded-t-[20px]" id='groundedSnake'>
                             <div className="flex">
                                 <div className="w-3 h-3 rounded-full bg-traffic-red"></div>
                                 <div className="w-3 h-3 mx-2 rounded-full bg-traffic-yellow"></div>
@@ -492,11 +495,11 @@ export default function AmphibiansAndReptile() {
                             <h2 className="text-xl font-bold text-brown-dark">兩棲爬蟲類</h2>
                         </div>
                         <div className="w-[121px] h-[58px] bg-green-normal rounded-t-[20px] pt-4 mr-[52px]">
-                            <h2 className="text-xl font-bold text-center text-white">蛇</h2>
+                            <h2 className="text-xl xl:font-bold font-semibold text-center text-white">蛇</h2>
                         </div>
                     </div>
-                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px]">
-                        <div className="flex justify-center mx-[93px] mb-6" >
+                    <div className="bg-green-light rounded-[22px] rounded-tl-none pt-[45px] pb-[54px] px-4 lg:px-0">
+                        <div className="flex justify-center xl:mx-[93px] mb-6" >
                             <div className="w-[31px] h-[41px] bg-white rounded-[10px]"></div>
                             <figure className="flex justify-center bg-white gap-x-3 ml-[18px] rounded-[10px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
@@ -508,14 +511,17 @@ export default function AmphibiansAndReptile() {
                         onSwiper={setSwiperRef}
                         slidesPerView={4}
                         centeredSlides={false}
-                        spaceBetween={5}
+                        spaceBetween={10}
                         pagination={{
                             type: 'custom',
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper max-w-[900px] mg"
+                        className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -532,16 +538,16 @@ export default function AmphibiansAndReptile() {
                         }}
                         >
                             {geckGrounded.map((image,id) =>(
-                                <SwiperSlide className='' key={id} id='arborealSnake'>
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
-                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
                                         </div>
                                     </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="flex justify-center mx-[93px] my-6" >
+                        <div className="flex justify-center xl:mx-[93px] my-6" >
                             <figure className="flex justify-center bg-white gap-x-3 mr-[18px] rounded-[10px] w-full items-center">
                                 <img src={titleDeco} alt="deco" className="w-[21px]" />
                                 <h3 className="text-xl font-bold text-green-dark">樹棲蛇</h3>
@@ -553,14 +559,17 @@ export default function AmphibiansAndReptile() {
                         onSwiper={setSwiperRef}
                         slidesPerView={4}
                         centeredSlides={false}
-                        spaceBetween={5}
+                        spaceBetween={10}
                         pagination={{
                             type: 'custom',
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper max-w-[900px] mg"
+                        className="mb-4 mySwiper mg  max-w-[905px]"
                         breakpoints={{
+                            360:{
+                                slidesPerView: 1,
+                            },
                             390:{
                                 slidesPerView: 1,
                             },
@@ -577,9 +586,9 @@ export default function AmphibiansAndReptile() {
                         }}
                         >
                             {geckGrounded.map((image,id) =>(
-                                <SwiperSlide className='' key={id}>
+                                <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
-                                        <div className="group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-green-dark">{image.title}</h4>
                                         </div>
                                     </Link>
