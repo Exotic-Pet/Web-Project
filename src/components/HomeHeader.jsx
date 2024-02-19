@@ -10,7 +10,7 @@ import calendarGreen from "../assets/index/calendar-green.svg";
 import introGreen from "../assets/index/intro-green.svg";
 import peopleGreen from "../assets/index/people-green.svg";
 import msgGreen from "../assets/index/msg-green.svg";
-import accountGreen from "../assets/layout/account-green.svg";
+import accountBrown from "../assets/layout/account-brown.svg";
 import googlePlay from "../assets/index/google-play.png";
 import appStore from "../assets/index/app-store.png";
 
@@ -22,6 +22,7 @@ import turtleImg from "../assets/index/turtle.svg";
 import duckImg from "../assets/index/duck.svg";
 import bannerBg from "../assets/index/banner-bg.svg";
 import bannerImg from "../assets/index/banner.svg";
+import phoneBanner from "../assets/index/phone-banner.svg";
 
 export default function HomeHeader() {
   AosInit();
@@ -70,79 +71,94 @@ export default function HomeHeader() {
           {/* Expand Menu */}
           <ul
             className={`${
-              isMenuActive ? "menu--open" : "menu--close"
-            } overflow-hidden absolute top-[92px] left-0 right-0 bg-brown-dark tracking-wide ease-out duration-500 xl:hidden`}
+              isMenuActive ? "menu--open" : "menu--close border-transparent"
+            } overflow-hidden absolute top-[92px] right-0 z-10 rounded-bl-[20px] border-2 backdrop-blur-xl tracking-wide ease-out duration-300 xl:hidden`}
           >
             <li>
               <Link
                 to="/page/store-overview"
-                className="flex gap-x-2 justify-center items-center py-4 mt-4 group"
+                className="flex gap-x-3 items-center px-10 py-2 mt-2 group"
                 onClick={() => setIsMenuActive(false)}
               >
-                <img src={homeGreen} alt="icon" className="w-10" />
-                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                <img src={homeGreen} alt="icon" className="max-w-[52px]" />
+                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
                   特寵探店
+                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                    Exotic pet stores
+                  </span>
                 </h2>
               </Link>
             </li>
             <li>
               <Link
                 to="/page/event"
-                className="flex gap-x-2 justify-center items-center py-4 group"
+                className="flex gap-x-3 items-center py-2 px-10 group"
                 onClick={() => setIsMenuActive(false)}
               >
-                <img src={calendarGreen} alt="icon" className="w-10" />
-                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                <img src={calendarGreen} alt="icon" className="max-w-[52px]" />
+                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
                   特寵活動
+                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                    Exotic pet event
+                  </span>
                 </h2>
               </Link>
             </li>
             <li>
               <Link
                 to="/page/exotic-overview"
-                className="flex gap-x-2 justify-center items-center py-4 group"
+                className="flex gap-x-3 items-center py-2 px-10 group"
                 onClick={() => setIsMenuActive(false)}
               >
-                <img src={introGreen} alt="icon" className="w-10" />
-                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                <img src={introGreen} alt="icon" className="max-w-[52px]" />
+                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
                   特寵介紹
+                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                    Introduction
+                  </span>
                 </h2>
               </Link>
             </li>
             <li>
               <Link
                 to="/page/gathering"
-                className="flex gap-x-2 justify-center items-center py-4 group"
+                className="flex gap-x-3 items-center py-2 px-10 group"
                 onClick={() => setIsMenuActive(false)}
               >
-                <img src={peopleGreen} alt="icon" className="w-10" />
-                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                <img src={peopleGreen} alt="icon" className="max-w-[52px]" />
+                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
                   聚會揪團
+                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                    Get-together
+                  </span>
                 </h2>
               </Link>
             </li>
             <li>
               <Link
                 to="/page/community"
-                className="flex gap-x-2 justify-center items-center py-4 group"
+                className="flex gap-x-3 items-center pt-2 pb-5 px-10 group"
                 onClick={() => setIsMenuActive(false)}
               >
-                <img src={msgGreen} alt="icon" className="w-10" />
-                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                <img src={msgGreen} alt="icon" className="max-w-[52px]" />
+                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
                   心得交流
+                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                    Forum
+                  </span>
                 </h2>
               </Link>
             </li>
-            <li>
+            <li className="max-w-[168px] mx-auto border-t-[1.5px] border-brown-light">
               <div
-                className="flex gap-x-2 justify-center items-center cursor-pointer py-4 mb-4 group"
+                className="flex gap-x-2 items-center cursor-pointer mb-4 px-3 pt-6 pb-2 group"
                 onClick={() => {
                   setSignInLightBoxState(true);
                   setIsMenuActive(false);
                 }}
               >
-                <img src={accountGreen} alt="icon" className="w-10" />
-                <h2 className="text-white text-2xl text-center group-hover:text-yellow-light">
+                <img src={accountBrown} alt="icon" className="w-[34px] ml-2" />
+                <h2 className="text-brown-dark font-semibold group-hover:text-green-dark">
                   我的帳號
                 </h2>
               </div>
@@ -151,7 +167,7 @@ export default function HomeHeader() {
         </nav>
       </header>
       {/* <!-- PC Menu & Banner --> */}
-      <div className="mt-28 xl:mt-10">
+      <div className="mt-32 xl:mt-10">
         <div className="container flex mx-auto justify-evenly">
           {/* <!-- PC Navbar --> */}
           <nav className="max-w-[180px] hidden xl:block">
@@ -261,7 +277,12 @@ export default function HomeHeader() {
           </nav>
           {/* <!-- Banner --> */}
           <figure className="relative xl:ml-[24px]">
-            <img className="xl:hidden" src={bannerImg} alt="banner" />
+            <img className="sm:hidden" src={phoneBanner} alt="phone-banner" />
+            <img
+              className="hidden sm:block xl:hidden"
+              src={bannerImg}
+              alt="banner"
+            />
             <img className="hidden xl:block" src={bannerBg} alt="banner-bg" />
             {/* <!-- Animal --> */}
             <img
@@ -307,6 +328,16 @@ export default function HomeHeader() {
               alt="duck"
             />
           </figure>
+        </div>
+        {/* <!-- Scroll Animation --> */}
+        <div className="mt-[48px] -rotate-90 mx-auto max-w-[80px] md:hidden">
+          <p className="text-[12px] font-bold text-center text-brown-dark">
+            Scroll
+          </p>
+          <div className="scroll my-[4px] pb-2">
+            <div className="my-1 border-b-2 scroll__line border-green-normal"></div>
+            <div className="scroll__ball bg-brown-dark"></div>
+          </div>
         </div>
       </div>
     </>

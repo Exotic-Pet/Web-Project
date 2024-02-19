@@ -205,14 +205,14 @@ export default function HomePage() {
             <div className="flex items-end justify-between">
               {/*  <!-- News Title --> */}
               <div className="mx-auto md:mx-0">
-                <h2 className="tracking-widest text-brown-dark font-bold text-[50px]">
+                <h2 className="tracking-widest text-brown-dark font-bold text-[40px] md:text-[50px]">
                   News
-                  <br className="sm:hidden" />
-                  <span className="text-green-normal text-[40px] font-bold md:ml-4">
+                  {/* <br className="sm:hidden" /> */}
+                  <span className="text-green-normal text-[32px] md:text-[40px] font-bold md:ml-4">
                     最新消息
                   </span>
                 </h2>
-                <div className="mt-7 text-[20px] font-bold">
+                <div className="mt-4 md:mt-7 text-[20px] font-bold">
                   <button
                     className={`${
                       currentNewsType === "活動"
@@ -272,9 +272,9 @@ export default function HomePage() {
             ></img>
             {/*  <!-- Hot Info Title --> */}
             <div className="container mx-auto relative text-center font-bold tracking-wide">
-              <h2 className="text-brown-dark text-[48px]">
+              <h2 className="text-brown-dark text-[40px] md:text-[48px]">
                 Hot
-                <span className="text-cyan-dark text-[40px] tracking-widest md:ml-4">
+                <span className="text-cyan-dark text-[36px] md:text-[40px] tracking-widest ml-2 md:ml-4">
                   熱門文章
                 </span>
               </h2>
@@ -285,42 +285,42 @@ export default function HomePage() {
               <img
                 data-aos="zoom-in"
                 data-aos-delay="600"
-                className="zoom__slow absolute w-5 md:w-10 top-[50%] left-[4%] md:left-[8%]"
+                className="zoom__slow absolute w-6 md:w-10 top-[50%] left-[4%] md:left-[8%]"
                 src={deco_1}
                 alt="deco"
               />
               <img
                 data-aos="zoom-in"
                 data-aos-delay="400"
-                className="zoom__fast absolute w-5 md:w-10 top-[82%] left-[10%] md:left-[16%]"
+                className="zoom__fast absolute w-6 md:w-10 top-[82%] left-[10%] md:left-[16%]"
                 src={deco_2}
                 alt="deco"
               />
               <img
                 data-aos="zoom-in"
                 data-aos-delay="200"
-                className="zoom__slow absolute w-5 md:w-10 top-[5%] left-[14%] md:left-[20%]"
+                className="zoom__slow absolute w-6 md:w-10 -top-3 sm:top-[5%] left-[14%] md:left-[20%]"
                 src={deco_3}
                 alt="deco"
               />
               <img
                 data-aos="zoom-in"
                 data-aos-delay="200"
-                className="zoom__fast absolute w-5 md:w-10 top-0 right-[14%] md:right-[22%]"
+                className="zoom__fast absolute w-6 md:w-10 -top-2 sm:top-0 right-[14%] md:right-[22%]"
                 src={deco_4}
                 alt="deco"
               />
               <img
                 data-aos="zoom-in"
                 data-aos-delay="400"
-                className="zoom__slow absolute w-5 md:w-10 top-[80%] right-[8%] md:right-[15%]"
+                className="zoom__slow absolute w-6 md:w-10 top-[80%] right-[8%] md:right-[15%]"
                 src={deco_5}
                 alt="deco"
               />
               <img
                 data-aos="zoom-in"
                 data-aos-delay="600"
-                className="zoom__fast absolute w-5 md:w-10 top-[8%] right-[4%] md:right-[10%]"
+                className="zoom__fast absolute w-6 md:w-10 top-[8%] right-[4%] md:right-[10%]"
                 src={deco_6}
                 alt="deco"
               />
@@ -331,7 +331,7 @@ export default function HomePage() {
                 {hotArticlesData.map((article, index) => (
                   <li
                     key={index}
-                    className="w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal"
+                    className="w-[356px] md:w-[376px] sm:w-[400px] px-8 py-7 border-[3px] rounded-2xl bg-white border-cyan-normal hover:border-yellow-normal"
                   >
                     <h4 className="text-sm text-cyan-normal font-medium">
                       {article.animal}
@@ -369,31 +369,31 @@ export default function HomePage() {
           </article>
         </div>
         {/*  <!-- Follow APP Info --> */}
-        <div className="container mx-auto my-36 px-2 lg:px-0 flex gap-6 justify-evenly items-center flex-col lg:flex-row">
+        <div className="container mx-auto mt-16 mb-36 md:mt-36 px-2 lg:px-0 flex gap-6 justify-evenly items-center flex-col lg:flex-row">
           <figure data-aos="zoom-in" data-aos-duration="1500">
-            <img src={appDemo} alt="phone" />
+            <img className="max-w-[320px] md:max-w-full" src={appDemo} alt="phone" />
           </figure>
           <section
             data-aos="fade-in"
             data-aos-duration="1500"
             className="text-center"
           >
-            <h2 className="text-[40px] text-green-normal tracking-widest font-bold">
+            <h2 className="text-[34px] md:text-[40px] text-green-normal tracking-widest font-bold">
               APP瀏覽更方便
             </h2>
-            <h3 className="mt-2 text-[26px] sm:text-[30px] text-brown-dark font-bold tracking-wider">
+            <h3 className="mt-2 text-2xl md:text-[26px] sm:text-[30px] text-brown-dark font-bold tracking-wider">
               隨時關注特寵消息不錯過哦！
             </h3>
             <div className="mt-14">
               <a
                 href="https://play.google.com"
-                className="max-w-[251px] mx-auto block hover:opacity-70"
+                className="max-w-[208px] md:max-w-[251px] mx-auto block hover:opacity-70"
               >
                 <img src={googlePlay} alt="google-play" />
               </a>
               <a
                 href="https://www.apple.com/tw/app-store"
-                className="max-w-[251px] mx-auto mt-[12px] block hover:opacity-70"
+                className="max-w-[208px] md:max-w-[251px] mx-auto mt-4 md:mt-3 block hover:opacity-70"
               >
                 <img src={appStore} alt="app-store" />
               </a>
