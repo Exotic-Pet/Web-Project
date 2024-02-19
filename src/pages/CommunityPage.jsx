@@ -33,9 +33,9 @@ export default function CommunityPage() {
       <div className="bg-cyan-normal bg-no-repeat bg-center bg-[url('../assets/community/banner.svg')] min-h-[133px] mt-20"></div>
       {/*Content Info*/}
       <div className=" bg-gray-normal">
-        <main className="container justify-center mx-auto pb-32">
-          <nav className="pt-8">
-            <ul className="flex justify-center gap-x-8">
+        <main className="container justify-center mx-auto pt-7 pb-32 px-4 lg:px-0">
+          <nav className="px-[14px] py-1 overflow-x-auto whitespace-nowrap">
+            <ul className="flex lg:justify-center gap-x-8">
               <li className="pr-6 border-r border-solid border-brown-normal">
                 <h2 className="text-2xl font-bold cursor-pointer text-brown-dark hover:text-cyan-dark">
                   全部
@@ -73,7 +73,7 @@ export default function CommunityPage() {
               </li>
             </ul>
           </nav>
-          <ul className="mt-4 py-3 flex border border-solid border-brown-light rounded-[41px] bg-white gap-x-7 max-w-[760px] justify-center mx-auto">
+          <ul className="mt-4 py-3 px-3 flex border border-solid border-brown-light rounded-[41px] bg-white gap-x-7 max-w-[760px] sm:justify-center mx-auto overflow-x-auto whitespace-nowrap">
             <li>
               <h3 className="text-2xl text-brown-dark cursor-pointer hover:text-brown-normal">
                 守宮
@@ -117,7 +117,7 @@ export default function CommunityPage() {
           </div>
           <div className="container mx-auto mt-6">
             {/*容器*/}
-            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
               {/*格線*/}
               <li className="col-span-1">
                 <ul className="flex flex-col gap-4">
@@ -144,7 +144,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -153,7 +153,7 @@ export default function CommunityPage() {
                   <li
                     data-aos="fade-in"
                     data-aos-duration="1000"
-                    className=" py-[22px] bg-white w-full rounded-2xl border-cyan-normal border-[3px] hover:border-yellow-normal px-9"
+                    className="py-[22px] bg-white w-full rounded-2xl border-cyan-normal border-[3px] hover:border-yellow-normal px-9"
                   >
                     <div className="flex gap-x-[6px] justify-end">
                       <img src={unlike} alt="unlike" />
@@ -171,7 +171,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
@@ -198,7 +198,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
@@ -255,7 +255,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -339,7 +339,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
@@ -399,7 +399,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -425,7 +425,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -451,7 +451,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
@@ -507,7 +507,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
@@ -534,7 +534,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -560,7 +560,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -590,7 +590,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -674,7 +674,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
@@ -701,7 +701,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       關於倉鼠飼養
                     </h3>
-                    <img src={sample1} alt="image" className="my-3" />
+                    <img src={sample1} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       最近在社團常看到新手分享倉鼠飼養，但似乎沒有接收到正確的飼養資訊，基礎飼養上愛鼠協會官網即可，今天來分享一下大家比較少談到的科養。在一般的環境當中，
                     </p>
@@ -727,7 +727,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）
@@ -783,7 +783,7 @@ export default function CommunityPage() {
                     <h3 className="text-xl font-bold text-brown-dark">
                       兔子放風聖地推薦
                     </h3>
-                    <img src={sample2} alt="image" className="my-3" />
+                    <img src={sample2} alt="image" className="my-3 w-full" />
                     <p className="text-base text-brown-dark ellipsis-3">
                       自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅）
                       不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）

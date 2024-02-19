@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import user1 from "../assets/communitycontent/user1.png";
 import user2 from "../assets/communitycontent/user2.png";
 import user3 from "../assets/communitycontent/user3.png";
@@ -17,7 +19,14 @@ import selectbtn from "../assets/communitycontent/select-click.svg";
 import open from "../assets/communitycontent/triangle-down.svg";
 import photobtn from "../assets/communitycontent/photo-icon.svg";
 
-export default function CommunityContent({ isOpenState, setIsOpenState, toggleState }) {
+export default function CommunityContent({
+  isOpenState,
+  setIsOpenState,
+  toggleState,
+}) {
+  // State
+  const [isMsgOpen, setIsMsgOpen] = useState(false);
+  const [isOpenFeedback, setIsOpenFeedback] = useState(false);
 
   return (
     <div
@@ -25,12 +34,12 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
-        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--sm lightBox__scrollbar--cyan max-w-[90%] lg:max-w-[1064px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] px-4 lg:px-[104px] py-[30px]"
+        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--sm lightBox__scrollbar--cyan max-w-[90%] lg:max-w-[1064px] max-h-[85vh] overflow-y-auto relative bg-white border-4 border-cyan-dark rounded-[20px] pl-4 lg:px-[104px] py-[30px]"
         onClick={(e) => e.stopPropagation()}
       >
-        <div 
-        className="absolute cursor-pointer hover:opacity-80 rounded-full top-6 right-0 w-11 h-11 bg-cyan-normal"
-        onClick={() => setIsOpenState(false)}
+        <div
+          className="absolute cursor-pointer hover:opacity-80 rounded-full top-6 right-0 w-11 h-11 bg-cyan-normal"
+          onClick={() => setIsOpenState(false)}
         >
           <div className="relative cursor-pointer">
             <div className="w-[30px] bg-white -bottom-6 left-[16%] absolute h-[3px] rotate-45"></div>
@@ -46,15 +55,16 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
         <h2 className="text-3xl font-bold text-brown-dark mb-[26px]">
           關於倉鼠如何科養
         </h2>
-        <div className="flex border border-brown-light bg-gray-normal rounded-[79px] py-4 px-[33px] gap-x-4 mb-[30px]">
+        <div className="flex justify-between sm:justify-around lg:justify-evenly border border-brown-light bg-gray-normal rounded-[79px] py-4 px-3 lg:px-[33px] gap-x-4 mb-[30px]">
           <div className="flex gap-x-[18px]">
-            <img src={user1} alt="user" />
+            <img className="w-12" src={user1} alt="user" />
             <div>
               <p className="text-base font-bold text-cyan-dark">小MO</p>
               <p className="text-base text-brown-dark">@momo168</p>
             </div>
           </div>
-          <ul className="border-x border-brown-light px-[26px] flex flex-wrap w-[350px] gap-x-[14px] gap-y-[6px] justify-center">
+          {/* Tag Class */}
+          <ul className="hidden md:flex border-x border-brown-light px-[26px] flex-wrap w-[350px] gap-x-[14px] gap-y-[6px] justify-center">
             <li className="flex gap-x-[7px]">
               <img src={hamster} alt="icon" />
               <p className="font-bold text-brown-normal text-[15px] whitespace-nowrap">
@@ -92,6 +102,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
               </p>
             </li>
           </ul>
+          {/* Action */}
           <ul className="">
             <li className="flex items-center mb-1 gap-x-3">
               <img src={readmore} alt="read more" />
@@ -167,7 +178,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
         <h3 className="mb-6 text-lg font-bold text-center text-cyan-dark">
           查看更多相關有趣話題！
         </h3>
-        <ul className="grid justify-center grid-cols-3 gap-x-[10px] gap-y-[15px] list-disc pl-5 border-b border-brown-normal pb-6 mb-6">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-[10px] gap-y-[15px] list-disc pl-5 border-b border-brown-normal pb-6 mb-6">
           <li>
             <h4 className="text-base font-bold text-brown-dark">
               大家都是怎麼照顧兔子的？
@@ -182,7 +193,7 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
             </div>
           </li>
           <li>
-            <h4 className="w-[200px] text-base font-bold truncate text-brown-dark">
+            <h4 className="max-w-[200px] text-base font-bold truncate text-brown-dark">
               我的刺蝟最近有奇怪的行為，有人有相似的經驗嗎？
             </h4>
             <div className="flex gap-x-5">
@@ -251,87 +262,107 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
             <p className="pr-4 text-base border-r text-brown-dark border-brown-normal">
               排序
             </p>
-            {/* <p className="text-base text-brown-dark">丨</p> */}
             <p className="text-base text-brown-dark">熱門</p>
             <p className="text-base text-brown-dark">最新</p>
           </div>
         </div>
-        {/* message */}
-        <div className="bg-gray-dark rounded-[10px] w-full pl-10 py-4 pr-10 mb-6">
+        {/* Feedback Message */}
+        <div className="bg-gray-dark rounded-[10px] py-4 mb-6 px-4 md:px-10">
           <div className="flex">
-            <img src={user2} alt="user" className="h-[53px] mr-3" />
-            <div className="mr-5">
-              <div className="flex items-center mb-2 gap-x-1">
-                <p className="text-base font-bold text-cyan-dark">Lisa</p>
-                <p className="text-xs font-medium text-brown-normal border border-white bg-white rounded-[60px] ml-1 px-2 py-[2px]">
-                  @lisa021225
-                </p>
-              </div>
-              <p className="text-base text-brown-dark border-b border-brown-normal w-[400px] pb-5">
-                推！養鼠真的上下限差好多
-              </p>
-            </div>
-            <div className="flex flex-col justify-between">
-              <div className="flex items-center justify-end gap-x-2">
-                <img src={likebtn} alt="likenumber" className="w-4" />
-                <p className="text-brown-dark font-bold text-[15px] ">25</p>
-              </div>
-              <div className="flex gap-x-2 ">
-                <p className="text-xs font-medium text-cyan-dark">回覆</p>
-                <p className="text-xs font-medium text-brown-normal">
-                  2023/10/5
-                </p>
-                <p className="text-xs font-medium text-brown-normal">21:34</p>
-                <p className="text-xs font-medium text-brown-normal">1樓</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-x-2">
-            <p className="text-brown-dark font-medium text-[13px] my-[14px] ml-[65px]">
-              隱藏留言
-            </p>
-            <img src={open} alt="triangle" />
-          </div>
-        </div>
-        <div className="px-10 mb-6">
-          <div className="bg-gray-dark rounded-[10px] w-full pl-10 py-4 pr-10">
-            <div className="flex">
-              <img src={user1} alt="user" className="h-[53px] mr-3" />
-              <div className="mr-5">
+            <img src={user2} alt="user" className="h-[40px] md:h-[52px] mr-3" />
+            <section className="flex-1">
+              <div className="flex justify-between items-baseline">
                 <div className="flex items-center mb-2 gap-x-1">
-                  <p className="text-base font-bold text-cyan-dark">樓主</p>
+                  <p className="text-base font-bold text-cyan-dark">Lisa</p>
                   <p className="text-xs font-medium text-brown-normal border border-white bg-white rounded-[60px] ml-1 px-2 py-[2px]">
-                    @momo0108
+                    @lisa021225
                   </p>
                 </div>
-                <p className="text-base text-brown-dark border-b border-brown-normal w-[300px] pb-5">
-                  不求大家都科養，但至少基本養，基本的給好。
-                </p>
-              </div>
-              <div className="flex flex-col justify-between">
-                <div className="flex items-center justify-end gap-x-2">
+                <div className="flex items-center gap-x-2">
                   <img src={likebtn} alt="likenumber" className="w-4" />
                   <p className="text-brown-dark font-bold text-[15px] ">25</p>
                 </div>
-                <div className="flex gap-x-2 ">
+              </div>
+              <p className="text-base text-brown-dark pb-5">
+                推！養鼠真的上下限差好多
+              </p>
+              <div className="flex items-center gap-x-5">
+                <hr className="border-t border-brown-normal flex-1" />
+                <div className="flex gap-x-2">
                   <p className="text-xs font-medium text-cyan-dark">回覆</p>
                   <p className="text-xs font-medium text-brown-normal">
-                    2023/10/15
+                    2023/10/5
                   </p>
-                  <p className="text-xs font-medium text-brown-normal">23:02</p>
-                  <p className="text-xs font-medium text-brown-normal">1樓-1</p>
+                  <p className="text-xs font-medium text-brown-normal">21:34</p>
+                  <p className="text-xs font-medium text-brown-normal">1樓</p>
                 </div>
               </div>
-            </div>
-            <textarea
-              placeholder="回覆..."
-              className="pl-[14px] pt-3 focus:outline-brown-normal w-full mt-5 text-xs font-medium text-brown-normal rounded-xl"
-            ></textarea>
+            </section>
           </div>
+          <button
+            className="flex items-center gap-x-2 cursor-pointer my-2 py-[6px]"
+            onClick={() => setIsMsgOpen(!isMsgOpen)}
+          >
+            <p className="text-brown-dark font-medium text-[13px] ml-[65px]">
+              {isMsgOpen ? "隱藏留言" : "查看其他1則留言"}
+            </p>
+            <img src={open} alt="triangle" />
+          </button>
         </div>
-        <div className="bg-gray-dark rounded-[10px] w-full pl-10 py-4 pr-10 mb-6">
+        {isMsgOpen && (
+          <div className="px-4 md:px-10 mb-6">
+            <div className="bg-gray-dark rounded-[10px] py-4 mb-6 px-3 md:px-10">
+              <div className="flex">
+                <img
+                  src={user1}
+                  alt="user"
+                  className="h-[40px] md:h-[52px] mr-3"
+                />
+                <section className="flex-1">
+                  <div className="flex justify-between items-baseline">
+                    <div className="flex items-center mb-2 gap-x-1">
+                      <p className="text-base font-bold text-cyan-dark">樓主</p>
+                      <p className="text-xs font-medium text-brown-normal border border-white bg-white rounded-[60px] ml-1 px-2 py-[2px]">
+                        @lisa021225
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-x-2">
+                      <img src={likebtn} alt="likenumber" className="w-4" />
+                      <p className="text-brown-dark font-bold text-[15px] ">
+                        25
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-base text-brown-dark pb-5">
+                    不求大家都科養，但至少基本養，基本的給好。
+                  </p>
+                  <div className="flex items-center gap-x-5">
+                    <hr className="border-t border-brown-normal flex-1" />
+                    <div className="flex gap-x-2">
+                      <p className="text-xs font-medium text-cyan-dark">回覆</p>
+                      <p className="text-xs font-medium text-brown-normal">
+                        2023/10/15
+                      </p>
+                      <p className="text-xs font-medium text-brown-normal">
+                        21:34
+                      </p>
+                      <p className="text-xs font-medium text-brown-normal">
+                        1樓
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <textarea
+                placeholder="回覆..."
+                className="pl-[14px] py-3 focus:outline-brown-normal w-full mt-5 text-xs font-medium text-brown-normal rounded-xl"
+              ></textarea>
+            </div>
+          </div>
+        )}
+        <div className="bg-gray-dark rounded-[10px] py-4 mb-6 px-4 md:px-10">
           <div className="flex">
-            <img src={user3} alt="user" className="h-[53px] mr-3" />
+            <img src={user3} alt="user" className="h-[40px] md:h-[52px] mr-3" />
             <div className="mr-5">
               <div className="flex justify-between mb-2">
                 <div className="flex items-center mb-2 gap-x-1">
@@ -351,8 +382,10 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
               </p>
               <img src={img3} alt="image" />
               <div className="flex items-center justify-between mt-10 gap-x-5">
-                <hr className="h-[2px] w-[65%] bg-brown-normal" />
-                <div className="flex gap-x-2 ">
+                <hr className="flex-1 h-[2px] bg-brown-normal" />
+                <div className="flex gap-x-2 cursor-pointer"
+                  onClick={() => setIsOpenFeedback(!isOpenFeedback)}
+                >
                   <p className="text-xs font-medium text-cyan-dark">回覆</p>
                   <p className="text-xs font-medium text-brown-normal">
                     2023/10/9
@@ -371,15 +404,19 @@ export default function CommunityContent({ isOpenState, setIsOpenState, toggleSt
             </div>
           </div>
         </div>
-        <div className="">
-          <div className="flex gap-x-6 bg-gray-dark rounded-[10px] w-full px-[73px] py-5 mb-6">
-            <img src={user4} alt="user" className="h-[53px]" />
-            <textarea
-              placeholder="回覆..."
-              className="pl-[14px] pt-3 focus:outline-brown-normal text-xs font-medium text-brown-normal rounded-[10px] w-full"
-            ></textarea>
+
+        {isOpenFeedback && (
+          <div>
+            <div className="flex gap-x-6 bg-gray-dark rounded-[10px] w-full px-6 md:px-[73px] py-5 mb-6">
+              <img src={user4} alt="user" className="h-[40px] md:h-[52px]" />
+              <textarea
+                placeholder="回覆..."
+                className="pl-[14px] pt-3 focus:outline-brown-normal text-xs font-medium text-brown-normal rounded-[10px] w-full"
+              ></textarea>
+            </div>
           </div>
-        </div>
+        )}
+
         <div className="border border-brown-normal rounded-[10px] p-4 mb-8">
           <textarea
             placeholder="說些什麼參與討論吧！"
