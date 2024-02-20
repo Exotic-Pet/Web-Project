@@ -23,17 +23,6 @@ import eventImg6 from "../assets/event/event-img6.svg";
 import featureEventImg1 from "../assets/event/imageForEvent/feature-event-1.png";
 import featureEventImg2 from "../assets/event/imageForEvent/feature-event-2.png";
 import featureEventImg3 from "../assets/event/imageForEvent/feature-event-3.png";
-import eventImg7 from "../assets/event/event-img7.svg";
-import eventImg8 from "../assets/event/event-img8.svg";
-import eventImg9 from "../assets/event/event-img9.svg";
-import searchResultImg1 from "../assets/event/imageForEvent/search-result-1.png";
-import searchResultImg2 from "../assets/event/imageForEvent/search-result-2.png";
-import searchResultImg3 from "../assets/event/imageForEvent/search-result-3.png";
-import searchResultImg4 from "../assets/event/imageForEvent/search-result-4.png";
-import searchResultImg5 from "../assets/event/imageForEvent/search-result-5.png";
-import searchResultImg6 from "../assets/event/imageForEvent/search-result-6.png";
-import plate from "../assets/event/plate-1.svg";
-import searchIcon from "../assets/event/event-search.svg";
 import arrow from "../assets/event/arrow.svg";
 import deco from "../assets/event/deco.svg";
 import allrats from "../assets/event/all-rats.svg";
@@ -42,7 +31,10 @@ import monthlySelection from "../assets/event/monthly-selection.svg";
 import allRatsBanner from "../assets/event/all-rats-BN.svg";
 import allreptilesBanner from "../assets/event/all-reptiles-BN.svg";
 import monthlySelectionBanner from "../assets/event/monthly-selection-BN.svg";
+// custom css
 import "../styles/swiperstyle.css";
+// component
+import Filter from"../components/EventFilter"
 // import { Link } from "react-router-dom";
 import LightBox from "../components/LightBox";
 
@@ -51,84 +43,6 @@ export default function StoreContent() {
   const [eventLightBoxState, setEventLightBoxState] = useState(false);
 
   const [swiperRef, setSwiperRef] = useState(null);
-
-  const [selectedArea, setSelectedArea] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  // const [cards, setCards] = useState(searchCard);
-  
-  const handleItemClick = (index) => {
-      setSelectedArea(index);
-      // filterCards();
-  };
-  const handleDateClick = (index) => {
-    setSelectedDate(index);
-    // filterCards();
-  };
-  const handleCategoryClick = (index) => {
-    setSelectedCategory(index);
-    // filterCards();
-  };
-
-  const areaListItems = () => {
-    const regions = ['全台', '北部', '中部', '南部', '東部'];
-
-    return regions.map((region, index) => (
-      <li
-        key={index}
-        className={`px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal ${
-          selectedArea === index ? 'text-white bg-green-normal bg-opacity-100' : 'hover:border-opacity-100 hover:bg-opacity-100'
-        }`}
-        onClick={() => handleItemClick(index)}
-      >
-        {region}
-      </li>
-    ));
-  };
-  
-  const dateListItems = () => {
-    const dates = ['全部日期', '今天', '本周末', '7天內', '30天內'];
-
-    return dates.map((date, index) => (
-      <li
-        key={index}
-        className={`px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal ${
-          selectedDate === index ? 'text-white bg-green-normal bg-opacity-100' : 'hover:border-opacity-100 hover:bg-opacity-100'
-        }`}
-        onClick={() => handleDateClick(index)}
-      >
-        {date}
-      </li>
-    ));
-  };
-
-  const categoryListItems = () => {
-    const categories = ['全部分類', '展覽', '市集', '親子活動', '快閃活動', '線上活動', '其他'];
-
-    return categories.map((category, index) => (
-      <li
-        key={index}
-        className={`px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal ${
-          selectedCategory === index ? 'text-white bg-green-normal bg-opacity-100' : 'hover:border-opacity-100 hover:bg-opacity-100'
-        }`}
-        onClick={() => handleCategoryClick(index)}
-      >
-        {category}
-      </li>
-    ));
-  };
-
-  const filterCards = () => {
-    const filteredCards = cards.filter(card => {
-      return (
-        (selectedArea === null || card.region === regions[selectedArea]) &&
-        (selectedDate === null || card.date === dates[selectedDate]) &&
-        (selectedCategory === null || card.category === categories[selectedCategory])
-      );
-    });
-  
-    setCards(filteredCards);
-  };
 
   const mainSwpImage = [
     mainImg1,
@@ -214,82 +128,7 @@ export default function StoreContent() {
       date: "2024/2/07 (六)",
     },
   ];
-  const searchCard = [
-    {
-      id : "1",
-      region: "北部",
-      imgUrl: eventImg7,
-      category: "展覽",
-      title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
-      date: "2024/6/22 (六)-6/23 (日)",
-    },
-    {
-      id : "2",
-      region: "北部",
-      imgUrl: eventImg8,
-      category: "展覽",
-      title:
-        "台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館",
-      date: "2024/8/26 (六)-8/27 (日)",
-    },
-    {
-      id : "3",
-      region: "中部",
-      imgUrl: eventImg9,
-      category: "展覽",
-      title: "台中｜2024台灣爬蟲季｜台中世貿二館",
-      date: "2024/6/22 (六)-6/23 (日)",
-    },
-    {
-      id : "4",
-      region: "中部",
-      imgUrl: searchResultImg1,
-      category: "快閃活動",
-      title: "台中｜動物觀察-咕溜蛇來囉｜蛇類觀察課",
-      date: "2024/6/22 (六)-6/23 (日)",
-    },
-    {
-      id : "5",
-      region: "中部",
-      imgUrl: searchResultImg2,
-      category: "講座",
-      title:
-        "台中｜刺蝟、蜜袋鼯飼養照顧講座",
-      date: "2024/10/18 (三)",
-    },
-    {
-      id : "6",
-      region: "北部",
-      imgUrl: searchResultImg3,
-      category: "展覽",
-      title: "台北｜2024兩棲爬蟲特寵見面會｜松菸文創園區",
-      date: "2024/2/23 (五)-2/25 (日)",
-    },
-    {
-      id : "7",
-      region: "北部",
-      imgUrl: searchResultImg4,
-      category: "講座",
-      title: "台北｜昆蟲種子教師研習｜台灣昆蟲館",
-      date: "2024/5/14 (六)",
-    },
-    {
-      id : "8",
-      region: "北部",
-      imgUrl: searchResultImg5,
-      category: "親子活動",
-      title: "新竹｜親子動物觀察講座",
-      date: "2024/2/25 (六)",
-    },
-    {
-      id : "9",
-      region: "南部",
-      imgUrl: searchResultImg6,
-      category: "快閃活動",
-      title: "高雄｜牧草圓又圓中途兔兔送養會",
-      date: "2024/8/31 (六)",
-    },
-  ];
+  
 
   return (
     <>
@@ -477,139 +316,7 @@ export default function StoreContent() {
               ))}
             </Swiper>
           </div>
-          {/*Search*/}
-          <div className=" relative hidden md:block">
-            <img
-              src={plate}
-              alt="plate-1"
-              className=" absolute right-[130px] top-20 2xl:right-[260px]"
-            />
-          </div>
-          <div className="relative mx-1 xl:mx-auto max-w-[778px] border-solid border-2 rounded-[30px] bg-white mt-[68px] border-brown-normal pb-[33px]">
-            {/*Selector*/}
-            <form action="" className="justify-center text-center">
-              <div className="relative mx-[68px]">
-                <input
-                  type="text"
-                  placeholder="搜尋活動/場地/舉辦方"
-                  className=" focus-within:placeholder-opacity-20 w-full py-2 text-base text-center outline-none placeholder-brown-dark rounded-full text-brown-dark bg-yellow-light mt-7"
-                />
-                <img
-                  className="absolute cursor-pointer hover:scale-125 bottom-[10px] left-[8%] sm:left-[25%] md:left-[30%]"
-                  src={searchIcon}
-                  alt="search"
-                />
-              </div>
-              <div className="flex mt-[26px]">
-                <p className="text-base font-bold text-brown-dark ml-[20px] mr-[50px] sm:mx-[70px] whitespace-nowrap">
-                  地區
-                </p>
-                <ul className="flex flex-wrap gap-x-2">
-                  {areaListItems()}
-                  {/* <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    全台
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    北部
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    中部
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    南部
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    東部
-                  </li> */}
-                </ul>
-              </div>
-              <div className="flex mt-5">
-                <p className="text-base font-bold text-brown-dark ml-[20px] mr-[50px] sm:mx-[70px] whitespace-nowrap">
-                  日期
-                </p>
-                <ul className="flex flex-wrap gap-x-2">
-                  {dateListItems()}
-                  {/* <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    全部日期
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    今天
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    本周末
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    7天內
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    30天內
-                  </li> */}
-                </ul>
-              </div>
-              <div className="flex mt-5">
-                <p className="text-base font-bold text-brown-dark ml-[20px] mr-[18px] sm:ml-[72px] sm:mr-[36px] whitespace-nowrap">
-                  活動分類
-                </p>
-                <ul className="flex flex-wrap gap-x-2">
-                  {categoryListItems()}
-                  {/* <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    全部分類
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    展覽
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    市集
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    親子活動
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    快閃活動
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    線上活動
-                  </li>
-                  <li className="px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal hover:border-opacity-100 hover:bg-opacity-100">
-                    其他
-                  </li> */}
-                </ul>
-              </div>
-            </form>
-          </div>
-          {/*Search Result*/}
-          <div className="">
-            <ul className="flex mt-[70px] flex-wrap justify-center gap-x-[50px]">
-              {searchCard.map((card, i) => (
-                <li
-                  key={i}
-                  className="w-[335px] mb-11 hover:bg-white group hover:rounded-2xl px-3 pt-5"
-                >
-                  <a href="#" className="flex gap-x-5">
-                    <img
-                      src={card.imgUrl}
-                      alt="event"
-                      className="duration-500 group-hover:-translate-y-3"
-                    />
-                    <div>
-                      <p className="text-xs text-brown-normal mb-[6px]">
-                        {card.category}
-                      </p>
-                      <h3 className="text-base font-bold text-brown-dark ellipsis-2">
-                        {card.title}
-                      </h3>
-                      <p className="mt-1 text-xs text-green-dark mb-[45px]">
-                        {card.date}
-                      </p>
-                      <h4 className="ml-auto block text-xs border-b-2 border-solid text-green-dark border-brown-normal max-w-[35px] text-center">
-                        MORE
-                      </h4>
-                    </div>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <Filter/>
           {/*Page Number*/}
           <div className="mt-[70px] mb-[60px]">
             <ul className="flex justify-center">
