@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import AosInit from "../components/AosInit";
 
 import createIcon from "../assets/gathering/create-icon.svg";
 import salamandridae from "../assets/gathering/Salamandridae.svg";
@@ -39,8 +40,26 @@ import cardPhoto_8 from "../assets/gathering/card-photo-8.png";
 import cardPhoto_9 from "../assets/gathering/card-photo-9.png";
 
 export default function Gathering() {
+  // AOS Init
+  AosInit();
+
   // Area State
   const [selectArea, setSelectArea] = useState("北部");
+
+  // 地區狀態
+  const [selectedArea, setSelectedArea] = useState(null);
+  // 動物種類狀態
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  // 地區選擇處理器
+  const handleAreaSelect = (area) => setSelectedArea(area);
+  // 動物種類選擇處理器
+  const handleCategorySelect = (category) => {
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
+  };
 
   // Category Data
   const [categoryTagData, setCategoryTagData] = useState([
@@ -99,7 +118,10 @@ export default function Gathering() {
           ? "bg-green-light"
           : "bg-brown-light hover:opacity-80"
       } flex gap-x-3 items-center rounded-full p-2 lg:py-4 lg:px-5 cursor-pointer`}
-      onClick={() => toggleSelectState(category.id)}
+      onClick={() => {
+        toggleSelectState(category.id);
+        handleCategorySelect(category.category);
+      }}
     >
       <img
         className={category.selectState ? "hidden" : "block"}
@@ -235,7 +257,7 @@ export default function Gathering() {
       popular: 333,
       photoPath: cardPhoto_5,
       title: "2024愛兔工會認養會",
-      category: "兔",
+      category: "兔子",
       date: "2024/5/13 (六)",
       locationTitle: "高雄公園",
       interest: false,
@@ -286,12 +308,21 @@ export default function Gathering() {
     },
   ];
 
-  // DeepCopy Data
-  // const gatheringDataDeepCopy = JSON.parse(JSON.stringify(gatheringData));
+  // 根據選擇的地區和動物種類過濾卡片
+  const filteredGatheringData = gatheringData.filter((card) => {
+    const isAreaMatch = selectedArea === null || card.area === selectedArea;
+    const isCategoryMatch =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(card.category);
+    return isAreaMatch && isCategoryMatch;
+  });
 
   // Gathering Card
   const GatheringCard = ({ card }) => (
-    <li className="p-6 rounded-2xl shadow-xl bg-white border-2 border-transparent hover:border-green-light">
+    <li
+      data-aos="flip-left"
+      className="p-6 rounded-2xl shadow-xl bg-white border-2 border-transparent hover:border-green-light"
+    >
       <div className="leading-relaxed">
         <h5 className="text-brown-normal">{card.category}</h5>
         <h4 className="text-brown-dark font-bold text-[16px]">{card.title}</h4>
@@ -355,142 +386,45 @@ export default function Gathering() {
         </div>
         {/* Filter Area */}
         <ul className="flex justify-between items-end text-center tracking-wider">
-          <li className="flex-1">
-            <div
-              onClick={() => setSelectArea("北部")}
-              className={`${
-                selectArea === "北部"
-                  ? "bg-gray-normal border-2 border-b-0"
-                  : "bg-green-light border-b"
-              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
-            >
-              <figure className="hidden sm:block">
-                <img
-                  className={`${
-                    selectArea === "北部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationClick}
-                  alt="location"
-                />
-                <img
-                  className={`${
-                    selectArea !== "北部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationUnclick}
-                  alt="location"
-                />
-              </figure>
-              <h3
+          {["北部", "中部", "南部", "東部"].map((area) => (
+            <li className="flex-1" key={area}>
+              <div
+                onClick={() => {
+                  setSelectArea(area);
+                  handleAreaSelect(area);
+                }}
                 className={`${
-                  selectArea === "北部" ? "text-green-dark" : "text-white"
-                } font-bold text-2xl`}
+                  selectArea === area
+                    ? "bg-gray-normal border-2 border-b-0"
+                    : "bg-green-light border-b"
+                } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
               >
-                北部
-              </h3>
-            </div>
-          </li>
-          <li className="flex-1">
-            <div
-              onClick={() => setSelectArea("中部")}
-              className={`${
-                selectArea === "中部"
-                  ? "bg-gray-normal border-2 border-b-0"
-                  : "bg-green-light border-b"
-              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
-            >
-              <figure className="hidden sm:block">
-                <img
+                <figure className="hidden sm:block">
+                  <img
+                    className={`${
+                      selectArea === area ? "block" : "hidden"
+                    } mr-[6px]`}
+                    src={locationClick}
+                    alt="location"
+                  />
+                  <img
+                    className={`${
+                      selectArea !== area ? "block" : "hidden"
+                    } mr-[6px]`}
+                    src={locationUnclick}
+                    alt="location"
+                  />
+                </figure>
+                <h3
                   className={`${
-                    selectArea === "中部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationClick}
-                  alt="location"
-                />
-                <img
-                  className={`${
-                    selectArea !== "中部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationUnclick}
-                  alt="location"
-                />
-              </figure>
-              <h3
-                className={`${
-                  selectArea === "中部" ? "text-green-dark" : "text-white"
-                } font-bold text-2xl`}
-              >
-                中部
-              </h3>
-            </div>
-          </li>
-          <li className="flex-1">
-            <div
-              onClick={() => setSelectArea("南部")}
-              className={`${
-                selectArea === "南部"
-                  ? "bg-gray-normal border-2 border-b-0"
-                  : "bg-green-light border-b"
-              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
-            >
-              <figure className="hidden sm:block">
-                <img
-                  className={`${
-                    selectArea === "南部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationClick}
-                  alt="location"
-                />
-                <img
-                  className={`${
-                    selectArea !== "南部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationUnclick}
-                  alt="location"
-                />
-              </figure>
-              <h3
-                className={`${
-                  selectArea === "南部" ? "text-green-dark" : "text-white"
-                } font-bold text-2xl`}
-              >
-                南部
-              </h3>
-            </div>
-          </li>
-          <li className="flex-1">
-            <div
-              onClick={() => setSelectArea("東部")}
-              className={`${
-                selectArea === "東部"
-                  ? "bg-gray-normal border-2 border-b-0"
-                  : "bg-green-light border-b"
-              } duration-100 py-3 md:py-5 flex justify-center items-center cursor-pointer rounded-tl-[30px] rounded-tr-[30px] hover:opacity-80`}
-            >
-              <figure className="hidden sm:block">
-                <img
-                  className={`${
-                    selectArea === "東部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationClick}
-                  alt="location"
-                />
-                <img
-                  className={`${
-                    selectArea !== "東部" ? "block" : "hidden"
-                  } mr-[6px]`}
-                  src={locationUnclick}
-                  alt="location"
-                />
-              </figure>
-              <h3
-                className={`${
-                  selectArea === "東部" ? "text-green-dark" : "text-white"
-                } font-bold text-2xl`}
-              >
-                東部
-              </h3>
-            </div>
-          </li>
+                    selectArea === area ? "text-green-dark" : "text-white"
+                  } font-bold text-2xl`}
+                >
+                  {area}
+                </h3>
+              </div>
+            </li>
+          ))}
         </ul>
         {/* Content */}
         <div className="py-16 bg-gray-normal border-2 border-t-0 rounded-bl-[20px] rounded-br-[20px]">
@@ -499,7 +433,7 @@ export default function Gathering() {
               全部分類
             </h4>
             <ul className="flex gap-x-2 md:gap-x-6 overflow-x-auto">
-              {categoryTagData?.map((category) => (
+              {categoryTagData.map((category) => (
                 <CategoryTag category={category} key={category.id} />
               ))}
             </ul>
@@ -513,8 +447,8 @@ export default function Gathering() {
             </div>
             {/* Card List */}
             <ul className="mt-7 gap-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              {gatheringData?.map((card) => (
-                <GatheringCard card={card} key={card.id} />
+              {filteredGatheringData.map((card) => (
+                <GatheringCard key={card.id} card={card} />
               ))}
             </ul>
             {/* Pagination */}
