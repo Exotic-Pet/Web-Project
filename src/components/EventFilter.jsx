@@ -29,6 +29,7 @@ const SearchComponent = () => {
       category: "展覽",
       title: "台北｜2024台灣兩棲爬蟲博覽會｜花博爭豔館",
       date: "2024/6/22 (六)-6/23 (日)",
+      specifiedTime:"2024-6-22"
     },
     {
       id: "2",
@@ -38,6 +39,7 @@ const SearchComponent = () => {
       title:
         "台北｜2024 水美園 - 創四季 【植栽、 爬蟲、昆蟲、礦石】 盛典｜花博爭豔館",
       date: "2024/8/26 (六)-8/27 (日)",
+      specifiedTime:"2024-8-26"
     },
     {
       id: "3",
@@ -46,6 +48,7 @@ const SearchComponent = () => {
       category: "展覽",
       title: "台中｜2024台灣爬蟲季｜台中世貿二館",
       date: "2024/6/22 (六)-6/23 (日)",
+      specifiedTime:"2024-6-22"
     },
     {
       id: "4",
@@ -54,6 +57,7 @@ const SearchComponent = () => {
       category: "快閃活動",
       title: "台中｜動物觀察-咕溜蛇來囉｜蛇類觀察課",
       date: "2024/6/22 (六)-6/23 (日)",
+      specifiedTime:"2024-6-22"
     },
     {
       id: "5",
@@ -62,6 +66,7 @@ const SearchComponent = () => {
       category: "講座",
       title: "台中｜刺蝟、蜜袋鼯飼養照顧講座",
       date: "2024/10/18 (三)",
+      specifiedTime:"2024-10-18"
     },
     {
       id: "6",
@@ -70,6 +75,7 @@ const SearchComponent = () => {
       category: "展覽",
       title: "台北｜2024兩棲爬蟲特寵見面會｜松菸文創園區",
       date: "2024/2/23 (五)-2/25 (日)",
+      specifiedTime:"2024-2-23"
     },
     {
       id: "7",
@@ -77,7 +83,8 @@ const SearchComponent = () => {
       imgUrl: searchResultImg4,
       category: "講座",
       title: "台北｜昆蟲種子教師研習｜台灣昆蟲館",
-      date: "2024/5/14 (六)",
+      date: "2024/3/16 (六)",
+      specifiedTime:"2024-3-16"
     },
     {
       id: "8",
@@ -86,6 +93,7 @@ const SearchComponent = () => {
       category: "親子活動",
       title: "新竹｜親子動物觀察講座",
       date: "2024/2/25 (六)",
+      specifiedTime:"2024-2-25"
     },
     {
       id: "9",
@@ -94,6 +102,7 @@ const SearchComponent = () => {
       category: "快閃活動",
       title: "高雄｜牧草圓又圓中途兔兔送養會",
       date: "2024/8/31 (六)",
+      specifiedTime:"2024-8-31"
     },
   ];
 
@@ -102,16 +111,34 @@ const SearchComponent = () => {
   const [selectedDate, setSelectedDate] = useState("全部日期");
   const [selectedCategory, setSelectedCategory] = useState("全部分類");
 
+  const today = new Date();
+
+
   const handleFilter = () => {
     const newData = allData.filter(
-      (item) =>
+      (item) =>{
+        const itemDate = new Date(item.specifiedTime);
+        const time = (itemDate - today) / (1000 * 60 * 60 * 24);
+        const daysDiff = Math.floor(time);
+        return(
         (selectedArea === "全部" || item.area === selectedArea) &&
-        (selectedDate === "全部日期") &&
+        (selectedDate === "全部日期" ||
+          (selectedDate === "今天" && daysDiff == 0) ||
+          (selectedDate === "本周末" && daysDiff > 0 && daysDiff <= 5) ||
+          (selectedDate === "7天內" && daysDiff > 5 && daysDiff <= 7) ||
+          (selectedDate === "30天內" && daysDiff > 7 && daysDiff < 30)
+        ) &&
         (selectedCategory === "全部分類" || item.category === selectedCategory)
-    );
+        )
+  });
 
     setFilteredData(newData);
   };
+
+  // 測試時間計算(天)
+  // const specifiedTime = new Date("2024-2-20")
+  // const time = (specifiedTime - today) / (1000 * 60 * 60 * 24);
+  // console.log(Math.floor(time));
 
   return (
     <>
@@ -346,14 +373,14 @@ const SearchComponent = () => {
               </li>
               <li
                 className={`px-2 text-base bg-opacity-0 border border-opacity-0 border-solid rounded-full cursor-pointer text-brown-normal border-brown-normal bg-gray-normal  ${
-                  selectedCategory === "其他" ? "text-white bg-green-normal bg-opacity-100" : "hover:border-opacity-100 hover:bg-opacity-100"
+                  selectedCategory === "講座" ? "text-white bg-green-normal bg-opacity-100" : "hover:border-opacity-100 hover:bg-opacity-100"
                 }`}
                 onClick={() => {
-                  setSelectedCategory("其他");
+                  setSelectedCategory("講座");
                   handleFilter();
                 }}
               >
-                其他
+                講座
               </li>
             </ul>
           </div>
@@ -364,7 +391,7 @@ const SearchComponent = () => {
         {filteredData.map((card, i) => (
           <li
             data-aos="fade-in"
-            data-aos-duration="500"
+            data-aos-duration="300"
             key={i}
             className="w-[335px] mb-11 hover:bg-white group hover:rounded-2xl px-3 pt-5 cursor-pointer"
             onClick={() => setEventLightBoxState(true)}
