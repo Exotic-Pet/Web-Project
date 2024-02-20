@@ -69,101 +69,111 @@ export default function HomeHeader() {
             />
           </svg>
           {/* Expand Menu */}
-          <ul
+          <div
             className={`${
-              isMenuActive ? "menu--open" : "menu--close border-transparent"
-            } overflow-hidden absolute top-[92px] right-0 z-10 rounded-bl-[20px] border-2 backdrop-blur-xl tracking-wide ease-out duration-300 xl:hidden`}
+              isMenuActive ? "menu--open" : "menu--close"
+            } overflow-hidden absolute top-[92px] right-0 z-10 ease-out duration-300 xl:hidden`}
           >
-            <li>
-              <Link
-                to="/page/store-overview"
-                className="flex gap-x-3 items-center px-10 py-2 mt-2 group"
-                onClick={() => setIsMenuActive(false)}
-              >
-                <img src={homeGreen} alt="icon" className="max-w-[52px]" />
-                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
-                  特寵探店
-                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
-                    Exotic pet stores
-                  </span>
-                </h2>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/page/event"
-                className="flex gap-x-3 items-center py-2 px-10 group"
-                onClick={() => setIsMenuActive(false)}
-              >
-                <img src={calendarGreen} alt="icon" className="max-w-[52px]" />
-                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
-                  特寵活動
-                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
-                    Exotic pet event
-                  </span>
-                </h2>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/page/exotic-overview"
-                className="flex gap-x-3 items-center py-2 px-10 group"
-                onClick={() => setIsMenuActive(false)}
-              >
-                <img src={introGreen} alt="icon" className="max-w-[52px]" />
-                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
-                  特寵介紹
-                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
-                    Introduction
-                  </span>
-                </h2>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/page/gathering"
-                className="flex gap-x-3 items-center py-2 px-10 group"
-                onClick={() => setIsMenuActive(false)}
-              >
-                <img src={peopleGreen} alt="icon" className="max-w-[52px]" />
-                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
-                  聚會揪團
-                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
-                    Get-together
-                  </span>
-                </h2>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/page/community"
-                className="flex gap-x-3 items-center pt-2 pb-5 px-10 group"
-                onClick={() => setIsMenuActive(false)}
-              >
-                <img src={msgGreen} alt="icon" className="max-w-[52px]" />
-                <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
-                  心得交流
-                  <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
-                    Forum
-                  </span>
-                </h2>
-              </Link>
-            </li>
-            <li className="max-w-[168px] mx-auto border-t-[1.5px] border-brown-light">
-              <div
-                className="flex gap-x-2 items-center cursor-pointer mb-4 px-3 pt-6 pb-2 group"
-                onClick={() => {
-                  setSignInLightBoxState(true);
-                  setIsMenuActive(false);
-                }}
-              >
-                <img src={accountBrown} alt="icon" className="w-[34px] ml-2" />
-                <h2 className="text-brown-dark font-semibold group-hover:text-green-dark">
-                  我的帳號
-                </h2>
-              </div>
-            </li>
-          </ul>
+            <ul className="overflow-hidden rounded-bl-[20px] border-l-2 border-b-2 bg-blur tracking-wide">
+              <li>
+                <Link
+                  to="/page/store-overview"
+                  className="flex gap-x-3 items-center px-10 py-2 mt-2 group"
+                  onClick={() => setIsMenuActive(false)}
+                >
+                  <img src={homeGreen} alt="icon" className="max-w-[52px]" />
+                  <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
+                    特寵探店
+                    <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                      Exotic pet stores
+                    </span>
+                  </h2>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/page/event"
+                  className="flex gap-x-3 items-center py-2 px-10 group"
+                  onClick={() => setIsMenuActive(false)}
+                >
+                  <img
+                    src={calendarGreen}
+                    alt="icon"
+                    className="max-w-[52px]"
+                  />
+                  <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
+                    特寵活動
+                    <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                      Exotic pet event
+                    </span>
+                  </h2>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/page/exotic-overview"
+                  className="flex gap-x-3 items-center py-2 px-10 group"
+                  onClick={() => setIsMenuActive(false)}
+                >
+                  <img src={introGreen} alt="icon" className="max-w-[52px]" />
+                  <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
+                    特寵介紹
+                    <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                      Introduction
+                    </span>
+                  </h2>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/page/gathering"
+                  className="flex gap-x-3 items-center py-2 px-10 group"
+                  onClick={() => setIsMenuActive(false)}
+                >
+                  <img src={peopleGreen} alt="icon" className="max-w-[52px]" />
+                  <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
+                    聚會揪團
+                    <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                      Get-together
+                    </span>
+                  </h2>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/page/community"
+                  className="flex gap-x-3 items-center pt-2 pb-5 px-10 group"
+                  onClick={() => setIsMenuActive(false)}
+                >
+                  <img src={msgGreen} alt="icon" className="max-w-[52px]" />
+                  <h2 className="text-brown-dark font-bold text-[18px] group-hover:text-green-dark">
+                    心得交流
+                    <span className="block text-[12px] text-brown-normal tracking-normal mt-2">
+                      Forum
+                    </span>
+                  </h2>
+                </Link>
+              </li>
+              <li className="max-w-[168px] mx-auto border-t-[1.5px] border-brown-light">
+                <div
+                  className="flex gap-x-2 items-center cursor-pointer mb-4 px-3 pt-6 pb-2 group"
+                  onClick={() => {
+                    setSignInLightBoxState(true);
+                    setIsMenuActive(false);
+                  }}
+                >
+                  <img
+                    src={accountBrown}
+                    alt="icon"
+                    className="w-[34px] ml-2"
+                  />
+                  <h2 className="text-brown-dark font-semibold group-hover:text-green-dark">
+                    我的帳號
+                  </h2>
+                </div>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       {/* <!-- PC Menu & Banner --> */}

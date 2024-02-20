@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Google Font (Noto Sans TC) */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&display=swap");
 
 /* Tailwind CSS */
 @tailwind base;
@@ -9,7 +9,9 @@
 @tailwind utilities;
 
 /* Base Setting */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   transition: all 0.25s;
   scroll-behavior: smooth;
@@ -28,21 +30,35 @@ img {
   vertical-align: middle;
 }
 
-button, label {
+button,
+label {
   user-select: none;
 }
 
-input::placeholder, textarea::placeholder {
-  color: #A3907A;
+input::placeholder,
+textarea::placeholder {
+  color: #a3907a;
 }
 
 /* Utilities Class */
-.placeholder-brown-dark > ::placeholder, textarea::placeholder {
+.placeholder-brown-dark > ::placeholder,
+textarea::placeholder {
   color: #543816;
 }
 
 .bg-brown-60 {
   background-color: rgba(84, 56, 22, 0.6);
+}
+
+.bg-blur {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: transparent;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.9)
+  );
 }
 
 .ellipsis-2 {
@@ -127,7 +143,15 @@ input::placeholder, textarea::placeholder {
 }
 
 .lightBox__scrollbar::-webkit-scrollbar-track {
-  background: linear-gradient(to right, transparent, transparent 45%, #D0CCC6 45%, #D0CCC6 55%, transparent 55%, transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    transparent 45%,
+    #d0ccc6 45%,
+    #d0ccc6 55%,
+    transparent 55%,
+    transparent
+  );
 }
 
 .lightBox__scrollbar--sm::-webkit-scrollbar-track {
@@ -143,11 +167,11 @@ input::placeholder, textarea::placeholder {
 }
 
 .lightBox__scrollbar--cyan::-webkit-scrollbar-thumb {
-  background: radial-gradient(circle at center, #93C9C8 16%, transparent 16%);
+  background: radial-gradient(circle at center, #93c9c8 16%, transparent 16%);
 }
 
 .lightBox__scrollbar--green::-webkit-scrollbar-thumb {
-  background: radial-gradient(circle at center, #ABC592 8%, transparent 8%);
+  background: radial-gradient(circle at center, #abc592 8%, transparent 8%);
 }
 
 /* Toggle Expand */
@@ -170,14 +194,14 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Hidden Default Style */
-.checkbox__style input[type=checkbox] {
+.checkbox__style input[type="checkbox"] {
   display: none;
 }
 
 /* Checkbox Border */
 .checkbox__style .checkmark::before {
   content: "";
-  outline: 1.5px solid #A3907A;
+  outline: 1.5px solid #a3907a;
   border-radius: 2px;
   display: inline-block;
   width: 20px;
@@ -189,28 +213,28 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Checkbox Color */
-.checkbox--yellow input[type=checkbox]:checked + .checkmark::before {
-  background-color: #EFC141;
-  outline: 1.5px solid #EFC141;
+.checkbox--yellow input[type="checkbox"]:checked + .checkmark::before {
+  background-color: #efc141;
+  outline: 1.5px solid #efc141;
 }
 
-.checkbox--cyan input[type=checkbox]:checked + .checkmark::before {
-  background-color: #93C9C8;
-  outline: 1.5px solid #93C9C8;
+.checkbox--cyan input[type="checkbox"]:checked + .checkmark::before {
+  background-color: #93c9c8;
+  outline: 1.5px solid #93c9c8;
 }
 
-.checkbox--green input[type=checkbox]:checked + .checkmark::before {
-  background-color: #ABC592;
-  outline: 1.5px solid #ABC592;
+.checkbox--green input[type="checkbox"]:checked + .checkmark::before {
+  background-color: #abc592;
+  outline: 1.5px solid #abc592;
 }
 
 /* Input Focus Style */
 .input__style--green:focus {
-  outline: 1.5px solid #ABC592;
+  outline: 1.5px solid #abc592;
 }
 
 /* Slider Style */
-input[type=range] {
+input[type="range"] {
   width: 100%;
   /* 可依需求調整寬度 */
   -webkit-appearance: none;
@@ -220,7 +244,7 @@ input[type=range] {
 }
 
 /* Slider Thumb */
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   position: relative;
   transform: translateY(-7.5px);
   /* 滑塊位置 */
@@ -228,7 +252,7 @@ input[type=range]::-webkit-slider-thumb {
   /* 滑塊寬度 */
   height: 20px;
   /* 滑塊高度 */
-  background-color: #A3907A;
+  background-color: #a3907a;
   /* 滑塊顏色 */
   cursor: pointer;
   /* 滑過時的指標形狀 */
@@ -240,7 +264,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* Slider Track */
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
   background-color: #eee;
@@ -250,16 +274,16 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 /* Range Color */
-.range--yellow input[type=range]::-webkit-slider-runnable-track {
-  background-color: #EFC141;
+.range--yellow input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #efc141;
 }
 
-.range--cyan input[type=range]::-webkit-slider-runnable-track {
-  background-color: #4D9895;
+.range--cyan input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4d9895;
 }
 
-.range--green input[type=range]::-webkit-slider-runnable-track {
-  background-color: #ABC592;
+.range--green input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #abc592;
 }
 
 /* Scroll Ball Animation */
@@ -315,7 +339,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .move:hover .move__ball {
   right: -13px;
-  background-color: #91AF74;
+  background-color: #91af74;
   transform: scale(1.2);
 }
 
@@ -339,7 +363,7 @@ input[type=range]::-webkit-slider-runnable-track {
   position: absolute;
   bottom: -10px;
   height: 3px;
-  background-color: #ABC592;
+  background-color: #abc592;
   right: 0;
   transition: all 0.3s;
 }
@@ -361,7 +385,8 @@ input[type=range]::-webkit-slider-runnable-track {
   transition: all 0.5s;
 }
 
-.nav__list__link:hover + .nav__list__menu, .nav__list__menu:hover {
+.nav__list__link:hover + .nav__list__menu,
+.nav__list__menu:hover {
   max-height: 300px;
 }
 
