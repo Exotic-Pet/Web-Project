@@ -10,9 +10,13 @@ import searchIcon from '../assets/store/search.svg';
 import arrowDown from '../assets/reptile/arrow-down.svg';
 import titleDeco from '../assets/reptile/titledeco.svg';
 import rabbitL from  '../assets/rabbitrat/rabbit/sample1.jpg';
-// import rabbit2 from  '../assets/rabbitrat/rabbit/sample2.jfif';
-// import rabbit3 from  '../assets/rabbitrat/rabbit/sample3.jfif';
-// import rabbit4 from  '../assets/rabbitrat/rabbit/sample4.jpg';
+import rabbitE from  '../assets/rabbitrat/rabbit/sample2.jfif';
+import rabbitW from  '../assets/rabbitrat/rabbit/sample3.jfif';
+import rabbitO from  '../assets/rabbitrat/rabbit/sample4.jpg';
+import cricetinae from  '../assets/rabbitrat/rat/sample1.jfif';
+import caviaPorcellus from  '../assets/rabbitrat/rat/sample2.jpg';
+import chinchilla from  '../assets/rabbitrat/rat/sample3.jpg';
+import others from  '../assets/rabbitrat/rat/sample4.jpg';
 //CustomCSS
 import "../styles/swiperstyle.css";
 
@@ -60,6 +64,230 @@ export default function LeporidaeAndMuriodea() {
             title: "長毛兔"
         },
     ]
+    const rabbitEar =[
+        {
+            id:"1",
+            bgimg:rabbitE,
+            title: "垂耳兔"
+        },
+        {
+            id:"2",
+            bgimg:rabbitE,
+            title: "垂耳兔"
+        },
+        {
+            id:"3",
+            bgimg:rabbitE,
+            title: "垂耳兔"
+        },
+        {
+            id:"4",
+            bgimg:rabbitE,
+            title: "垂耳兔"
+        },
+        {
+            id:"5",
+            bgimg:rabbitE,
+            title: "垂耳兔"
+        },
+        {
+            id:"6",
+            bgimg:rabbitE,
+            title: "垂耳兔"
+        },
+    ]
+    const rabbitWhite =[
+        {
+            id:"1",
+            bgimg:rabbitW,
+            title: "白兔"
+        },
+        {
+            id:"2",
+            bgimg:rabbitW,
+            title: "白兔"
+        },
+        {
+            id:"3",
+            bgimg:rabbitW,
+            title: "白兔"
+        },
+        {
+            id:"4",
+            bgimg:rabbitW,
+            title: "白兔"
+        },
+        {
+            id:"5",
+            bgimg:rabbitW,
+            title: "白兔"
+        },
+        {
+            id:"6",
+            bgimg:rabbitW,
+            title: "白兔"
+        },
+    ]
+    const rabbitOthers =[
+        {
+            id:"1",
+            bgimg:rabbitO,
+            title: "其他"
+        },
+        {
+            id:"2",
+            bgimg:rabbitO,
+            title: "其他"
+        },
+        {
+            id:"3",
+            bgimg:rabbitO,
+            title: "其他"
+        },
+        {
+            id:"4",
+            bgimg:rabbitO,
+            title: "其他"
+        },
+        {
+            id:"5",
+            bgimg:rabbitO,
+            title: "其他"
+        },
+        {
+            id:"6",
+            bgimg:rabbitO,
+            title: "其他"
+        },
+    ]
+    const ratCricetinae =[
+        {
+            id:"1",
+            bgimg:cricetinae,
+            title: "倉鼠"
+        },
+        {
+            id:"2",
+            bgimg:cricetinae,
+            title: "倉鼠"
+        },
+        {
+            id:"3",
+            bgimg:cricetinae,
+            title: "倉鼠"
+        },
+        {
+            id:"4",
+            bgimg:cricetinae,
+            title: "倉鼠"
+        },
+        {
+            id:"5",
+            bgimg:cricetinae,
+            title: "倉鼠"
+        },
+        {
+            id:"6",
+            bgimg:cricetinae,
+            title: "倉鼠"
+        },
+    ]
+    const ratCaviaPorcellus =[
+        {
+            id:"1",
+            bgimg:caviaPorcellus,
+            title: "天竺鼠"
+        },
+        {
+            id:"2",
+            bgimg:caviaPorcellus,
+            title: "天竺鼠"
+        },
+        {
+            id:"3",
+            bgimg:caviaPorcellus,
+            title: "天竺鼠"
+        },
+        {
+            id:"4",
+            bgimg:caviaPorcellus,
+            title: "天竺鼠"
+        },
+        {
+            id:"5",
+            bgimg:caviaPorcellus,
+            title: "天竺鼠"
+        },
+        {
+            id:"6",
+            bgimg:caviaPorcellus,
+            title: "天竺鼠"
+        },
+    ]
+    const ratChinchilla =[
+        {
+            id:"1",
+            bgimg:chinchilla,
+            title: "絲絨鼠"
+        },
+        {
+            id:"2",
+            bgimg:chinchilla,
+            title: "絲絨鼠"
+        },
+        {
+            id:"3",
+            bgimg:chinchilla,
+            title: "絲絨鼠"
+        },
+        {
+            id:"4",
+            bgimg:chinchilla,
+            title: "絲絨鼠"
+        },
+        {
+            id:"5",
+            bgimg:chinchilla,
+            title: "絲絨鼠"
+        },
+        {
+            id:"6",
+            bgimg:chinchilla,
+            title: "絲絨鼠"
+        },
+    ]
+    const ratOthers =[
+        {
+            id:"1",
+            bgimg:others,
+            title: "其他"
+        },
+        {
+            id:"2",
+            bgimg:others,
+            title: "其他"
+        },
+        {
+            id:"3",
+            bgimg:others,
+            title: "其他"
+        },
+        {
+            id:"4",
+            bgimg:others,
+            title: "其他"
+        },
+        {
+            id:"5",
+            bgimg:others,
+            title: "其他"
+        },
+        {
+            id:"6",
+            bgimg:others,
+            title: "其他"
+        },
+    ]
 
     return (
         <>
@@ -67,7 +295,7 @@ export default function LeporidaeAndMuriodea() {
                 <aside className="xl:col-span-3 mt-9 mx-6 xl:mx-0">
                     <div className='sticky top-44'>
                         {/*Search Bar*/}
-                        <form action="" className="flex justify-around">
+                        <form action="" className="flex justify-around mx-auto">
                             <div className="relative">
                                 <input type="text" placeholder="搜尋"
                                     className="text-brown-normal text-xl max-w-full rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-yellow-normal" />
@@ -211,7 +439,7 @@ export default function LeporidaeAndMuriodea() {
                             }
                         }}
                         >
-                            {rabbitLong.map((image,id) =>(
+                            {rabbitEar.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
@@ -259,7 +487,7 @@ export default function LeporidaeAndMuriodea() {
                             }
                         }}
                         >
-                            {rabbitLong.map((image,id) =>(
+                            {rabbitWhite.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
@@ -307,7 +535,7 @@ export default function LeporidaeAndMuriodea() {
                             }
                         }}
                         >
-                            {rabbitLong.map((image,id) =>(
+                            {rabbitOthers.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
@@ -371,7 +599,7 @@ export default function LeporidaeAndMuriodea() {
                             }
                         }}
                         >
-                            {rabbitLong.map((image,id) =>(
+                            {ratCricetinae.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
@@ -419,7 +647,7 @@ export default function LeporidaeAndMuriodea() {
                             }
                         }}
                         >
-                            {rabbitLong.map((image,id) =>(
+                            {ratCaviaPorcellus.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
@@ -467,7 +695,7 @@ export default function LeporidaeAndMuriodea() {
                             }
                         }}
                         >
-                            {rabbitLong.map((image,id) =>(
+                            {ratChinchilla.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
@@ -515,7 +743,7 @@ export default function LeporidaeAndMuriodea() {
                             }
                         }}
                         >
-                            {rabbitLong.map((image,id) =>(
+                            {ratOthers.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>

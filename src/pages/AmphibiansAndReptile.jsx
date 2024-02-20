@@ -18,6 +18,11 @@ import geck5 from '../assets/reptile/gecko/grounded_namib-gecko.jpeg';
 import geck6 from '../assets/reptile/gecko/grounded_ocelot-gecko.jpg';
 import geck7 from '../assets/reptile/gecko/grounded_Viper-gecko.webp';
 import geck8 from '../assets/reptile/gecko/grounded_wonder-gecko.jpg';
+import geckT1 from '../assets/reptile/gecko/arboreal_Crested-Gecko.jpg';
+import geckT2 from '../assets/reptile/gecko/arboreal_day-geckos.jpg';
+import geckT3 from '../assets/reptile/gecko/arboreal_Gargoyle-gecko.jpg';
+import geckT4 from '../assets/reptile/gecko/arboreal_giant-gecko.jpg'
+import geckT5 from '../assets/reptile/gecko/arboreal_Ocellated-Velvet-Gecko.webp'
 //CustomCSS
 import "../styles/swiperstyle.css";
 
@@ -63,6 +68,48 @@ export default function AmphibiansAndReptile() {
         {
             id:"5",
             bgimg: geck5 ,
+            title:"豹貓守宮",
+        },
+        {
+            id:"6",
+            bgimg: geck6 ,
+            title:"豹貓守宮",
+        },
+        {
+            id:"7",
+            bgimg: geck7 ,
+            title:"豹貓守宮",
+        },
+        {
+            id:"8",
+            bgimg: geck8 ,
+            title:"豹貓守宮",
+        },
+    ]
+    const geckArboreal =[
+        {
+            id:"1",
+            bgimg: geckT1 ,
+            title:"測試守宮",
+        },
+        {
+            id:"2",
+            bgimg: geckT2 ,
+            title:"肥尾守宮",
+        },
+        {
+            id:"3",
+            bgimg: geckT3 ,
+            title:"瘤尾守宮",
+        },
+        {
+            id:"4",
+            bgimg: geckT4,
+            title:"豹貓守宮",
+        },
+        {
+            id:"5",
+            bgimg: geckT5,
             title:"豹貓守宮",
         },
         {
@@ -249,7 +296,7 @@ export default function AmphibiansAndReptile() {
                             }
                         }}
                         >
-                            {geckGrounded.map((image,id) =>(
+                            {geckArboreal.map((image,id) =>(
                                 <SwiperSlide className='' key={id} id='arborealGecko'>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>

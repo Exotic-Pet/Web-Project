@@ -12,6 +12,8 @@ import titleDeco from '../assets/reptile/titledeco.svg';
 import parrotLg from '../assets/bird/parrot/sample1.jpg';
 import parrotMd from '../assets/bird/parrot/sample2.jfif';
 import parrotSm from '../assets/bird/parrot/sample3.jpg';
+import sparrow from '../assets/bird/sparrow/sample1.jpg';
+import other from '../assets/bird/sample1.jfif'
 //CustomCSS
 import "../styles/swiperstyle.css";
 
@@ -55,6 +57,134 @@ export default function Aves() {
             id:"6",
             bgimg: parrotLg ,
             title:"大型鸚鵡",
+        },
+    ]
+    const parrotM = [
+        {
+            id:"1",
+            bgimg: parrotMd ,
+            title:"中型鸚鵡",
+        },
+        {
+            id:"2",
+            bgimg: parrotMd ,
+            title:"中型鸚鵡",
+        },
+        {
+            id:"3",
+            bgimg: parrotMd ,
+            title:"中型鸚鵡",
+        },
+        {
+            id:"4",
+            bgimg: parrotMd ,
+            title:"中型鸚鵡",
+        },
+        {
+            id:"5",
+            bgimg: parrotMd ,
+            title:"中型鸚鵡",
+        },
+        {
+            id:"6",
+            bgimg: parrotMd ,
+            title:"中型鸚鵡",
+        },
+    ]
+    const parrotS = [
+        {
+            id:"1",
+            bgimg: parrotSm ,
+            title:"小型鸚鵡",
+        },
+        {
+            id:"2",
+            bgimg: parrotSm ,
+            title:"小型鸚鵡",
+        },
+        {
+            id:"3",
+            bgimg: parrotSm ,
+            title:"小型鸚鵡",
+        },
+        {
+            id:"4",
+            bgimg: parrotSm ,
+            title:"小型鸚鵡",
+        },
+        {
+            id:"5",
+            bgimg: parrotSm ,
+            title:"小型鸚鵡",
+        },
+        {
+            id:"6",
+            bgimg: parrotSm ,
+            title:"小型鸚鵡",
+        },
+    ]
+    const sparrows = [
+        {
+            id:"1",
+            bgimg: sparrow ,
+            title:"雀科",
+        },
+        {
+            id:"2",
+            bgimg: sparrow ,
+            title:"雀科",
+        },
+        {
+            id:"3",
+            bgimg: sparrow ,
+            title:"雀科",
+        },
+        {
+            id:"4",
+            bgimg: sparrow ,
+            title:"雀科",
+        },
+        {
+            id:"5",
+            bgimg: sparrow ,
+            title:"雀科",
+        },
+        {
+            id:"6",
+            bgimg: sparrow ,
+            title:"雀科",
+        },
+    ]
+    const others = [
+        {
+            id:"1",
+            bgimg: other ,
+            title:"其他",
+        },
+        {
+            id:"2",
+            bgimg: other ,
+            title:"其他",
+        },
+        {
+            id:"3",
+            bgimg: other ,
+            title:"其他",
+        },
+        {
+            id:"4",
+            bgimg: other ,
+            title:"其他",
+        },
+        {
+            id:"5",
+            bgimg: other ,
+            title:"其他",
+        },
+        {
+            id:"6",
+            bgimg: other ,
+            title:"其他",
         },
     ]
 
@@ -202,7 +332,7 @@ export default function Aves() {
                             }
                         }}
                         >
-                            {parrotL.map((image,id) =>(
+                            {parrotM.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
@@ -250,10 +380,10 @@ export default function Aves() {
                             }
                         }}
                         >
-                            {parrotL.map((image,id) =>(
+                            {parrotS.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
-                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">{image.title}</h4>
                                         </div>
                                     </Link>
@@ -314,10 +444,10 @@ export default function Aves() {
                             }
                         }}
                         >
-                            {parrotL.map((image,id) =>(
+                            {sparrows.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
-                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
+                                        <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover bg-center bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
                                             <h4 className="text-white text-xl font-bold group-hover:opacity-80 absolute w-[200px] h-[200px] pt-8 -bottom-32 -left-3 opacity-0 text-center rounded-full bg-cyan-dark">{image.title}</h4>
                                         </div>
                                     </Link>
@@ -378,7 +508,7 @@ export default function Aves() {
                             }
                         }}
                         >
-                            {parrotL.map((image,id) =>(
+                            {others.map((image,id) =>(
                                 <SwiperSlide className='' key={id}>
                                     <Link to="intropage">
                                         <div className=" group rounded-xl overflow-hidden relative w-[181px] h-[285px] bg-cover  bg-no-repeat" style={{backgroundImage:`url(${image.bgimg})`}}>
