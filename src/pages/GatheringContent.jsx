@@ -68,7 +68,7 @@ export default function GatheringContent() {
     <li>
       <Link to="/page/gathering" className="flex items-center gap-4 group">
         {/* Photo */}
-        <figure className="max-w-[180px] xl:max-w-[204px] relative rounded-xl overflow-hidden">
+        <figure className="max-w-[180px] relative rounded-xl overflow-hidden">
           <img
             className="group-hover:scale-125"
             src={list.imagePath}
