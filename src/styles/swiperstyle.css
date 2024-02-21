@@ -86,6 +86,11 @@
     padding-left: 80px;
   }
 }
+@media (width: 768px) {
+  .mg{
+    padding-left: 50px;
+  }
+}
 .mg a {
   display: block;
   width: 181px;

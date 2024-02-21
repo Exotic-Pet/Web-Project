@@ -42,7 +42,7 @@ export default function IntroPage() {
                         ))}
                     </Swiper>
                 </figure>
-                <div className="pr-[87px] flex-1 ml-5 sm:ml-0">
+                <div className="pr-[87px] flex-1 ml-5 lg::ml-0">
                     <div className="flex items-center justify-between ">
                         <div>
                             <h3 className="text-2xl text-brown-normal">Leopard Gecko</h3>
@@ -62,7 +62,7 @@ export default function IntroPage() {
                         className="py-[11px] max-w-[423px] block text-3xl font-bold text-center border-2 border-solid rounded-full bg-cyan-normal text-brown-dark mx-auto relative -translate-y-8">
                         來更加認識牠吧!</h3>
                     <div
-                        className="lg:flex bg-white border-2 rounded-[30px] border-brown-light mt-[70px] sm:ml-20 max-w-[1118px] gap-x-12 px-12 sm:px-[110px] py-9 ">
+                        className="lg:flex bg-white border-2 rounded-[30px] border-brown-light mt-[70px] lg:ml-20 max-w-[1118px] gap-x-12 px-12 sm:px-[110px] py-9 ">
                         <div className=" mt-[30px] lg:mr-11 mb-5 lg:mb-0">
                             <h2 className="text-2xl font-bold text-cyan-dark">特寵小檔案</h2>
                             <img src={file} alt="file-img" className="mt-4" />
@@ -170,7 +170,7 @@ export default function IntroPage() {
                     </figure>
                     <ul>
                         <li className="lg:flex mt-[73px] gap-x-10">
-                            <img src={feedBox1} alt="equipment" className="mx-auto sm:ml-[79px]" />
+                            <img src={feedBox1} alt="equipment" className="mx-auto lg:ml-[79px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">飼養箱</h4>
                                 <p className="text-lg font-bold text-brown-dark">
@@ -179,7 +179,7 @@ export default function IntroPage() {
                             </div>
                         </li>
                         <li className="lg:flex mt-[53px] gap-x-10">
-                            <img src={feedBox2} alt="equipment" className="rounded-[20px] mx-auto sm:ml-[79px]" />
+                            <img src={feedBox2} alt="equipment" className="rounded-[20px] mx-auto lg:ml-[79px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">底材</h4>
                                 <p className="text-lg font-bold text-brown-dark">
@@ -188,7 +188,7 @@ export default function IntroPage() {
                             </div>
                         </li>
                         <li className="lg:flex mt-[53px] gap-x-10">
-                            <img src={feedBox3} alt="equipment" className="rounded-[20px] mx-auto sm:ml-[79px]" />
+                            <img src={feedBox3} alt="equipment" className="rounded-[20px] mx-auto lg:ml-[79px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">加溫墊</h4>
                                 <p className="text-lg font-bold text-brown-dark">
@@ -197,7 +197,7 @@ export default function IntroPage() {
                             </div>
                         </li>
                         <li className="lg:flex mt-[53px] gap-x-10">
-                            <img src={feedBox4} alt="equipment" className="rounded-[20px] mx-auto sm:ml-[79px]" />
+                            <img src={feedBox4} alt="equipment" className="rounded-[20px] mx-auto lg:ml-[79px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">躲避屋</h4>
                                 <p className="text-lg font-bold text-brown-dark">躲避屋的重要性有 2
@@ -206,7 +206,7 @@ export default function IntroPage() {
                             </div>
                         </li>
                         <li className="lg:flex mt-[53px] gap-x-10">
-                            <img src={feedBox5} alt="equipment" className="mx-auto sm:ml-[79px] rounded-[20px]" />
+                            <img src={feedBox5} alt="equipment" className="mx-auto lg:ml-[79px] rounded-[20px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">水盆</h4>
                                 <p className="text-lg font-bold text-brown-dark">
@@ -214,7 +214,7 @@ export default function IntroPage() {
                             </div>
                         </li>
                         <li className="lg:flex mt-[53px] gap-x-10">
-                            <img src={feedBox6} alt="equipment" className="mx-auto sm:ml-[79px]" />
+                            <img src={feedBox6} alt="equipment" className="mx-auto lg:ml-[79px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">溫濕度計</h4>
                                 <p className="text-lg font-bold text-brown-dark">由於豹紋守宮需要溫度在 25～32 度之間，濕度 40%～70%

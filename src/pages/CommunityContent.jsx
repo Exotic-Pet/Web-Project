@@ -56,15 +56,15 @@ export default function CommunityContent({
           關於倉鼠如何科養
         </h2>
         <div className="flex justify-between sm:justify-around lg:justify-evenly border border-brown-light bg-gray-normal rounded-[79px] py-4 px-3 lg:px-[33px] gap-x-4 mb-[30px]">
-          <div className="flex gap-x-[18px]">
-            <img className="w-12" src={user1} alt="user" />
+          <div className="flex gap-x-[18px] items-center">
+            <img className="max-w-12 max-h-12" src={user1} alt="user" />
             <div>
               <p className="text-base font-bold text-cyan-dark">小MO</p>
               <p className="text-base text-brown-dark">@momo168</p>
             </div>
           </div>
           {/* Tag Class */}
-          <ul className="hidden md:flex border-x border-brown-light px-[26px] flex-wrap w-[350px] gap-x-[14px] gap-y-[6px] justify-center">
+          <ul className="hidden md:flex border-x border-brown-light flex-wrap w-[330px] xl:w-[340px] gap-x-[14px] gap-y-[6px] justify-center items-center">
             <li className="flex gap-x-[7px]">
               <img src={hamster} alt="icon" />
               <p className="font-bold text-brown-normal text-[15px] whitespace-nowrap">

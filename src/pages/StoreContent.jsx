@@ -34,7 +34,7 @@ export default function StoreContent() {
     return (
     // Store Content
     <>
-        <main className="mt-[84px] container mx-auto overflow-hidden md:flex">
+        <main className="mt-[84px] container mx-auto overflow-hidden xl:flex">
             <article className="mt-8 px-2 lg:px-0 max-w-[859px]">
             <h4 className="flex items-center text-base font-bold text-white mb-[13px]">
                 <div className="w-[117px] h-[29px] bg-[url('../assets/store/label.svg')] bg-no-repeat flex justify-center items-center">
@@ -95,7 +95,7 @@ export default function StoreContent() {
                 </div>
             </div>
             </article>
-            <aside className="mt-10 pb-24 px-2 md:w-[300px] lg:px-0 lg:ml-6 xl:ml-[113px]">
+            <aside className="mt-10 pb-24 px-2 md:min-w-[300px] lg:px-0 lg:ml-6 xl:ml-[113px]">
             <h3 className="tracking-wide pb-5 mb-5 text-xl font-bold border-b-2 border-solid text-cyan-dark border-cyan-dark">相關文章</h3>
             <ul>
                 <li className="flex items-center mb-6">
