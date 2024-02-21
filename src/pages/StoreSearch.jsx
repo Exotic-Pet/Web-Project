@@ -133,16 +133,16 @@ export default function StoreSearch() {
       },
       {
         id: 5,
-        title: "玩蟒人生",
-        subTitle: "Pythonism",
+        title: "水豚騎士",
+        subTitle: "Capybara",
         area: "北部",
-        imgPath: cafeImg_1,
-        label: ["蛇", "龜", "守宮"],
-        contentTitle: "以球蟒為主的咖啡廳！",
-        content:
-          "只需消費一杯飲料就能與各種花色的蛇蛇或爬蟲類近距離互動，店內同時也有販售球蟒哦！",
+        imgPath: cafeImg_2,
+        label: ["水豚", "柯爾鴨"],
+        contentTitle: "水豚陪伴的咖啡廳！",
+        content: "只需要消費200元，就可以體驗和水豚一起玩耍做朋友哦！",
         like: false,
         articlePath: "/page/store-search/content",
+        price: 200,
       },
       {
         id: 6,
@@ -347,7 +347,8 @@ export default function StoreSearch() {
     const results = exploreStoreData[currentCategory].filter(
       (store) =>
         store.title.toLowerCase().includes(searchInput.toLowerCase()) ||
-        store.content.toLowerCase().includes(searchInput.toLowerCase())
+        store.content.toLowerCase().includes(searchInput.toLowerCase()) ||
+        store.label[0].toLowerCase().includes(searchInput.toLowerCase())
     );
     setSearchResults(results);
   };
@@ -568,6 +569,7 @@ export default function StoreSearch() {
             </ul>
             <div className="mt-14 text-brown-dark">
               <button
+                onClick={handleSearch}
                 className={`hover:text-white mx-auto block text-[20px] font-bold bg-${categoryColor}-${colorDepth} rounded-full w-[213px] h-[49px]`}
               >
                 開始搜尋
