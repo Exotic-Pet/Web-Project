@@ -37,12 +37,12 @@ export default function CommunityPage() {
     {
       title: "兔版",
       select: false,
-      data: ["長毛兔", "垂耳兔", "白兔", "其他"],
+      data: ["長毛兔", "垂耳兔", "白兔", "奶油兔", "其他"],
     },
     {
       title: "鳥版",
       select: false,
-      data: ["鸚鵡", "雀科", "其他"],
+      data: ["鸚鵡", "雀科", "金絲雀", "愛情鳥", "其他"],
     },
     {
       title: "節肢動物版",
