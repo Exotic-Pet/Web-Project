@@ -293,7 +293,7 @@ export default function LeporidaeAndMuriodea() {
         <>
             <main className="container xl:grid justify-center xl:grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
                 <aside className="xl:col-span-3 mt-9 mx-6 xl:mx-0">
-                    <div className='sticky top-44'>
+                    <div className='sticky top-40'>
                         {/*Search Bar*/}
                         <form action="" className="flex justify-around mx-auto">
                             <div className="relative">
@@ -371,7 +371,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -383,11 +383,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -419,7 +423,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -431,11 +435,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -467,7 +475,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -479,11 +487,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -515,7 +527,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -527,11 +539,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -579,7 +595,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -591,11 +607,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -627,7 +647,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -639,11 +659,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -675,7 +699,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -687,11 +711,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -723,7 +751,7 @@ export default function LeporidaeAndMuriodea() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -735,11 +763,15 @@ export default function LeporidaeAndMuriodea() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >

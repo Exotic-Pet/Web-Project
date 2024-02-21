@@ -91,6 +91,19 @@
     padding-left: 50px;
   }
 }
+.mg .swiper-slide-active {
+  margin-left: 20px;
+}
+@media (max-width: 1440px) {
+  .mg .swiper-slide-active {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .mg .swiper-slide-active {
+    margin-left: 0px;
+  }
+}
 .mg a {
   display: block;
   width: 181px;

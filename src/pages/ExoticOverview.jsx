@@ -18,13 +18,14 @@ export default function ExoticOverview() {
             <Link to="/page/exotic-overview/amphibiansAndreptile">
                 <figure className="relative flex-1 group 2xl:ml-32">
                     <img className="mx-auto border-4 rounded-[50px] border-transparent group-hover:border-4 group-hover:border-green-normal" src={amphibiansAndReptiles} alt="Amphibians & Reptiles"  />
-                    <img className="absolute opacity-0 -top-5 right-52 group-hover:opacity-100" src={heartIcon} alt="heart"  />
+                    <img className="absolute opacity-0 -top-5 left-[40%] lg:right-52 group-hover:opacity-100" src={heartIcon} alt="heart"  />
                 </figure>
             </Link>
         </div>
         <div className="flex flex-col flex-wrap justify-center flex-1 gap-8 sm:flex-row">
             <Link to="/page/exotic-overview/leporidaeAndmuriodea">
-                <figure className="relative group">                    <img className="mx-auto border-4 border-opacity-0 border-yellow-normal rounded-[30px] hover:border-opacity-100" src={leporidaeAndMuroidea} alt="Leporidae & Muroidea" />
+                <figure className="relative group">                    
+                    <img className="mx-auto border-4 border-opacity-0 border-yellow-normal rounded-[30px] hover:border-opacity-100" src={leporidaeAndMuroidea} alt="Leporidae & Muroidea" />
                     <img className="absolute -top-[5%]  opacity-0 right-[40%] group-hover:opacity-100" src={flowerLeftIcon} alt="flower" />
                 </figure>
             </Link>

@@ -192,18 +192,19 @@ export default function Aves() {
         <>
             <main className="container xl:grid justify-center xl:grid-cols-12 mx-auto mt-32 mb-32 gap-x-[50px]">
                 <aside className="xl:col-span-3 mt-9 mx-6 xl:mx-0">
-                    {/*Search Bar*/}
-                    <form action="" className="flex justify-around">
+                    <div className='sticky top-40'>
+                        {/*Search Bar*/}
+                        <form action="" className="flex justify-around">
                         <div className="relative">
                             <input type="text" placeholder="搜尋"
                                 className="text-brown-normal text-xl max-w-full rounded-full border border-solid border-brown-normal py-[5px] pl-5 focus:outline-cyan-normal" />
                             <img className="absolute w-5 cursor-pointer right-4 top-[11px] hover:scale-125"
                                 src={searchIcon} alt="search" />
                         </div>
-                    </form>
-                    {/*Search Place*/}
-                    <h2 className="text-3xl font-bold tracking-wider text-center text-brown-normal m-7">索引目錄</h2>
-                    <form action="">
+                        </form>
+                        {/*Search Place*/}
+                        <h2 className="text-3xl font-bold tracking-wider text-center text-brown-normal m-7">索引目錄</h2>
+                        <form action="">
                         <h2 className="mb-6 text-2xl font-bold text-cyan-dark">鳥類</h2>
                         <ul>
                             <li>
@@ -228,7 +229,8 @@ export default function Aves() {
                                 </a>
                             </li>
                         </ul>
-                    </form>
+                        </form>
+                    </div>
                 </aside>
                 <section className="xl:col-span-9 tracking-wide mt-4 xl:mt-0">
                     {/*Parrot*/}
@@ -264,7 +266,7 @@ export default function Aves() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -276,11 +278,15 @@ export default function Aves() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -312,7 +318,7 @@ export default function Aves() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -324,11 +330,15 @@ export default function Aves() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -360,7 +370,7 @@ export default function Aves() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -372,11 +382,15 @@ export default function Aves() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -424,7 +438,7 @@ export default function Aves() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -436,11 +450,15 @@ export default function Aves() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -488,7 +506,7 @@ export default function Aves() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -500,11 +518,15 @@ export default function Aves() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >

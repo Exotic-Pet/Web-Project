@@ -138,7 +138,7 @@ export default function AmphibiansAndReptile() {
                         <form action="" className="flex justify-around mx-auto">
                             <div className="relative">
                                 <input type="text" placeholder="搜尋"
-                                    className="text-brown-normal text-xl max-w-[258px] rounded-full border border-brown-normal py-[5px] pl-5 focus:outline-green-normal" />
+                                    className="text-brown-normal text-xl max-w-full rounded-full border border-brown-normal py-[5px] pl-5 focus:outline-green-normal" />
                                 <img className="absolute w-5 cursor-pointer right-4 top-[11px] hover:scale-125"
                                     src={searchIcon} alt="search" />
                             </div>
@@ -228,7 +228,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -240,11 +240,15 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -276,7 +280,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -288,11 +292,15 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -340,7 +348,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -352,11 +360,15 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -388,7 +400,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -400,11 +412,15 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -452,7 +468,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -464,11 +480,15 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -500,7 +520,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -512,11 +532,15 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -564,7 +588,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -576,11 +600,15 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
                                 
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
@@ -612,7 +640,7 @@ export default function AmphibiansAndReptile() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mb-4 mySwiper mg  max-w-[905px]"
+                        className="mb-4 mySwiper mg  max-w-[905px] 2xl:max-w-[1000px]"
                         breakpoints={{
                             360:{
                                 slidesPerView: 1,
@@ -624,11 +652,14 @@ export default function AmphibiansAndReptile() {
                                 slidesPerView: 3,
                             },
                             1024:{
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
                             1280:{
                                 slidesPerView: 4,
-                                
+                            },
+                            1440:{
+                                slidesPerView: 4,
+                                spaceBetween: -10
                             }
                         }}
                         >
