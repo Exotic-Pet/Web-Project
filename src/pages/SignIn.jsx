@@ -75,10 +75,10 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
       onClick={(e) => toggleState(e, isOpenState, setIsOpenState)}
     >
       <article
-        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--green max-w-[90%] lg:max-w-[548px] max-h-[90vh] overflow-y-auto tracking-wide bg-white rounded-[20px] p-6 md:p-12"
+        className="lightBox__content lightBox__scrollbar lightBox__scrollbar--green max-w-[90%] lg:max-w-[548px] max-h-[90vh] overflow-y-auto tracking-wide bg-white rounded-[20px] p-7 md:p-12"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex gap-x-3 px-6 py-[14px] bg-gray-dark rounded-full">
+        <div className="flex gap-x-3 px-3 md:px-6 py-2 md:py-[14px] bg-gray-dark rounded-full">
           <button
             className={`${
               isSignIn ? "text-green-dark bg-white" : "text-brown-dark"
@@ -96,11 +96,11 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
             註冊
           </button>
         </div>
-        <div className="mt-12 mb-10 px-6 text-brown-dark">
+        <div className="mt-6 md:mt-12 mb-6 md:mb-10 px-6 text-brown-dark">
           <label htmlFor="account" className="mb-6 block">
             <span className="text-[18px] font-bold mr-5">帳號</span>
             <input
-              className="input__style--green outline  outline-[1.5px] outline-brown-normal px-6 py-[10px] mt-2 sm:mt-0 block sm:inline sm:min-w-[320px] rounded-full"
+              className="input__style--green outline  outline-[1.5px] outline-brown-normal px-6 py-2 md:py-[10px] mt-2 sm:mt-0 block sm:inline-block sm:min-w-[320px] rounded-full"
               type="email"
               id="account"
               placeholder={`請輸入${isSignIn ? "使用者名稱 / " : ""}Email`}
@@ -111,7 +111,7 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
           <label htmlFor="password" className="mb-9 block">
             <span className="text-[18px] font-bold mr-5">密碼</span>
             <input
-              className="input__style--green outline  outline-[1.5px] outline-brown-normal px-6 py-[10px] mt-2 sm:mt-0 block sm:inline sm:min-w-[320px] rounded-full focus:border-green-normal"
+              className="input__style--green outline  outline-[1.5px] outline-brown-normal px-6 py-2 md:py-[10px] mt-2 sm:mt-0 block sm:inline-block sm:min-w-[320px] rounded-full focus:border-green-normal"
               type="password"
               id="password"
               placeholder="請輸入密碼"
@@ -120,12 +120,12 @@ export default function SignIn({ isOpenState, setIsOpenState, toggleState }) {
             />
           </label>
           <button
-            className="bg-green-light block rounded-full w-full py-4 tracking-wider font-bold text-xl hover:text-white"
+            className="bg-green-light block rounded-full w-full py-3 md:py-4 tracking-wider font-bold text-xl hover:text-white"
             onClick={() => handleSubmit()}
           >
             {isSignIn ? "登 入" : "註冊會員"}
           </button>
-          <div className="mt-6 flex justify-evenly">
+          <div className="mt-6 flex justify-around md:justify-evenly">
             <button className="text-[18px] font-bold tracking-wide hover:text-brown-normal">
               忘記帳號
             </button>

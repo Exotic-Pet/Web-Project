@@ -29,7 +29,7 @@ export default function Header() {
       )}
       <header className="py-[16px] fixed top-0 z-20 w-full shadow-md bg-white xl:py-[14px]">
         {/* <!-- Navbar --> */}
-        <nav className="flex items-center justify-between px-4 mx-auto leading-none lg:px-8 2xl:px-0 2xl:container">
+        <nav className="flex items-center justify-between pl-6 pr-2 mx-auto leading-none lg:px-8 2xl:px-0 2xl:container">
           <h1>
             <strong className="hidden">特寵生活</strong>
             <Link to="/" className="hover:opacity-70">

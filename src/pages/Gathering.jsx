@@ -117,7 +117,7 @@ export default function Gathering() {
         category.selectState
           ? "bg-green-light"
           : "bg-brown-light hover:opacity-80"
-      } flex gap-x-3 items-center rounded-full p-2 lg:py-4 lg:px-5 cursor-pointer`}
+      } flex md:gap-x-2 lg:gap-x-3 items-center rounded-full p-2 md:p-3 lg:py-4 lg:px-5 cursor-pointer`}
       onClick={() => {
         toggleSelectState(category.id);
         handleCategorySelect(category.category);
@@ -133,7 +133,7 @@ export default function Gathering() {
         src={category.icon}
         alt="icon-color"
       />
-      <h5 className="hidden md:block text-brown-dark text-xl font-bold">
+      <h5 className="hidden md:block text-brown-dark text-lg lg:text-xl font-bold">
         {category.category}
       </h5>
     </li>
@@ -432,7 +432,7 @@ export default function Gathering() {
             <h4 className="hidden lg:block text-brown-dark text-2xl font-bold w-[56px]">
               全部分類
             </h4>
-            <ul className="flex gap-x-2 md:gap-x-6 overflow-x-auto">
+            <ul className="flex gap-x-2 md:gap-x-4 lg:gap-x-6 overflow-x-auto">
               {categoryTagData.map((category) => (
                 <CategoryTag category={category} key={category.id} />
               ))}

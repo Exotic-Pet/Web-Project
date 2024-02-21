@@ -208,11 +208,11 @@ export default function HomePage() {
                 <h2 className="tracking-widest text-brown-dark font-bold text-[40px] md:text-[50px]">
                   News
                   {/* <br className="sm:hidden" /> */}
-                  <span className="text-green-normal text-[32px] md:text-[40px] font-bold md:ml-4">
+                  <span className="text-green-normal text-[32px] md:text-[40px] font-bold ml-2 md:ml-4">
                     最新消息
                   </span>
                 </h2>
-                <div className="mt-4 md:mt-7 text-[20px] font-bold">
+                <div className="mt-4 md:mt-7 text-[20px] font-bold flex justify-center md:justify-start">
                   <button
                     className={`${
                       currentNewsType === "活動"
