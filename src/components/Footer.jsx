@@ -13,15 +13,15 @@ export default function Footer() {
   return (
     <footer>
       <div className="py-[64px] relative bg-yellow-normal">
-        <div className="container flex flex-col justify-center mx-auto md:flex-row">
-          <nav className="flex flex-col gap-y-6 justify-center md:flex-row">
-            <h2 className="md:mr-[44px]">
+        <div className="container flex flex-col justify-center mx-auto md:flex-row gap-x-12">
+          <nav className="flex flex-col gap-y-6 gap-x-10 justify-center md:flex-row">
+            <h2 className="">
               <strong className="hidden">特寵生活</strong>
               <Link to="/" className="hover:opacity-80">
                 <img className="mx-auto" src={logo} alt="logo" />
               </Link>
             </h2>
-            <ul className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <ul className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               <li className="">
                 <Link
                   to="/page/store-overview"
@@ -29,7 +29,7 @@ export default function Footer() {
                 >
                   <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={homeWhite} alt="home" />
-                    <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
+                    <h2 className="ml-[12px] text-[22px] md:text-[18px] lg:text-[22px] tracking-wide text-brown-dark font-bold">
                       特寵探店
                       <small className="block text-[10px] text-white">
                         Exotic pet stores
@@ -45,7 +45,7 @@ export default function Footer() {
                 >
                   <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={calendarWhite} alt="calendar" />
-                    <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
+                    <h2 className="ml-[12px] text-[22px] md:text-[18px] lg:text-[22px] tracking-wide text-brown-dark font-bold">
                       特寵活動
                       <small className="block text-[10px] text-white">
                         Exotic pet event
@@ -61,7 +61,7 @@ export default function Footer() {
                 >
                   <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={introWhite} alt="intro" />
-                    <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
+                    <h2 className="ml-[12px] text-[22px] md:text-[18px] lg:text-[22px] tracking-wide text-brown-dark font-bold">
                       特寵介紹
                       <small className="block text-[10px] text-white">
                         Introduction
@@ -74,7 +74,7 @@ export default function Footer() {
                 <Link to="/page/gathering" className="block hover:opacity-80">
                   <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={peopleWhite} alt="people" />
-                    <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
+                    <h2 className="ml-[12px] text-[22px] md:text-[18px] lg:text-[22px] tracking-wide text-brown-dark font-bold">
                       聚會揪團
                       <small className="block text-[10px] text-white">
                         Get-together
@@ -87,7 +87,7 @@ export default function Footer() {
                 <Link to="/page/community" className="block hover:opacity-80">
                   <div className="max-w-[200px] mx-auto flex items-center">
                     <img src={msgWhite} alt="msg" />
-                    <h2 className="ml-[12px] text-[22px] tracking-wide text-brown-dark font-bold">
+                    <h2 className="ml-[12px] text-[22px] md:text-[18px] lg:text-[22px] tracking-wide text-brown-dark font-bold">
                       心得交流
                       <small className="block text-[10px] text-white">
                         Forum
@@ -99,10 +99,10 @@ export default function Footer() {
             </ul>
           </nav>
           {/* Footer Contact */}
-          <section className="mt-6 pt-6 border-t border-white text-white sm:py-4 sm:ml-[48px] md:mt-0 md:pl-[64px] md:border-t-0 md:border-l">
+          <section className="mt-6 pt-6 border-t border-white text-white sm:py-4 md:mt-0 md:pl-12 lg:pl-[64px] md:border-t-0 md:border-l">
             <div className="mx-auto max-w-[320px] pl-8 sm:pl-0">
               <h3 className="text-xl font-bold tracking-wider">
-                聯繫我們 Contact us
+                聯繫我們<br className="hidden md:block xl:hidden" /> Contact us
               </h3>
               <ul className="mt-[16px] text-sm leading-6 font-medium tracking-wide">
                 <li>電話 02-22222222</li>
