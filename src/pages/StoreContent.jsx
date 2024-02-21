@@ -28,7 +28,7 @@ import FbShare from "../components/FacebookShare";
 export default function StoreContent() {
     const handleLineShare = () => {
         const windowFeatures = 'width=500,height=500,left=100,top=100';
-        const shareUrl = "https://exotic-pet.github.io/Web-Project/page/store-search/content"; // 替換成你想要分享的網址
+        const shareUrl = "https://exotic-pet.github.io/Web-Project/"; // 替換成你想要分享的網址
         window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`,'Custom Window',windowFeatures);
     };
     return (
@@ -217,8 +217,12 @@ export default function StoreContent() {
                     </div>
                 </li>
             </ul>
-            <div className="mx-auto mt-[75px] mb-[39px]"><img src={gdn1} alt="GDN" className="mx-auto"/></div>
-            <div className="mx-auto"><img src={gdn2} alt="GDN" className="mx-auto"/></div>
+            <div className="mx-auto mt-[75px] mb-[39px]">
+                <img src={gdn1} alt="GDN" className=""/>
+            </div>
+            <div className="mx-auto">
+                <img src={gdn2} alt="GDN" className=""/>
+            </div>
             </aside>
         </main>
         
