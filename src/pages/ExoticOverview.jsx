@@ -14,12 +14,14 @@ export default function ExoticOverview() {
     return (
     <main className="my-32">
     <div className="container flex flex-col justify-center mx-auto xl:flex-row gap-y-8">
-        <Link to="/page/exotic-overview/amphibiansAndreptile">
-        <figure className="relative flex-1 group">
-            <img className="mx-auto border-4 rounded-[50px] border-transparent group-hover:border-4 group-hover:border-green-normal" src={amphibiansAndReptiles} alt="Amphibians & Reptiles"  />
-            <img className="absolute opacity-0 -top-5 right-52 group-hover:opacity-100" src={heartIcon} alt="heart"  />
-        </figure>
-        </Link>
+        <div className="">
+            <Link to="/page/exotic-overview/amphibiansAndreptile">
+                <figure className="relative flex-1 group 2xl:ml-32">
+                    <img className="mx-auto border-4 rounded-[50px] border-transparent group-hover:border-4 group-hover:border-green-normal" src={amphibiansAndReptiles} alt="Amphibians & Reptiles"  />
+                    <img className="absolute opacity-0 -top-5 right-52 group-hover:opacity-100" src={heartIcon} alt="heart"  />
+                </figure>
+            </Link>
+        </div>
         <div className="flex flex-col flex-wrap justify-center flex-1 gap-8 sm:flex-row">
             <Link to="/page/exotic-overview/leporidaeAndmuriodea">
                 <figure className="relative group">                    <img className="mx-auto border-4 border-opacity-0 border-yellow-normal rounded-[30px] hover:border-opacity-100" src={leporidaeAndMuroidea} alt="Leporidae & Muroidea" />

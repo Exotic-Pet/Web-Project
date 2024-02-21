@@ -94,6 +94,11 @@ export default function StoreContent() {
                     </strong>
                 </div>
             </div>
+            <div className="  bg-gray-normal border border-brown-light rounded-[47px] py-[15px] mb-[90px] px-10 sm:px-28 max-w-[867px]">
+                <h4 className="text-brown-dark font-bold text-sm mb-[6px]">照片來源：玩蟒人生 Pythonism FB 粉絲專頁</h4>
+                <p className="text-brown-dark font-medium text-sm mb-1">若您認為有侵權情形，煩請立即告知，我們將移除相關內容並下架，以確保維護相關權益。</p>
+                <p className="text-brown-dark font-medium text-sm">我們一向重視知識產權和合法使用，致力於建立一個公正、尊重著作權的環境，感謝您的合作與理解。</p>
+            </div>
             </article>
             <aside className="mt-10 pb-24 px-2 md:min-w-[300px] lg:px-0 lg:ml-6 xl:ml-[113px]">
             <h3 className="tracking-wide pb-5 mb-5 text-xl font-bold border-b-2 border-solid text-cyan-dark border-cyan-dark">相關文章</h3>
@@ -216,11 +221,7 @@ export default function StoreContent() {
             <div className="mx-auto"><img src={gdn2} alt="GDN" className="mx-auto"/></div>
             </aside>
         </main>
-        <div className=" bg-gray-normal border border-brown-light rounded-[47px] py-[15px] mb-[90px] px-10 sm:px-28 max-w-[867px] sm:mx-20">
-                <h4 className="text-brown-dark font-bold text-sm mb-[6px]">照片來源：玩蟒人生 Pythonism FB 粉絲專頁</h4>
-                <p className="text-brown-dark font-medium text-sm mb-1">若您認為有侵權情形，煩請立即告知，我們將移除相關內容並下架，以確保維護相關權益。</p>
-                <p className="text-brown-dark font-medium text-sm">我們一向重視知識產權和合法使用，致力於建立一個公正、尊重著作權的環境，感謝您的合作與理解。</p>
-        </div>
+        
     </>
     )
 }

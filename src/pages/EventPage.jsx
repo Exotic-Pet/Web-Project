@@ -233,7 +233,7 @@ export default function StoreContent() {
             >
               {hotEvents.map((hotEvent, i) => (
                 <SwiperSlide className="mt-5 mb-4" key={i}>
-                  <li className="cursor-pointer shadow-md bg-white mx-auto rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5" onClick={() => setEventLightBoxState(true)}>
+                  <li className="cursor-pointer shadow-md bg-white mx-auto rounded-xl px-[35px] py-[30px] w-[350px] 2xl:w-[400px] hover:-translate-y-5" onClick={() => setEventLightBoxState(true)}>
                       <img
                         src={hotEvent.imgUrl}
                         alt="event"
@@ -293,7 +293,7 @@ export default function StoreContent() {
             >
               {featuredEvents.map((featuredEvent, i) => (
                 <SwiperSlide className="mt-5 mb-4" key={i}>
-                  <li className="cursor-pointer mx-auto bg-white shadow-md rounded-xl px-[35px] py-[30px] w-[350px] hover:-translate-y-5" onClick={() => setEventLightBoxState(true)}>
+                  <li className="cursor-pointer mx-auto bg-white shadow-md rounded-xl px-[35px] py-[30px] w-[350px] 2xl:w-[400px] hover:-translate-y-5" onClick={() => setEventLightBoxState(true)}>
                     <img
                       src={featuredEvent.imgUrl}
                       alt="event"
