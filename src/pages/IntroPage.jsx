@@ -51,8 +51,8 @@ export default function IntroPage() {
                         <h3 className="block w-[80px] pt-3 h-[80px] text-xl font-bold text-center text-white rounded-full bg-brown-normal">兩棲<br />爬蟲</h3>
                     </div>
                     <div className="py-6 my-6 text-xl font-bold border-solid border-y-2 border-brown-light text-brown-dark">
-                        <p>豹紋守宮有著肥肥的尾巴，水汪汪的大眼睛眨呀眨，加上偶而露出的魔性微笑，那可愛又親人的模樣、讓他成為全世界最有人氣的爬蟲類寵物！</p>
-                        <p className="mt-3">擁有眾多美麗的品系變化、以及容易飼育等特點，都是豹紋守宮的魅力所在。</p>
+                        <p>豹紋守宮擁有肥肥的尾巴、大眼睛時而眨呀眨，再加上臉上一直掛著的魔性微笑，這迷人的模樣使其成為全球最受歡迎的爬蟲類寵物之一！</p>
+                        <p className="mt-3">還擁有眾多不同品系的美麗外觀和容易飼養的特點，這些都是豹紋守宮迷人之處。</p>
                     </div>
                 </div>
             </div>
@@ -81,24 +81,22 @@ export default function IntroPage() {
                     <div className="mx-10 sm:mx-20 mt-9">
                         <h2 className="text-cyan-dark font-bold text-3xl tracking-[8%] mb-5 text-center">豹紋守宮是什麼？</h2>
                         <p className="text-base text-brown-dark">
-                            守宮可愛的模樣讓人深深著迷，加上溫順親人的性格，使許多人開始飼養守宮，但究竟守宮是什麼呢？守宮名稱的由來為何？其實，守宮是一種屬於瞼虎科中的「擬蜥屬」爬行動物。據說在古代，守宮經常會出現在宮殿、房屋等住家中，且會幫忙吃害蟲，因此被古人認為是一種「守護宮殿」的爬蟲，所以稱之為守宮，台語又稱作「蟮蟲仔」。<br />
-                            除此之外，多數守宮在遇到危險時，還會斷尾逃生，<strong
-                                className="font-bold text-brown-dark">雖然尾巴會再生長出來，但卻不比一開始來的漂亮</strong>，因此在守宮飼養的過程中，<strong
-                                    className="font-bold text-brown-dark">需要特別注意不要驚嚇到牠們</strong>，尤其是守宮上手時，一定要動作小、輕，且從肚子下方扶起，讓他們有安全感！
+                            守宮迷人的模樣深深吸引人，再加上其溫順親人的性格，因而吸引了許多人開始飼養守宮。那麼，守宮究竟是什麼呢？
+                            守宮屬於瞼虎科中的「擬蜥屬」爬行動物。傳言在古代，守宮經常出現在宮殿、房屋等住家中，並以捕食害蟲而被古人認為是一種「守護宮殿」的爬蟲，因此得名守宮，而在台語中也被稱為「蟮蟲仔」。<br />
+                            此外，大多數守宮在面臨危險時會選擇斷尾逃生。<strong
+                                className="font-bold text-brown-dark">儘管尾巴有再生的能力，但新長出來的尾巴並不如原本的美麗</strong>，因此在守宮飼養的過程中，因此，在飼養守宮的過程中，特別需要注意不要驚嚇到牠們，特別是當要接觸守宮時，應該保持動作小、輕柔，從肚子下方扶起，以確保它們感到安全。
                         </p>
                     </div>
                     <div className="border-b-[1px] border-solid border-brown-normal pb-[58px] mt-9 mx-10 sm:mx-20">
                         <h2 className="text-cyan-dark font-bold text-3xl tracking-[8%] mb-5 text-center">豹紋守宮吃什麼？</h2>
-                        <p className="text-base text-brown-dark ">守宮食物與一般壁虎無異，主食是以昆蟲為主，像是：蟋蟀、蟑螂、麵包蟲、大麥蟲、蠶等，甚至也會吃乳鼠；除此之外，
-                            。<strong className="font-bold text-brown-dark">也需要定期為守宮補充鈣粉、維他命等營養品，約 2～3 天添加 1
-                                次，才不會導致缺鈣，進而造成骨骼變形等狀況</strong>而至於守宮多久餵一次，<strong
-                                    className="font-bold text-brown-dark">只能說每個「個體」與「品種」都不盡相同，但基本上幼體 1 日 1 次，成體則 2～3 日餵食 1
-                                次</strong>。</p>
+                        <p className="text-base text-brown-dark ">守宮的飲食與一般的壁虎相似，主要以昆蟲為主食，包括蟋蟀、蟑螂、麵包蟲、大麥蟲、蠶等，甚至可能進食乳鼠。此外，為了確保守宮獲得足夠的營養
+                            <strong className="font-bold text-brown-dark">也需要定期添加鈣粉、維他命等補充品，通常每 2～3 天補充 1 次，以防止缺鈣可能導致的骨骼變形等問題。<br/></strong>至於餵食的頻率，<strong
+                                    className="font-bold text-brown-dark">只能說每個「個體」和「品種」都存在差異，但一般而言，幼體每天餵食 1 次，成體則通常每 2～3 天餵食 1 次</strong>。這樣的安排有助於確保守宮獲得適當的營養，維持其健康狀態。</p>
                     </div>
                     <div className="mt-[45px] mx-10 sm:mx-20">
                         <h2 className="text-cyan-dark font-bold text-3xl tracking-[8%] mb-5 text-center">豹紋守宮有哪些品系？</h2>
-                        <p className="text-base text-brown-dark">豹紋守宮的外貌很有特色。原生色的豹紋守宮呈黃褐色，身上有黑色斑點，這也是它名字的由來。<span
-                            className="font-bold text-brown-dark">但是寵物界的豹紋守宮可不只有原色這一種顏色，豹紋守宮因為遺傳基因較為多樣化，進而造成許多的個體差異，專業的繁育者選育出了超多的顏色基因品系</span>，這些不同基因的名字也起得非常好聽：日蝕、黑夜、陽光、暴風雪、雪花、檸檬霜、雨水白化、川普白化等，就來看看常見的豹紋守宮品系吧！
+                        <p className="text-base text-brown-dark">豹紋守宮的外觀非常獨特。原生色的豹紋守宮呈現黃褐色，身上佈滿黑色斑點，這也是其名稱的由來。然而，在寵物領域，<span
+                            className="font-bold text-brown-dark">豹紋守宮並不僅限於原生色，因其基因的多樣性，導致許多個體呈現差異。專業的繁育者通過選育，創造出豐富多彩的顏色基因品系</span>，而這些品系的名稱也十分特別，如日蝕、黑夜、陽光、暴風雪、雪花、檸檬霜、雨水白化、川普白化等。讓我們來了解一下一些常見的豹紋守宮品系吧！
                         </p>
                     </div>
                     <div className="bg-[url('../assets/intropage/dialog-box.svg')] bg-no-repeat mt-[48px] mb-[25px] mx-auto text-center bg-center">
@@ -174,8 +172,7 @@ export default function IntroPage() {
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">飼養箱</h4>
                                 <p className="text-lg font-bold text-brown-dark">
-                                    首先，飼養箱是養豹紋守宮的必需品，雖然牠對環境要求不高，但為了提供豹紋守宮舒適的生活環境，需要一個至少 30 x 30 x 20
-                                    的飼養箱，且不宜過小或過大。因為過小的飼養箱可能會給牠們壓迫感，甚至會因此而無法正常長大；過大的飼養箱若沒有足夠的躲避空間，可能會使牠感到不安。</p>
+                                首先，住所是培養豹紋守宮的必備品。雖然牠對環境的需求不苛刻，但為了提供這種守宮一個舒適的居住環境，需要一個至少 30 x 30 x 20 的住所，而且不宜太小或太大。因為太小的住所可能會讓牠感到壓迫，甚至會影響牠的正常成長；太大的住所如果沒有足夠的藏身處，可能會使牠感到不安。</p>
                             </div>
                         </li>
                         <li className="lg:flex mt-[53px] gap-x-10">
@@ -183,7 +180,7 @@ export default function IntroPage() {
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">底材</h4>
                                 <p className="text-lg font-bold text-brown-dark">
-                                    在挑選底材時，建議選擇一個容易清潔的底材，像是：廚房紙巾、赤玉土、椰土等，不過要注意的是，不要為了好看而選用沙類、木屑等細小的底材，因為很容易造成豹紋守宮誤食。曾經就發生過守宮死亡後解剖來看，結果肚子全是沙的慘狀。
+                                在挑選底材時，建議選擇易於清潔的材料，如廚房紙巾、紅玉土、椰子土等。但需要注意的是，不要為了美觀而選用細小的底材，如沙子或木屑，因為這可能會導致豹紋守宮誤食。曾有守宮死亡並進行解剖，結果發現牠們的胃部充滿沙子，情況非常慘烈。
                                 </p>
                             </div>
                         </li>
@@ -192,7 +189,7 @@ export default function IntroPage() {
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">加溫墊</h4>
                                 <p className="text-lg font-bold text-brown-dark">
-                                    由於豹紋守宮是變溫動物，代表牠們的體溫會隨著環境溫度而變化，所以加溫需求對於爬蟲來說相當重要，最好的方法就是將加溫墊可以放在飼養箱「底部」的某一側，並讓它們躺在上面取暖。不過要注意的是，溫度要控制好，且不要與守宮直接接觸，以避免守宮燙傷。
+                                因為豹紋守宮是變溫動物，這意味著它們的體溫會根據環境溫度而變化。因此，提供適當的加溫是相當重要的。最佳的方法是將加溫墊放置在飼養箱的「底部」某一側，讓它們可以躺在上面取暖。但必須要小心確保溫度控制良好，並避免直接接觸守宮，以免造成燙傷。
                                 </p>
                             </div>
                         </li>
@@ -200,8 +197,7 @@ export default function IntroPage() {
                             <img src={feedBox4} alt="equipment" className="rounded-[20px] mx-auto lg:ml-[79px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">躲避屋</h4>
-                                <p className="text-lg font-bold text-brown-dark">躲避屋的重要性有 2
-                                    點，一是豹紋守宮的天性習慣在遮蔽處找安全感，因此需要提供躲避屋給牠們，如果缺乏隱蔽空間，守宮可能會感到不安，進而對健康產生負面影響，甚至會影響牠們的食慾和行為表現。二是豹紋守宮在脫皮時，若有磨擦系數足夠且表面粗糙的躲避屋，可以幫助牠們順利脫皮。
+                                <p className="text-lg font-bold text-brown-dark">提供躲藏處的重要性有兩個方面。首先，豹紋守宮天生習慣在隱藏處感到安全，因此需要給予它們躲藏的地方。若缺乏這種隱蔽空間，守宮可能會感到焦慮，進而對它們的健康造成負面影響，甚至影響它們的食慾和行為表現。其次，當豹紋守宮脫皮時，具有足夠磨擦力和表面粗糙的躲藏處可以幫助牠們順利脫皮。
                                 </p>
                             </div>
                         </li>
@@ -210,15 +206,14 @@ export default function IntroPage() {
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">水盆</h4>
                                 <p className="text-lg font-bold text-brown-dark">
-                                    如同人類一樣，豹紋守宮也需要飲水，所以提供乾淨的水源非常重要，建議可以將水盆放至飼養箱冷區（無加溫墊那區），並隨時保持清潔，以避免細菌孳生。</p>
+                                就像人類一樣，豹紋守宮也需要水，因此提供清潔的水源至關重要。建議將水盆放在飼養箱的冷區（無加熱墊的區域），並定期清潔，以防止細菌繁殖。</p>
                             </div>
                         </li>
                         <li className="lg:flex mt-[53px] gap-x-10">
                             <img src={feedBox6} alt="equipment" className="mx-auto lg:ml-[79px]" />
                             <div className="mt-[32px] mx-10">
                                 <h4 className="mb-3 text-2xl font-bold text-cyan-dark">溫濕度計</h4>
-                                <p className="text-lg font-bold text-brown-dark">由於豹紋守宮需要溫度在 25～32 度之間，濕度 40%～70%
-                                    之間的飼養環境，因此適當的溫度控制非常重要；而準備溫濕度計，則可以幫助飼主確認飼養箱的溫度是否在適宜範圍內，也需準備紅外線測溫槍，更加確定溫度及濕度，以提供豹紋守宮一個健康的生活環境。
+                                <p className="text-lg font-bold text-brown-dark">由於豹紋守宮需要保持在 25～32 度的溫度和 40%～70% 的濕度，因此溫度控制至關重要。使用溫度計可以幫助飼主確認飼養箱內的溫度是否在適當範圍內，同時使用紅外線溫度計可以更準確地測量溫度和濕度，以確保豹紋守宮生活在健康的環境中。
                                 </p>
                             </div>
                         </li>
@@ -230,15 +225,15 @@ export default function IntroPage() {
                                 className="text-brown-dark text-3xl font-bold text-center py-[10px] bg-cyan-normal rounded-[53px] sm:px-0 px-5 mr-2">
                                 豹紋守宮為何會變白？</h2>
                             <ul className="text-base text-brown-dark mt-[30px] mb-5 lg:mb-0">
-                                <li className="list-disc">守宮數個月會脫皮一次；發現守宮的身體變白，就是即將要脫皮的信號。發現將脫皮的徵兆後，請讓飼育箱內保持一定濕度，並放置水盆保持。</li>
-                                <li className="list-disc">脫皮如果持續殘留在身上，可能會造成守宮的皮膚發炎、壞死。可以將卡皮的部分浸泡於溫水中，使用沾濕的棉花棒幫助守宮去除脫皮。</li>
-                                <li className="list-disc">守宮經常將自己脫下來的皮吃掉，此為正常現象。</li>
+                                <li className="list-disc">守宮每隔數個月會脫一次皮；當守宮身體變白時，表示即將要脫皮。一旦發現脫皮的徵兆，應該讓飼養箱內保持適當的濕度，同時放置水盆供守宮飲用。</li>
+                                <li className="list-disc">如果脫皮殘留在身上，可能會導致守宮皮膚發炎或壞死。可以將殘留的皮浸泡在溫水中，並使用濕潤的棉花棒幫助守宮去除脫皮。</li>
+                                <li className="list-disc">守宮經常會吃掉自己脫下來的皮，這是一個正常現象。</li>
                             </ul>
                         </div>
                         <img src={feedBox7} alt="img" className="rounded-[20px] my-auto mx-auto" />
                     </div>
                     <p className="text-lg font-bold text-brown-dark mx-[81px]">
-                        豹紋守宮是一種地棲型（在地面生活）的晨昏性（清晨和黃昏時間內活動）動物，其飼養門檻低、環境要求不高、不占空間不吵鬧，再加上可愛溫馴的個性等優點，成為了多數人的首選爬蟲類寵物；且如果你是從未接觸過爬蟲類的新手，豹紋守宮更是入坑推薦的入門爬蟲寵物！
+                    豹紋守宮是一種棲息於地面的動物，它們主要在清晨和黃昏時分活動。這種爬蟲寵物的飼養門檻低，對環境要求不高，並且不佔用太多空間，也不會造成噪音。再加上它們可愛且溫馴的個性，因此成為了許多人首選的寵物之一。對於從未接觸過爬蟲類的新手來說，豹紋守宮更是推薦的入門寵物！
                     </p>
                     <figure
                         className="bg-[url('../assets/intropage/readmore-bg.svg')] text-center bg-no-repeat bg-center mt-[67px] py-7">
@@ -246,11 +241,11 @@ export default function IntroPage() {
                     </figure>
                     <div className="text-xl font-bold text-brown-dark bg-white px-14 py-[33px] rounded-[30px] border-solid border-2 border-brown-light sm:mx-[90px] leading-normal tracking-wide ">
                         <ul className="sm:ml-11">
-                            <a href=""><li className="list-disc">豹紋守宮怎麼養？豹紋守宮飼養新手從 0 開始！</li></a>
-                            <a href=""><li className="list-disc">肥尾守宮全攻略：肥尾守宮飼養新手從 0 開始！</li></a>
-                            <a href=""><li className="list-disc">守宮介紹：守宮是什麼？6 個守宮飼養入門必看須知！</li></a>
-                            <a href=""><li className="list-disc">守宮種類有哪些？8 種守宮：豹紋、肥尾、睫角全上榜！</li></a>
-                            <a href=""><li className="list-disc">守宮購買前必看：如何挑選 1 隻健康的守宮？</li></a>
+                            <a href=""><li className="list-disc">如何飼養豹紋守宮？飼養豹紋守宮的新手從零開始！</li></a>
+                            <a href=""><li className="list-disc">飼養肥尾守宮完整指南：肥尾守宮飼養新手從零開始！</li></a>
+                            <a href=""><li className="list-disc">守宮簡介：守宮是什麼？6 個飼養守宮初學者必看的重要資訊！</li></a>
+                            <a href=""><li className="list-disc">守宮品種總覽：有哪些守宮品種？8 種守宮：包括豹紋、肥尾和睫角守宮！</li></a>
+                            <a href=""><li className="list-disc">購買守宮前的必讀指南：如何選擇一隻健康的守宮？</li></a>
                         </ul>
                     </div>
                 </div>
