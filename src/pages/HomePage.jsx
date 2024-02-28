@@ -21,10 +21,9 @@ import deco_4 from "../assets/index/deco-4.svg";
 import deco_5 from "../assets/index/deco-5.svg";
 import deco_6 from "../assets/index/deco-6.svg";
 import timeIcon from "../assets/index/time.svg";
-import hotImg_1 from "../assets/index/hot-1.png";
-import hotImg_2 from "../assets/index/hot-2.png";
-import hotImg_3 from "../assets/index/hot-3.png";
-import hotImg_4 from "../assets/index/hot-4.png";
+import hotImg_1 from "../assets/index/hot-img-1.png";
+import hotImg_2 from "../assets/index/hot-img-2.png";
+import hotImg_3 from "../assets/index/hot-img-3.png";
 import appDemo from "../assets/index/APP-demo.svg";
 import googlePlay from "../assets/index/google-play.png";
 import appStore from "../assets/index/app-store.png";
@@ -36,51 +35,59 @@ export default function HomePage() {
   const hotArticlesData = [
     {
       postTime: 23,
-      animal: "烏龜",
-      title: "養到超黏人陸龜",
+      animal: "鸚鵡",
+      title: "北部鸚鵡旅館推薦",
       imgUrl: hotImg_1,
       content:
-        "嗨👋我是豆包 黃金歐陸 帥哥一枚 我超級愛在我媽媽身上睡覺 如果不躺在媽媽身上我會一直挖我的小屋吵他 直到他把我放在他肥肥又溫暖的肚子上 我才會乖乖的睡覺💤",
+        "因為全家要出國所以這次就選擇了「鸚鵡天堂」這家鸚鵡旅館寄養我家的鳥寶們，服務真的很不錯！住宿就像是鸚鵡的五星奢華度假村一樣，有專屬的鳥套房～鸚鵡天堂一直秉持著最高的安全與衛生標準，他們配備了先進的清潔設施，維持房間的衛生狀態，同時也提供安全的食物和水源，讓鳥寶們在這裡獲得全方位的照顧。最炫的是智力遊戲時間，讓你的鸚鵡腦袋也動動，不只是吃吃睡睡，還可以讓牠們過個有挑戰性的小日子。而且，他們還有超棒的鳥類醫療小組，隨時照顧牠們的健康～",
     },
     {
       postTime: 5,
       animal: "守宮",
-      title: "(圖多)當一隻冬天的守宮🦖",
+      title: "(圖多)貪吃的守宮🦖",
       imgUrl: hotImg_2,
       content:
-        "先來一張可愛的小朋友，天氣變冷了🍂 我也開始被重用了！！！像這樣！！或這樣！！看看那個小手手！！！",
-    },
-    {
-      postTime: 1,
-      animal: "兔子",
-      title: "兔子放風聖地推薦",
-      imgUrl: hotImg_3,
-      content:
-        "自從家裡養了兔子，都在煩惱到底要帶牠們去哪裡放風跑跑，看牠在家都有點無聊，想說這次可以帶牠一起出門（不然都會跟主人一樣變宅宅） 不過不太想讓他們待在機車上太久，所以盡量都是找台中市區境內的寵物餐廳，但是要找到適合兔子放風的場域也是難上加難，去勤美草悟道又怕兔子被嚇到（哀）",
+        "Yo！來談談我家那位特別的小吃貨守宮。就是這麼一位，喜歡的不是水果也不是蔬菜，而是那些小小的蟲蟲！一旦拿出蟲子，牠的眼睛就亮了起來，立馬進入專注模式。不管是蟋蟀、度比亞還是櫻桃蟑螂，牠通通都吃得津津有味。",
     },
     {
       postTime: 1,
       animal: "倉鼠",
-      title: "關於倉鼠飼養",
-      imgUrl: hotImg_4,
+      title: "關於倉鼠如何科養",
+      imgUrl: hotImg_3,
       content:
-        "最近在社團常看到新手分享倉鼠飼養 但似乎沒有接收到正確的飼養資訊 基礎飼養上愛鼠協會官網即可 今天來分享一下大家比較少談到的科養。 關於科養 甚麼是科養?為什麼要科養?倉鼠一定要科養嗎? 🌟隨著動保意識抬頭，飼養寵物不再只是將動物關起來，給他們食物跟水維持基本溫飽，動物的身心靈健康，也漸漸的越來越被重視。 🌟科養是科學飼養的簡稱，通常是指德國飼養標準，德國有著全世界最嚴格的倉鼠飼養標準，這些標準有些是德國科學家根據實驗而得，例如籠具大小、墊材厚度還有豐容(enrichment)等，其中最重要的就是豐容，許多標準基於豐容應運而生。",
+        "在寵物飼養的領域中，德國科學飼養標準，俗稱「科養」，已經成為愛護寵物的新趨勢。科養的核心理念在於創造一個能夠滿足寵物天性需求的環境，進而讓牠們在身心層面都能夠維持快樂。",
     },
     {
       postTime: 23,
-      animal: "烏龜",
-      title: "養到超黏人陸龜",
+      animal: "鸚鵡",
+      title: "北部鸚鵡旅館推薦",
       imgUrl: hotImg_1,
       content:
-        "嗨👋我是豆包 黃金歐陸 帥哥一枚 我超級愛在我媽媽身上睡覺 如果不躺在媽媽身上我會一直挖我的小屋吵他 直到他把我放在他肥肥又溫暖的肚子上 我才會乖乖的睡覺💤",
+        "因為全家要出國所以這次就選擇了「鸚鵡天堂」這家鸚鵡旅館寄養我家的鳥寶們，服務真的很不錯！住宿就像是鸚鵡的五星奢華度假村一樣，有專屬的鳥套房～鸚鵡天堂一直秉持著最高的安全與衛生標準，他們配備了先進的清潔設施，維持房間的衛生狀態，同時也提供安全的食物和水源，讓鳥寶們在這裡獲得全方位的照顧。最炫的是智力遊戲時間，讓你的鸚鵡腦袋也動動，不只是吃吃睡睡，還可以讓牠們過個有挑戰性的小日子。而且，他們還有超棒的鳥類醫療小組，隨時照顧牠們的健康～",
     },
     {
       postTime: 5,
       animal: "守宮",
-      title: "(圖多)當一隻冬天的守宮🦖",
+      title: "(圖多)貪吃的守宮🦖",
       imgUrl: hotImg_2,
       content:
-        "先來一張可愛的小朋友，天氣變冷了🍂 我也開始被重用了！！！像這樣！！或這樣！！看看那個小手手！！！",
+        "Yo！來談談我家那位特別的小吃貨守宮。就是這麼一位，喜歡的不是水果也不是蔬菜，而是那些小小的蟲蟲！一旦拿出蟲子，牠的眼睛就亮了起來，立馬進入專注模式。不管是蟋蟀、度比亞還是櫻桃蟑螂，牠通通都吃得津津有味。",
+    },
+    {
+      postTime: 1,
+      animal: "倉鼠",
+      title: "關於倉鼠如何科養",
+      imgUrl: hotImg_3,
+      content:
+        "在寵物飼養的領域中，德國科學飼養標準，俗稱「科養」，已經成為愛護寵物的新趨勢。科養的核心理念在於創造一個能夠滿足寵物天性需求的環境，進而讓牠們在身心層面都能夠維持快樂。",
+    },
+    {
+      postTime: 23,
+      animal: "鸚鵡",
+      title: "北部鸚鵡旅館推薦",
+      imgUrl: hotImg_1,
+      content:
+        "因為全家要出國所以這次就選擇了「鸚鵡天堂」這家鸚鵡旅館寄養我家的鳥寶們，服務真的很不錯！住宿就像是鸚鵡的五星奢華度假村一樣，有專屬的鳥套房～鸚鵡天堂一直秉持著最高的安全與衛生標準，他們配備了先進的清潔設施，維持房間的衛生狀態，同時也提供安全的食物和水源，讓鳥寶們在這裡獲得全方位的照顧。最炫的是智力遊戲時間，讓你的鸚鵡腦袋也動動，不只是吃吃睡睡，還可以讓牠們過個有挑戰性的小日子。而且，他們還有超棒的鳥類醫療小組，隨時照顧牠們的健康～",
     },
   ];
 
@@ -260,7 +267,7 @@ export default function HomePage() {
           </article>
         </div>
         {/*  <!-- Hot Article --> */}
-        <div className="mt-56 py-32 bg-cover bg-no-repeat bg-center 2xl:bg-contain 2xl:bg-gray-normal bg-[url('../assets/index/hot-bg.svg')]">
+        <div className="mt-56 py-36 bg-cover bg-no-repeat bg-center 2xl:bg-contain 2xl:bg-gray-normal bg-[url('../assets/index/hot-bg.svg')]">
           <article className="relative">
             {/*  <!-- Chameleon --> */}
             <img
@@ -347,7 +354,7 @@ export default function HomePage() {
                     <h3 className="mt-2 text-xl text-brown-dark tracking-wide font-bold">
                       {article.title}
                     </h3>
-                    <figure className="mt-3">
+                    <figure className="mt-4">
                       <img className="w-full" src={article.imgUrl} alt="hot" />
                     </figure>
                     <p className="mt-6 mb-3 ellipsis-2 text-brown-dark text-justify">
